@@ -91,7 +91,7 @@ namespace BussinessLogic {
             }
         }
 
-        public bool NewBookingRoomByType (BookingRoomByTypeEN aBookingRoomByTypeEN) {
+        public bool NewOrEditBookingRoomByType (BookingRoomByTypeEN aBookingRoomByTypeEN) {
             try{
                 BookingRoomByType aNewBooking = new BookingRoomByType();
                 int IDCustomer = 0;
@@ -112,7 +112,7 @@ namespace BussinessLogic {
                     IDCustomer = aCustomersBO.Insert(aCustomers);
                 }
                 #endregion
-
+                aNewBooking.ID = aBookingRoomByTypeEN.ID;
                 aNewBooking.IDCustomer = IDCustomer;
                 aNewBooking.FromDate = aBookingRoomByTypeEN.FromDate;
                 aNewBooking.ToDate = aBookingRoomByTypeEN.ToDate;
@@ -121,7 +121,7 @@ namespace BussinessLogic {
                 aNewBooking.Standard = aBookingRoomByTypeEN.Standard;
                 aNewBooking.BookingStatus = aBookingRoomByTypeEN.BookingStatus;
 
-                aDatabaseDA.BookingRoomByType.Add(aNewBooking);
+                aDatabaseDA.BookingRoomByType.AddOrUpdate(aNewBooking);
                 aDatabaseDA.SaveChanges();
                 return true;
             }

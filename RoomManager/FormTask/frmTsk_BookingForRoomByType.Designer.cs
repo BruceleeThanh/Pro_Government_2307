@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent () {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_BookingForRoomByType));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labStandard = new DevExpress.XtraEditors.LabelControl();
             this.labSuperior = new DevExpress.XtraEditors.LabelControl();
@@ -124,7 +124,7 @@
             // 
             this.labSuperior.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.labSuperior.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labSuperior.Location = new System.Drawing.Point(283, 137);
+            this.labSuperior.Location = new System.Drawing.Point(292, 137);
             this.labSuperior.Name = "labSuperior";
             this.labSuperior.Size = new System.Drawing.Size(63, 13);
             this.labSuperior.TabIndex = 29;
@@ -231,7 +231,6 @@
             this.txtStandardBooking.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtStandardBooking.Size = new System.Drawing.Size(100, 20);
             this.txtStandardBooking.TabIndex = 21;
-            this.txtStandardBooking.EditValueChanged += new System.EventHandler(this.txtStandardBooking_EditValueChanged);
             // 
             // txtSuperiorBooking
             // 
@@ -241,7 +240,6 @@
             this.txtSuperiorBooking.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSuperiorBooking.Size = new System.Drawing.Size(100, 20);
             this.txtSuperiorBooking.TabIndex = 20;
-            this.txtSuperiorBooking.EditValueChanged += new System.EventHandler(this.txtSuperiorBooking_EditValueChanged);
             // 
             // txtSuiteBooking
             // 
@@ -251,7 +249,6 @@
             this.txtSuiteBooking.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.txtSuiteBooking.Size = new System.Drawing.Size(100, 20);
             this.txtSuiteBooking.TabIndex = 19;
-            this.txtSuiteBooking.EditValueChanged += new System.EventHandler(this.txtSuiteBooking_EditValueChanged);
             // 
             // labelControl5
             // 
@@ -390,6 +387,7 @@
             this.CustomerName.Caption = "Tên khách";
             this.CustomerName.FieldName = "CustomerName";
             this.CustomerName.Name = "CustomerName";
+            this.CustomerName.OptionsColumn.AllowEdit = false;
             this.CustomerName.Visible = true;
             this.CustomerName.VisibleIndex = 0;
             this.CustomerName.Width = 195;
@@ -409,6 +407,7 @@
             this.FromDate.GroupFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.FromDate.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.FromDate.Name = "FromDate";
+            this.FromDate.OptionsColumn.AllowEdit = false;
             this.FromDate.Visible = true;
             this.FromDate.VisibleIndex = 1;
             this.FromDate.Width = 142;
@@ -428,6 +427,7 @@
             this.ToDate.GroupFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.ToDate.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.ToDate.Name = "ToDate";
+            this.ToDate.OptionsColumn.AllowEdit = false;
             this.ToDate.Visible = true;
             this.ToDate.VisibleIndex = 2;
             this.ToDate.Width = 134;
@@ -443,6 +443,7 @@
             this.SuiteType.Caption = "Suite";
             this.SuiteType.FieldName = "Suite";
             this.SuiteType.Name = "SuiteType";
+            this.SuiteType.OptionsColumn.AllowEdit = false;
             this.SuiteType.Visible = true;
             this.SuiteType.VisibleIndex = 3;
             this.SuiteType.Width = 58;
@@ -458,6 +459,7 @@
             this.SuperiorType.Caption = "Superior";
             this.SuperiorType.FieldName = "Superior";
             this.SuperiorType.Name = "SuperiorType";
+            this.SuperiorType.OptionsColumn.AllowEdit = false;
             this.SuperiorType.Visible = true;
             this.SuperiorType.VisibleIndex = 4;
             this.SuperiorType.Width = 63;
@@ -473,6 +475,7 @@
             this.StandardType.Caption = "Standard";
             this.StandardType.FieldName = "Standard";
             this.StandardType.Name = "StandardType";
+            this.StandardType.OptionsColumn.AllowEdit = false;
             this.StandardType.Visible = true;
             this.StandardType.VisibleIndex = 5;
             this.StandardType.Width = 65;
@@ -494,7 +497,7 @@
             // 
             this.btnEdit.AutoHeight = false;
             this.btnEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEdit.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEdit.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEdit_ButtonClick);
@@ -516,7 +519,7 @@
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);

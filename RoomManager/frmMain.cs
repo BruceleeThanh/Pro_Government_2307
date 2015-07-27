@@ -950,8 +950,13 @@ namespace RoomManager
         }
 
         private void btnBookingByType_ItemClick (object sender, ItemClickEventArgs e) {
-            frmTsk_BookingForRoomByType afrmTsk_BookingForRoomByType = new frmTsk_BookingForRoomByType();
-            afrmTsk_BookingForRoomByType.Show();
+            try {
+                frmTsk_BookingForRoomByType afrmTsk_BookingForRoomByType = new frmTsk_BookingForRoomByType();
+                afrmTsk_BookingForRoomByType.Show();
+            }
+            catch (Exception ex) {
+                throw new Exception("frmMain.btnBookingByType_ItemClick" + ex.ToString());
+            }
         }
 
 

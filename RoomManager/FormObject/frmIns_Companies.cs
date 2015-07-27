@@ -109,14 +109,14 @@ namespace RoomManager
             {
                 if (this.ValidateData() == true)
                 {
-                    string name = txtName.Text;
+                    string name = txtName.Text.Trim();
                     if (name.Length <= 255)
                     {
                         Companies aCompanies = new Companies();
                         aCompanies.Type = Convert.ToInt32(lueCustomerType.EditValue);
                         aCompanies.Name = name;
-                        aCompanies.TaxNumberCode = txtTaxNumberCode.Text;
-                        aCompanies.Address = txtAddress.Text;
+                        aCompanies.TaxNumberCode = txtTaxNumberCode.Text.Trim();
+                        aCompanies.Address = txtAddress.Text.Trim();
                         aCompanies.Status = cboStatus.SelectedIndex + 1;
                         aCompanies.Disable = bool.Parse(cboDisable.Text);
                         

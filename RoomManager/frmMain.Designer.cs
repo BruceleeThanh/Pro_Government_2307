@@ -85,6 +85,7 @@
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBookingByType = new DevExpress.XtraBars.BarButtonItem();
             this.ribPagCatBusiness = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -157,7 +158,8 @@
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnBookingByType = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBookingByType1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBookingByType2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
@@ -262,9 +264,11 @@
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8,
-            this.btnBookingByType});
+            this.btnBookingByType,
+            this.btnBookingByType1,
+            this.btnBookingByType2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 212;
+            this.ribbon.MaxItemId = 214;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
             this.ribPagCatBusiness,
@@ -353,7 +357,7 @@
             // 
             // btnCheckIn_Type1
             // 
-            this.btnCheckIn_Type1.Caption = "Check In";
+            this.btnCheckIn_Type1.Caption = "CheckIn";
             this.btnCheckIn_Type1.CategoryGuid = new System.Guid("6ffddb2b-9015-4d97-a4c1-91613e0ef537");
             this.btnCheckIn_Type1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnCheckIn_Type1.Glyph")));
             this.btnCheckIn_Type1.Id = 140;
@@ -757,7 +761,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Check In cho phòng đã đặt ";
+            this.barButtonItem2.Caption = "CheckIn cho phòng đã đặt ";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 193;
             this.barButtonItem2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.LargeGlyph")));
@@ -868,6 +872,15 @@
             this.barButtonItem8.Name = "barButtonItem8";
             this.barButtonItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem8_ItemClick);
             // 
+            // btnBookingByType
+            // 
+            this.btnBookingByType.Caption = "Đặt phòng\r\ntheo loại";
+            this.btnBookingByType.Glyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType.Glyph")));
+            this.btnBookingByType.Id = 211;
+            this.btnBookingByType.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType.LargeGlyph")));
+            this.btnBookingByType.Name = "btnBookingByType";
+            this.btnBookingByType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBookingByType_ItemClick);
+            // 
             // ribPagCatBusiness
             // 
             this.ribPagCatBusiness.Color = System.Drawing.Color.Empty;
@@ -908,6 +921,7 @@
             // ribbonPageGroup1
             // 
             this.ribbonPageGroup1.ItemLinks.Add(this.btnBooking_Type2);
+            this.ribbonPageGroup1.ItemLinks.Add(this.btnBookingByType1);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnVeryfy_Type2);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCheckinGroupForRoomBooking);
             this.ribbonPageGroup1.ItemLinks.Add(this.btnCheckIn_Type2);
@@ -927,6 +941,7 @@
             // ribbonPageGroup3
             // 
             this.ribbonPageGroup3.ItemLinks.Add(this.btnBooking_Type3);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnBookingByType2);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnVeryfy_Type3);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnCheckInClientForRoomBooking);
             this.ribbonPageGroup3.ItemLinks.Add(this.btnCheckIn_Type3);
@@ -1390,14 +1405,14 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1015, 447);
+            this.xtraTabPage2.Size = new System.Drawing.Size(990, 423);
             this.xtraTabPage2.Text = "Chi tiết ";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.panLuongNghiepVu);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1015, 447);
+            this.xtraTabPage3.Size = new System.Drawing.Size(990, 423);
             this.xtraTabPage3.Text = "Luồng nghiệp vụ";
             // 
             // panLuongNghiepVu
@@ -1405,7 +1420,7 @@
             this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
             this.panLuongNghiepVu.Name = "panLuongNghiepVu";
-            this.panLuongNghiepVu.Size = new System.Drawing.Size(1015, 447);
+            this.panLuongNghiepVu.Size = new System.Drawing.Size(990, 423);
             this.panLuongNghiepVu.TabIndex = 0;
             // 
             // dockPanel3
@@ -1532,14 +1547,23 @@
             this.popupMenu3.Name = "popupMenu3";
             this.popupMenu3.Ribbon = this.ribbon;
             // 
-            // btnBookingByType
+            // btnBookingByType1
             // 
-            this.btnBookingByType.Caption = "Đặt phòng\r\ntheo loại";
-            this.btnBookingByType.Glyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType.Glyph")));
-            this.btnBookingByType.Id = 211;
-            this.btnBookingByType.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType.LargeGlyph")));
-            this.btnBookingByType.Name = "btnBookingByType";
-            this.btnBookingByType.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBookingByType_ItemClick);
+            this.btnBookingByType1.Caption = "Đặt phòng theo loại";
+            this.btnBookingByType1.Glyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType1.Glyph")));
+            this.btnBookingByType1.Id = 212;
+            this.btnBookingByType1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType1.LargeGlyph")));
+            this.btnBookingByType1.Name = "btnBookingByType1";
+            this.btnBookingByType1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBookingByType_ItemClick);
+            // 
+            // btnBookingByType2
+            // 
+            this.btnBookingByType2.Caption = "Đặt phòng theo loại";
+            this.btnBookingByType2.Glyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType2.Glyph")));
+            this.btnBookingByType2.Id = 213;
+            this.btnBookingByType2.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnBookingByType2.LargeGlyph")));
+            this.btnBookingByType2.Name = "btnBookingByType2";
+            this.btnBookingByType2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBookingByType_ItemClick);
             // 
             // frmMain
             // 
@@ -1742,5 +1766,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.PopupMenu popupMenu3;
         private DevExpress.XtraBars.BarButtonItem btnBookingByType;
+        private DevExpress.XtraBars.BarButtonItem btnBookingByType1;
+        private DevExpress.XtraBars.BarButtonItem btnBookingByType2;
     }
 }
