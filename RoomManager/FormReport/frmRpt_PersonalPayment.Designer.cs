@@ -514,7 +514,7 @@
             this.xrLabel39.StylePriority.UseBackColor = false;
             this.xrLabel39.StylePriority.UseFont = false;
             this.xrLabel39.StylePriority.UseTextAlignment = false;
-            this.xrLabel39.Text = "( Total of payment):";
+            this.xrLabel39.Text = "(Total of payment):";
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel41
@@ -528,7 +528,7 @@
             this.xrLabel41.StylePriority.UseBackColor = false;
             this.xrLabel41.StylePriority.UseFont = false;
             this.xrLabel41.StylePriority.UseTextAlignment = false;
-            this.xrLabel41.Text = "( Total B.T):";
+            this.xrLabel41.Text = "(Total B.T):";
             this.xrLabel41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel42
@@ -542,7 +542,7 @@
             this.xrLabel42.StylePriority.UseBackColor = false;
             this.xrLabel42.StylePriority.UseFont = false;
             this.xrLabel42.StylePriority.UseTextAlignment = false;
-            this.xrLabel42.Text = "( Tax 10.00%):";
+            this.xrLabel42.Text = "(Tax 10.00%):";
             this.xrLabel42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel44
@@ -556,7 +556,7 @@
             this.xrLabel44.StylePriority.UseBackColor = false;
             this.xrLabel44.StylePriority.UseFont = false;
             this.xrLabel44.StylePriority.UseTextAlignment = false;
-            this.xrLabel44.Text = "( Total):";
+            this.xrLabel44.Text = "(Total):";
             this.xrLabel44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel45
@@ -570,7 +570,7 @@
             this.xrLabel45.StylePriority.UseBackColor = false;
             this.xrLabel45.StylePriority.UseFont = false;
             this.xrLabel45.StylePriority.UseTextAlignment = false;
-            this.xrLabel45.Text = "( Deposit):";
+            this.xrLabel45.Text = "(Deposit):";
             this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel46
@@ -584,7 +584,7 @@
             this.xrLabel46.StylePriority.UseBackColor = false;
             this.xrLabel46.StylePriority.UseFont = false;
             this.xrLabel46.StylePriority.UseTextAlignment = false;
-            this.xrLabel46.Text = "( Fee of T.C):";
+            this.xrLabel46.Text = "(Fee of T.C):";
             this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel47
@@ -598,7 +598,7 @@
             this.xrLabel47.StylePriority.UseBackColor = false;
             this.xrLabel47.StylePriority.UseFont = false;
             this.xrLabel47.StylePriority.UseTextAlignment = false;
-            this.xrLabel47.Text = "( Service Charge):";
+            this.xrLabel47.Text = "(Service Charge):";
             this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel29
@@ -612,7 +612,7 @@
             this.xrLabel29.StylePriority.UseBackColor = false;
             this.xrLabel29.StylePriority.UseFont = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
-            this.xrLabel29.Text = "( Meal Charge):";
+            this.xrLabel29.Text = "(Meal Charge):";
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel30
@@ -626,7 +626,7 @@
             this.xrLabel30.StylePriority.UseBackColor = false;
             this.xrLabel30.StylePriority.UseFont = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
-            this.xrLabel30.Text = "( Tel):";
+            this.xrLabel30.Text = "(Tel):";
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel31
@@ -640,7 +640,7 @@
             this.xrLabel31.StylePriority.UseBackColor = false;
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.StylePriority.UseTextAlignment = false;
-            this.xrLabel31.Text = "( Photocopy):";
+            this.xrLabel31.Text = "(Photocopy):";
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel32
@@ -654,7 +654,7 @@
             this.xrLabel32.StylePriority.UseBackColor = false;
             this.xrLabel32.StylePriority.UseFont = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
-            this.xrLabel32.Text = "( Room Service):";
+            this.xrLabel32.Text = "(Room Service):";
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel33
@@ -668,7 +668,7 @@
             this.xrLabel33.StylePriority.UseBackColor = false;
             this.xrLabel33.StylePriority.UseFont = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.Text = "( Overnight Charge):";
+            this.xrLabel33.Text = "(Overnight Charge):";
             this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel34
@@ -682,7 +682,7 @@
             this.xrLabel34.StylePriority.UseBackColor = false;
             this.xrLabel34.StylePriority.UseFont = false;
             this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.Text = "( Drink Charge):";
+            this.xrLabel34.Text = "(Drink Charge):";
             this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel35
@@ -696,7 +696,7 @@
             this.xrLabel35.StylePriority.UseBackColor = false;
             this.xrLabel35.StylePriority.UseFont = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.Text = "( Laundry):";
+            this.xrLabel35.Text = "(Laundry):";
             this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel37
@@ -710,7 +710,7 @@
             this.xrLabel37.StylePriority.UseBackColor = false;
             this.xrLabel37.StylePriority.UseFont = false;
             this.xrLabel37.StylePriority.UseTextAlignment = false;
-            this.xrLabel37.Text = "( Extra order if any):";
+            this.xrLabel37.Text = "(Extra order if any):";
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // lblConvertToString
@@ -1052,7 +1052,7 @@
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
-            this.xrLabel10.Text = "Các khoản thanh toán ( Item of Clearance ) ";
+            this.xrLabel10.Text = "Các khoản thanh toán (Item of Clearance ) ";
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblExchangeRate
@@ -1131,7 +1131,7 @@
             this.xrLabel9.StylePriority.UseBackColor = false;
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "Tỷ giá ( Exchange Rate) :";
+            this.xrLabel9.Text = "Tỷ giá (Exchange Rate) :";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel8
@@ -1145,7 +1145,7 @@
             this.xrLabel8.StylePriority.UseBackColor = false;
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "đến ( to)";
+            this.xrLabel8.Text = "đến (to)";
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel7
@@ -1159,7 +1159,7 @@
             this.xrLabel7.StylePriority.UseBackColor = false;
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "Thời gian ( Duration) : Từ ( from) ";
+            this.xrLabel7.Text = "Thời gian (Duration) : Từ (from) ";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel6
@@ -1173,7 +1173,7 @@
             this.xrLabel6.StylePriority.UseBackColor = false;
             this.xrLabel6.StylePriority.UseFont = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.Text = "Tên khách ( Name) : ";
+            this.xrLabel6.Text = "Tên khách (Name) : ";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel5
@@ -1187,7 +1187,7 @@
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "Buồng ( Room) : ";
+            this.xrLabel5.Text = "Buồng (Room) : ";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // TopMargin
@@ -1435,7 +1435,7 @@
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UseForeColor = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "( BILL OF CLEARANCE)";
+            this.xrLabel4.Text = "(BILL OF CLEARANCE)";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // ReportFooter
@@ -1458,7 +1458,7 @@
             this.xrLabel40.SizeF = new System.Drawing.SizeF(276.2499F, 30F);
             this.xrLabel40.StylePriority.UseFont = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
-            this.xrLabel40.Text = "( Cashier)";
+            this.xrLabel40.Text = "(Cashier)";
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel48
@@ -1470,7 +1470,7 @@
             this.xrLabel48.SizeF = new System.Drawing.SizeF(276.2499F, 30F);
             this.xrLabel48.StylePriority.UseFont = false;
             this.xrLabel48.StylePriority.UseTextAlignment = false;
-            this.xrLabel48.Text = "( Guest)";
+            this.xrLabel48.Text = "(Guest)";
             this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel38
@@ -1506,7 +1506,7 @@
             this.lblDayMonthYear.SizeF = new System.Drawing.SizeF(276.2499F, 30F);
             this.lblDayMonthYear.StylePriority.UseFont = false;
             this.lblDayMonthYear.StylePriority.UseTextAlignment = false;
-            this.lblDayMonthYear.Text = "Hà nội , ngày 12 tháng 08 năm 2014";
+            this.lblDayMonthYear.Text = "Hà Nội, ngày 12 tháng 08 năm 2014";
             this.lblDayMonthYear.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // formattingRule1

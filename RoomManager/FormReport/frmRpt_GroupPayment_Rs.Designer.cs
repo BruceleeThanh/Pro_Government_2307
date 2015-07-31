@@ -45,8 +45,17 @@
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblIDBookingR = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblInvoiceNumber = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblInvoiceDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.lbAcceptDate = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
             this.DetailReport = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Detail1 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -108,15 +117,6 @@
             this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblIDBookingR = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblInvoiceDate = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblInvoiceNumber = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
-            this.lbAcceptDate = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -351,6 +351,26 @@
             this.ReportHeader.HeightF = 86.59216F;
             this.ReportHeader.Name = "ReportHeader";
             // 
+            // xrLabel23
+            // 
+            this.xrLabel23.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel23.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel23.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel23.Name = "xrLabel23";
+            this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel23.SizeF = new System.Drawing.SizeF(224.1147F, 62.1666F);
+            this.xrLabel23.StylePriority.UseBackColor = false;
+            this.xrLabel23.StylePriority.UseBorders = false;
+            this.xrLabel23.StylePriority.UseFont = false;
+            this.xrLabel23.StylePriority.UseForeColor = false;
+            this.xrLabel23.StylePriority.UsePadding = false;
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
+            this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // xrLabel3
             // 
             this.xrLabel3.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
@@ -380,6 +400,138 @@
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.Text = "(Không có giá trị thay hóa đơn)";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel26
+            // 
+            this.xrLabel26.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel26.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(0.5316939F, 18.00003F);
+            this.xrLabel26.Name = "xrLabel26";
+            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel26.SizeF = new System.Drawing.SizeF(43.38498F, 20.33325F);
+            this.xrLabel26.StylePriority.UseBackColor = false;
+            this.xrLabel26.StylePriority.UseFont = false;
+            this.xrLabel26.StylePriority.UseForeColor = false;
+            this.xrLabel26.StylePriority.UseTextAlignment = false;
+            this.xrLabel26.Text = "HĐ TC:";
+            this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lblIDBookingR
+            // 
+            this.lblIDBookingR.BackColor = System.Drawing.Color.Transparent;
+            this.lblIDBookingR.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDBookingR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblIDBookingR.LocationFloat = new DevExpress.Utils.PointFloat(53.99324F, 0F);
+            this.lblIDBookingR.Name = "lblIDBookingR";
+            this.lblIDBookingR.NullValueText = "N/A";
+            this.lblIDBookingR.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.lblIDBookingR.SizeF = new System.Drawing.SizeF(76.93604F, 18.00003F);
+            this.lblIDBookingR.StylePriority.UseBackColor = false;
+            this.lblIDBookingR.StylePriority.UseFont = false;
+            this.lblIDBookingR.StylePriority.UseForeColor = false;
+            this.lblIDBookingR.StylePriority.UsePadding = false;
+            this.lblIDBookingR.StylePriority.UseTextAlignment = false;
+            this.lblIDBookingR.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lblInvoiceNumber
+            // 
+            this.lblInvoiceNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblInvoiceNumber.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblInvoiceNumber.LocationFloat = new DevExpress.Utils.PointFloat(43.91668F, 18.00003F);
+            this.lblInvoiceNumber.Name = "lblInvoiceNumber";
+            this.lblInvoiceNumber.NullValueText = "N/A";
+            this.lblInvoiceNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.lblInvoiceNumber.SizeF = new System.Drawing.SizeF(63.26199F, 20.33324F);
+            this.lblInvoiceNumber.StylePriority.UseBackColor = false;
+            this.lblInvoiceNumber.StylePriority.UseFont = false;
+            this.lblInvoiceNumber.StylePriority.UseForeColor = false;
+            this.lblInvoiceNumber.StylePriority.UsePadding = false;
+            this.lblInvoiceNumber.StylePriority.UseTextAlignment = false;
+            this.lblInvoiceNumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel11
+            // 
+            this.xrLabel11.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel11.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(0.5316925F, 0F);
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(53.46155F, 18.00003F);
+            this.xrLabel11.StylePriority.UseBackColor = false;
+            this.xrLabel11.StylePriority.UseFont = false;
+            this.xrLabel11.StylePriority.UseForeColor = false;
+            this.xrLabel11.StylePriority.UseTextAlignment = false;
+            this.xrLabel11.Text = "Mã IDBR:";
+            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel36
+            // 
+            this.xrLabel36.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel36.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(107.1787F, 18.00003F);
+            this.xrLabel36.Name = "xrLabel36";
+            this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel36.SizeF = new System.Drawing.SizeF(34.99994F, 20.33324F);
+            this.xrLabel36.StylePriority.UseBackColor = false;
+            this.xrLabel36.StylePriority.UseFont = false;
+            this.xrLabel36.StylePriority.UseForeColor = false;
+            this.xrLabel36.StylePriority.UseTextAlignment = false;
+            this.xrLabel36.Text = "Ngày:";
+            this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lblInvoiceDate
+            // 
+            this.lblInvoiceDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblInvoiceDate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvoiceDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblInvoiceDate.LocationFloat = new DevExpress.Utils.PointFloat(142.1786F, 18.00003F);
+            this.lblInvoiceDate.Name = "lblInvoiceDate";
+            this.lblInvoiceDate.NullValueText = "N/A";
+            this.lblInvoiceDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.lblInvoiceDate.SizeF = new System.Drawing.SizeF(81.93605F, 20.33324F);
+            this.lblInvoiceDate.StylePriority.UseBackColor = false;
+            this.lblInvoiceDate.StylePriority.UseFont = false;
+            this.lblInvoiceDate.StylePriority.UseForeColor = false;
+            this.lblInvoiceDate.StylePriority.UsePadding = false;
+            this.lblInvoiceDate.StylePriority.UseTextAlignment = false;
+            this.lblInvoiceDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // lbAcceptDate
+            // 
+            this.lbAcceptDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbAcceptDate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAcceptDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbAcceptDate.LocationFloat = new DevExpress.Utils.PointFloat(77.55669F, 39.16657F);
+            this.lbAcceptDate.Name = "lbAcceptDate";
+            this.lbAcceptDate.NullValueText = "N/A";
+            this.lbAcceptDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.lbAcceptDate.SizeF = new System.Drawing.SizeF(106.8521F, 23.00003F);
+            this.lbAcceptDate.StylePriority.UseBackColor = false;
+            this.lbAcceptDate.StylePriority.UseFont = false;
+            this.lbAcceptDate.StylePriority.UseForeColor = false;
+            this.lbAcceptDate.StylePriority.UsePadding = false;
+            this.lbAcceptDate.StylePriority.UseTextAlignment = false;
+            this.lbAcceptDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel49
+            // 
+            this.xrLabel49.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel49.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(0.5317762F, 39.16659F);
+            this.xrLabel49.Name = "xrLabel49";
+            this.xrLabel49.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel49.SizeF = new System.Drawing.SizeF(77.02492F, 23.00001F);
+            this.xrLabel49.StylePriority.UseBackColor = false;
+            this.xrLabel49.StylePriority.UseFont = false;
+            this.xrLabel49.StylePriority.UseForeColor = false;
+            this.xrLabel49.StylePriority.UseTextAlignment = false;
+            this.xrLabel49.Text = "Ghi nhận DT:";
+            this.xrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // DetailReport
             // 
@@ -1042,7 +1194,7 @@
             this.lblDayMonthYear.SizeF = new System.Drawing.SizeF(220F, 30F);
             this.lblDayMonthYear.StylePriority.UseFont = false;
             this.lblDayMonthYear.StylePriority.UseTextAlignment = false;
-            this.lblDayMonthYear.Text = "Hà nội , ngày 12 tháng 08 năm 2014";
+            this.lblDayMonthYear.Text = "Hà Nội, ngày 12 tháng 08 năm 2014";
             this.lblDayMonthYear.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel42
@@ -1117,158 +1269,6 @@
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             this.xrLabel18.Text = "Thủ trưởng đơn vị";
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // lblIDBookingR
-            // 
-            this.lblIDBookingR.BackColor = System.Drawing.Color.Transparent;
-            this.lblIDBookingR.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDBookingR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblIDBookingR.LocationFloat = new DevExpress.Utils.PointFloat(53.99324F, 0F);
-            this.lblIDBookingR.Name = "lblIDBookingR";
-            this.lblIDBookingR.NullValueText = "N/A";
-            this.lblIDBookingR.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.lblIDBookingR.SizeF = new System.Drawing.SizeF(76.93604F, 18.00003F);
-            this.lblIDBookingR.StylePriority.UseBackColor = false;
-            this.lblIDBookingR.StylePriority.UseFont = false;
-            this.lblIDBookingR.StylePriority.UseForeColor = false;
-            this.lblIDBookingR.StylePriority.UsePadding = false;
-            this.lblIDBookingR.StylePriority.UseTextAlignment = false;
-            this.lblIDBookingR.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel11.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(0.5316925F, 0F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(53.46155F, 18.00003F);
-            this.xrLabel11.StylePriority.UseBackColor = false;
-            this.xrLabel11.StylePriority.UseFont = false;
-            this.xrLabel11.StylePriority.UseForeColor = false;
-            this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "Mã IDBR:";
-            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel36
-            // 
-            this.xrLabel36.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel36.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(107.1787F, 18.00003F);
-            this.xrLabel36.Name = "xrLabel36";
-            this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel36.SizeF = new System.Drawing.SizeF(34.99994F, 20.33324F);
-            this.xrLabel36.StylePriority.UseBackColor = false;
-            this.xrLabel36.StylePriority.UseFont = false;
-            this.xrLabel36.StylePriority.UseForeColor = false;
-            this.xrLabel36.StylePriority.UseTextAlignment = false;
-            this.xrLabel36.Text = "Ngày:";
-            this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblInvoiceDate
-            // 
-            this.lblInvoiceDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblInvoiceDate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblInvoiceDate.LocationFloat = new DevExpress.Utils.PointFloat(142.1786F, 18.00003F);
-            this.lblInvoiceDate.Name = "lblInvoiceDate";
-            this.lblInvoiceDate.NullValueText = "N/A";
-            this.lblInvoiceDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.lblInvoiceDate.SizeF = new System.Drawing.SizeF(81.93605F, 20.33324F);
-            this.lblInvoiceDate.StylePriority.UseBackColor = false;
-            this.lblInvoiceDate.StylePriority.UseFont = false;
-            this.lblInvoiceDate.StylePriority.UseForeColor = false;
-            this.lblInvoiceDate.StylePriority.UsePadding = false;
-            this.lblInvoiceDate.StylePriority.UseTextAlignment = false;
-            this.lblInvoiceDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel49
-            // 
-            this.xrLabel49.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel49.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(0.5317762F, 39.16659F);
-            this.xrLabel49.Name = "xrLabel49";
-            this.xrLabel49.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel49.SizeF = new System.Drawing.SizeF(77.02492F, 23.00001F);
-            this.xrLabel49.StylePriority.UseBackColor = false;
-            this.xrLabel49.StylePriority.UseFont = false;
-            this.xrLabel49.StylePriority.UseForeColor = false;
-            this.xrLabel49.StylePriority.UseTextAlignment = false;
-            this.xrLabel49.Text = "Ghi nhận DT:";
-            this.xrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblInvoiceNumber
-            // 
-            this.lblInvoiceNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblInvoiceNumber.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvoiceNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblInvoiceNumber.LocationFloat = new DevExpress.Utils.PointFloat(43.91668F, 18.00003F);
-            this.lblInvoiceNumber.Name = "lblInvoiceNumber";
-            this.lblInvoiceNumber.NullValueText = "N/A";
-            this.lblInvoiceNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.lblInvoiceNumber.SizeF = new System.Drawing.SizeF(63.26199F, 20.33324F);
-            this.lblInvoiceNumber.StylePriority.UseBackColor = false;
-            this.lblInvoiceNumber.StylePriority.UseFont = false;
-            this.lblInvoiceNumber.StylePriority.UseForeColor = false;
-            this.lblInvoiceNumber.StylePriority.UsePadding = false;
-            this.lblInvoiceNumber.StylePriority.UseTextAlignment = false;
-            this.lblInvoiceNumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel26
-            // 
-            this.xrLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel26.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(0.5316939F, 18.00003F);
-            this.xrLabel26.Name = "xrLabel26";
-            this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel26.SizeF = new System.Drawing.SizeF(43.38498F, 20.33325F);
-            this.xrLabel26.StylePriority.UseBackColor = false;
-            this.xrLabel26.StylePriority.UseFont = false;
-            this.xrLabel26.StylePriority.UseForeColor = false;
-            this.xrLabel26.StylePriority.UseTextAlignment = false;
-            this.xrLabel26.Text = "HĐ TC:";
-            this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lbAcceptDate
-            // 
-            this.lbAcceptDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbAcceptDate.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAcceptDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbAcceptDate.LocationFloat = new DevExpress.Utils.PointFloat(77.55669F, 39.16657F);
-            this.lbAcceptDate.Name = "lbAcceptDate";
-            this.lbAcceptDate.NullValueText = "N/A";
-            this.lbAcceptDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.lbAcceptDate.SizeF = new System.Drawing.SizeF(106.8521F, 23.00003F);
-            this.lbAcceptDate.StylePriority.UseBackColor = false;
-            this.lbAcceptDate.StylePriority.UseFont = false;
-            this.lbAcceptDate.StylePriority.UseForeColor = false;
-            this.lbAcceptDate.StylePriority.UsePadding = false;
-            this.lbAcceptDate.StylePriority.UseTextAlignment = false;
-            this.lbAcceptDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel23
-            // 
-            this.xrLabel23.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel23.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel23.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel23.Name = "xrLabel23";
-            this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel23.SizeF = new System.Drawing.SizeF(224.1147F, 62.1666F);
-            this.xrLabel23.StylePriority.UseBackColor = false;
-            this.xrLabel23.StylePriority.UseBorders = false;
-            this.xrLabel23.StylePriority.UseFont = false;
-            this.xrLabel23.StylePriority.UseForeColor = false;
-            this.xrLabel23.StylePriority.UsePadding = false;
-            this.xrLabel23.StylePriority.UseTextAlignment = false;
-            this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // frmRpt_GroupPayment_Rs
             // 

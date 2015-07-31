@@ -55,7 +55,32 @@ namespace RoomManager.FormTask {
             }
         }
 
-        private void LoadLabelCountAvailableRoom () {
+        private void LoadCountAvailableRoom (DateTime From, DateTime To) {
+            aCountAvailableRoomEN.SetValue(aBookingRoomByTypeBO.Select_CountAvailableRoomType(From, To, 1));
+            if (aCountAvailableRoomEN.Suite != null) {
+                if (aCountAvailableRoomEN.Suite < 0) {
+                    availableSuite = 0;
+                }
+                else {
+                    availableSuite = aCountAvailableRoomEN.Suite;
+                }
+            }
+            if (aCountAvailableRoomEN.Superior != null) {
+                if (aCountAvailableRoomEN.Superior < 0) {
+                    availableSuperior = 0;
+                }
+                else {
+                    availableSuperior = aCountAvailableRoomEN.Superior;
+                }
+            }
+            if (aCountAvailableRoomEN.Standard != null) {
+                if (aCountAvailableRoomEN.Standard < 0) {
+                    availableStandard = 0;
+                }
+                else {
+                    availableStandard = aCountAvailableRoomEN.Standard;
+                }
+            }
             labSuite.Text = availableSuite.ToString();
             labStandard.Text = availableStandard.ToString();
             labSuperior.Text = availableSuperior.ToString();
@@ -141,17 +166,8 @@ namespace RoomManager.FormTask {
                 
                 dtpFrom.DateTime = DateTime.Now;
                 dtpTo.DateTime = DateTime.Now.AddDays(1);
-                aCountAvailableRoomEN.SetValue(aBookingRoomByTypeBO.Select_CountAvailableRoomType(dtpFrom.DateTime, dtpTo.DateTime, 1));
-                if (aCountAvailableRoomEN.Suite != null) {
-                    availableSuite = aCountAvailableRoomEN.Suite;
-                }
-                if (aCountAvailableRoomEN.Superior != null) {
-                    availableSuperior = aCountAvailableRoomEN.Superior;
-                }
-                if (aCountAvailableRoomEN.Standard != null) {
-                    availableStandard = aCountAvailableRoomEN.Standard;
-                }
-                this.LoadLabelCountAvailableRoom();
+
+                this.LoadCountAvailableRoom(dtpFrom.DateTime, dtpTo.DateTime);
 
                 this.LoadListBookingRoomType();
                 dgvListBookingRoom.DataSource = this.aListBookingRoomType;
@@ -169,17 +185,7 @@ namespace RoomManager.FormTask {
         private void btnSearch_Click (object sender, EventArgs e) {
             try {
                 if (this.CheckData()) {
-                    aCountAvailableRoomEN.SetValue(aBookingRoomByTypeBO.Select_CountAvailableRoomType(dtpFrom.DateTime, dtpTo.DateTime, 1));
-                    if (aCountAvailableRoomEN.Suite != null) {
-                        availableSuite = aCountAvailableRoomEN.Suite;
-                    }
-                    if (aCountAvailableRoomEN.Superior != null) {
-                        availableSuperior = aCountAvailableRoomEN.Superior;
-                    }
-                    if (aCountAvailableRoomEN.Standard != null) {
-                        availableStandard = aCountAvailableRoomEN.Standard;
-                    }
-                    this.LoadLabelCountAvailableRoom();
+                    this.LoadCountAvailableRoom(dtpFrom.DateTime, dtpTo.DateTime);
                 }
             }
             catch (Exception ex) {
@@ -241,6 +247,7 @@ namespace RoomManager.FormTask {
                             txtSuiteBooking.Text = "";
                             txtSuperiorBooking.Text = "";
                             txtStandardBooking.Text = "";
+                            this.LoadCountAvailableRoom(dtpFrom.DateTime, dtpTo.DateTime);
                         }
                         else {
                             MessageBox.Show("Đặt phòng thất bại vui lòng thực hiện lại.", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -273,6 +280,7 @@ namespace RoomManager.FormTask {
                                 txtSuiteBooking.Text = "";
                                 txtSuperiorBooking.Text = "";
                                 txtStandardBooking.Text = "";
+                                this.LoadCountAvailableRoom(dtpFrom.DateTime, dtpTo.DateTime);
                             }
                             else {
                                 MessageBox.Show("Sửa thất bại vui lòng thực hiện lại.", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -24,6 +24,8 @@ namespace Entity
            this.Sku = "000";
            this.Note = "";
            this.Type = 0;
+           this.LevelSku = 0;
+           this.OrderSku = 0;
            this.BookingRooms_ID = 0;
            this.BookingRs_BookingMoney = 0;
            this.BookingRs_CustomerType = 0;

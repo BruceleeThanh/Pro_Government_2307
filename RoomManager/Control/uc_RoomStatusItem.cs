@@ -67,7 +67,7 @@ namespace RoomManager
                 this.lblSku_BackColor = System.Drawing.Color.Tomato;
                 this.lblSku_ForeColor = System.Drawing.Color.Salmon;
             }
-            if (Datasource.RoomStatus == 3) // 
+            if (Datasource.RoomStatus == 3) // Dang o
             {
                 this.rectangleShape_BackColor = System.Drawing.Color.Gold;
                 this.rectangleShape_BorderColor = System.Drawing.Color.Goldenrod;
@@ -183,7 +183,8 @@ namespace RoomManager
                 }
                 if (this.Datasource.RoomStatus == 2)
                 {
-                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
+                    // them 2 lan .Parent . . . luc dau 10 lan
+                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
                     uc_Tooltip_StatusRoom_2 aToolTip_2 = new uc_Tooltip_StatusRoom_2(afrmMain);
 
                     aToolTip_2.Datasource = this.Datasource;
@@ -193,7 +194,8 @@ namespace RoomManager
                 }
                 else if (this.Datasource.RoomStatus == 3)
                 {
-                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
+                    // them 2 lan .Parent . . . luc dau 10 lan
+                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
                     
                     if (this.lbWarning.Text != this.Mess_Qua_han)
                     {
@@ -214,7 +216,8 @@ namespace RoomManager
                 }
                 else if (this.Datasource.RoomStatus == 5)
                 {
-                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
+                    // them 2 lan .Parent . . . luc dau 10 lan
+                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
                     uc_Tooltip_StatusRoom_5 aToolTip_5 = new uc_Tooltip_StatusRoom_5(afrmMain);
                     
                     aToolTip_5.Datasource = this.Datasource;
@@ -225,7 +228,8 @@ namespace RoomManager
 
                 else if (this.Datasource.RoomStatus == 0)
                 {
-                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
+                    // them 2 lan .Parent . . . luc dau 10 lan
+                    frmMain afrmMain = (frmMain)this.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent;
                     uc_Tooltip_StatusRoom_0 aToolTip_0 = new uc_Tooltip_StatusRoom_0(afrmMain);
                     
                     aToolTip_0.Datasource = this.Datasource;

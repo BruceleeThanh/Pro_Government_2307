@@ -160,6 +160,8 @@ namespace BussinessLogic
                     aRoomExtStatusEN.Sku = aList[i].Sku;
                     aRoomExtStatusEN.Note = aList[i].Note;
                     aRoomExtStatusEN.Type = aList[i].Type;
+                    aRoomExtStatusEN.LevelSku = aList[i].LevelSku;
+                    aRoomExtStatusEN.OrderSku = aList[i].OrderSku;
                     aRoomExtStatusEN.BookingRooms_ID = aList[i].BookingRooms_ID;
 
                     aRoomExtStatusEN.BookingRs_BookingMoney = aList[i].BookingRs_BookingMoney;
@@ -219,6 +221,8 @@ namespace BussinessLogic
                     aRoomExtStatusEN.Bed1 = aRooms.Bed1;
                     aRoomExtStatusEN.Bed2 = aRooms.Bed2;
                     aRoomExtStatusEN.Type = aRooms.Type;
+                    aRoomExtStatusEN.LevelSku = aRooms.LevelSku;
+                    aRoomExtStatusEN.OrderSku = aRooms.OrderSku;
                 }
                 else
                 {

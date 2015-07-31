@@ -68,12 +68,12 @@
             this.lblSku.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lblSku.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.lblSku.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.lblSku.Appearance.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSku.Appearance.Font = new System.Drawing.Font("Arial-Rounded", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSku.Appearance.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblSku.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblSku.Location = new System.Drawing.Point(40, 17);
+            this.lblSku.Location = new System.Drawing.Point(46, 34);
             this.lblSku.Name = "lblSku";
-            this.lblSku.Size = new System.Drawing.Size(45, 32);
+            this.lblSku.Size = new System.Drawing.Size(28, 28);
             this.lblSku.TabIndex = 4;
             this.lblSku.Text = "101";
             this.lblSku.ToolTipController = this.toolTip;
@@ -95,9 +95,9 @@
             this.lbWarning.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbWarning.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbWarning.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
-            this.lbWarning.Location = new System.Drawing.Point(15, 56);
+            this.lbWarning.Location = new System.Drawing.Point(15, 68);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(93, 54);
+            this.lbWarning.Size = new System.Drawing.Size(93, 42);
             this.lbWarning.TabIndex = 5;
             this.lbWarning.Text = "Mai trả phòng";
             this.lbWarning.Visible = false;

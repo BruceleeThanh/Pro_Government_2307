@@ -783,22 +783,24 @@ namespace RoomManager
                 // Bat dau
 
                 // Phong ko co nguoi van checkin thanh cong
-                string notiRoomEmpty = "Vui lòng thêm khách vào phòng ";
-                bool checkRoomEmpty = false;
-                foreach (RoomMemberEN checkListCus in aCheckInEN.aListRoomMembers) {
-                    if (checkListCus.ListCustomer.Count == 0) {
-                        notiRoomEmpty += checkListCus.RoomSku + " ";
-                        checkRoomEmpty = true;
+                if (dgvSelectedCustomer.DataSource == null) {
+                    string notiRoomEmpty = "Vui lòng thêm khách vào phòng ";
+                    bool checkRoomEmpty = false;
+                    foreach (RoomMemberEN checkListCus in aCheckInEN.aListRoomMembers) {
+                        if (checkListCus.ListCustomer.Count == 0) {
+                            notiRoomEmpty += checkListCus.RoomSku + " ";
+                            checkRoomEmpty = true;
+                        }
                     }
-                }
-                if (checkRoomEmpty) {
-                    MessageBox.Show(notiRoomEmpty, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return false;
-                }
+                    if (checkRoomEmpty) {
+                        MessageBox.Show(notiRoomEmpty, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                    }
 
-                // Check du lieu cua khach moi truoc khi checkin
-                if (!this.CheckDataBeforeSaveCustomer()) {
-                    return false;
+                    // Check du lieu cua khach moi truoc khi checkin
+                    if (!this.CheckDataBeforeSaveCustomer()) {
+                        return false;
+                    }
                 }
 
                 // Ket thuc

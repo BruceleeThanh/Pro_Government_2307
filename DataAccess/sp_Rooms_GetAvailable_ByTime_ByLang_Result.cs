@@ -27,5 +27,7 @@ namespace DataAccess
         public Nullable<bool> Disable { get; set; }
         public string Code { get; set; }
         public Nullable<int> IDLang { get; set; }
+        public Nullable<int> LevelSku { get; set; }
+        public Nullable<int> OrderSku { get; set; }
     }
 }

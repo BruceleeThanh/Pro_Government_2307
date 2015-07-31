@@ -38,7 +38,10 @@ namespace RoomManager
         RoomsBO aRoomsBO = new RoomsBO();
 
         uc_CurrentUser auc_CurrentUser = new uc_CurrentUser();
-        uc_StatusRooms auc_StatusRooms = new uc_StatusRooms();
+        //uc_StatusRooms auc_StatusRooms = new uc_StatusRooms();
+
+        uc_StatusRoomsUpdate auc_StatusRoomsUpdate = new uc_StatusRoomsUpdate();
+
         frmLogin afrmLogin = new frmLogin();
         public frmMain(frmLogin afrmLogin)
         {
@@ -48,24 +51,41 @@ namespace RoomManager
         }
         #region Tabcontrol
 
-        public void RefreshData_auc_StatusRooms(DateTime CheckTime)
+        public void RefreshData_auc_StatusRoomsUpdate(DateTime CheckTime)
         {
             //uc_StatusRooms
-            auc_StatusRooms.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
-            auc_StatusRooms.CheckTime = CheckTime;
+            //auc_StatusRooms.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
+            //auc_StatusRooms.CheckTime = CheckTime;
+            //if (CheckTime.Date > DateTime.Now.Date) // tuong lai
+            //{
+            //    auc_StatusRooms.StatusButtonPopup = 3;
+            //}
+            //else if (CheckTime.Date < DateTime.Now.Date) // Qua khu
+            //{
+            //    auc_StatusRooms.StatusButtonPopup = 1;
+            //}
+            //else if (CheckTime.Date == DateTime.Now.Date) // hien tai
+            //{
+            //    auc_StatusRooms.StatusButtonPopup = 2;
+            //}
+            //auc_StatusRooms.DataBind();
+
+            //uc_StatusRoomsUpdate
+            auc_StatusRoomsUpdate.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
+            auc_StatusRoomsUpdate.CheckTime = CheckTime;
             if (CheckTime.Date > DateTime.Now.Date) // tuong lai
             {
-                auc_StatusRooms.StatusButtonPopup = 3;
+                auc_StatusRoomsUpdate.StatusButtonPopup = 3;
             }
             else if (CheckTime.Date < DateTime.Now.Date) // Qua khu
             {
-                auc_StatusRooms.StatusButtonPopup = 1;
+                auc_StatusRoomsUpdate.StatusButtonPopup = 1;
             }
             else if (CheckTime.Date == DateTime.Now.Date) // hien tai
             {
-                auc_StatusRooms.StatusButtonPopup = 2;
+                auc_StatusRoomsUpdate.StatusButtonPopup = 2;
             }
-            auc_StatusRooms.DataBind();
+            auc_StatusRoomsUpdate.DataBind();
 
         }
 
@@ -85,7 +105,9 @@ namespace RoomManager
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            RefreshData_auc_StatusRooms(DateTime.ParseExact(dtpSearch.Text, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
+            //RefreshData_auc_StatusRooms(DateTime.ParseExact(dtpSearch.Text, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
+
+            RefreshData_auc_StatusRoomsUpdate(DateTime.ParseExact(dtpSearch.Text, "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture));
         }
 
         public void LoadData()
@@ -95,11 +117,10 @@ namespace RoomManager
                 dockManager1.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Fill);
                 dtpSearch.DateTime = DateTime.Now;
 
-                RefreshData_auc_StatusRooms(DateTime.Now);
-                auc_StatusRooms.Dock = DockStyle.Fill;
+                RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
+                auc_StatusRoomsUpdate.Dock = DockStyle.Fill;
 
-                panStatusRoom.Controls.Add(auc_StatusRooms);
-
+                panStatusRoom.Controls.Add(auc_StatusRoomsUpdate);
                 auc_CurrentUser.DataSource = CORE.CURRENTUSER.SystemUser;
                 auc_CurrentUser.DataSourceExtend = CORE.CURRENTUSER.SystemUserExts;
                 auc_CurrentUser.Dock = DockStyle.Fill;
@@ -120,7 +141,7 @@ namespace RoomManager
         {
             try
             {
-                RefreshData_auc_StatusRooms(DateTime.Now);
+                RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
             }
             catch (Exception ex)
             {

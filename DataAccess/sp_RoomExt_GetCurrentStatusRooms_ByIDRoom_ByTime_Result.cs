@@ -20,6 +20,8 @@ namespace DataAccess
         public string Sku { get; set; }
         public Nullable<int> Type { get; set; }
         public string Code { get; set; }
+        public Nullable<int> LevelSku { get; set; }
+        public Nullable<int> OrderSku { get; set; }
         public int BookingRooms_ID { get; set; }
         public System.DateTime CheckInActual { get; set; }
         public string Note { get; set; }

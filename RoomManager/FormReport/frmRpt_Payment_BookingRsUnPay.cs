@@ -42,7 +42,7 @@ namespace RoomManager
                 int day = DateTime.Now.Day;
                 int month = DateTime.Now.Month;
                 int year = DateTime.Now.Year;
-                lblDayMonthYear.Text = "Hà nội , ngày " + day.ToString() + " tháng " + month.ToString() + " năm " + year.ToString();
+                lblDayMonthYear.Text = "Hà Nội, ngày " + day.ToString() + " tháng " + month.ToString() + " năm " + year.ToString();
 
                 aListServiceUsed = this.aNewPaymentEN.GetAllServiceUsedInRoom();
                 //Lấy List< IDServiceGroup>

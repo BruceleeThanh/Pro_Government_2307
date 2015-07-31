@@ -702,7 +702,7 @@ namespace RoomManager
             DialogResult result = MessageBox.Show("Chuyển phòng thành công","Nhà khách chính phủ", buttons);
             if (result == System.Windows.Forms.DialogResult.OK) 
             {
-                this.afrmMain.RefreshData_auc_StatusRooms(DateTime.Now);
+                this.afrmMain.RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
                 this.Close();
 
             }

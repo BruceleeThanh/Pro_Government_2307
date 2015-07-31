@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Companies">
           <Key>
             <PropertyRef Name="ID" />
@@ -886,6 +886,8 @@
           <Property Name="Disable" Type="bit" />
           <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="IDLang" Type="int" />
+          <Property Name="LevelSku" Type="int" />
+          <Property Name="OrderSku" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_[BookingHalls_ServicesInfo]_BookingHalls_BookingHallsServices_Services_ServiceGroups' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -1740,8 +1742,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
         </Function>
         <Function Name="CountAvailableRooms_ByType_ByTime_ByLang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
           <Parameter Name="Type" Type="int" Mode="In" />
-          <Parameter Name="Start" Type="date" Mode="In" />
-          <Parameter Name="End" Type="date" Mode="In" />
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="End" Type="datetime" Mode="In" />
           <Parameter Name="IDLang" Type="int" Mode="In" />
         </Function>
         <Function Name="f_split" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1875,8 +1877,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
         <Function Name="sp_PaymentExt_GetAllData_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_PaymentExt_GetAllData_Ext" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="sp_Room_CountAvailableRooms_ByType_ByTime_ByLang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Start" Type="date" Mode="In" />
-          <Parameter Name="End" Type="date" Mode="In" />
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="End" Type="datetime" Mode="In" />
           <Parameter Name="IDLang" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1884,8 +1886,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <Parameter Name="Now" Type="datetime" Mode="In" />
         </Function>
         <Function Name="sp_Rooms_GetAvailable_ByTime_ByLang" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="Start" Type="date" Mode="In" />
-          <Parameter Name="End" Type="date" Mode="In" />
+          <Parameter Name="Start" Type="datetime" Mode="In" />
+          <Parameter Name="End" Type="datetime" Mode="In" />
           <Parameter Name="IDLang" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_RoomsExt_CalculationEfficiency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -2764,7 +2766,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
     FROM [dbo].[vw_Support2_DataPayment] AS [vw_Support2_DataPayment]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -3675,6 +3678,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <Property Name="Disable" Type="Boolean" />
           <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IDLang" Type="Int32" />
+          <Property Name="LevelSku" Type="Int32" />
+          <Property Name="OrderSku" Type="Int32" />
         </EntityType>
         <EntityType Name="vw__BookingHalls_ServicesInfo__BookingHalls_BookingHallsServices_Services_ServiceGroups">
           <Key>
@@ -4555,7 +4560,7 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
             <Parameter Name="delimiter" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Get_Status_Room_In_Date" IsComposable="true" ReturnType="Collection(Model.Get_Status_Room_In_Date_Result)">
-          <Parameter Name="CheckDate" Mode="In" Type="DateTime" />
+            <Parameter Name="CheckDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_AutoChangeStatusBookingR">
             <Parameter Name="IDBookingR" Mode="In" Type="Int32" />
@@ -4567,11 +4572,11 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           </FunctionImport>
           <FunctionImport Name="sp_BookingRooms_CheckConflict_CheckTimeError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_CheckTimeError_Result)" />
           <FunctionImport Name="sp_BookingRooms_CheckConflict_Status678Now" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_Status678Now_Result)">
-          <Parameter Name="Now" Mode="In" Type="DateTime" />
+            <Parameter Name="Now" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_BookingRooms_CheckConflict_StatusError" ReturnType="Collection(Model.sp_BookingRooms_CheckConflict_StatusError_Result)" />
           <FunctionImport Name="sp_BookingRooms_Select_ByTime" ReturnType="Collection(Model.sp_BookingRooms_Select_ByTime_Result)">
-          <Parameter Name="Time" Mode="In" Type="DateTime" />
+            <Parameter Name="Time" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_BookingType_BookingRoomStatus_Result)" />
           <FunctionImport Name="sp_BookingRs_CheckConflict_Level_CustomerType" ReturnType="Collection(Model.sp_BookingRs_CheckConflict_Level_CustomerType_Result)" />
@@ -4582,10 +4587,10 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
             <Parameter Name="ListStatus" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Contracts_GetCurrentHaveNotAllowances" ReturnType="Collection(Model.sp_Contracts_GetCurrentHaveNotAllowances_Result)">
-          <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
+            <Parameter Name="IDAllowance" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Get_Status_ListRooms_In_Month" ReturnType="Collection(Model.sp_Get_Status_ListRooms_In_Month_Result)">
-          <Parameter Name="checkpoint" Mode="In" Type="DateTime" />
+            <Parameter Name="checkpoint" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime" ReturnType="Collection(Model.sp_HallExt_GetCurrentStatusHalls_ByIDHall_ByTime_Result)">
             <Parameter Name="IDHall" Mode="In" Type="Int32" />
@@ -4721,10 +4726,10 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
             <Parameter Name="AcceptDate" Mode="In" Type="DateTime" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentInDivision_Result)">
-          <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+            <Parameter Name="IDDivision" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentNotInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentNotInDivision_Result)">
-          <Parameter Name="IDDivision" Mode="In" Type="Int32" />
+            <Parameter Name="IDDivision" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="sp_BookingExt_GetAllBooking_Result">
@@ -4997,9 +5002,9 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <Property Type="String" Name="BookingHs_Subject" Nullable="true" MaxLength="255" />
         </ComplexType>
         <ComplexType Name="sp_Room_CountAvailableRooms_ByType_ByTime_ByLang_Result">
-          <Property Type="Int32" Name="Standard" Nullable="true" />
           <Property Type="Int32" Name="Suite" Nullable="true" />
           <Property Type="Int32" Name="Superior" Nullable="true" />
+          <Property Type="Int32" Name="Standard" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -5009,6 +5014,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <Property Type="String" Name="Sku" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="Type" Nullable="true" />
           <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="LevelSku" Nullable="true" />
+          <Property Type="Int32" Name="OrderSku" Nullable="true" />
           <Property Type="Int32" Name="BookingRooms_ID" Nullable="false" />
           <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
           <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
@@ -5046,6 +5053,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <Property Type="Boolean" Name="Disable" Nullable="true" />
           <Property Type="String" Name="Code" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="IDLang" Nullable="true" />
+          <Property Type="Int32" Name="LevelSku" Nullable="true" />
+          <Property Type="Int32" Name="OrderSku" Nullable="true" />
         </ComplexType>
         <ComplexType Name="sp_RoomsExt_CalculationEfficiency_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -6055,6 +6064,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
                 <ScalarProperty Name="Disable" ColumnName="Disable" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+                <ScalarProperty Name="LevelSku" ColumnName="LevelSku" />
+                <ScalarProperty Name="OrderSku" ColumnName="OrderSku" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -7167,9 +7178,9 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
           <FunctionImportMapping FunctionImportName="sp_Room_CountAvailableRooms_ByType_ByTime_ByLang" FunctionName="Model.Store.sp_Room_CountAvailableRooms_ByType_ByTime_ByLang">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model.sp_Room_CountAvailableRooms_ByType_ByTime_ByLang_Result">
-                <ScalarProperty Name="Standard" ColumnName="Standard" />
                 <ScalarProperty Name="Suite" ColumnName="Suite" />
                 <ScalarProperty Name="Superior" ColumnName="Superior" />
+                <ScalarProperty Name="Standard" ColumnName="Standard" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -7183,6 +7194,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
                 <ScalarProperty Name="Sku" ColumnName="Sku" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="LevelSku" ColumnName="LevelSku" />
+                <ScalarProperty Name="OrderSku" ColumnName="OrderSku" />
                 <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
                 <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
                 <ScalarProperty Name="Note" ColumnName="Note" />
@@ -7224,6 +7237,8 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
                 <ScalarProperty Name="Disable" ColumnName="Disable" />
                 <ScalarProperty Name="Code" ColumnName="Code" />
                 <ScalarProperty Name="IDLang" ColumnName="IDLang" />
+                <ScalarProperty Name="LevelSku" ColumnName="LevelSku" />
+                <ScalarProperty Name="OrderSku" ColumnName="OrderSku" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -7337,7 +7352,7 @@ warning 6002: The table/view 'DatabaseProjectGovernment.dbo.vw_Support2_DataPaym
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

@@ -13,8 +13,8 @@ namespace DataAccess
     
     public partial class sp_Room_CountAvailableRooms_ByType_ByTime_ByLang_Result
     {
-        public Nullable<int> Standard { get; set; }
         public Nullable<int> Suite { get; set; }
         public Nullable<int> Superior { get; set; }
+        public Nullable<int> Standard { get; set; }
     }
 }

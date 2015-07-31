@@ -1332,7 +1332,7 @@
             this.lblDayMonthYear.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDayMonthYear.SizeF = new System.Drawing.SizeF(220F, 30F);
             this.lblDayMonthYear.StylePriority.UseTextAlignment = false;
-            this.lblDayMonthYear.Text = "Hà nội , ngày 12 tháng 08 năm 2014";
+            this.lblDayMonthYear.Text = "Hà Nội, ngày 12 tháng 08 năm 2014";
             this.lblDayMonthYear.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel7

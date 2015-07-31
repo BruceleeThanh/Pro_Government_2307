@@ -42,6 +42,9 @@
             this.lblNameCustomer = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.picLogo = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -104,17 +107,14 @@
             this.lblTotalMoneyString = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter2 = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblDayMonthYear = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel42 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.picLogo = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel43 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNumberVote = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tblHall)).BeginInit();
@@ -301,6 +301,49 @@
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
+            this.picLogo.LocationFloat = new DevExpress.Utils.PointFloat(41.04077F, 2.5F);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.SizeF = new System.Drawing.SizeF(110F, 110F);
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.BorderWidth = 0;
+            this.xrLabel2.Font = new System.Drawing.Font("Arial", 8F);
+            this.xrLabel2.ForeColor = System.Drawing.Color.DimGray;
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(197.7008F, 35.41666F);
+            this.xrLabel2.Multiline = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(384.2584F, 51.25F);
+            this.xrLabel2.StylePriority.UseBorderColor = false;
+            this.xrLabel2.StylePriority.UseBorderWidth = false;
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseForeColor = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "2 Lê Thạch - 12 Ngô Quyền, Hoàn  Kiếm, Hà Nội, Việt Nam \r\nTel : (84-4) 3825.5801 " +
+    "- (84-4) 3825.5853\r\nFax : (84-4) 3825.9227";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel3
+            // 
+            this.xrLabel3.BorderWidth = 0;
+            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel3.ForeColor = System.Drawing.Color.DimGray;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(197.7008F, 15.41667F);
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(384.2584F, 20F);
+            this.xrLabel3.StylePriority.UseBorderColor = false;
+            this.xrLabel3.StylePriority.UseBorderWidth = false;
+            this.xrLabel3.StylePriority.UseFont = false;
+            this.xrLabel3.StylePriority.UseForeColor = false;
+            this.xrLabel3.StylePriority.UseTextAlignment = false;
+            this.xrLabel3.Text = "NHÀ KHÁCH CHÍNH PHỦ - GOVERMENTGUEST HOUSE";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // BottomMargin
             // 
@@ -1133,6 +1176,53 @@
             this.ReportFooter2.HeightF = 280F;
             this.ReportFooter2.Name = "ReportFooter2";
             // 
+            // xrLabel41
+            // 
+            this.xrLabel41.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel41.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 59.99985F);
+            this.xrLabel41.Name = "xrLabel41";
+            this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel41.SizeF = new System.Drawing.SizeF(752.0001F, 30F);
+            this.xrLabel41.StylePriority.UseBackColor = false;
+            this.xrLabel41.StylePriority.UseFont = false;
+            this.xrLabel41.StylePriority.UsePadding = false;
+            this.xrLabel41.StylePriority.UseTextAlignment = false;
+            this.xrLabel41.Text = "Mã số thuế    :  0100113166";
+            this.xrLabel41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel40
+            // 
+            this.xrLabel40.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel40.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 29.99992F);
+            this.xrLabel40.Name = "xrLabel40";
+            this.xrLabel40.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel40.SizeF = new System.Drawing.SizeF(752.0001F, 30F);
+            this.xrLabel40.StylePriority.UseBackColor = false;
+            this.xrLabel40.StylePriority.UseFont = false;
+            this.xrLabel40.StylePriority.UsePadding = false;
+            this.xrLabel40.StylePriority.UseTextAlignment = false;
+            this.xrLabel40.Text = "Số tài khoản  :  102010000032269  -  Tại  :  Ngân hàng TMCP Công Thương VN - CN  " +
+    "TP Hà Nội";
+            this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 0F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(751.9553F, 30F);
+            this.xrLabel1.StylePriority.UseBackColor = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UsePadding = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch,P" +
+    ".Tràng Tiền,Q.Hoàn Kiếm,Hà Nội";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
             // lblDayMonthYear
             // 
             this.lblDayMonthYear.LocationFloat = new DevExpress.Utils.PointFloat(501.27F, 130.0001F);
@@ -1140,7 +1230,7 @@
             this.lblDayMonthYear.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDayMonthYear.SizeF = new System.Drawing.SizeF(220F, 30F);
             this.lblDayMonthYear.StylePriority.UseTextAlignment = false;
-            this.lblDayMonthYear.Text = "Hà nội , ngày 12 tháng 08 năm 2014";
+            this.lblDayMonthYear.Text = "Hà Nội, ngày 12 tháng 08 năm 2014";
             this.lblDayMonthYear.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel5
@@ -1193,96 +1283,6 @@
             this.xrLabel6});
             this.ReportHeader1.HeightF = 60F;
             this.ReportHeader1.Name = "ReportHeader1";
-            // 
-            // xrLabel41
-            // 
-            this.xrLabel41.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel41.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 59.99985F);
-            this.xrLabel41.Name = "xrLabel41";
-            this.xrLabel41.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel41.SizeF = new System.Drawing.SizeF(752.0001F, 30F);
-            this.xrLabel41.StylePriority.UseBackColor = false;
-            this.xrLabel41.StylePriority.UseFont = false;
-            this.xrLabel41.StylePriority.UsePadding = false;
-            this.xrLabel41.StylePriority.UseTextAlignment = false;
-            this.xrLabel41.Text = "Mã số thuế    :  0100113166";
-            this.xrLabel41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel40
-            // 
-            this.xrLabel40.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel40.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 29.99992F);
-            this.xrLabel40.Name = "xrLabel40";
-            this.xrLabel40.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel40.SizeF = new System.Drawing.SizeF(752.0001F, 30F);
-            this.xrLabel40.StylePriority.UseBackColor = false;
-            this.xrLabel40.StylePriority.UseFont = false;
-            this.xrLabel40.StylePriority.UsePadding = false;
-            this.xrLabel40.StylePriority.UseTextAlignment = false;
-            this.xrLabel40.Text = "Số tài khoản  :  102010000032269  -  Tại  :  Ngân hàng TMCP Công Thương VN - CN  " +
-    "TP Hà Nội";
-            this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0.4999399F, 0F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(751.9553F, 30F);
-            this.xrLabel1.StylePriority.UseBackColor = false;
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UsePadding = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch,P" +
-    ".Tràng Tiền,Q.Hoàn Kiếm,Hà Nội";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = ((System.Drawing.Image)(resources.GetObject("picLogo.Image")));
-            this.picLogo.LocationFloat = new DevExpress.Utils.PointFloat(41.04077F, 2.5F);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.SizeF = new System.Drawing.SizeF(110F, 110F);
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.BorderWidth = 0;
-            this.xrLabel2.Font = new System.Drawing.Font("Arial", 8F);
-            this.xrLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(197.7008F, 35.41666F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(384.2584F, 51.25F);
-            this.xrLabel2.StylePriority.UseBorderColor = false;
-            this.xrLabel2.StylePriority.UseBorderWidth = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseForeColor = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "2 Lê Thạch - 12 Ngô Quyền, Hoàn  Kiếm, Hà Nội, Việt Nam \r\nTel : (84-4) 3825.5801 " +
-    "- (84-4) 3825.5853\r\nFax : (84-4) 3825.9227";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.BorderWidth = 0;
-            this.xrLabel3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.xrLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(197.7008F, 15.41667F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(384.2584F, 20F);
-            this.xrLabel3.StylePriority.UseBorderColor = false;
-            this.xrLabel3.StylePriority.UseBorderWidth = false;
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.StylePriority.UseForeColor = false;
-            this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "NHÀ KHÁCH CHÍNH PHỦ - GOVERMENTGUEST HOUSE";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel43
             // 

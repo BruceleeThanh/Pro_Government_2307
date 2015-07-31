@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRpt_PaymentBookingHs));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.lblSubject = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblTaxNumberCode = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
@@ -117,8 +119,6 @@
             this.ReportHeader1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel43 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNumberVote = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblSubject = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tblHall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
@@ -145,6 +145,34 @@
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // lblSubject
+            // 
+            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubject.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.lblSubject.LocationFloat = new DevExpress.Utils.PointFloat(73.76105F, 0F);
+            this.lblSubject.Name = "lblSubject";
+            this.lblSubject.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblSubject.SizeF = new System.Drawing.SizeF(375F, 23F);
+            this.lblSubject.StylePriority.UseBackColor = false;
+            this.lblSubject.StylePriority.UseFont = false;
+            this.lblSubject.StylePriority.UseTextAlignment = false;
+            this.lblSubject.Text = "null";
+            this.lblSubject.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel21
+            // 
+            this.xrLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel21.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel21.Name = "xrLabel21";
+            this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(71.50001F, 23F);
+            this.xrLabel21.StylePriority.UseBackColor = false;
+            this.xrLabel21.StylePriority.UseFont = false;
+            this.xrLabel21.StylePriority.UseTextAlignment = false;
+            this.xrLabel21.Text = "Tên tiệc :";
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // lblTaxNumberCode
             // 
@@ -1279,7 +1307,7 @@
             this.lblDayMonthYear.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblDayMonthYear.SizeF = new System.Drawing.SizeF(220F, 30F);
             this.lblDayMonthYear.StylePriority.UseTextAlignment = false;
-            this.lblDayMonthYear.Text = "Hà nội , ngày 12 tháng 08 năm 2014";
+            this.lblDayMonthYear.Text = "Hà Nội, ngày 12 tháng 08 năm 2014";
             this.lblDayMonthYear.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // ReportHeader1
@@ -1319,34 +1347,6 @@
             this.lblNumberVote.StylePriority.UseTextAlignment = false;
             this.lblNumberVote.Text = "00000";
             this.lblNumberVote.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // lblSubject
-            // 
-            this.lblSubject.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubject.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lblSubject.LocationFloat = new DevExpress.Utils.PointFloat(73.76105F, 0F);
-            this.lblSubject.Name = "lblSubject";
-            this.lblSubject.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSubject.SizeF = new System.Drawing.SizeF(375F, 23F);
-            this.lblSubject.StylePriority.UseBackColor = false;
-            this.lblSubject.StylePriority.UseFont = false;
-            this.lblSubject.StylePriority.UseTextAlignment = false;
-            this.lblSubject.Text = "null";
-            this.lblSubject.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel21
-            // 
-            this.xrLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel21.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel21.Name = "xrLabel21";
-            this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(71.50001F, 23F);
-            this.xrLabel21.StylePriority.UseBackColor = false;
-            this.xrLabel21.StylePriority.UseFont = false;
-            this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "Tên tiệc :";
-            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // frmRpt_PaymentBookingHs
             // 

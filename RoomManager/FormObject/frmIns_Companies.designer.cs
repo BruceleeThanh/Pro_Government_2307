@@ -60,10 +60,10 @@
             // 
             this.labelControl16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(3, 170);
+            this.labelControl16.Location = new System.Drawing.Point(3, 172);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl16.Size = new System.Drawing.Size(81, 17);
+            this.labelControl16.Size = new System.Drawing.Size(68, 13);
             this.labelControl16.TabIndex = 10;
             this.labelControl16.Text = "Trạng thái";
             // 
@@ -131,10 +131,10 @@
             // 
             this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(3, 11);
+            this.labelControl13.Location = new System.Drawing.Point(3, 12);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl13.Size = new System.Drawing.Size(86, 16);
+            this.labelControl13.Size = new System.Drawing.Size(76, 13);
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "Tên công ty";
             // 
@@ -142,10 +142,10 @@
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(3, 213);
+            this.labelControl8.Location = new System.Drawing.Point(3, 214);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.labelControl8.Size = new System.Drawing.Size(61, 16);
+            this.labelControl8.Size = new System.Drawing.Size(56, 13);
             this.labelControl8.TabIndex = 12;
             this.labelControl8.Text = "Disable";
             // 
@@ -169,10 +169,10 @@
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(3, 129);
+            this.labelControl1.Location = new System.Drawing.Point(3, 131);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.labelControl1.Size = new System.Drawing.Size(43, 17);
+            this.labelControl1.Size = new System.Drawing.Size(38, 13);
             this.labelControl1.TabIndex = 8;
             this.labelControl1.Text = "Loại";
             // 
@@ -197,10 +197,10 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(3, 48);
+            this.labelControl2.Location = new System.Drawing.Point(3, 50);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl2.Size = new System.Drawing.Size(90, 17);
+            this.labelControl2.Size = new System.Drawing.Size(75, 13);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Mã số thuế ";
             // 
@@ -208,10 +208,10 @@
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(3, 88);
+            this.labelControl3.Location = new System.Drawing.Point(3, 90);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.labelControl3.Size = new System.Drawing.Size(55, 17);
+            this.labelControl3.Size = new System.Drawing.Size(48, 13);
             this.labelControl3.TabIndex = 6;
             this.labelControl3.Text = "Địa chỉ";
             // 
