@@ -51,7 +51,7 @@ namespace RoomManager
         }
         #region Tabcontrol
 
-        public void RefreshData_auc_StatusRoomsUpdate(DateTime CheckTime)
+        public void CreateData_auc_StatusRoomsUpdate(DateTime CheckTime)
         {
             //uc_StatusRooms
             //auc_StatusRooms.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
@@ -71,6 +71,7 @@ namespace RoomManager
             //auc_StatusRooms.DataBind();
 
             //uc_StatusRoomsUpdate
+            
             auc_StatusRoomsUpdate.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
             auc_StatusRoomsUpdate.CheckTime = CheckTime;
             if (CheckTime.Date > DateTime.Now.Date) // tuong lai
@@ -86,7 +87,24 @@ namespace RoomManager
                 auc_StatusRoomsUpdate.StatusButtonPopup = 2;
             }
             auc_StatusRoomsUpdate.DataBind();
+        }
 
+        public void RefreshData_auc_StatusRoomsUpdate(DateTime CheckTime) {
+            auc_StatusRoomsUpdate.Datasource = aRoomsBO.GetListStatusRoom(CheckTime).OrderBy(r => r.Sku).ToList();
+            auc_StatusRoomsUpdate.CheckTime = CheckTime;
+            if(CheckTime.Date > DateTime.Now.Date) // tuong lai
+            {
+                auc_StatusRoomsUpdate.StatusButtonPopup = 3;
+            }
+            else if(CheckTime.Date < DateTime.Now.Date) // Qua khu
+            {
+                auc_StatusRoomsUpdate.StatusButtonPopup = 1;
+            }
+            else if(CheckTime.Date == DateTime.Now.Date) // hien tai
+            {
+                auc_StatusRoomsUpdate.StatusButtonPopup = 2;
+            }
+            auc_StatusRoomsUpdate.FlowLayoutPanel_Refesh();
         }
 
         private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
@@ -117,7 +135,7 @@ namespace RoomManager
                 dockManager1.AddPanel(DevExpress.XtraBars.Docking.DockingStyle.Fill);
                 dtpSearch.DateTime = DateTime.Now;
 
-                RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
+                CreateData_auc_StatusRoomsUpdate(DateTime.Now);
                 auc_StatusRoomsUpdate.Dock = DockStyle.Fill;
 
                 panStatusRoom.Controls.Add(auc_StatusRoomsUpdate);

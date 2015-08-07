@@ -29,7 +29,7 @@
             // 
             // navBarControl1
             // 
-            this.navBarControl1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.navBarControl1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
             this.navBarControl1.ActiveGroup = null;
             this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navBarControl1.Location = new System.Drawing.Point(0, 0);

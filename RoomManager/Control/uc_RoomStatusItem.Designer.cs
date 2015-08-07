@@ -68,12 +68,12 @@
             this.lblSku.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.lblSku.Appearance.BackColor2 = System.Drawing.Color.Transparent;
             this.lblSku.Appearance.BorderColor = System.Drawing.Color.Transparent;
-            this.lblSku.Appearance.Font = new System.Drawing.Font("Arial-Rounded", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSku.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSku.Appearance.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblSku.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblSku.Location = new System.Drawing.Point(46, 34);
+            this.lblSku.Location = new System.Drawing.Point(42, 37);
             this.lblSku.Name = "lblSku";
-            this.lblSku.Size = new System.Drawing.Size(28, 28);
+            this.lblSku.Size = new System.Drawing.Size(36, 24);
             this.lblSku.TabIndex = 4;
             this.lblSku.Text = "101";
             this.lblSku.ToolTipController = this.toolTip;

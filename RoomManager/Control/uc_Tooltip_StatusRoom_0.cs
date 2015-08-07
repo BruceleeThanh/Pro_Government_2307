@@ -100,7 +100,7 @@ namespace RoomManager
             afrm.BringToFront();
     
             afrm.Width = this.Width + 18;
-            afrm.Height = this.Height + 20;
+            afrm.Height = this.Height + 27;
             afrm.ShowDialog();
         }
 
