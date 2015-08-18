@@ -1347,8 +1347,8 @@
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch,P" +
-    ".Tràng Tiền,Q.Hoàn Kiếm,Hà Nội";
+            this.xrLabel7.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch, " +
+    "P.Tràng Tiền, Q.Hoàn Kiếm, Hà Nội";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // PageFooter

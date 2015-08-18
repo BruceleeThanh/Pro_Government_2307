@@ -1182,7 +1182,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 12 Ngô Quyền " +
-    "- 2  Lê Thạch,P.Tràng Tiền,Q.Hoàn Kiếm,Hà Nội";
+    "- 2  Lê Thạch, P.Tràng Tiền, Q.Hoàn Kiếm, Hà Nội";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblDayMonthYear

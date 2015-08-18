@@ -153,6 +153,10 @@ namespace Entity
                 temp.PlaceOfIssue1 = cust.PlaceOfIssue1;
                 temp.PlaceOfIssue2 = cust.PlaceOfIssue2;
                 temp.PlaceOfIssue3 = cust.PlaceOfIssue3;
+
+                temp.AgencyOfIssue1 = cust.AgencyOfIssue1;
+                temp.AgencyOfIssue2 = cust.AgencyOfIssue2;
+                temp.AgencyOfIssue3 = cust.AgencyOfIssue3;
                 temp.Status = cust.Status;
 
                 temp.Tel = cust.Tel;
@@ -211,6 +215,10 @@ namespace Entity
                     temp.PlaceOfIssue1 = aListCustomers[i].PlaceOfIssue1;
                     temp.PlaceOfIssue2 = aListCustomers[i].PlaceOfIssue2;
                     temp.PlaceOfIssue3 = aListCustomers[i].PlaceOfIssue3;
+
+                    temp.AgencyOfIssue1 = aListCustomers[i].AgencyOfIssue1;
+                    temp.AgencyOfIssue2 = aListCustomers[i].AgencyOfIssue2;
+                    temp.AgencyOfIssue3 = aListCustomers[i].AgencyOfIssue3;
                     temp.Status = aListCustomers[i].Status;
 
                     temp.Tel = aListCustomers[i].Tel;
@@ -275,6 +283,10 @@ namespace Entity
                         temp.PlaceOfIssue1 = aListCustomers[i].PlaceOfIssue1;
                         temp.PlaceOfIssue2 = aListCustomers[i].PlaceOfIssue2;
                         temp.PlaceOfIssue3 = aListCustomers[i].PlaceOfIssue3;
+
+                        temp.AgencyOfIssue1 = aListCustomers[i].AgencyOfIssue1;
+                        temp.AgencyOfIssue2 = aListCustomers[i].AgencyOfIssue2;
+                        temp.AgencyOfIssue3 = aListCustomers[i].AgencyOfIssue3;
                         temp.Status = aListCustomers[i].Status;
 
                         temp.Tel = aListCustomers[i].Tel;
@@ -338,6 +350,10 @@ namespace Entity
                         this._alistCustomer[i].PlaceOfIssue1 = aCustomers.PlaceOfIssue1;
                         this._alistCustomer[i].PlaceOfIssue2 = aCustomers.PlaceOfIssue2;
                         this._alistCustomer[i].PlaceOfIssue3 = aCustomers.PlaceOfIssue3;
+
+                        this._alistCustomer[i].AgencyOfIssue1 = aCustomers.AgencyOfIssue1;
+                        this._alistCustomer[i].AgencyOfIssue2 = aCustomers.AgencyOfIssue2;
+                        this._alistCustomer[i].AgencyOfIssue3 = aCustomers.AgencyOfIssue3;
                         this._alistCustomer[i].Status = aCustomers.Status;
 
                         this._alistCustomer[i].Tel = aCustomers.Tel;

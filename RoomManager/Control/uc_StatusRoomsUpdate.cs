@@ -54,7 +54,7 @@ namespace RoomManager {
                 NavBarGroup aNavBarGroup = new NavBarGroup();
                 aNavBarGroup.Caption = "Tầng " + i;
                 aNavBarGroup.Name = "navBarGroup" + i;
-                aNavBarGroup.GroupClientHeight = 267;
+                aNavBarGroup.GroupClientHeight = 140;
                 aNavBarGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
                 aNavBarGroup.Expanded = true;
                 AddFloor(aNavBarGroup, i, aListRoom);

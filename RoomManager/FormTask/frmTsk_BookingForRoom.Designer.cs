@@ -602,7 +602,7 @@
             this.chkCustomerType.Name = "chkCustomerType";
             this.chkCustomerType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.chkCustomerType.Properties.Appearance.Options.UseFont = true;
-            this.chkCustomerType.Properties.Caption = "Khách thuộc bộ ngoại giao";
+            this.chkCustomerType.Properties.Caption = "Khách thuộc Bộ Ngoại giao";
             this.chkCustomerType.Size = new System.Drawing.Size(199, 21);
             this.chkCustomerType.TabIndex = 4;
             this.chkCustomerType.CheckedChanged += new System.EventHandler(this.chkCustomerType_CheckedChanged);

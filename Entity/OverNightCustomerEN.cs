@@ -30,6 +30,9 @@ namespace Entity
         public string PlaceOfIssue1 { get; set; }
         public string PlaceOfIssue2 { get; set; }
         public string PlaceOfIssue3 { get; set; }
+        public string AgencyOfIssue1 { get; set; }
+        public string AgencyOfIssue2 { get; set; }
+        public string AgencyOfIssue3 { get; set; }
         public string PurposeComeVietnam { get; set; }
         public string CompanyName { get; set; }
         public Nullable<System.DateTime> CheckInActual { get; set; }

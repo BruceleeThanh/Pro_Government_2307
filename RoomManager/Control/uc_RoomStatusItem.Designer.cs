@@ -43,7 +43,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(122, 124);
+            this.shapeContainer1.Size = new System.Drawing.Size(84, 123);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
@@ -55,9 +55,9 @@
             this.rectangleShape1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.rectangleShape1.BorderWidth = 5;
             this.rectangleShape1.FillGradientColor = System.Drawing.Color.Gainsboro;
-            this.rectangleShape1.Location = new System.Drawing.Point(11, 8);
+            this.rectangleShape1.Location = new System.Drawing.Point(5, 8);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(100, 105);
+            this.rectangleShape1.Size = new System.Drawing.Size(71, 103);
             this.rectangleShape1.Tag = "xxxxxxxxxxxxxxxxxxx";
             this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
             this.rectangleShape1.MouseEnter += new System.EventHandler(this.rectangleShape1_MouseEnter);
@@ -71,7 +71,7 @@
             this.lblSku.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSku.Appearance.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblSku.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblSku.Location = new System.Drawing.Point(42, 37);
+            this.lblSku.Location = new System.Drawing.Point(22, 18);
             this.lblSku.Name = "lblSku";
             this.lblSku.Size = new System.Drawing.Size(36, 24);
             this.lblSku.TabIndex = 4;
@@ -89,17 +89,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbWarning.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.lbWarning.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.lbWarning.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWarning.Appearance.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.lbWarning.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lbWarning.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lbWarning.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbWarning.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbWarning.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
-            this.lbWarning.Location = new System.Drawing.Point(15, 68);
+            this.lbWarning.Location = new System.Drawing.Point(8, 48);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(93, 42);
+            this.lbWarning.Size = new System.Drawing.Size(66, 62);
             this.lbWarning.TabIndex = 5;
-            this.lbWarning.Text = "Mai trả phòng";
+            this.lbWarning.Text = "CheckOut";
             this.lbWarning.Visible = false;
             this.lbWarning.Click += new System.EventHandler(this.lbWarning_Click);
             // 
@@ -114,7 +115,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uc_RoomStatusItem";
-            this.Size = new System.Drawing.Size(122, 124);
+            this.Size = new System.Drawing.Size(84, 123);
             this.Load += new System.EventHandler(this.uc_RoomStatusItem_Load);
             this.Click += new System.EventHandler(this.uc_RoomStatusItem_Click);
             this.ResumeLayout(false);

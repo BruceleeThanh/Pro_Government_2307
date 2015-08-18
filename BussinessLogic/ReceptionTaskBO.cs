@@ -893,7 +893,7 @@ namespace BussinessLogic
                         aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách vãng lai";
                         break;
                     case 5:
-                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách bộ ngoại giao";
+                        aBookingRStatusPayViewEN.CustomerTypeDisplay = "Khách Bộ Ngoại giao";
                         break;
                     default:
                         aBookingRStatusPayViewEN.CustomerTypeDisplay = "Chưa xác định";
@@ -1977,6 +1977,9 @@ namespace BussinessLogic
                                                         PlaceOfIssue1 = aCustomers.PlaceOfIssue1,
                                                         PlaceOfIssue2 = aCustomers.PlaceOfIssue2,
                                                         PlaceOfIssue3 = aCustomers.PlaceOfIssue3,
+                                                        AgencyOfIssue1 = aCustomers.AgencyOfIssue1,
+                                                        AgencyOfIssue2 = aCustomers.AgencyOfIssue2,
+                                                        AgencyOfIssue3 = aCustomers.AgencyOfIssue3
 
                                                     }).Distinct().ToList();
 
@@ -3374,7 +3377,7 @@ namespace BussinessLogic
                 }
                 else if (aCheckInEN.CustomerType == 5)
                 {
-                    customerType = "Khách bộ ngoại giao";
+                    customerType = "Khách Bộ Ngoại giao";
                 }
                 else
                 {
@@ -3513,10 +3516,15 @@ namespace BussinessLogic
                             aCustomers = aListCustomers[0];
                             aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
                             aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Identifier1CreatedDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1CreatedDate;
+                            aCustomers.PlaceOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PlaceOfIssue1;
+                            aCustomers.AgencyOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].AgencyOfIssue1;
+                            aCustomers.Address = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Address;
                             aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
                             aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
                             aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
                             aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomers.Citizen = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Citizen;
                             aCustomersBO.Update(aCustomers);
 
                         }
@@ -3525,10 +3533,15 @@ namespace BussinessLogic
                             aCustomers = new Customers();
                             aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
                             aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Identifier1CreatedDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1CreatedDate;
+                            aCustomers.PlaceOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PlaceOfIssue1;
+                            aCustomers.AgencyOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].AgencyOfIssue1;
+                            aCustomers.Address = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Address;
                             aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
                             aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
                             aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
                             aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomers.Citizen = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Citizen;
 
                             //Them moi khach hang
                             IDCustomer = aCustomersBO.Insert(aCustomers);
@@ -3647,7 +3660,7 @@ namespace BussinessLogic
                 }
                 else if (aNewBookingEN.CustomerType == 5)
                 {
-                    customerType = "Khách bộ ngoại giao";
+                    customerType = "Khách Bộ Ngoại giao";
                 }
                 else
                 {
@@ -3853,7 +3866,7 @@ namespace BussinessLogic
                 }
                 else if (aCheckInEN.CustomerType == 5)
                 {
-                    customerType = "Khách bộ ngoại giao";
+                    customerType = "Khách Bộ Ngoại giao";
                 }
                 else
                 {
@@ -4026,10 +4039,15 @@ namespace BussinessLogic
                             aCustomers = aListCustomers[0];
                             aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
                             aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Identifier1CreatedDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1CreatedDate;
+                            aCustomers.PlaceOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PlaceOfIssue1;
+                            aCustomers.AgencyOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].AgencyOfIssue1;
+                            aCustomers.Address = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Address;
                             aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
                             aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
                             aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
                             aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomers.Citizen = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Citizen;
                             aCustomersBO.Update(aCustomers);
                         }
                         else
@@ -4037,10 +4055,15 @@ namespace BussinessLogic
                             aCustomers = new Customers();
                             aCustomers.Name = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Name;
                             aCustomers.Identifier1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1;
+                            aCustomers.Identifier1CreatedDate = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Identifier1CreatedDate;
+                            aCustomers.PlaceOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].PlaceOfIssue1;
+                            aCustomers.AgencyOfIssue1 = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].AgencyOfIssue1;
+                            aCustomers.Address = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Address;
                             aCustomers.Birthday = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Birthday;
                             aCustomers.Gender = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Gender;
                             aCustomers.Tel = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Tel;
                             aCustomers.Nationality = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Nationality;
+                            aCustomers.Citizen = aCheckInEN.aListRoomMembers[i].ListCustomer[ii].Citizen;
 
                             //Them moi khach hang
                             IDCustomer = aCustomersBO.Insert(aCustomers);

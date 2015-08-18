@@ -75,6 +75,12 @@ namespace RoomManager
                     txtIdentifier1.EditValue = aCustomer.Identifier1;
                     txtIdentifier2.EditValue = aCustomer.Identifier2;
                     txtIdentifier3.EditValue = aCustomer.Identifier3;
+                    txtPlaceOfIssue1.EditValue = aCustomer.PlaceOfIssue1;
+                    txtAgencyOfIssue1.EditValue = aCustomer.AgencyOfIssue1;
+
+                    if(aCustomer.Identifier1CreatedDate != null) {
+                        dtpIdentifier1CreatedDate.DateTime = aCustomer.Identifier1CreatedDate.GetValueOrDefault();
+                    }
                     if (aCustomer.Birthday != null)
                     {
                         dtpBirthday.DateTime = aCustomer.Birthday.GetValueOrDefault();
@@ -102,8 +108,6 @@ namespace RoomManager
                     {
                         lueCitizen.EditValue = CORE.CONSTANTS.SelectedCitizen(2).ID;
                     }
-                    
-
 
                     txtTel.EditValue = aCustomer.Tel;
                     txtEmail.EditValue = aCustomer.Email;
@@ -148,6 +152,14 @@ namespace RoomManager
                         return false;
                     }
                 }
+
+                if(dtpIdentifier1CreatedDate.EditValue != null) {
+                    dtpIdentifier1CreatedDate.Focus();
+                    if(DateTime.Now <= dtpIdentifier1CreatedDate.DateTime) {
+                        MessageBox.Show("Nhập ngày cấp nhỏ hơn ngày hiện tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                    }
+                }
                 
                 return true;
 
@@ -175,6 +187,9 @@ namespace RoomManager
                     aCustomers.Identifier1 = txtIdentifier1.Text;
                     aCustomers.Identifier2 = txtIdentifier2.Text;
                     aCustomers.Identifier3 = txtIdentifier3.Text;
+                    aCustomers.Identifier1CreatedDate = String.IsNullOrEmpty(dtpIdentifier1CreatedDate.Text) == true ? NullDateTime : dtpIdentifier1CreatedDate.DateTime;
+                    aCustomers.PlaceOfIssue1 = txtPlaceOfIssue1.Text;
+                    aCustomers.AgencyOfIssue1 = txtAgencyOfIssue1.Text;
                     aCustomers.Birthday = String.IsNullOrEmpty(dtpBirthday.Text) == true ? NullDateTime : dtpBirthday.DateTime;
                     aCustomers.Gender = Convert.ToString(lueGender.EditValue);
                     aCustomers.Address = txtAddress.Text;

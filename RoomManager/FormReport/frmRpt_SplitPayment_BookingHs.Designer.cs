@@ -1219,8 +1219,8 @@
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch,P" +
-    ".Tràng Tiền,Q.Hoàn Kiếm,Hà Nội";
+            this.xrLabel1.Text = "Đề nghị chuyển trả số tiền trên cho Nhà khách chính phủ - Địa chỉ : 2  Lê Thạch, P" +
+    ".Tràng Tiền, Q.Hoàn Kiếm, Hà Nội";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // lblDayMonthYear

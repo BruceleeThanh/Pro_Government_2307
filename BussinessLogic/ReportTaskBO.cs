@@ -363,6 +363,9 @@ namespace BussinessLogic
                     aNewOverNightCustomer.PlaceOfIssue1 = aCustomers.PlaceOfIssue1;
                     aNewOverNightCustomer.PlaceOfIssue2 = aCustomers.PlaceOfIssue2;
                     aNewOverNightCustomer.PlaceOfIssue3 = aCustomers.PlaceOfIssue3;
+                    aNewOverNightCustomer.AgencyOfIssue1 = aCustomers.AgencyOfIssue1;
+                    aNewOverNightCustomer.AgencyOfIssue2 = aCustomers.AgencyOfIssue2;
+                    aNewOverNightCustomer.AgencyOfIssue3 = aCustomers.AgencyOfIssue3;
 
                     aListNewOverNightCustomer.Add(aNewOverNightCustomer);
                 }
@@ -464,6 +467,9 @@ namespace BussinessLogic
                     aOverNightCustomer.PlaceOfIssue1 = aCustomers.PlaceOfIssue1;
                     aOverNightCustomer.PlaceOfIssue2 = aCustomers.PlaceOfIssue2;
                     aOverNightCustomer.PlaceOfIssue3 = aCustomers.PlaceOfIssue3;
+                    aOverNightCustomer.AgencyOfIssue1 = aCustomers.AgencyOfIssue1;
+                    aOverNightCustomer.AgencyOfIssue2 = aCustomers.AgencyOfIssue2;
+                    aOverNightCustomer.AgencyOfIssue3 = aCustomers.AgencyOfIssue3;
                     aOverNightCustomer.CAN_BO_NM = "NVNK";
                     aOverNightCustomer.IsVietNam = "N";
                     aOverNightCustomer.Quan = "HK";

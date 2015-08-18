@@ -38,6 +38,10 @@ namespace Entity
             this.PlaceOfIssue2 = aItem.PlaceOfIssue2;
             this.PlaceOfIssue3 = aItem.PlaceOfIssue3;
 
+            this.AgencyOfIssue1 = aItem.AgencyOfIssue1;
+            this.AgencyOfIssue2 = aItem.AgencyOfIssue2;
+            this.AgencyOfIssue3 = aItem.AgencyOfIssue3;
+
             this.Status = aItem.Status;
             this.Tel = aItem.Tel;
             this.Type = aItem.Type;
@@ -69,6 +73,10 @@ namespace Entity
             this.PlaceOfIssue1 = aItem.PlaceOfIssue1;
             this.PlaceOfIssue2 = aItem.PlaceOfIssue2;
             this.PlaceOfIssue3 = aItem.PlaceOfIssue3;
+
+            this.AgencyOfIssue1 = aItem.AgencyOfIssue1;
+            this.AgencyOfIssue2 = aItem.AgencyOfIssue2;
+            this.AgencyOfIssue3 = aItem.AgencyOfIssue3;
 
             this.Status = aItem.Status;
             this.Tel = aItem.Tel;

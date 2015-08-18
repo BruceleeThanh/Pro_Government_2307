@@ -46,6 +46,9 @@ namespace Entity
             this.PlaceOfIssue1 = aCustomers.PlaceOfIssue1;
             this.PlaceOfIssue2 = aCustomers.PlaceOfIssue2;
             this.PlaceOfIssue3 = aCustomers.PlaceOfIssue3;
+            this.AgencyOfIssue1 = aCustomers.AgencyOfIssue1;
+            this.AgencyOfIssue2 = aCustomers.AgencyOfIssue2;
+            this.AgencyOfIssue3 = aCustomers.AgencyOfIssue3;
         }
     }
 

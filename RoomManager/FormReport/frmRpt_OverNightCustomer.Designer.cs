@@ -40,7 +40,7 @@
             this.lblAdress = new DevExpress.XtraReports.UI.XRLabel();
             this.lblIdentify = new DevExpress.XtraReports.UI.XRLabel();
             this.lblCreatedDate = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblAgencyOfIssue1 = new DevExpress.XtraReports.UI.XRLabel();
             this.lblName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
@@ -243,20 +243,20 @@
             this.lblCreatedDate.StylePriority.UseTextAlignment = false;
             this.lblCreatedDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
-            // xrLabel22
+            // lblAgencyOfIssue1
             // 
-            this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel22.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(110F, 224.8334F);
-            this.xrLabel22.Name = "xrLabel22";
-            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(263F, 23F);
-            this.xrLabel22.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel22.StylePriority.UseBorders = false;
-            this.xrLabel22.StylePriority.UseFont = false;
-            this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.lblAgencyOfIssue1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.lblAgencyOfIssue1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblAgencyOfIssue1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgencyOfIssue1.LocationFloat = new DevExpress.Utils.PointFloat(110F, 224.8334F);
+            this.lblAgencyOfIssue1.Name = "lblAgencyOfIssue1";
+            this.lblAgencyOfIssue1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.lblAgencyOfIssue1.SizeF = new System.Drawing.SizeF(263F, 23F);
+            this.lblAgencyOfIssue1.StylePriority.UseBorderDashStyle = false;
+            this.lblAgencyOfIssue1.StylePriority.UseBorders = false;
+            this.lblAgencyOfIssue1.StylePriority.UseFont = false;
+            this.lblAgencyOfIssue1.StylePriority.UseTextAlignment = false;
+            this.lblAgencyOfIssue1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // lblName
             // 
@@ -657,7 +657,7 @@
             this.xrLabel18,
             this.lblPlaceOfIssue1,
             this.xrLabel13,
-            this.xrLabel22,
+            this.lblAgencyOfIssue1,
             this.xrLabel12,
             this.lblCheckInActual,
             this.lblCheckOutPlan,
@@ -824,7 +824,7 @@
         private DevExpress.XtraReports.UI.XRLabel lblAdress;
         private DevExpress.XtraReports.UI.XRLabel lblIdentify;
         private DevExpress.XtraReports.UI.XRLabel lblCreatedDate;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel22;
+        private DevExpress.XtraReports.UI.XRLabel lblAgencyOfIssue1;
         private DevExpress.XtraReports.UI.DetailReportBand DetailReport;
         private DevExpress.XtraReports.UI.DetailBand Detail1;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader1;

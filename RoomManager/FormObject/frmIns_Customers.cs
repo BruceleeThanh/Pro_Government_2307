@@ -84,6 +84,9 @@ namespace RoomManager
                     aCustomers.Identifier1 = txtIdentifier1.Text;
                     aCustomers.Identifier2 = txtIdentifier2.Text;
                     aCustomers.Identifier3 = txtIdentifier3.Text;
+                    aCustomers.Identifier1CreatedDate = String.IsNullOrEmpty(dtpIdentifier1CreatedDate.Text) == true ? NullDateTime : dtpIdentifier1CreatedDate.DateTime;
+                    aCustomers.PlaceOfIssue1 = txtPlaceOfIssue1.Text;
+                    aCustomers.AgencyOfIssue1 = txtAgencyOfIssue1.Text;
                     aCustomers.Birthday = String.IsNullOrEmpty(dtpBirthday.Text) == true ? NullDateTime : dtpBirthday.DateTime;
                     aCustomers.Gender = Convert.ToString(lueGender.EditValue);
                     aCustomers.Address = txtAddress.Text;
@@ -140,8 +143,6 @@ namespace RoomManager
                 lueCitizen.Properties.DisplayMember = "Name";
                 lueCitizen.Properties.ValueMember = "ID";
                 lueCitizen.EditValue = CORE.CONSTANTS.SelectedCitizen(2).ID;
-                
-
 
                 lueGender.Properties.DataSource = CORE.CONSTANTS.ListGenders;//Load Gioi tinh
                 lueGender.Properties.DisplayMember = "Name";
@@ -157,9 +158,6 @@ namespace RoomManager
             }
 
         }
-
-
-
 
     }
 }

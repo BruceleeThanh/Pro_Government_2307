@@ -311,6 +311,13 @@ namespace RoomManager
                 dgvAvailableRooms.DataSource = this.aListAvaiableRooms;
                 dgvAvailableRooms.RefreshDataSource();
 
+                RoomsBO aRoomsBO = new RoomsBO();
+                this.aCurrent_CodeRoom = Convert.ToString(viewSelectedRooms.GetFocusedRowCellValue("RoomCode"));
+                lblRoomSku.Text = "Phòng số :" + aRoomsBO.Select_ByCodeRoom(this.aCurrent_CodeRoom, 1).Sku;
+
+                dgvSelectedCustomer.DataSource = null;
+                dgvSelectedCustomer.DataSource = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom);
+                dgvSelectedCustomer.RefreshDataSource();
 
             }
             catch (Exception ex)
@@ -390,40 +397,45 @@ namespace RoomManager
                 }
                 else
                 {
-                    DateTime? dateTime = null;
-                    CustomerInfoEN aCustomerInfoEN = new CustomerInfoEN();
-                    int IDCustomer = Convert.ToInt32(grvAvailableCustomer.GetFocusedRowCellValue("ID"));
-                    aCustomerInfoEN.ID = IDCustomer;
-                    aCustomerInfoEN.RoomCode = this.aCurrent_CodeRoom;
-                    aCustomerInfoEN.Name = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Name"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Name"));
-                    aCustomerInfoEN.Identifier1 = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1"));
-                    aCustomerInfoEN.Birthday = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Birthday"))) == true ? dateTime : Convert.ToDateTime(grvAvailableCustomer.GetFocusedRowCellValue("Birthday"));
-                    aCustomerInfoEN.Tel = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Tel"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Tel"));
-                    aCustomerInfoEN.Gender = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Gender"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Gender"));
-                    aCustomerInfoEN.Nationality = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Nationality"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Nationality"));
-                    aCustomerInfoEN.PepoleRepresentative = false;
+                    if(this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom).Count() < 3) {
+                        DateTime? dateTime = null;
+                        CustomerInfoEN aCustomerInfoEN = new CustomerInfoEN();
+                        int IDCustomer = Convert.ToInt32(grvAvailableCustomer.GetFocusedRowCellValue("ID"));
+                        aCustomerInfoEN.ID = IDCustomer;
+                        aCustomerInfoEN.RoomCode = this.aCurrent_CodeRoom;
+                        aCustomerInfoEN.Name = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Name"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Name"));
+                        aCustomerInfoEN.Identifier1 = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1"));
+                        aCustomerInfoEN.Identifier1CreatedDate = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1CreatedDate"))) == true ? dateTime : Convert.ToDateTime(grvAvailableCustomer.GetFocusedRowCellValue("Identifier1CreatedDate"));
+                        aCustomerInfoEN.PlaceOfIssue1 = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("PlaceOfIssue1"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("PlaceOfIssue1"));
+                        aCustomerInfoEN.AgencyOfIssue1 = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("AgencyOfIssue1"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("AgencyOfIssue1"));
+                        aCustomerInfoEN.Address = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Address"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Address"));
+                        aCustomerInfoEN.Birthday = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Birthday"))) == true ? dateTime : Convert.ToDateTime(grvAvailableCustomer.GetFocusedRowCellValue("Birthday"));
+                        aCustomerInfoEN.Tel = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Tel"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Tel"));
+                        aCustomerInfoEN.Gender = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Gender"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Gender"));
+                        aCustomerInfoEN.Nationality = String.IsNullOrEmpty(Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Nationality"))) == true ? String.Empty : Convert.ToString(grvAvailableCustomer.GetFocusedRowCellValue("Nationality"));
+                        aCustomerInfoEN.PepoleRepresentative = false;
 
-                    if (this.aCheckInEN.IsCustomerExistInRoom(this.aCurrent_CodeRoom, IDCustomer) == true)
-                    {
-                        MessageBox.Show("Khách đã có ở trong phòng vui lòng chọn người khác.", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        if (!String.IsNullOrEmpty(this.aCurrent_CodeRoom))
-                        {
-                            this.aCheckInEN.AddCustomerToRoom(this.aCurrent_CodeRoom, aCustomerInfoEN);
-                            dgvSelectedCustomer.DataSource = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom);
-                            dgvSelectedCustomer.RefreshDataSource();
+                        if(this.aCheckInEN.IsCustomerExistInRoom(this.aCurrent_CodeRoom, IDCustomer) == true) {
+                            MessageBox.Show("Khách đã có ở trong phòng vui lòng chọn người khác.", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                    }
+                        else {
+                            if(!String.IsNullOrEmpty(this.aCurrent_CodeRoom)) {
+                                this.aCheckInEN.AddCustomerToRoom(this.aCurrent_CodeRoom, aCustomerInfoEN);
+                                dgvSelectedCustomer.DataSource = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom);
+                                dgvSelectedCustomer.RefreshDataSource();
+                            }
+                        }
 
-                    List<Customers> aListTemps = aListAvailableCustomers.Where(c => c.ID == Convert.ToInt32(grvAvailableCustomer.GetFocusedRowCellValue("ID"))).ToList();
-                    if (aListTemps.Count > 0)
-                    {
-                        this.aListAvailableCustomers.Remove(aListTemps[0]);
+                        List<Customers> aListTemps = aListAvailableCustomers.Where(c => c.ID == Convert.ToInt32(grvAvailableCustomer.GetFocusedRowCellValue("ID"))).ToList();
+                        if(aListTemps.Count > 0) {
+                            this.aListAvailableCustomers.Remove(aListTemps[0]);
+                        }
+                        dgvAvailableCustomer.DataSource = this.aListAvailableCustomers;
+                        dgvAvailableCustomer.RefreshDataSource();
                     }
-                    dgvAvailableCustomer.DataSource = this.aListAvailableCustomers;
-                    dgvAvailableCustomer.RefreshDataSource();
+                    else {
+                        MessageBox.Show("Một phòng chỉ được nhập tối đa 3 người", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
             }
@@ -443,6 +455,10 @@ namespace RoomManager
                 aCustomers.ID = Convert.ToInt32(viewSelectedCustomer.GetFocusedRowCellValue("ID"));
                 aCustomers.Name = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Name"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Name"));
                 aCustomers.Identifier1 = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Identifier1"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Identifier1"));
+                aCustomers.Identifier1CreatedDate = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Identifier1CreatedDate"))) == true ? dateTime : Convert.ToDateTime(viewSelectedCustomer.GetFocusedRowCellValue("Identifier1CreatedDate"));
+                aCustomers.PlaceOfIssue1 = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("PlaceOfIssue1"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("PlaceOfIssue1"));
+                aCustomers.AgencyOfIssue1 = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("AgencyOfIssue1"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("AgencyOfIssue1"));
+                aCustomers.Address = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Address"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Address"));
                 aCustomers.Birthday = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Birthday"))) == true ? dateTime : Convert.ToDateTime(viewSelectedCustomer.GetFocusedRowCellValue("Birthday"));
                 aCustomers.Tel = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Tel"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Tel"));
                 aCustomers.Gender = String.IsNullOrEmpty(Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Gender"))) == true ? String.Empty : Convert.ToString(viewSelectedCustomer.GetFocusedRowCellValue("Gender"));
@@ -525,11 +541,15 @@ namespace RoomManager
                     lblIDCustomer.Text = Convert.ToString(this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).ID);
                     txtNames.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Name;
                     txtIdentifier1.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Identifier1;
+                    dtpIdentifier1CreatedDate.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Identifier1CreatedDate;
+                    txtPlaceOfIssue1.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).PlaceOfIssue1;
+                    txtAgencyOfIssue.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).AgencyOfIssue1;
+                    txtAddress.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Address;
                     dtpBirthday.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Birthday;
                     lueGender.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Gender;
                     txtTel.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Tel;
-                    lueNationality.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Nationality;
 
+                    lueNationality.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).Nationality;
                     txtPurposeComeVietnam.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).PurposeComeVietnam;
                     dtpDateEnterCountry.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).DateEnterCountry;
                     txtEnterGate.EditValue = this.aCheckInEN.GetCustomerInfoByRoomCodeAndIDCustomer(this.aCurrent_CodeRoom, this.aCurrent_IDCustomer).EnterGate;
@@ -568,11 +588,15 @@ namespace RoomManager
                 lblIDCustomer.Text = "000";
                 txtNames.EditValue = string.Empty;
                 txtIdentifier1.EditValue = string.Empty;
+                dtpIdentifier1CreatedDate.EditValue = null;
+                txtPlaceOfIssue1.EditValue = null;
+                txtAgencyOfIssue.EditValue = null;
+                txtAddress.EditValue = null;
                 dtpBirthday.EditValue = null;
                 lueGender.EditValue = CORE.CONSTANTS.SelectedGender(1).ID;
                 txtTel.EditValue = string.Empty;
-                lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
 
+                lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
                 txtPurposeComeVietnam.EditValue = string.Empty;
                 dtpDateEnterCountry.EditValue = null;
                 txtEnterGate.EditValue = string.Empty;
@@ -629,6 +653,10 @@ namespace RoomManager
                         aCustomerInfoEN.RoomCode = this.aCurrent_CodeRoom;
                         aCustomerInfoEN.Name = txtNames.Text;
                         aCustomerInfoEN.Identifier1 = txtIdentifier1.Text;
+                        aCustomerInfoEN.Identifier1CreatedDate = String.IsNullOrEmpty(dtpIdentifier1CreatedDate.Text) ? dateTime : dtpIdentifier1CreatedDate.DateTime;
+                        aCustomerInfoEN.PlaceOfIssue1 = txtPlaceOfIssue1.Text;
+                        aCustomerInfoEN.AgencyOfIssue1 = txtAgencyOfIssue.Text;
+                        aCustomerInfoEN.Address = txtAddress.Text;
                         aCustomerInfoEN.Birthday = String.IsNullOrEmpty(dtpBirthday.Text) ? dateTime : dtpBirthday.DateTime;
                         aCustomerInfoEN.Citizen = Convert.ToInt32(lueCitizen.EditValue);
                         aCustomerInfoEN.Gender = Convert.ToString(lueGender.EditValue);
@@ -702,6 +730,20 @@ namespace RoomManager
                         dtpBirthday.Focus();
                         MessageBox.Show("Vui lòng nhập ngày sinh phải nhỏ hơn hoặc bằng ngày hiện tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return false;
+                    }
+                }
+                else if(dtpIdentifier1CreatedDate.EditValue != null) {
+                    if(dtpIdentifier1CreatedDate.DateTime.Date > DateTime.Now.Date) {
+                        dtpIdentifier1CreatedDate.Focus();
+                        MessageBox.Show("Vui lòng nhập ngày cấp phải nhỏ hơn hoặc bằng ngày hiện tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return false;
+                    }
+                    else {
+                        if(dtpIdentifier1CreatedDate.DateTime.Date < dtpBirthday.DateTime.Date) {
+                            dtpIdentifier1CreatedDate.Focus();
+                            MessageBox.Show("Vui lòng nhập ngày cấp phải lớn hơn hoặc bằng ngày sinh.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return false;
+                        }
                     }
                 }
                 else if (dtpDateEnterCountry.EditValue != null)
@@ -857,9 +899,9 @@ namespace RoomManager
                 if (this.CheckDataBeforeCheckIn() == true)
                 {
 
-                    if (!String.IsNullOrEmpty(txtNames.Text) || !String.IsNullOrEmpty(txtIdentifier1.Text) || !String.IsNullOrEmpty(dtpBirthday.Text)
-                        || !String.IsNullOrEmpty(txtTel.Text) || !String.IsNullOrEmpty(txtPurposeComeVietnam.Text) || !String.IsNullOrEmpty(dtpDateEnterCountry.Text)
-                    || !String.IsNullOrEmpty(txtEnterGate.Text) || !String.IsNullOrEmpty(dtpTemporaryResidenceDate.Text) || !String.IsNullOrEmpty(dtpLeaveDate.Text)
+                    if(!String.IsNullOrEmpty(txtNames.Text) || !String.IsNullOrEmpty(txtIdentifier1.Text) || !String.IsNullOrEmpty(dtpIdentifier1CreatedDate.Text) || !String.IsNullOrEmpty(txtPlaceOfIssue1.Text)
+                       || !String.IsNullOrEmpty(txtAgencyOfIssue.Text) || !String.IsNullOrEmpty(txtAddress.Text) || !String.IsNullOrEmpty(dtpBirthday.Text) || !String.IsNullOrEmpty(txtTel.Text) || !String.IsNullOrEmpty(txtPurposeComeVietnam.Text) 
+                       || !String.IsNullOrEmpty(dtpDateEnterCountry.Text) || !String.IsNullOrEmpty(txtEnterGate.Text) || !String.IsNullOrEmpty(dtpTemporaryResidenceDate.Text) || !String.IsNullOrEmpty(dtpLeaveDate.Text)
                     || !String.IsNullOrEmpty(txtOrganization.Text) || !String.IsNullOrEmpty(dtpLimitDateEnterCountry.Text))
                     {
                         DialogResult result = MessageBox.Show("Bạn có muốn lưu lại thông tin khách hàng không?", "Câu hỏi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

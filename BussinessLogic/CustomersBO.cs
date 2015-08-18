@@ -152,6 +152,15 @@ namespace BussinessLogic
                 aCustomers.Disable = items.Customers_Disable;
                 aCustomers.Gender = items.Customers_Gender;
                 aCustomers.Citizen = items.Customers_Citizen;
+                aCustomers.Identifier1CreatedDate = items.Customers_Identifier1CreatedDate;
+                aCustomers.Identifier2CreatedDate = items.Customers_Identifier2CreatedDate;
+                aCustomers.Identifier3CreatedDate = items.Customers_Identifier3CreatedDate;
+                aCustomers.PlaceOfIssue1 = items.Customers_PlaceOfIssue1;
+                aCustomers.PlaceOfIssue2 = items.Customers_PlaceOfIssue2;
+                aCustomers.PlaceOfIssue3 = items.Customers_PlaceOfIssue3;
+                aCustomers.AgencyOfIssue1 = items.Customers_AgencyOfIssue1;
+                aCustomers.AgencyOfIssue2 = items.Customers_AgencyOfIssue2;
+                aCustomers.AgencyOfIssue3 = items.Customers_AgencyOfIssue3;
 
                 aListReturn.Add(aCustomers);
             }
