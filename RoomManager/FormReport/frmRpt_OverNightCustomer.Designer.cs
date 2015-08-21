@@ -85,7 +85,6 @@
             // 
             // Detail
             // 
-            this.Detail.Expanded = false;
             this.Detail.HeightF = 0.583299F;
             this.Detail.MultiColumn.ColumnCount = 2;
             this.Detail.MultiColumn.Layout = DevExpress.XtraPrinting.ColumnLayout.AcrossThenDown;
@@ -512,7 +511,6 @@
             // 
             // ReportHeader
             // 
-            this.ReportHeader.Expanded = false;
             this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -781,7 +779,7 @@
             this.Version = "13.1";
             this.Watermark.Image = ((System.Drawing.Image)(resources.GetObject("frmRpt_OverNightCustomer.Watermark.Image")));
             this.Watermark.ImageTiling = true;
-            this.Watermark.ImageTransparency = 151;
+            this.Watermark.ImageTransparency = 240;
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

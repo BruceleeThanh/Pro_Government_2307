@@ -312,7 +312,7 @@ namespace RoomManager
                 dgvAvailableRooms.RefreshDataSource();
 
                 RoomsBO aRoomsBO = new RoomsBO();
-                this.aCurrent_CodeRoom = Convert.ToString(viewSelectedRooms.GetFocusedRowCellValue("RoomCode"));
+                this.aCurrent_CodeRoom = aRoomMemberEN.RoomCode;
                 lblRoomSku.Text = "Phòng số :" + aRoomsBO.Select_ByCodeRoom(this.aCurrent_CodeRoom, 1).Sku;
 
                 dgvSelectedCustomer.DataSource = null;
@@ -397,7 +397,11 @@ namespace RoomManager
                 }
                 else
                 {
-                    if(this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom).Count() < 3) {
+                    int countCustomerInRoom = 0;
+                    if(this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom) != null) {
+                        countCustomerInRoom = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom).Count();
+                    }
+                    if(countCustomerInRoom < 3) {
                         DateTime? dateTime = null;
                         CustomerInfoEN aCustomerInfoEN = new CustomerInfoEN();
                         int IDCustomer = Convert.ToInt32(grvAvailableCustomer.GetFocusedRowCellValue("ID"));
@@ -808,6 +812,8 @@ namespace RoomManager
         {
             try
             {
+                string notiRoomEmpty = "Vui lòng thêm khách vào phòng ";
+                bool checkRoomEmpty = false;
                 if (lueIDCompanies.EditValue == null && String.IsNullOrEmpty(txtNameCompany.Text))
                 {
                     lueIDCompanies.Focus();
@@ -821,28 +827,25 @@ namespace RoomManager
                     return false;
                 }
 
-                // Thanh sua loi - 01/07/2015
+                // Brucelee Thanh sua loi - 01/07/2015
                 // Bat dau
 
                 // Phong ko co nguoi van checkin thanh cong
-                if (dgvSelectedCustomer.DataSource == null) {
-                    string notiRoomEmpty = "Vui lòng thêm khách vào phòng ";
-                    bool checkRoomEmpty = false;
-                    foreach (RoomMemberEN checkListCus in aCheckInEN.aListRoomMembers) {
-                        if (checkListCus.ListCustomer.Count == 0) {
-                            notiRoomEmpty += checkListCus.RoomSku + " ";
-                            checkRoomEmpty = true;
-                        }
+                
+                foreach (RoomMemberEN checkListCus in aCheckInEN.aListRoomMembers) {
+                    if (checkListCus.ListCustomer.Count == 0) {
+                        notiRoomEmpty += checkListCus.RoomSku + " ";
+                        checkRoomEmpty = true;
                     }
-                    if (checkRoomEmpty) {
-                        MessageBox.Show(notiRoomEmpty, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return false;
-                    }
+                }
+                if (checkRoomEmpty) {
+                    MessageBox.Show(notiRoomEmpty, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
 
-                    // Check du lieu cua khach moi truoc khi checkin
-                    if (!this.CheckDataBeforeSaveCustomer()) {
-                        return false;
-                    }
+                // Check du lieu cua khach moi truoc khi checkin
+                if (!this.CheckDataBeforeSaveCustomer()) {
+                    return false;
                 }
 
                 // Ket thuc

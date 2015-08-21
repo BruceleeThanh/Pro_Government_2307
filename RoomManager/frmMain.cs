@@ -160,6 +160,7 @@ namespace RoomManager
             try
             {
                 RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
+                dtpSearch.DateTime = DateTime.Now;
             }
             catch (Exception ex)
             {

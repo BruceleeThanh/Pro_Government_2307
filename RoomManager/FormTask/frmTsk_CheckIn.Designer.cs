@@ -871,9 +871,10 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Location = new System.Drawing.Point(359, 56);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(126, 13);
+            this.labelControl3.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl3.Size = new System.Drawing.Size(79, 13);
             this.labelControl3.TabIndex = 40;
-            this.labelControl3.Text = "Mục đích đến Việt Nam";
+            this.labelControl3.Text = "Lý do tạm trú";
             // 
             // txtPurposeComeVietnam
             // 
@@ -892,7 +893,8 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Location = new System.Drawing.Point(359, 81);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(89, 13);
+            this.labelControl2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl2.Size = new System.Drawing.Size(92, 13);
             this.labelControl2.TabIndex = 42;
             this.labelControl2.Text = "Ngày nhập cảnh";
             // 
@@ -923,7 +925,8 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Location = new System.Drawing.Point(359, 131);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(122, 13);
+            this.labelControl6.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl6.Size = new System.Drawing.Size(125, 13);
             this.labelControl6.TabIndex = 46;
             this.labelControl6.Text = "Ngày đăng ký tạm trú";
             // 
@@ -933,7 +936,8 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Location = new System.Drawing.Point(359, 106);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(114, 13);
+            this.labelControl4.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl4.Size = new System.Drawing.Size(117, 13);
             this.labelControl4.TabIndex = 44;
             this.labelControl4.Text = "Cửa khẩu nhập cảnh";
             // 
@@ -975,7 +979,8 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Location = new System.Drawing.Point(359, 156);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(106, 13);
+            this.labelControl7.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl7.Size = new System.Drawing.Size(109, 13);
             this.labelControl7.TabIndex = 48;
             this.labelControl7.Text = "Ngày dời đi dự kiến";
             // 
@@ -1006,7 +1011,8 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Location = new System.Drawing.Point(359, 181);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(85, 13);
+            this.labelControl8.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl8.Size = new System.Drawing.Size(88, 13);
             this.labelControl8.TabIndex = 50;
             this.labelControl8.Text = "Đơn vị tiếp đón";
             // 
@@ -1016,7 +1022,8 @@
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Location = new System.Drawing.Point(359, 206);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(111, 13);
+            this.labelControl9.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.labelControl9.Size = new System.Drawing.Size(114, 13);
             this.labelControl9.TabIndex = 52;
             this.labelControl9.Text = "Ngày hết hạn cư trú";
             // 

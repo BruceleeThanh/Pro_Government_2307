@@ -13,7 +13,7 @@ namespace Entity
         public string Service_Unit { get; set; }
         
 
-        // Thành sửa check số lượng dịch vụ âm 16/06/2015
+        // Brucelee Thanh sửa check số lượng dịch vụ âm 16/06/2015
  
         // Bắt đầu
         public decimal? Sum {

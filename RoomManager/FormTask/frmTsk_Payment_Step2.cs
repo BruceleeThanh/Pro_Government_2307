@@ -222,7 +222,7 @@ namespace RoomManager
                 //====================================================================================================
                 //====================================================================================================
                 //====================================================================================================
-                // Thành sửa ngày 04/06/2015
+                // Brucelee Thanh sửa ngày 04/06/2015
                 // 
                 //---------------
                 // Lỗi sai điều kiện câu lệnh if khiến aBookingHs truyền dữ liệu CustomerType sai cho NewPaymentEN
@@ -1202,38 +1202,37 @@ namespace RoomManager
         {
             try
             {
-                if (this.CurrentIDBookingRoom > 0)
-                {
+                if(this.IsLockForm == true) {
+                    MessageBox.Show("Bạn cần tắt chế độ khoá form trước khi sửa bằng cách ấn vào nút 'Sửa hóa đơn' ");
+                }
+                else {
 
-                    ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
-                    if (dtpCheckInActual.DateTime < dtpCheckOutActual.DateTime)
-                    {
-                        if (this.CheckChangeTime(CurrentIDBookingRoom, CodeRoom, dtpCheckInActual.DateTime, dtpCheckOutActual.DateTime) == true)
-                        {
-                            List<BookingRoomUsedEN> aTemp = new List<BookingRoomUsedEN>();
-                            aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList();
+                    if(this.CurrentIDBookingRoom > 0) {
 
-                            if (aTemp.Count > 0)
-                            {
-                                // Phai kiem tra xem sua cai gi
-                                if (aTemp[0].Status >= 7)
-                                {
-                                    this.aNewPaymentEN.ChangeCheckOutActual(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
+                        ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+                        if(dtpCheckInActual.DateTime < dtpCheckOutActual.DateTime) {
+                            if(this.CheckChangeTime(CurrentIDBookingRoom, CodeRoom, dtpCheckInActual.DateTime, dtpCheckOutActual.DateTime) == true) {
+                                List<BookingRoomUsedEN> aTemp = new List<BookingRoomUsedEN>();
+                                aTemp = this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList();
+
+                                if(aTemp.Count > 0) {
+                                    // Phai kiem tra xem sua cai gi
+                                    if(aTemp[0].Status >= 7) {
+                                        this.aNewPaymentEN.ChangeCheckOutActual(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
+                                    }
+                                    else if(aTemp[0].Status < 7) {
+                                        this.aNewPaymentEN.ChangeCheckOutPlan(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
+
+                                    }
+
                                 }
-                                else if (aTemp[0].Status < 7)
-                                {
-                                    this.aNewPaymentEN.ChangeCheckOutPlan(this.CurrentIDBookingRoom, dtpCheckOutActual.DateTime);
-
-                                }
-                                
                             }
+                            this.LoadDataCurrentRoomForControl();
                         }
-                        this.LoadDataCurrentRoomForControl();
-                    }
-                    else
-                    {
+                        else {
 
-                        MessageBox.Show("Vui lòng nhập ngày giờ CheckIn phải nhỏ hơn ngày giờ CheckOut", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Vui lòng nhập ngày giờ CheckIn phải nhỏ hơn ngày giờ CheckOut", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
 
