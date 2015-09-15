@@ -6,7 +6,7 @@ using DataAccess;
 using BussinessLogic;
 using System.Globalization;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_SystemUsers : DevExpress.XtraEditors.XtraForm
     {

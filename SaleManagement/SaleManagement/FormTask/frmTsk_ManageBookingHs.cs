@@ -14,7 +14,7 @@ using Entity;
 using CORESYSTEM;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_ManageBookingHs : DevExpress.XtraEditors.XtraForm
     {
@@ -248,10 +248,10 @@ namespace SaleManagement
         {
             try
             {
-                int IDBookingH = Convert.ToInt32(grvBookingHs.GetFocusedRowCellValue("ID"));
-                decimal BookingMoney = Convert.ToDecimal(grvBookingHs.GetFocusedRowCellValue("BookingMoney"));
-                frmTsk_PaymentHall afrmTsk_PaymentHall = new frmTsk_PaymentHall(IDBookingH);
-                afrmTsk_PaymentHall.ShowDialog();
+                //int IDBookingH = Convert.ToInt32(grvBookingHs.GetFocusedRowCellValue("ID"));
+                //decimal BookingMoney = Convert.ToDecimal(grvBookingHs.GetFocusedRowCellValue("BookingMoney"));
+                //frmTsk_PaymentHall afrmTsk_PaymentHall = new frmTsk_PaymentHall(IDBookingH);
+                //afrmTsk_PaymentHall.ShowDialog();
             }
             catch (Exception ex)
             {

@@ -28,11 +28,11 @@ namespace RoomManager
         {
             InitializeComponent();
         }
-        public frmTsk_ReportPaymentStyle1(List<RptPaymentStyle1_ForDisplay> aListData, List<int> aListIDCustomerGroup, string CompanyName, string Address, string NameCustomerGroup,string InvoiceNumber
+        public frmTsk_ReportPaymentStyle1(List<RptPaymentStyle1_ForDisplay> aListData, List<ServiceGroups> aListServiceGroups, string CompanyName, string Address, string NameCustomerGroup, string InvoiceNumber
             , DateTime FirstDate, DateTime LastDate, decimal? BookingHMoney, decimal? BookingRMoney,int IDBookingR)
         {
             InitializeComponent();
-            this.aListIDCustomerGroup = aListIDCustomerGroup;
+            this.aListServiceGroups.AddRange(aListServiceGroups);
             this.CompanyName = CompanyName;
             this.Address = Address;
             this.NameCustomerGroup = NameCustomerGroup;
@@ -52,11 +52,12 @@ namespace RoomManager
             
         }
         public List<RptPaymentStyle1_ForPrint> aListRet = new List<RptPaymentStyle1_ForPrint>();
-        public List<int> aListIDCustomerGroup = new List<int>();
+        //public List<int> aListIDServiceGroup = new List<int>();
+        public List<ServiceGroups> aListServiceGroups = new List<ServiceGroups>();
         private void frmTsk_ReportPaymentStyle1_Load(object sender, EventArgs e)
         {
             ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
-            List<ServiceGroups> aList = aServiceGroupsBO.Sel_all().Where(p=>aListIDCustomerGroup.Contains(p.ID)).ToList();
+            //List<ServiceGroups> aList = aServiceGroupsBO.Sel_all().Where(p=>aListIDServiceGroup.Contains(p.ID)).ToList();
            
 
             //GridColumn aCol = new GridColumn();
@@ -96,20 +97,19 @@ namespace RoomManager
             //this.gridView1.Columns.Add(aCol);
 
             GridColumn aCol = new GridColumn();
-            for (int i = 0; i < this.aListIDCustomerGroup.Count ; i++)
+            for (int i = 0; i < this.aListServiceGroups.Count ; i++)
             {
-                List<ServiceGroups> aListItem = aList.Where(p => p.ID == this.aListIDCustomerGroup[i]).ToList();
-                if (aListItem.Count > 0)
-                {
+                ServiceGroups aItem = aListServiceGroups[i];
+
                     aCol = new GridColumn();
-                    aCol.Caption = aListItem[0].Name;
+                    aCol.Caption = aItem.Name;
                     int tempt =  2 + i ;
                     aCol.FieldName = "ServiceGroup"+ tempt +"_Fee";
                     aCol.DisplayFormat.FormatType = FormatType.Numeric;
                     aCol.DisplayFormat.FormatString = "{0:0,0}";
                     aCol.Visible = true;
                     this.grvReportPaymentStyle1.Columns.Add(aCol);
-                }
+              
             }
        
             this.dgvReportPaymentStyle1.MainView = this.grvReportPaymentStyle1;

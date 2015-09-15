@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmTsk_PaymentHall
     {
@@ -65,14 +65,16 @@
             this.lblTotalMoney = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.lblCompany = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.lblNameCustomer = new DevExpress.XtraEditors.LabelControl();
             this.lblNameCustomerGroup = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTaxNumberCode = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTaxNumberCodeH = new DevExpress.XtraEditors.TextEdit();
+            this.txtAddressH = new DevExpress.XtraEditors.TextEdit();
             this.dgvHalls = new DevExpress.XtraGrid.GridControl();
             this.viewHalls = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -92,7 +94,7 @@
             this.txtPercentTax_Hall = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.lblSku = new DevExpress.XtraEditors.LabelControl();
+            this.lblSkuHall = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.lblLunarDate = new DevExpress.XtraEditors.LabelControl();
@@ -122,6 +124,7 @@
             this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.lblNameMenu = new DevExpress.XtraEditors.LabelControl();
+            this.lueMenus = new DevExpress.XtraEditors.LookUpEdit();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.txtServiceCost)).BeginInit();
@@ -140,7 +143,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdateService)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel15.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumberCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumberCodeH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddressH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBookingHall)).BeginInit();
@@ -161,6 +165,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSelectCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.tableLayoutPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMenus.Properties)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -169,7 +174,7 @@
             // 
             this.colCost.AppearanceCell.Options.UseTextOptions = true;
             this.colCost.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colCost.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colCost.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.colCost.AppearanceHeader.Options.UseFont = true;
             this.colCost.AppearanceHeader.Options.UseTextOptions = true;
             this.colCost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -199,7 +204,7 @@
             // btnPrint
             // 
             this.btnPrint.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
             this.btnPrint.Location = new System.Drawing.Point(405, 11);
@@ -232,7 +237,7 @@
             // btnPaymentHall
             // 
             this.btnPaymentHall.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPaymentHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentHall.Appearance.Options.UseFont = true;
             this.btnPaymentHall.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentHall.Image")));
             this.btnPaymentHall.Location = new System.Drawing.Point(273, 11);
@@ -246,7 +251,7 @@
             // btnPrepay
             // 
             this.btnPrepay.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPrepay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrepay.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrepay.Appearance.Options.UseFont = true;
             this.btnPrepay.Image = ((System.Drawing.Image)(resources.GetObject("btnPrepay.Image")));
             this.btnPrepay.Location = new System.Drawing.Point(140, 11);
@@ -260,10 +265,10 @@
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl11.Location = new System.Drawing.Point(164, 5);
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl11.Location = new System.Drawing.Point(139, 3);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(99, 13);
+            this.labelControl11.Size = new System.Drawing.Size(124, 17);
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "Tổng tiền dịch vụ:";
             // 
@@ -296,10 +301,10 @@
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.Location = new System.Drawing.Point(18, 5);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl5.Location = new System.Drawing.Point(146, 3);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(122, 13);
+            this.labelControl5.Size = new System.Drawing.Size(154, 17);
             this.labelControl5.TabIndex = 0;
             this.labelControl5.Text = "Hình thức thanh toán:";
             // 
@@ -322,7 +327,7 @@
             // luePayMethod
             // 
             this.luePayMethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.luePayMethod.Location = new System.Drawing.Point(146, 3);
+            this.luePayMethod.Location = new System.Drawing.Point(3, 3);
             this.luePayMethod.Name = "luePayMethod";
             this.luePayMethod.Properties.Appearance.Options.UseTextOptions = true;
             this.luePayMethod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -355,24 +360,24 @@
             // labelControl10
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl10.Location = new System.Drawing.Point(20, 10);
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl10.Location = new System.Drawing.Point(20, 8);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(89, 13);
+            this.labelControl10.Size = new System.Drawing.Size(111, 17);
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "Dịch vụ sử dụng";
             // 
             // btnAddService
             // 
             this.btnAddService.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAddService.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddService.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnAddService.Appearance.Options.UseFont = true;
             this.btnAddService.Image = ((System.Drawing.Image)(resources.GetObject("btnAddService.Image")));
             this.btnAddService.Location = new System.Drawing.Point(625, 5);
             this.btnAddService.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(105, 23);
+            this.btnAddService.Size = new System.Drawing.Size(130, 23);
             this.btnAddService.TabIndex = 2;
             this.btnAddService.Text = "Thêm dịch vụ";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
@@ -399,10 +404,10 @@
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Location = new System.Drawing.Point(3, 8);
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl9.Location = new System.Drawing.Point(3, 6);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(60, 13);
+            this.labelControl9.Size = new System.Drawing.Size(74, 17);
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "Thành tiền";
             // 
@@ -452,7 +457,7 @@
             // 
             this.colDate.AppearanceCell.Options.UseTextOptions = true;
             this.colDate.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colDate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colDate.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.colDate.AppearanceHeader.Options.UseFont = true;
             this.colDate.AppearanceHeader.Options.UseTextOptions = true;
             this.colDate.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -473,7 +478,7 @@
             // 
             this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -492,7 +497,7 @@
             // 
             this.gridColumn17.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn17.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn17.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn17.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn17.AppearanceHeader.Options.UseFont = true;
             this.gridColumn17.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn17.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -518,7 +523,7 @@
             // 
             this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn3.AppearanceHeader.Options.UseFont = true;
             this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -549,7 +554,7 @@
             // 
             this.colTotal.AppearanceCell.Options.UseTextOptions = true;
             this.colTotal.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colTotal.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colTotal.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.colTotal.AppearanceHeader.Options.UseFont = true;
             this.colTotal.AppearanceHeader.Options.UseTextOptions = true;
             this.colTotal.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -602,9 +607,9 @@
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.16045F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.20129F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.63826F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.09302F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.1196F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.63798F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(345, 602);
             this.tableLayoutPanel10.TabIndex = 7;
             // 
@@ -613,39 +618,63 @@
             this.tableLayoutPanel15.ColumnCount = 2;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel15.Controls.Add(this.labelControl21, 0, 2);
+            this.tableLayoutPanel15.Controls.Add(this.labelControl18, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.labelControl16, 0, 0);
             this.tableLayoutPanel15.Controls.Add(this.lblCompany, 1, 0);
-            this.tableLayoutPanel15.Controls.Add(this.labelControl12, 0, 3);
-            this.tableLayoutPanel15.Controls.Add(this.lblNameCustomer, 1, 3);
-            this.tableLayoutPanel15.Controls.Add(this.lblNameCustomerGroup, 1, 2);
-            this.tableLayoutPanel15.Controls.Add(this.labelControl14, 0, 2);
-            this.tableLayoutPanel15.Controls.Add(this.txtTaxNumberCode, 1, 1);
-            this.tableLayoutPanel15.Controls.Add(this.labelControl18, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.labelControl12, 0, 4);
+            this.tableLayoutPanel15.Controls.Add(this.lblNameCustomer, 1, 4);
+            this.tableLayoutPanel15.Controls.Add(this.lblNameCustomerGroup, 1, 3);
+            this.tableLayoutPanel15.Controls.Add(this.labelControl14, 0, 3);
+            this.tableLayoutPanel15.Controls.Add(this.txtTaxNumberCodeH, 1, 1);
+            this.tableLayoutPanel15.Controls.Add(this.txtAddressH, 1, 2);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
-            this.tableLayoutPanel15.RowCount = 4;
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel15.RowCount = 5;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel15.Size = new System.Drawing.Size(339, 127);
             this.tableLayoutPanel15.TabIndex = 17;
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl21.Location = new System.Drawing.Point(3, 54);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(45, 17);
+            this.labelControl21.TabIndex = 5;
+            this.labelControl21.Text = "Địa chỉ";
+            // 
+            // labelControl18
+            // 
+            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl18.Location = new System.Drawing.Point(3, 29);
+            this.labelControl18.Name = "labelControl18";
+            this.labelControl18.Size = new System.Drawing.Size(76, 17);
+            this.labelControl18.TabIndex = 4;
+            this.labelControl18.Text = "Mã số thuế";
             // 
             // labelControl16
             // 
             this.labelControl16.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl16.Location = new System.Drawing.Point(3, 9);
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl16.Location = new System.Drawing.Point(3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(43, 13);
+            this.labelControl16.Size = new System.Drawing.Size(50, 16);
             this.labelControl16.TabIndex = 0;
             this.labelControl16.Text = "Công ty";
             // 
             // lblCompany
             // 
             this.lblCompany.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCompany.Location = new System.Drawing.Point(88, 9);
+            this.lblCompany.Location = new System.Drawing.Point(108, 6);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(68, 13);
             this.lblCompany.TabIndex = 1;
@@ -654,17 +683,17 @@
             // labelControl12
             // 
             this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl12.Location = new System.Drawing.Point(3, 103);
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl12.Location = new System.Drawing.Point(3, 105);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(79, 13);
+            this.labelControl12.Size = new System.Drawing.Size(99, 17);
             this.labelControl12.TabIndex = 0;
             this.labelControl12.Text = "Người đại diện";
             // 
             // lblNameCustomer
             // 
             this.lblNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomer.Location = new System.Drawing.Point(88, 103);
+            this.lblNameCustomer.Location = new System.Drawing.Point(108, 107);
             this.lblNameCustomer.Name = "lblNameCustomer";
             this.lblNameCustomer.Size = new System.Drawing.Size(68, 13);
             this.lblNameCustomer.TabIndex = 1;
@@ -673,7 +702,7 @@
             // lblNameCustomerGroup
             // 
             this.lblNameCustomerGroup.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomerGroup.Location = new System.Drawing.Point(88, 71);
+            this.lblNameCustomerGroup.Location = new System.Drawing.Point(108, 81);
             this.lblNameCustomerGroup.Name = "lblNameCustomerGroup";
             this.lblNameCustomerGroup.Size = new System.Drawing.Size(68, 13);
             this.lblNameCustomerGroup.TabIndex = 1;
@@ -682,35 +711,26 @@
             // labelControl14
             // 
             this.labelControl14.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl14.Location = new System.Drawing.Point(3, 71);
+            this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl14.Location = new System.Drawing.Point(3, 79);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(32, 13);
+            this.labelControl14.Size = new System.Drawing.Size(35, 16);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Nhóm";
             // 
-            // txtTaxNumberCode
+            // txtTaxNumberCodeH
             // 
-            this.txtTaxNumberCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTaxNumberCode.Location = new System.Drawing.Point(88, 36);
-            this.txtTaxNumberCode.Name = "txtTaxNumberCode";
-            this.txtTaxNumberCode.Properties.MaxLength = 100;
-            this.txtTaxNumberCode.Properties.NullValuePrompt = "Nhập tối đai 100 ký tư.";
-            this.txtTaxNumberCode.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtTaxNumberCode.Size = new System.Drawing.Size(243, 20);
-            this.txtTaxNumberCode.TabIndex = 25;
-            this.txtTaxNumberCode.Visible = false;
-            this.txtTaxNumberCode.Leave += new System.EventHandler(this.txtTaxNumberCode_Leave);
+            this.txtTaxNumberCodeH.Location = new System.Drawing.Point(108, 28);
+            this.txtTaxNumberCodeH.Name = "txtTaxNumberCodeH";
+            this.txtTaxNumberCodeH.Size = new System.Drawing.Size(223, 20);
+            this.txtTaxNumberCodeH.TabIndex = 2;
             // 
-            // labelControl18
+            // txtAddressH
             // 
-            this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl18.Location = new System.Drawing.Point(3, 40);
-            this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(62, 13);
-            this.labelControl18.TabIndex = 0;
-            this.labelControl18.Text = "Mã số thuế";
+            this.txtAddressH.Location = new System.Drawing.Point(108, 53);
+            this.txtAddressH.Name = "txtAddressH";
+            this.txtAddressH.Size = new System.Drawing.Size(223, 20);
+            this.txtAddressH.TabIndex = 3;
             // 
             // dgvHalls
             // 
@@ -746,7 +766,7 @@
             // 
             this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn12.AppearanceHeader.Options.UseFont = true;
             this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -767,7 +787,7 @@
             // 
             this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn13.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn13.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn13.AppearanceHeader.Options.UseFont = true;
             this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -786,7 +806,7 @@
             // 
             this.gridColumn14.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn14.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn14.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn14.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn14.AppearanceHeader.Options.UseFont = true;
             this.gridColumn14.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn14.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -875,7 +895,7 @@
             // labelControl19
             // 
             this.labelControl19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl19.Location = new System.Drawing.Point(109, 50);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(6, 16);
@@ -905,17 +925,17 @@
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl6.Location = new System.Drawing.Point(3, 7);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl6.Location = new System.Drawing.Point(3, 6);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(49, 13);
+            this.labelControl6.Size = new System.Drawing.Size(55, 16);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Ngày âm";
             // 
             // lblDate
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDate.Location = new System.Drawing.Point(78, 7);
+            this.lblDate.Location = new System.Drawing.Point(90, 7);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(16, 13);
             this.lblDate.TabIndex = 22;
@@ -925,10 +945,10 @@
             // labelControl8
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl8.Location = new System.Drawing.Point(3, 8);
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl8.Location = new System.Drawing.Point(3, 6);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(28, 13);
+            this.labelControl8.Size = new System.Drawing.Size(35, 17);
             this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "Thuế";
             // 
@@ -954,32 +974,32 @@
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(3, 7);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Location = new System.Drawing.Point(3, 5);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.Size = new System.Drawing.Size(76, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Hội trường";
             // 
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Location = new System.Drawing.Point(3, 36);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Location = new System.Drawing.Point(3, 34);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(43, 13);
+            this.labelControl2.Size = new System.Drawing.Size(49, 16);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Đơn giá";
             // 
-            // lblSku
+            // lblSkuHall
             // 
-            this.lblSku.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSku.Location = new System.Drawing.Point(76, 7);
-            this.lblSku.Name = "lblSku";
-            this.lblSku.Size = new System.Drawing.Size(16, 13);
-            this.lblSku.TabIndex = 1;
-            this.lblSku.Text = "null";
-            this.lblSku.Visible = false;
+            this.lblSkuHall.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblSkuHall.Location = new System.Drawing.Point(90, 7);
+            this.lblSkuHall.Name = "lblSkuHall";
+            this.lblSkuHall.Size = new System.Drawing.Size(16, 13);
+            this.lblSkuHall.TabIndex = 1;
+            this.lblSkuHall.Text = "null";
+            this.lblSkuHall.Visible = false;
             // 
             // tableLayoutPanel12
             // 
@@ -1026,14 +1046,14 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.62271F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.21001F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31F));
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelControl2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblSku, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblSkuHall, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel12, 2, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel16, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel17, 3, 0);
@@ -1053,8 +1073,8 @@
             // tableLayoutPanel17
             // 
             this.tableLayoutPanel17.ColumnCount = 2;
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.2766F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.7234F));
             this.tableLayoutPanel17.Controls.Add(this.labelControl7, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.lblDate, 1, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1069,17 +1089,17 @@
             // labelControl7
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl7.Location = new System.Drawing.Point(3, 7);
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl7.Location = new System.Drawing.Point(3, 6);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(67, 13);
+            this.labelControl7.Size = new System.Drawing.Size(77, 16);
             this.labelControl7.TabIndex = 0;
             this.labelControl7.Text = "Ngày dương";
             // 
             // txtBookingHallsCost
             // 
             this.txtBookingHallsCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBookingHallsCost.Location = new System.Drawing.Point(76, 32);
+            this.txtBookingHallsCost.Location = new System.Drawing.Point(90, 32);
             this.txtBookingHallsCost.Name = "txtBookingHallsCost";
             this.txtBookingHallsCost.Properties.DisplayFormat.FormatString = "n0";
             this.txtBookingHallsCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1090,7 +1110,7 @@
             this.txtBookingHallsCost.Properties.MaxLength = 12;
             this.txtBookingHallsCost.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBookingHallsCost.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingHallsCost.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingHallsCost.Size = new System.Drawing.Size(94, 20);
             this.txtBookingHallsCost.TabIndex = 25;
             this.txtBookingHallsCost.Visible = false;
             this.txtBookingHallsCost.EditValueChanged += new System.EventHandler(this.txtBookingHallsCost_EditValueChanged);
@@ -1098,8 +1118,8 @@
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 2;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.80851F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.19149F));
             this.tableLayoutPanel13.Controls.Add(this.labelControl9, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.lblMoneyHall, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1114,7 +1134,7 @@
             // lblMoneyHall
             // 
             this.lblMoneyHall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMoneyHall.Location = new System.Drawing.Point(78, 8);
+            this.lblMoneyHall.Location = new System.Drawing.Point(90, 8);
             this.lblMoneyHall.Name = "lblMoneyHall";
             this.lblMoneyHall.Size = new System.Drawing.Size(16, 13);
             this.lblMoneyHall.TabIndex = 22;
@@ -1144,17 +1164,17 @@
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(3, 7);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl4.Location = new System.Drawing.Point(3, 5);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(59, 13);
+            this.labelControl4.Size = new System.Drawing.Size(74, 17);
             this.labelControl4.TabIndex = 0;
             this.labelControl4.Text = "Bắt đầu từ";
             // 
             // lblStartTime
             // 
             this.lblStartTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStartTime.Location = new System.Drawing.Point(75, 7);
+            this.lblStartTime.Location = new System.Drawing.Point(90, 7);
             this.lblStartTime.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.lblStartTime.Name = "lblStartTime";
             this.lblStartTime.Size = new System.Drawing.Size(16, 13);
@@ -1165,18 +1185,18 @@
             // labelControl20
             // 
             this.labelControl20.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl20.Location = new System.Drawing.Point(104, 7);
+            this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl20.Location = new System.Drawing.Point(119, 5);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(23, 13);
+            this.labelControl20.Size = new System.Drawing.Size(28, 17);
             this.labelControl20.TabIndex = 0;
             this.labelControl20.Text = "Đến";
             // 
             // lblEndTime
             // 
             this.lblEndTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblEndTime.Location = new System.Drawing.Point(140, 7);
+            this.lblEndTime.Location = new System.Drawing.Point(160, 7);
             this.lblEndTime.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.lblEndTime.Name = "lblEndTime";
             this.lblEndTime.Size = new System.Drawing.Size(16, 13);
@@ -1257,7 +1277,7 @@
             // 
             this.gridColumn4.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn4.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn4.AppearanceHeader.Options.UseFont = true;
             this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1278,7 +1298,7 @@
             // 
             this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn5.AppearanceHeader.Options.UseFont = true;
             this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1297,7 +1317,7 @@
             // 
             this.colBirthday.AppearanceCell.Options.UseTextOptions = true;
             this.colBirthday.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colBirthday.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.colBirthday.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.colBirthday.AppearanceHeader.Options.UseFont = true;
             this.colBirthday.AppearanceHeader.Options.UseTextOptions = true;
             this.colBirthday.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1316,7 +1336,7 @@
             // 
             this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn9.AppearanceHeader.Options.UseFont = true;
             this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1333,7 +1353,7 @@
             // 
             this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn10.AppearanceHeader.Options.UseFont = true;
             this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1350,7 +1370,7 @@
             // 
             this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.gridColumn11.AppearanceHeader.Options.UseFont = true;
             this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1386,6 +1406,7 @@
             this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel19.Controls.Add(this.labelControl3, 0, 0);
             this.tableLayoutPanel19.Controls.Add(this.lblNameMenu, 1, 0);
+            this.tableLayoutPanel19.Controls.Add(this.lueMenus, 4, 0);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel19.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
@@ -1398,22 +1419,35 @@
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(3, 6);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Location = new System.Drawing.Point(3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(77, 13);
+            this.labelControl3.Size = new System.Drawing.Size(98, 17);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Tên thực đơn:";
             // 
             // lblNameMenu
             // 
             this.lblNameMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameMenu.Location = new System.Drawing.Point(86, 6);
+            this.lblNameMenu.Location = new System.Drawing.Point(107, 6);
             this.lblNameMenu.Name = "lblNameMenu";
             this.lblNameMenu.Size = new System.Drawing.Size(16, 13);
             this.lblNameMenu.TabIndex = 22;
             this.lblNameMenu.Text = "null";
             this.lblNameMenu.Visible = false;
+            // 
+            // lueMenus
+            // 
+            this.lueMenus.Location = new System.Drawing.Point(129, 3);
+            this.lueMenus.Name = "lueMenus";
+            this.lueMenus.Properties.Appearance.Options.UseTextOptions = true;
+            this.lueMenus.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lueMenus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueMenus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên thực đơn")});
+            this.lueMenus.Size = new System.Drawing.Size(134, 20);
+            this.lueMenus.TabIndex = 24;
             // 
             // tableLayoutPanel4
             // 
@@ -1478,7 +1512,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel15.ResumeLayout(false);
             this.tableLayoutPanel15.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumberCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumberCodeH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddressH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditBookingHall)).EndInit();
@@ -1507,6 +1542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueMenus.Properties)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1568,7 +1604,7 @@
         private DevExpress.XtraEditors.TextEdit txtPercentTax_Hall;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl lblSku;
+        private DevExpress.XtraEditors.LabelControl lblSkuHall;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
@@ -1604,7 +1640,10 @@
         private DevExpress.XtraEditors.LookUpEdit luePayMethod;
         private DevExpress.XtraEditors.TextEdit txtBookingMoney;
         private DevExpress.XtraEditors.SimpleButton btnPrepay;
+        private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl18;
-        private DevExpress.XtraEditors.TextEdit txtTaxNumberCode;
+        private DevExpress.XtraEditors.TextEdit txtTaxNumberCodeH;
+        private DevExpress.XtraEditors.TextEdit txtAddressH;
+        private DevExpress.XtraEditors.LookUpEdit lueMenus;
     }
 }

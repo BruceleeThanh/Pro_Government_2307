@@ -14,7 +14,7 @@ using Entity;
 using CORESYSTEM;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_ListBookingHs : DevExpress.XtraEditors.XtraForm
     {
@@ -104,7 +104,7 @@ namespace SaleManagement
             for (int i = 0; i < aListTemp.Count; i++)
             {
                 aBookingHallsEN = new BookingHallsEN();
-                aBookingHallsEN.SkuHall = aHallsBO.Select_ByCodeHall(aListTemp[i].CodeHall, 1).Sku;
+                aBookingHallsEN.HallSku = aHallsBO.Select_ByCodeHall(aListTemp[i].CodeHall, 1).Sku;
                 aBookingHallsEN.ID = aListTemp[i].ID;
                 aBookingHallsEN.Cost = aListTemp[i].Cost;
                 aBookingHallsEN.StartTime = aListTemp[i].StartTime;

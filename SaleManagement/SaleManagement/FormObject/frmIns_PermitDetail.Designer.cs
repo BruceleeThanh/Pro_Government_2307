@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmIns_PermitDetail
     {
@@ -69,15 +69,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(299, 362);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(312, 362);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3.412969F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.1843F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.40273F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.47059F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.26144F));
             this.tableLayoutPanel2.Controls.Add(this.labelControl5, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl2, 1, 2);
@@ -100,73 +100,73 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(293, 287);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(306, 287);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(12, 17);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(13, 15);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(54, 13);
-            this.labelControl5.TabIndex = 5;
+            this.labelControl5.Size = new System.Drawing.Size(60, 16);
+            this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "ID Permit";
             // 
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(12, 64);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(13, 62);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(32, 13);
-            this.labelControl1.TabIndex = 6;
+            this.labelControl1.Size = new System.Drawing.Size(35, 16);
+            this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Name";
             // 
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(12, 111);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(13, 109);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(50, 13);
-            this.labelControl2.TabIndex = 7;
+            this.labelControl2.Size = new System.Drawing.Size(56, 16);
+            this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "PageURL";
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(12, 158);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(13, 156);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(28, 13);
+            this.labelControl3.Size = new System.Drawing.Size(31, 16);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Type";
             // 
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(12, 205);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(13, 203);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(37, 13);
-            this.labelControl4.TabIndex = 9;
+            this.labelControl4.Size = new System.Drawing.Size(43, 16);
+            this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Status";
             // 
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(12, 254);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(13, 253);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(41, 13);
-            this.labelControl6.TabIndex = 10;
+            this.labelControl6.Size = new System.Drawing.Size(46, 16);
+            this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "Disable";
             // 
             // lueIDPermit
             // 
             this.lueIDPermit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueIDPermit.Location = new System.Drawing.Point(79, 13);
+            this.lueIDPermit.Location = new System.Drawing.Point(96, 13);
             this.lueIDPermit.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.lueIDPermit.Name = "lueIDPermit";
             this.lueIDPermit.Properties.Appearance.Options.UseTextOptions = true;
@@ -176,37 +176,37 @@
             this.lueIDPermit.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
             this.lueIDPermit.Size = new System.Drawing.Size(200, 20);
-            this.lueIDPermit.TabIndex = 18;
+            this.lueIDPermit.TabIndex = 3;
             // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.Location = new System.Drawing.Point(79, 60);
+            this.txtName.Location = new System.Drawing.Point(96, 60);
             this.txtName.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtName.Name = "txtName";
             this.txtName.Properties.MaxLength = 200;
             this.txtName.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 19;
+            this.txtName.TabIndex = 5;
             // 
             // txtPageURL
             // 
             this.txtPageURL.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPageURL.Location = new System.Drawing.Point(79, 107);
+            this.txtPageURL.Location = new System.Drawing.Point(96, 107);
             this.txtPageURL.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.txtPageURL.Name = "txtPageURL";
             this.txtPageURL.Properties.MaxLength = 200;
             this.txtPageURL.Properties.NullValuePrompt = "Nhập tối đa 200 ký tự.";
             this.txtPageURL.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPageURL.Size = new System.Drawing.Size(200, 20);
-            this.txtPageURL.TabIndex = 20;
+            this.txtPageURL.TabIndex = 7;
             // 
             // cbbType
             // 
             this.cbbType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbType.EditValue = "--- Chọn lựa ---";
-            this.cbbType.Location = new System.Drawing.Point(79, 154);
+            this.cbbType.Location = new System.Drawing.Point(96, 154);
             this.cbbType.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.cbbType.Name = "cbbType";
             this.cbbType.Properties.Appearance.Options.UseTextOptions = true;
@@ -219,13 +219,13 @@
             "3",
             "4"});
             this.cbbType.Size = new System.Drawing.Size(200, 20);
-            this.cbbType.TabIndex = 21;
+            this.cbbType.TabIndex = 9;
             // 
             // cbbStatus
             // 
             this.cbbStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbStatus.EditValue = "--- Chọn  lựa---";
-            this.cbbStatus.Location = new System.Drawing.Point(79, 201);
+            this.cbbStatus.Location = new System.Drawing.Point(96, 201);
             this.cbbStatus.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Properties.Appearance.Options.UseTextOptions = true;
@@ -238,13 +238,13 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(200, 20);
-            this.cbbStatus.TabIndex = 22;
+            this.cbbStatus.TabIndex = 11;
             // 
             // cbbDisable
             // 
             this.cbbDisable.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbDisable.EditValue = "False";
-            this.cbbDisable.Location = new System.Drawing.Point(79, 251);
+            this.cbbDisable.Location = new System.Drawing.Point(96, 251);
             this.cbbDisable.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.cbbDisable.Name = "cbbDisable";
             this.cbbDisable.Properties.Appearance.Options.UseTextOptions = true;
@@ -255,7 +255,7 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(200, 20);
-            this.cbbDisable.TabIndex = 23;
+            this.cbbDisable.TabIndex = 13;
             // 
             // tableLayoutPanel4
             // 
@@ -270,28 +270,28 @@
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(299, 44);
-            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(312, 44);
+            this.tableLayoutPanel4.TabIndex = 14;
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Appearance.Options.UseFont = true;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(113, 8);
+            this.btnAdd.Location = new System.Drawing.Point(117, 8);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 28);
-            this.btnAdd.TabIndex = 1;
-            this.btnAdd.Text = "Thêm mới";
+            this.btnAdd.Size = new System.Drawing.Size(110, 28);
+            this.btnAdd.TabIndex = 15;
+            this.btnAdd.Text = "Cập nhật";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmIns_PermitDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 362);
+            this.ClientSize = new System.Drawing.Size(312, 362);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

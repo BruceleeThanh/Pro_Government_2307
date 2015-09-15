@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmUpd_Permits
     {
@@ -64,25 +64,25 @@
             // btnEdit
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Appearance.Options.UseFont = true;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.Location = new System.Drawing.Point(125, 5);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(82, 28);
-            this.btnEdit.TabIndex = 1;
-            this.btnEdit.Text = "Sửa";
+            this.btnEdit.Size = new System.Drawing.Size(100, 28);
+            this.btnEdit.TabIndex = 19;
+            this.btnEdit.Text = "Cập nhật";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(12, 259);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(12, 258);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(41, 13);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.Size = new System.Drawing.Size(46, 16);
+            this.labelControl2.TabIndex = 16;
             this.labelControl2.Text = "Disable";
             // 
             // cbbDisable
@@ -99,12 +99,13 @@
             "True",
             "False"});
             this.cbbDisable.Size = new System.Drawing.Size(200, 20);
-            this.cbbDisable.TabIndex = 15;
+            this.cbbDisable.TabIndex = 17;
             // 
             // cbbStatus
             // 
+            this.cbbStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbbStatus.EditValue = "--- Chọn ---";
-            this.cbbStatus.Location = new System.Drawing.Point(93, 213);
+            this.cbbStatus.Location = new System.Drawing.Point(93, 217);
             this.cbbStatus.Name = "cbbStatus";
             this.cbbStatus.Properties.Appearance.Options.UseTextOptions = true;
             this.cbbStatus.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -116,7 +117,7 @@
             "3",
             "4"});
             this.cbbStatus.Size = new System.Drawing.Size(200, 20);
-            this.cbbStatus.TabIndex = 14;
+            this.cbbStatus.TabIndex = 15;
             // 
             // cbbType
             // 
@@ -144,7 +145,7 @@
             this.cbxIsContent.Name = "cbxIsContent";
             this.cbxIsContent.Properties.Caption = "Check/ UnCheck";
             this.cbxIsContent.Size = new System.Drawing.Size(119, 19);
-            this.cbxIsContent.TabIndex = 11;
+            this.cbxIsContent.TabIndex = 9;
             // 
             // txtName
             // 
@@ -152,7 +153,7 @@
             this.txtName.Location = new System.Drawing.Point(93, 77);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 20);
-            this.txtName.TabIndex = 9;
+            this.txtName.TabIndex = 7;
             // 
             // cbxIsAdmin
             // 
@@ -162,87 +163,87 @@
             this.cbxIsAdmin.Name = "cbxIsAdmin";
             this.cbxIsAdmin.Properties.Caption = "Check/ UnCheck";
             this.cbxIsAdmin.Size = new System.Drawing.Size(119, 19);
-            this.cbxIsAdmin.TabIndex = 10;
+            this.cbxIsAdmin.TabIndex = 5;
             // 
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(12, 186);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(12, 184);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(28, 13);
-            this.labelControl6.TabIndex = 5;
+            this.labelControl6.Size = new System.Drawing.Size(31, 16);
+            this.labelControl6.TabIndex = 12;
             this.labelControl6.Text = "Type";
             // 
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(12, 221);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(12, 219);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(37, 13);
-            this.labelControl4.TabIndex = 3;
+            this.labelControl4.Size = new System.Drawing.Size(43, 16);
+            this.labelControl4.TabIndex = 14;
             this.labelControl4.Text = "Status";
             // 
             // labelControl8
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(12, 151);
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(12, 149);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(57, 13);
-            this.labelControl8.TabIndex = 7;
+            this.labelControl8.Size = new System.Drawing.Size(66, 16);
+            this.labelControl8.TabIndex = 10;
             this.labelControl8.Text = "Is Partner";
             // 
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(12, 116);
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(12, 114);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(59, 13);
+            this.labelControl9.Size = new System.Drawing.Size(68, 16);
             this.labelControl9.TabIndex = 8;
             this.labelControl9.Text = "Is Content";
             // 
             // labelControl7
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(12, 81);
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Location = new System.Drawing.Point(12, 79);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(32, 13);
+            this.labelControl7.Size = new System.Drawing.Size(35, 16);
             this.labelControl7.TabIndex = 6;
             this.labelControl7.Text = "Name";
             // 
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(12, 46);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(12, 44);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(50, 13);
+            this.labelControl5.Size = new System.Drawing.Size(56, 16);
             this.labelControl5.TabIndex = 4;
             this.labelControl5.Text = "Is Admin";
             // 
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(12, 11);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(12, 9);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(54, 13);
-            this.labelControl1.TabIndex = 17;
+            this.labelControl1.Size = new System.Drawing.Size(60, 16);
+            this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "ID Permit";
             // 
             // lblID
             // 
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblID.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(130, 11);
+            this.lblID.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(130, 9);
             this.lblID.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(20, 13);
-            this.lblID.TabIndex = 18;
+            this.lblID.Size = new System.Drawing.Size(22, 16);
+            this.lblID.TabIndex = 3;
             this.lblID.Text = "Null";
             // 
             // cbxIsPartner
@@ -253,7 +254,7 @@
             this.cbxIsPartner.Name = "cbxIsPartner";
             this.cbxIsPartner.Properties.Caption = "Check/ UnCheck";
             this.cbxIsPartner.Size = new System.Drawing.Size(119, 19);
-            this.cbxIsPartner.TabIndex = 19;
+            this.cbxIsPartner.TabIndex = 11;
             // 
             // tableLayoutPanel4
             // 
@@ -269,7 +270,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(306, 362);
-            this.tableLayoutPanel4.TabIndex = 3;
+            this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel6
             // 
@@ -306,7 +307,7 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(300, 287);
-            this.tableLayoutPanel6.TabIndex = 0;
+            this.tableLayoutPanel6.TabIndex = 1;
             // 
             // tableLayoutPanel7
             // 
@@ -322,7 +323,7 @@
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(306, 39);
-            this.tableLayoutPanel7.TabIndex = 3;
+            this.tableLayoutPanel7.TabIndex = 18;
             // 
             // frmUpd_Permits
             // 

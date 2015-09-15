@@ -5,7 +5,7 @@ using BussinessLogic;
 using System.Collections.Generic;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_SystemUsers : DevExpress.XtraEditors.XtraForm
     {

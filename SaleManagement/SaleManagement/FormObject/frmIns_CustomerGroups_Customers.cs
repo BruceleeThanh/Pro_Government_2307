@@ -1,26 +1,33 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using DataAccess;
 using BussinessLogic;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_CustomerGroups_Customers : DevExpress.XtraEditors.XtraForm
     {
-        CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+        #region Room
+        
 
         private List<Customers> aListAvailableCustomers = new List<Customers>();
         private List<Customers> aListSelectCustomers = new List<Customers>();
         private List<Customers> aListAdd = new List<Customers>();
-        private List<Customers> aListRemove = new List<Customers>();      
+        private List<Customers> aListRemove = new List<Customers>();
 
-        CustomersBO aCustomersBO = new CustomersBO();
-        frmTsk_BookingHall_Goverment afrmTsk_BookingHall_Goverment = null;
-        frmTsk_BookingHall_Group afrmTsk_BookingHall_Group = null;
-        frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = null;
-        frmTsk_UpdBooking afrmTsk_UpdBooking = null;
+        private frmTsk_CheckIn_Goverment_Step2 afrmTsk_CheckIn_Goverment_Step2 = null;
+        private frmTsk_CheckIn_Group_Step2 afrmTsk_CheckIn_Group_Step2 = null;
+        private frmTsk_CheckIn_Customer_Step2 afrm_Tsk_CheckIn_Customer_Step2 = null;
+
+        private frmTsk_CheckInGoverment_ForRoomBooking_Step2 afrmTsk_CheckInGoverment_ForRoomBooking_Step2 = null;
+        private frmTsk_CheckInGroup_ForRoomBooking_Step2 afrmTsk_CheckInGroup_ForRoomBooking_Step2 = null;
+        private frmTsk_CheckInCustomer_ForRoomBooking_Step2 afrmTsk_CheckInCustomer_ForRoomBooking_Step2 = null;
+
+        private frmTsk_Booking_Step2 afrmTsk_Booking_Step2 = null;
+
+        
         private int IDCustomerGroup = 0;
         private string NameCustomerGroup;
         private string NameCompany;
@@ -30,38 +37,71 @@ namespace SaleManagement
             InitializeComponent();
 
         }
-        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Goverment afrmTsk_BookingHall_Goverment, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckIn_Goverment_Step2 afrmTsk_CheckIn_Goverment_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
         {
             InitializeComponent();
-            this.afrmTsk_BookingHall_Goverment = afrmTsk_BookingHall_Goverment;
+            this.afrmTsk_CheckIn_Goverment_Step2 = afrmTsk_CheckIn_Goverment_Step2;
             this.IDCustomerGroup = IDCustomerGroup;
             this.NameCustomerGroup = NameCustomerGroup;
             this.NameCompany = NameCompany;
         }
-        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Group afrmTsk_BookingHall_Group, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckIn_Group_Step2 afrmTsk_CheckIn_Group_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
         {
             InitializeComponent();
-            this.afrmTsk_BookingHall_Group = afrmTsk_BookingHall_Group;
+            this.afrmTsk_CheckIn_Group_Step2 = afrmTsk_CheckIn_Group_Step2;
             this.IDCustomerGroup = IDCustomerGroup;
             this.NameCustomerGroup = NameCustomerGroup;
             this.NameCompany = NameCompany;
         }
-        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        //hiennv
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckInCustomer_ForRoomBooking_Step2 afrmTsk_CheckInCustomer_ForRoomBooking_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
         {
             InitializeComponent();
-            this.afrmTsk_BookingHall_Customer = afrmTsk_BookingHall_Customer;
+            this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2 = afrmTsk_CheckInCustomer_ForRoomBooking_Step2;
             this.IDCustomerGroup = IDCustomerGroup;
             this.NameCustomerGroup = NameCustomerGroup;
             this.NameCompany = NameCompany;
         }
-        public frmIns_CustomerGroups_Customers(frmTsk_UpdBooking afrmTsk_UpdBooking, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        //hiennv
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckInGoverment_ForRoomBooking_Step2 afrmTsk_CheckInGoverment_ForRoomBooking_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
         {
             InitializeComponent();
-            this.afrmTsk_UpdBooking = afrmTsk_UpdBooking;
+            this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2 = afrmTsk_CheckInGoverment_ForRoomBooking_Step2;
             this.IDCustomerGroup = IDCustomerGroup;
             this.NameCustomerGroup = NameCustomerGroup;
             this.NameCompany = NameCompany;
         }
+        //hiennv
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckInGroup_ForRoomBooking_Step2 afrmTsk_CheckInGroup_ForRoomBooking_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_CheckInGroup_ForRoomBooking_Step2 = afrmTsk_CheckInGroup_ForRoomBooking_Step2;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+
+        public frmIns_CustomerGroups_Customers(frmTsk_CheckIn_Customer_Step2 afrm_Tsk_CheckIn_Customer_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrm_Tsk_CheckIn_Customer_Step2 = afrm_Tsk_CheckIn_Customer_Step2;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+
+
+
+        public frmIns_CustomerGroups_Customers(frmTsk_Booking_Step2 afrmTsk_Booking_Step2, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_Booking_Step2 = afrmTsk_Booking_Step2;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+
         //function LoadDataSelectCustomers
         public void LoadDataSelectCustomers()
         {
@@ -80,9 +120,11 @@ namespace SaleManagement
         {
             try
             {
-
+                aListAvailableCustomers.Clear();
+                CustomersBO aCustomersBO = new CustomersBO();
                 aListAvailableCustomers = aCustomersBO.Select_All();
                 dgvAvailableCustomers.DataSource = aListAvailableCustomers;
+                dgvAvailableCustomers.RefreshDataSource();
             }
             catch (Exception ex)
             {
@@ -90,43 +132,64 @@ namespace SaleManagement
 
             }
         }
-
-
-
+        
+        //hiennv
         private void frmAddListCustomerToCustomerGroups_Load(object sender, EventArgs e)
         {
             try
-            {               
-                if (IDCustomerGroup == 0)
+            {
+                if (this.afrmTsk_CheckIn_Goverment_Step2 != null || this.afrmTsk_CheckIn_Group_Step2 != null || this.afrm_Tsk_CheckIn_Customer_Step2 != null || this.afrmTsk_Booking_Step2 != null)
                 {
-                    LoadIDCompanies();
-                    LoadDataAvailableCustomers();
-                }
-                else
-                {
-                    LoadDataAvailableCustomers();
-                    aListSelectCustomers = aCustomersBO.SelectListCustomer_ByIDCustomerGroups(IDCustomerGroup);
-                    LoadDataSelectCustomers();
+                    this.LoadDataAvailableCustomers();
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    this.aListSelectCustomers = aCustomersBO.SelectListCustomer_ByIDCustomerGroups(IDCustomerGroup);
+                    this.LoadDataSelectCustomers();
 
                     lueCompany.Properties.NullText = NameCompany;
                     lueCustomerGroup.Properties.NullText = NameCustomerGroup;
                     lueCompany.Properties.ReadOnly = true;
                     lueCustomerGroup.Properties.ReadOnly = true;
 
+                    btnAddCompanies.Visible = false;
+                    btnSearchCompany.Visible = false;
+                    btnAddCustomerGroup.Visible = false;
+                    btnSearchCustomerGroup.Visible = false;
+                }
+                else if (this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2 != null || this.afrmTsk_CheckInGroup_ForRoomBooking_Step2 != null || this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2 != null)
+                {
+                    this.LoadDataAvailableCustomers();
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    this.aListSelectCustomers = aCustomersBO.SelectListCustomer_ByIDCustomerGroups(IDCustomerGroup);
+                    this.LoadDataSelectCustomers();
+
+                    lueCompany.Properties.NullText = NameCompany;
+                    lueCustomerGroup.Properties.NullText = NameCustomerGroup;
+                    lueCompany.Properties.ReadOnly = true;
+                    lueCustomerGroup.Properties.ReadOnly = true;
+
+                    btnAddCompanies.Visible = false;
+                    btnSearchCompany.Visible = false;
+                    btnAddCustomerGroup.Visible = false;
+                    btnSearchCustomerGroup.Visible = false;
+                }
+                else
+                {
+                    this.LoadIDCompanies();
+                    this.LoadDataAvailableCustomers();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("frmAddListCustomerToCustomerGroups.frmAddListCustomerToCustomerGroups_Load\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
 
         }
 
+        //hiennv
         public void Reload()
         {
-            LoadIDCompanies();
-            LoadDataAvailableCustomers();
+            this.LoadIDCompanies();
+            this.LoadDataAvailableCustomers();
             dgvAvailableCustomers.RefreshDataSource();
         }
 
@@ -142,17 +205,20 @@ namespace SaleManagement
                 MessageBox.Show("frmAddListCustomerToCustomerGroups.btnAddCustomer_Click\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+     
 
         private void btnSelectCustomers_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             try
             {
+                DateTime? dateTime = null;
+
                 Customers aCustomers = new Customers();
                 int ID = Convert.ToInt32(viewAvailableCustomers.GetFocusedRowCellValue("ID"));
                 aCustomers.ID = ID;
-                aCustomers.Name = viewAvailableCustomers.GetFocusedRowCellValue("Name").ToString();
-                aCustomers.Identifier1 = viewAvailableCustomers.GetFocusedRowCellValue("Identifier1").ToString();
-                aCustomers.Birthday = Convert.ToDateTime(viewAvailableCustomers.GetFocusedRowCellValue("Birthday"));
+                aCustomers.Name = String.IsNullOrEmpty(Convert.ToString(viewAvailableCustomers.GetFocusedRowCellValue("Name"))) == true ? String.Empty : Convert.ToString(viewAvailableCustomers.GetFocusedRowCellValue("Name"));
+                aCustomers.Identifier1 = String.IsNullOrEmpty(Convert.ToString(viewAvailableCustomers.GetFocusedRowCellValue("Identifier1"))) == true ? String.Empty : Convert.ToString(viewAvailableCustomers.GetFocusedRowCellValue("Identifier1"));
+                aCustomers.Birthday = String.IsNullOrEmpty(Convert.ToString(viewAvailableCustomers.GetFocusedRowCellValue("Birthday"))) == true ? dateTime : Convert.ToDateTime(viewAvailableCustomers.GetFocusedRowCellValue("Birthday"));
 
 
                 List<Customers> aList = aListSelectCustomers.Where(c => c.ID == ID).ToList();
@@ -187,12 +253,13 @@ namespace SaleManagement
         {
             try
             {
+                DateTime? dateTime = null;
                 Customers aCustomers = new Customers();
 
                 aCustomers.ID = Convert.ToInt32(viewSelectCustomers.GetFocusedRowCellValue("ID"));
-                aCustomers.Name = viewSelectCustomers.GetFocusedRowCellValue("Name").ToString();
-                aCustomers.Identifier1 = viewSelectCustomers.GetFocusedRowCellValue("Identifier1").ToString();
-                aCustomers.Birthday = Convert.ToDateTime(viewSelectCustomers.GetFocusedRowCellValue("Birthday"));
+                aCustomers.Name = String.IsNullOrEmpty(Convert.ToString(viewSelectCustomers.GetFocusedRowCellValue("Name"))) == true ? String.Empty : Convert.ToString(viewSelectCustomers.GetFocusedRowCellValue("Name"));
+                aCustomers.Identifier1 = String.IsNullOrEmpty(Convert.ToString(viewSelectCustomers.GetFocusedRowCellValue("Identifier1"))) == true ? String.Empty : Convert.ToString(viewSelectCustomers.GetFocusedRowCellValue("Identifier1"));
+                aCustomers.Birthday = String.IsNullOrEmpty(Convert.ToString(viewSelectCustomers.GetFocusedRowCellValue("Birthday"))) == true ? dateTime : Convert.ToDateTime(viewSelectCustomers.GetFocusedRowCellValue("Birthday"));
 
                 aListAvailableCustomers.Insert(0, aCustomers);
                 aListRemove.Add(aCustomers);
@@ -227,62 +294,161 @@ namespace SaleManagement
                 MessageBox.Show("frmAddListCustomerToCustomerGroups.btnEditCustomers_ButtonClick\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //hiennv
+        private bool CheckDataBeforeApply()
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(lueCompany.Text) == true)
+                {
+                    lueCompany.Focus();
+                    MessageBox.Show("Vui lòng chọn tên công ty .", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+                if(String.IsNullOrEmpty(lueCustomerGroup.Text))
+                {
+                    lueCustomerGroup.Focus();
+                    MessageBox.Show("Vui lòng chọn tên nhóm .", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+                if (this.aListSelectCustomers.Count <= 0)
+                {
+                    MessageBox.Show("Vui lòng chọn khách hàng vào nhóm .", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmAddListCustomerToCustomerGroups.CheckDataBeforeApply\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+        }
+        //hiennv
         private void btnApply_Click(object sender, EventArgs e)
         {
             try
             {
-                CustomerGroups_CustomersBO aCustomerGroupsCustomersBO = new CustomerGroups_CustomersBO();
-
-                if (aListRemove.Count > 0)
+                if (this.CheckDataBeforeApply() == true)
                 {
-                    foreach (Customers item in aListRemove)
+
+                    CustomerGroups_CustomersBO aCustomerGroupsCustomersBO = new CustomerGroups_CustomersBO();
+
+                    if (aListRemove.Count > 0)
                     {
-                        List<CustomerGroups_Customers> count = aCustomerGroupsCustomersBO.Select_ByIDCustomer_ByIDCustomerGroup(item.ID, IDCustomerGroup);
-                        if (count.Count > 0)
+                        foreach (Customers item in aListRemove)
                         {
-                            aCustomerGroupsCustomersBO.Delete(item.ID, IDCustomerGroup);
+                            CustomerGroups_Customers aCustomerGroups_Customers = aCustomerGroupsCustomersBO.Select_ByIDCustomer_ByIDCustomerGroup(item.ID, IDCustomerGroup);
+                            if (aCustomerGroups_Customers != null)
+                            {
+                                aCustomerGroupsCustomersBO.Delete(item.ID, IDCustomerGroup);
+                            }
                         }
-                    }                
-
-                }
-                if (aListAdd.Count > 0)
-                {
-                    foreach (Customers item in aListAdd)
+                        if (this.afrmTsk_CheckIn_Goverment_Step2 != null)
+                        {
+                            this.afrmTsk_CheckIn_Goverment_Step2.LoadIDCustomers();
+                        }
+                        else if (this.afrmTsk_CheckIn_Group_Step2 != null)
+                        {
+                            this.afrmTsk_CheckIn_Group_Step2.LoadIDCustomers();
+                        }
+                        else if (this.afrm_Tsk_CheckIn_Customer_Step2 != null)
+                        {
+                            this.afrm_Tsk_CheckIn_Customer_Step2.LoadCustomers();
+                        }
+                        else if (this.afrmTsk_Booking_Step2 != null)
+                        {
+                            this.afrmTsk_Booking_Step2.LoadIDCustomers();
+                        }
+                        else if (this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2 != null)
+                        {
+                            this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckInGroup_ForRoomBooking_Step2 != null)
+                        {
+                            this.afrmTsk_CheckInGroup_ForRoomBooking_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckInGroup_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2 != null)
+                        {
+                            this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2.LoadCustomers();
+                            this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                      
+                    }
+                    if (aListAdd.Count > 0)
                     {
-                        List<CustomerGroups_Customers> list = aCustomerGroupsCustomersBO.Select_ByIDCustomer_ByIDCustomerGroup(item.ID, IDCustomerGroup);
-                        if (list.Count < 1)
+                        CustomerGroups_Customers aCustomerGroups_Customers = new CustomerGroups_Customers();
+                        foreach (Customers item in aListAdd)
                         {
-                            CustomerGroups_Customers aCustomerGroups_Customers = new CustomerGroups_Customers();
-                            string name = (NameCustomerGroup + "_" + item.Name).Length > 150 ? (NameCustomerGroup + "_" + item.Name).Substring(0, 250) : (NameCustomerGroup + "_" + item.Name);
-                            aCustomerGroups_Customers.Name = name;
-                            aCustomerGroups_Customers.IDCustomer = item.ID;
-                            aCustomerGroups_Customers.IDCustomerGroup = IDCustomerGroup;
-                            aCustomerGroupsCustomersBO.Insert(aCustomerGroups_Customers);
+                            aCustomerGroups_Customers = aCustomerGroupsCustomersBO.Select_ByIDCustomer_ByIDCustomerGroup(item.ID, IDCustomerGroup);
+                            if (aCustomerGroups_Customers != null)
+                            {
+                                
+                                string name = (NameCustomerGroup + "_" + item.Name).Length > 150 ? (NameCustomerGroup + "_" + item.Name).Substring(0, 150) : (NameCustomerGroup + "_" + item.Name);
+                                aCustomerGroups_Customers.Name = name;
+                                aCustomerGroups_Customers.IDCustomer = item.ID;
+                                aCustomerGroups_Customers.IDCustomerGroup = IDCustomerGroup;
+                                aCustomerGroupsCustomersBO.Insert(aCustomerGroups_Customers);
+                            }
                         }
-                    }                 
-                }
-                if (afrmTsk_BookingHall_Goverment != null)
-                {
-                    afrmTsk_BookingHall_Goverment.CallBackIDCustomer(aListSelectCustomers);
-                }
-                if (afrmTsk_BookingHall_Group != null)
-                {
-                    afrmTsk_BookingHall_Group.CallBackIDCustomer(aListSelectCustomers);
-                }
-                if (afrmTsk_BookingHall_Customer != null)
-                {
-                    afrmTsk_BookingHall_Customer.CallBackIDCustomer(aListSelectCustomers);
-                }
-                  
-                if (afrmTsk_UpdBooking != null)
-                {
-                    afrmTsk_UpdBooking.CallBackIDCustomer(aListSelectCustomers);
-                }
-                MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-                
+                        if (this.afrmTsk_CheckIn_Goverment_Step2 != null)
+                        {
+                            this.afrmTsk_CheckIn_Goverment_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckIn_Goverment_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckIn_Group_Step2 != null)
+                        {
+                            this.afrmTsk_CheckIn_Group_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckIn_Group_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrm_Tsk_CheckIn_Customer_Step2 != null)
+                        {
+                            this.afrm_Tsk_CheckIn_Customer_Step2.LoadCustomers();
+                            this.afrm_Tsk_CheckIn_Customer_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_Booking_Step2 != null)
+                        {
+                            this.afrmTsk_Booking_Step2.LoadIDCustomers();
+                            this.afrmTsk_Booking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2 != null)
+                        {
+                            this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckInGoverment_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckInGroup_ForRoomBooking_Step2 != null)
+                        {
+                            this.afrmTsk_CheckInGroup_ForRoomBooking_Step2.LoadIDCustomers();
+                            this.afrmTsk_CheckInGroup_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2!= null)
+                        {
+                            this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2.LoadCustomers();
+                            this.afrmTsk_CheckInCustomer_ForRoomBooking_Step2.CallBackIDCustomer(aListAdd[0].ID);
+                        }
+                        else if (afrmTsk_BookingHall_Goverment != null)
+                        {
+                            afrmTsk_BookingHall_Goverment.CallBackIDCustomer(aListSelectCustomers);
+                        }
+                        else if (afrmTsk_BookingHall_Group != null)
+                        {
+                            afrmTsk_BookingHall_Group.CallBackIDCustomer(aListSelectCustomers);
+                        }
+                        else if (afrmTsk_BookingHall_Customer != null)
+                        {
+                            afrmTsk_BookingHall_Customer.CallBackIDCustomer(aListSelectCustomers);
+                        }
 
+                        else if (afrmTsk_UpdBooking != null)
+                        {
+                            afrmTsk_UpdBooking.CallBackIDCustomer(aListSelectCustomers);
+                        }
+                    }
+                    this.Close();
+                    MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
@@ -295,7 +461,7 @@ namespace SaleManagement
             try
             {
                 CompaniesBO aCompaniesBO = new CompaniesBO();
-                lueCompany.Properties.DataSource = aCompaniesBO.Select_All();// [Company] Type = 2 : Công ty ngoài, 2; 
+                lueCompany.Properties.DataSource = aCompaniesBO.Select_All();
                 lueCompany.Properties.DisplayMember = "Name";
                 lueCompany.Properties.ValueMember = "ID";
             }
@@ -309,7 +475,7 @@ namespace SaleManagement
         {
             try
             {
-
+                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
                 int IDCompany = Convert.ToInt32(lueCompany.EditValue.ToString());
                 List<CustomerGroups> aListCustomerGroups = aCustomerGroupsBO.Select_ByIDCompany(IDCompany);
                 lueCustomerGroup.Properties.DataSource = aListCustomerGroups;
@@ -341,6 +507,7 @@ namespace SaleManagement
                 MessageBox.Show("frmIns_CustomerGroups_Customers.CallBackIDCompany\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         //Call Back data IDCustomerGroup
         public void CallBackIDCustomerGroup(int IDCustomerGroup)
         {
@@ -386,10 +553,9 @@ namespace SaleManagement
         {
             try
             {
-                string NameCompany = lueCompany.Text;
-                if (NameCompany.Equals("--- Chọn lựa ---") || NameCompany.Equals(""))
+                if (String.IsNullOrEmpty(lueCompany.Text)==true)
                 {
-                    lueCompany.Text = "--- Chọn lựa ---";
+                    lueCompany.Focus();
                     MessageBox.Show("Vui lòng chọn tên công ty .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -409,10 +575,9 @@ namespace SaleManagement
         {
             try
             {
-                string NameCompany = lueCompany.Text;
-                if (NameCompany.Equals("--- Chọn lựa ---") || NameCompany.Equals(""))
+                if (String.IsNullOrEmpty(lueCompany.Text)== true)
                 {
-                    lueCompany.Text = "--- Chọn lựa ---";
+                    lueCompany.Focus();
                     MessageBox.Show("Vui lòng chọn tên công ty .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -433,7 +598,7 @@ namespace SaleManagement
         {
             try
             {
-                LoadIDCustomerGroups();
+                this.LoadIDCustomerGroups();
             }
             catch (Exception ex)
             {
@@ -444,8 +609,49 @@ namespace SaleManagement
         private void lueCustomerGroup_EditValueChanged(object sender, EventArgs e)
         {
             IDCustomerGroup = Convert.ToInt32(lueCustomerGroup.EditValue);
+            CustomersBO aCustomersBO = new CustomersBO();
             aListSelectCustomers = aCustomersBO.SelectListCustomer_ByIDCustomerGroups(IDCustomerGroup);
-            LoadDataSelectCustomers();
+            this.LoadDataSelectCustomers();
         }
+        #endregion
+        #region Sale
+        frmTsk_BookingHall_Goverment afrmTsk_BookingHall_Goverment = null;
+        frmTsk_BookingHall_Group afrmTsk_BookingHall_Group = null;
+        frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = null;
+        frmTsk_UpdBooking afrmTsk_UpdBooking = null;
+        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Goverment afrmTsk_BookingHall_Goverment, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Goverment = afrmTsk_BookingHall_Goverment;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Group afrmTsk_BookingHall_Group, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Group = afrmTsk_BookingHall_Group;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+        public frmIns_CustomerGroups_Customers(frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer = afrmTsk_BookingHall_Customer;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+        public frmIns_CustomerGroups_Customers(frmTsk_UpdBooking afrmTsk_UpdBooking, int IDCustomerGroup, string NameCustomerGroup, string NameCompany)
+        {
+            InitializeComponent();
+            this.afrmTsk_UpdBooking = afrmTsk_UpdBooking;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.NameCustomerGroup = NameCustomerGroup;
+            this.NameCompany = NameCompany;
+        }
+
+        #endregion
     }
 }

@@ -41,6 +41,8 @@ namespace RoomManager
                     if (CORE.CheckPermit_WinForm(afrmMain) == true)
                     {
                         afrmMain.LoadData();
+                        //afrmMain.ReloadData();
+                        
                         afrmMain.Show();
                         this.Visible = false;
                     }
@@ -67,6 +69,7 @@ namespace RoomManager
                     if (CORE.CheckPermit_WinForm(afrmMain) == true)
                     {
                         afrmMain.LoadData();
+                        //afrmMain.ReloadData();
                         afrmMain.Show();
                         this.Visible = false;
                     }

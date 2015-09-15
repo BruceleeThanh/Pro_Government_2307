@@ -14,6 +14,7 @@ using Entity;
 using CORESYSTEM;
 using Library;
 using System.IO;
+using System.Collections;
 
 namespace RoomManager
 {
@@ -30,16 +31,17 @@ namespace RoomManager
 
         private NewBookingHEN aNewBookingHEN = new NewBookingHEN();
         //Ngoc
-        
+        private bool IsEditForm = false;
 
         private string CurrentCodeHall = null;
+        private int CurrentIndexHall = -1;
         private int IDCustomerGroup = 0;
         private int IDCompany = 0;
         private int IDCustomer = 0;
         private int IDBookingH, IDBookingR = 0;
         int CustomerType = 0;
         // Khởi tạo cho chọn Menus
-        private List<Foods> aListFoods = new List<Foods>();
+        private List<List<Foods>> aListFoods = new List<List<Foods>>();
         private MenusEN aMenusEN = new MenusEN();
 
         public frmTsk_BookingHall_Customer_New(frmMain afrmMain)
@@ -74,6 +76,15 @@ namespace RoomManager
             this.afrmMain_Halls = afrmMain_Halls;
             this.CustomerType = CustomerType;
 
+        }
+
+        public frmTsk_BookingHall_Customer_New(frmMain_Halls afrmMain_Halls, int CustomerType, bool IsEditForm, int IDBookingH)
+        {
+            InitializeComponent();
+            this.afrmMain_Halls = afrmMain_Halls;
+            this.CustomerType = CustomerType;
+            this.IsEditForm = IsEditForm;
+            this.IDBookingH = IDBookingH;
         }
 
         private void frmTsk_BookingHall_Customer_New_Load(object sender, EventArgs e)
@@ -160,10 +171,22 @@ namespace RoomManager
                     lueCompany.EditValue = 0;
                 }
             }
+
             //Load dữ liệu khách
-            lueCustomer.Properties.DataSource = aCustomersBO.Select_All();
+            Customers aDefaultCustomers = new Customers();
+            List<Customers> aListCustomers = new List<Customers>();
+            aDefaultCustomers.Name = "[Tạo mới người đại diện]";
+            aDefaultCustomers.ID = 0;
+
+            aListCustomers = aCustomersBO.Select_All();// [Company] Type = 3 : khách lẻ
+            aListCustomers.Add(aDefaultCustomers);
+
+            lueCustomer.Properties.DataSource = aListCustomers;
             lueCustomer.Properties.DisplayMember = "Name";
             lueCustomer.Properties.ValueMember = "ID";
+
+
+
             if (this.IDCustomer > 0)
             {
                 lueCustomer.EditValue = this.IDCustomer;
@@ -179,7 +202,13 @@ namespace RoomManager
             lueGuest.Properties.DataSource = aGuestsBO.Select_All();
             lueGuest.Properties.DisplayMember = "Name";
             lueGuest.Properties.ValueMember = "ID";
-            LoadDataListFoods();
+            //LoadDataListFoods();
+
+            if (this.IsEditForm == true)
+            {
+                BookingHsBO aBookingHsBO = new BookingHsBO();
+                aBookingHsBO.Select_ByID(this.IDBookingH);
+            }
         }
 
         public void LoadService()
@@ -612,21 +641,25 @@ namespace RoomManager
                 MessageBox.Show("Vui lòng chọn hoặc nhập tên công ty.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            else if (Convert.ToInt32(lueCustomer.EditValue) == 0 && txtCustomerName.Text == "")
+            if (Convert.ToInt32(lueCustomer.EditValue) == 0 && txtCustomerName.Text == "")
             {
                 MessageBox.Show("Vui lòng chọn hoặc nhập tên người đại diện.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            else if (this.aNewBookingHEN.aListBookingHallUsed.Count == 0)
+            if (this.aNewBookingHEN.aListBookingHallUsed.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn hội trường.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
-            else if (Convert.ToInt32(lueHalls.EditValue) != 0 && txtMenusName.Text == "")
+            if (lueHalls.EditValue != null) // có tạo thực đơn
             {
-                MessageBox.Show("Vui lòng nhập tên thực đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
+                if (string.IsNullOrEmpty(lueHalls.EditValue.ToString()) == true && txtMenusName.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập tên thực đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return false;
+                }
             }
+            
             return true;
         }
         private void btnBook_Click(object sender, EventArgs e)
@@ -780,7 +813,7 @@ namespace RoomManager
                     MessageBox.Show("Đặt hội trường thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     if (afrmMain_Halls != null)
                     {
-                        this.afrmMain_Halls.Reload();
+                        this.afrmMain_Halls.ReloadData();
                     }
                     if (afrmTsk_Payment_Step2 != null)
                     {
@@ -878,9 +911,15 @@ namespace RoomManager
                 this.aListFoods.Clear();
                 FoodsBO aFoodsBO = new FoodsBO();
                 MenusBO aMenusBO = new MenusBO();
-                this.aListFoods = aFoodsBO.Select_All();
+                int count = (lueHalls.Properties.DataSource as IList).Count;
 
-                dgvAvailableFoods.DataSource = this.aListFoods;
+                for (int i = 0; i < count; i++)
+                {
+                    this.aListFoods.Insert(i,aFoodsBO.Select_All());
+                }
+
+
+                dgvAvailableFoods.DataSource = this.aListFoods[this.lueHalls.ItemIndex];
                 dgvAvailableFoods.RefreshDataSource();
             }
             catch (Exception ex)
@@ -893,38 +932,42 @@ namespace RoomManager
         {
             try
             {
-                if (Convert.ToInt32(lueHalls.EditValue) == 0)
+                if (string.IsNullOrEmpty(lueHalls.EditValue.ToString())== true)
                 {
                     MessageBox.Show("Chọn hội trường trước khi tạo thực đơn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name == "")
-                {
-                    this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name = txtMenusName.Text;
-                }
-                if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList().Count() > 0)
-                {
-                    MessageBox.Show("Món ăn này đã có trong thực đơn vui lòng chọn món ăn khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
                 else
                 {
-                    Foods aFoods = new Foods();
-                    aFoods.ID = Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"));
-                    aFoods.Name = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name"));
-                    aFoods.Name1 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name1"));
-                    aFoods.Name2 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name2"));
-                    aFoods.Name3 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name3"));
-                    aFoods.Image1 = (byte[])viewAvailableFoods.GetFocusedRowCellValue("Image1");
+                    if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name == "")
+                    {
+                        this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].Name = txtMenusName.Text;
+                    }
+                    if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList().Count() > 0)
+                    {
+                        MessageBox.Show("Món ăn này đã có trong thực đơn vui lòng chọn món ăn khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        Foods aFoods = new Foods();
+                        aFoods.ID = Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"));
+                        aFoods.Name = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name"));
+                        aFoods.Name1 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name1"));
+                        aFoods.Name2 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name2"));
+                        aFoods.Name3 = Convert.ToString(viewAvailableFoods.GetFocusedRowCellValue("Name3"));
+                        aFoods.Image1 = (byte[])viewAvailableFoods.GetFocusedRowCellValue("Image1");
 
-                    this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Add(aFoods);
-                    dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
-                    dgvSelectFoods.RefreshDataSource();
+                        this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods.Add(aFoods);
+                        dgvSelectFoods.DataSource = this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN[0].aListFoods;
+                        dgvSelectFoods.RefreshDataSource();
 
-                    Foods aFoodsTemp = this.aListFoods.Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList()[0];
-                    this.aListFoods.Remove(aFoodsTemp);
-                    dgvAvailableFoods.DataSource = this.aListFoods;
-                    dgvAvailableFoods.RefreshDataSource();
+                        int i = this.lueHalls.ItemIndex;
+                        Foods aFoodsTemp = this.aListFoods[i].Where(f => f.ID == Convert.ToInt32(viewAvailableFoods.GetFocusedRowCellValue("ID"))).ToList()[0];
+                        this.aListFoods[i].Remove(aFoodsTemp);
+                        dgvAvailableFoods.DataSource = this.aListFoods[i];
+                        dgvAvailableFoods.RefreshDataSource();
 
+                    }
                 }
             }
             catch (Exception ex)
@@ -937,7 +980,8 @@ namespace RoomManager
         {
             try
             {
-                if (this.aListFoods.Where(f => f.ID == Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"))).ToList().Count() == 0)
+                int i = this.lueHalls.ItemIndex;
+                if (this.aListFoods[i].Where(f => f.ID == Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"))).ToList().Count() == 0)
                 {
                     Foods aFoods = new Foods();
                     aFoods.ID = Convert.ToInt32(viewSelectFoods.GetFocusedRowCellValue("ID"));
@@ -947,7 +991,7 @@ namespace RoomManager
                     aFoods.Name3 = Convert.ToString(viewSelectFoods.GetFocusedRowCellValue("Name3"));
                     aFoods.Image1 = (byte[])viewSelectFoods.GetFocusedRowCellValue("Image1");
 
-                    this.aListFoods.Insert(0, aFoods);
+                    this.aListFoods[i].Insert(0, aFoods);
                     dgvAvailableFoods.DataSource = this.aListFoods;
                     dgvAvailableFoods.RefreshDataSource();
 
@@ -966,7 +1010,8 @@ namespace RoomManager
         private void lueHalls_EditValueChanged(object sender, EventArgs e)
         {
             this.CurrentCodeHall = lueHalls.EditValue.ToString();
-
+   
+            LoadDataListFoods();
             if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList().Count > 0)
             {
                 if (this.aNewBookingHEN.aListBookingHallUsed.Where(a => a.CodeHall == CurrentCodeHall).ToList()[0].aListMenuEN.Count > 0)
@@ -1017,7 +1062,7 @@ namespace RoomManager
             }
             else if (this.afrmMain_Halls != null)
             {
-                this.afrmMain_Halls.Reload();
+                this.afrmMain_Halls.ReloadData();
             }
             
 

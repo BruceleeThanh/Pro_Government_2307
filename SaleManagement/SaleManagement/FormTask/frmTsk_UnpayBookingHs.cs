@@ -13,7 +13,7 @@ using BussinessLogic;
 using Entity;
 using CORESYSTEM;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_UnpayBookingHs : DevExpress.XtraEditors.XtraForm
     {
@@ -124,7 +124,7 @@ namespace SaleManagement
                 for (int i = 0; i < aListTemp.Count; i++)
                 {
                     aBookingHallsEN = new BookingHallsEN();
-                    aBookingHallsEN.SkuHall = aHallsBO.Select_ByCodeHall(aListTemp[i].CodeHall, 1).Sku;
+                    aBookingHallsEN.HallSku = aHallsBO.Select_ByCodeHall(aListTemp[i].CodeHall, 1).Sku;
                     aBookingHallsEN.ID = aListTemp[i].ID;
                     aBookingHallsEN.Cost = aListTemp[i].Cost;
                     aBookingHallsEN.StartTime = aListTemp[i].StartTime;
@@ -187,9 +187,9 @@ namespace SaleManagement
 
         private void btnPayment_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int IDBookingH = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("ID"));
-            frmTsk_PaymentHall afrmTsk_PaymentHall = new frmTsk_PaymentHall(IDBookingH);
-            afrmTsk_PaymentHall.ShowDialog();
+            //int IDBookingH = Convert.ToInt32(grvBookingRs.GetFocusedRowCellValue("ID"));
+            //frmTsk_PaymentHall afrmTsk_PaymentHall = new frmTsk_PaymentHall(IDBookingH);
+            //afrmTsk_PaymentHall.ShowDialog();
         }
 
         private void btnCancelBooking_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

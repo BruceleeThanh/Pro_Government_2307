@@ -5,18 +5,25 @@ using DataAccess;
 using BussinessLogic;
 using Library;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_SystemUsers : DevExpress.XtraEditors.XtraForm
     {
         SystemUsersBO aSysUserBO = new SystemUsersBO();
         SystemUsers aSysUser=new SystemUsers();
-       
+        public frmLogin afrmLogin_old;
+
         public frmIns_SystemUsers()
         {
             InitializeComponent();
         }
-       
+        public frmIns_SystemUsers(frmLogin afrmLogin)
+        {
+            InitializeComponent();
+            Refesh();
+            afrmLogin_old = afrmLogin;
+        }
+
         private string s;
         public String GetCapcha()
         {
@@ -24,6 +31,7 @@ namespace SaleManagement
             string s= StringUtility.md5(rand.Next().ToString());
             s = s.Substring(s.Length-4);
             return s;
+
         }
 
         private Bitmap DrawCapchaImg(string s)
@@ -74,5 +82,41 @@ namespace SaleManagement
         {
 
         }
+
+        //private void bnComfirm_Click(object sender, EventArgs e)
+        //{
+        //    if (txtCapcha.Text == "") 
+        //    {
+        //        MessageBox.Show("Nhập lại mã xác thực");
+        //    }
+        //    if (txtCapcha.Text.ToUpper() == s.ToUpper())
+        //    {
+        //        aSysUser.Username = txtUserName.Text;
+        //        aSysUser.Password = StringUtility.md5(txtPass.Text);
+        //        int ret = aSysUserBO.Ins(aSysUser);
+        //        if (ret == 1)
+        //        {
+        //            MessageBox.Show("Đăng ký thành công \n Cập nhật thông tin chi tiết trong trang chính");
+        //            this.Hide();
+        //            afrmLogin_old.GetText(txtUserName.Text,txtPass.Text);
+        //            this.Close();
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Lỗi!!");
+        //        }
+
+        //    }
+        //}
+
+        //private void bnRefesh_Click(object sender, EventArgs e)
+        //{
+        //    Refesh();
+        //}
+
+        //private void frmAddSysUser_Load(object sender, EventArgs e)
+        //{
+
+        //}
     }
 }

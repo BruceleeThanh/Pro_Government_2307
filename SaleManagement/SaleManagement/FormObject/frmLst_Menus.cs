@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using DataAccess;
 using Entity;
 using BussinessLogic;
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_Menus : DevExpress.XtraEditors.XtraForm
     {

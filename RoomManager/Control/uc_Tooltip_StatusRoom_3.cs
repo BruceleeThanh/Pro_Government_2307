@@ -48,7 +48,7 @@ namespace RoomManager
            
             this.lblFrom_3.Text = this.Datasource.CheckInActual.ToString("dd/MM/yyyy HH:mm");
             this.lblTo_3.Text = this.Datasource.CheckOutPlan.ToString("dd/MM/yyyy HH:mm");
-            this.lblBookingMoney.Text = String.Format(CultureInfo.InvariantCulture, "{0:#.##}", this.Datasource.BookingRs_BookingMoney.ToString());
+            this.lblBookingMoney.Text = this.Datasource.BookingRs_BookingMoney.GetValueOrDefault().ToString("G");
             this.lblTel_3.Text = this.Datasource.Customers_Tel;
 
             this.lblBookingR_3.Text = this.Datasource.BookingRs_Subject != null ? this.Datasource.BookingRs_Subject.ToString() : "";
@@ -218,6 +218,11 @@ namespace RoomManager
             {
                 MessageBox.Show("uc_Tooltip_StatusRoom_3.btnDetailRooms_Click\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pan_Status_3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

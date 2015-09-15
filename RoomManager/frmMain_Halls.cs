@@ -18,10 +18,18 @@ namespace RoomManager
 {
     public partial class frmMain_Halls : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        frmLogin afrmLogin = new frmLogin();
         public frmMain_Halls()
         {
             InitializeComponent();
             this.Visible = false;
+        }
+       
+        public frmMain_Halls(frmLogin afrmLogin)
+        {
+
+            InitializeComponent();
+            this.afrmLogin = afrmLogin;
         }
         #region Goverment
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -306,10 +314,10 @@ namespace RoomManager
         #region LoadData
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Reload();
+            ReloadData();
             
         }
-        public void Reload()
+        public void ReloadData()
         {
             try
             {
@@ -407,20 +415,10 @@ namespace RoomManager
 
         private void btnEditBookingH_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            try
-            {
-                int IDBookingH = Convert.ToInt32(grvChecked.GetFocusedRowCellValue("ID"));
-                BookingRs_BookingHs aBookingRs_BookingHs = (new BookingRs_BookingHsBO()).Select_ByIDBookingH(IDBookingH);
-                BookingRs aBookingRs = (new BookingRsBO()).Select_ByID(aBookingRs_BookingHs.IDBookingR.GetValueOrDefault(0));
-                //frmTsk_UpdBookingHall afrmTsk_UpdBookingHall = new frmTsk_UpdBookingHall(this, IDBookingH);
-                //afrmTsk_UpdBookingHall.ShowDialog();
-                frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(aBookingRs_BookingHs.IDBookingR.GetValueOrDefault(0), IDBookingH, aBookingRs.Status.GetValueOrDefault(0), false);
-                afrmTsk_Payment_Step2.ShowDialog();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("frmMain_Halls.btnEdit_ButtonClick \n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer = new frmTsk_BookingHall_Customer_New(this, 1);
+            afrmTsk_BookingHall_Customer.Show();
+
+
         }
 
         private void btnEditKitchenAccept_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -501,6 +499,24 @@ namespace RoomManager
             catch (Exception ex)
             {
                 MessageBox.Show("frmMain.Reload\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtViewBookingH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int IDBookingH = Convert.ToInt32(grvChecked.GetFocusedRowCellValue("ID"));
+                BookingRs_BookingHs aBookingRs_BookingHs = (new BookingRs_BookingHsBO()).Select_ByIDBookingH(IDBookingH);
+                BookingRs aBookingRs = (new BookingRsBO()).Select_ByID(aBookingRs_BookingHs.IDBookingR.GetValueOrDefault(0));
+                //frmTsk_UpdBookingHall afrmTsk_UpdBookingHall = new frmTsk_UpdBookingHall(this, IDBookingH);
+                //afrmTsk_UpdBookingHall.ShowDialog();
+                frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(this, aBookingRs_BookingHs.IDBookingR.GetValueOrDefault(0), IDBookingH, aBookingRs.Status.GetValueOrDefault(0), false);
+                afrmTsk_Payment_Step2.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmMain_Halls.btnEdit_ButtonClick \n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }  
 

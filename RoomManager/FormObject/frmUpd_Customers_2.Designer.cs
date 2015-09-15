@@ -831,10 +831,11 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.lueGender.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Giới tính")});
-            this.lueGender.Properties.NullText = "";
+            this.lueGender.Properties.NullText = "Chọn giới tính1";
             this.lueGender.Properties.NullValuePrompt = "Chọn giới tính";
             this.lueGender.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueGender.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            this.lueGender.Properties.ValidateOnEnterKey = true;
             this.lueGender.Size = new System.Drawing.Size(138, 22);
             this.lueGender.TabIndex = 16;
             // 

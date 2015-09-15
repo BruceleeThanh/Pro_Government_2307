@@ -39,7 +39,7 @@
             this.navBarControl1.SkinExplorerBarViewScrollStyle = DevExpress.XtraNavBar.SkinExplorerBarViewScrollStyle.ScrollBar;
             this.navBarControl1.TabIndex = 0;
             this.navBarControl1.Text = "navBarControl1";
-            this.navBarControl1.ScrollMode = DevExpress.XtraNavBar.NavBarScrollMode.ScrollAlways;
+            this.navBarControl1.Click += new System.EventHandler(this.navBarControl1_Click);
             // 
             // uc_StatusRoomsUpdate
             // 

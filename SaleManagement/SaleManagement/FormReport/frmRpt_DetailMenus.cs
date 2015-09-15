@@ -11,7 +11,7 @@ using BussinessLogic;
 using CORESYSTEM;
 using System.Collections.Generic;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmRpt_DetailMenus : DevExpress.XtraReports.UI.XtraReport
     {
@@ -37,7 +37,7 @@ namespace SaleManagement
                 {
                     if (aFoods.Image1.Length <= 0)
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         aFoods.Image1 = aImageByte;
@@ -45,7 +45,7 @@ namespace SaleManagement
                 }
                 else
                 {
-                    Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                    Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                     image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                     Byte[] aImageByte = this.ConvertImageToByteArray(image);
                     aFoods.Image1 = aImageByte;
@@ -66,8 +66,7 @@ namespace SaleManagement
             // Thông tin buổi tiệc
             BookingHallsBO aBookingHallsBO = new BookingHallsBO();
             BookingHalls aTemp = aBookingHallsBO.Select_ByID(IDBookingHall);
-            lblStartTime.Text = aTemp.StartTime.ToString();
-            lblEndTime.Text = aTemp.EndTime.ToString();
+            lblStartTime.Text = aTemp.Date.ToString();
             HallsBO aHallsBO = new HallsBO();
             lblHallSku.Text = aHallsBO.Select_ByCodeHall(aTemp.CodeHall,1).Sku;
             BookingHsBO aBookingHsBO = new BookingHsBO();

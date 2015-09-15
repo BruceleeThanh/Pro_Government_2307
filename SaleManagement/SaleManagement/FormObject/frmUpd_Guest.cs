@@ -9,7 +9,7 @@ using BussinessLogic;
 using DevExpress.XtraEditors;
 using CORESYSTEM;
 using DataAccess;
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_Guests : DevExpress.XtraEditors.XtraForm
     {

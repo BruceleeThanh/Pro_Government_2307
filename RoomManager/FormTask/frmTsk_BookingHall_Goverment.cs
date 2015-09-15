@@ -588,7 +588,7 @@ namespace RoomManager
                     }   
                     if (afrmMain_Halls != null)
                     {
-                        this.afrmMain_Halls.Reload();
+                        this.afrmMain_Halls.ReloadData();
                     }
                     this.Close();
                 }

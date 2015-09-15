@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using DataAccess;
 using BussinessLogic;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_Services : DevExpress.XtraEditors.XtraForm
     {
@@ -23,7 +23,9 @@ namespace SaleManagement
             InitializeComponent();
             this.afrmLst_Services = afrmLst_Services;
             this.ID = ID;
-        }     
+        }
+
+      
 
         private void frmUpd_Services_Load(object sender, EventArgs e)
         {
@@ -55,46 +57,25 @@ namespace SaleManagement
             frmIns_ServiceGroups frmAddSG = new frmIns_ServiceGroups();
             frmAddSG.ShowDialog();
         }
-        private bool ValidateData()
-        {
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Nhập tên dịch vụ trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            if (txtCost.Text == "")
-            {
-                MessageBox.Show("Nhập giá dịch vụ trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            if (txtUnit.Text == "")
-            {
-                MessageBox.Show("Nhập đơn vị tính trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            return true;
-        }
+
         private void btnEdit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (ValidateData() == true)
-                {
-                    ServicesBO aServiceBO = new ServicesBO();
-                    Services aService = aServiceBO.Select_ByID(ID);
-                    aService.Name = txtName.Text;
-                    aService.CostRef = decimal.Parse(txtCost.Text);
-                    aService.Unit = txtUnit.Text.ToString();
-                    aService.Status = cboStatus.SelectedIndex + 1;
-                    aService.Type = cboType.SelectedIndex + 1;
-                    aService.Disable = bool.Parse(cboDisable.Text);
-                    aService.IDServiceGroups = int.Parse(lueIDServiceGroup.EditValue.ToString());
-                    aServiceBO.Update(aService);
-                    MessageBox.Show("Cập nhật dữ liệu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.afrmLst_Services.ReloadData();
+                ServicesBO aServiceBO = new ServicesBO();
+                Services aService = aServiceBO.Select_ByID(ID);
+                aService.Name = txtName.Text;
+                aService.CostRef = decimal.Parse(txtCost.Text);
+                aService.Unit = txtUnit.Text.ToString();
+                aService.Status = cboStatus.SelectedIndex + 1;
+                aService.Type = cboType.SelectedIndex + 1;
+                aService.Disable = bool.Parse(cboDisable.Text);
+                aService.IDServiceGroups = int.Parse(lueIDServiceGroup.EditValue.ToString());
+                aServiceBO.Update(aService);
+                MessageBox.Show("Cập nhật dữ liệu thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.afrmLst_Services.ReloadData();
 
-                    this.Close();
-                }
+                this.Close();
             }
             catch (Exception ex)
             {

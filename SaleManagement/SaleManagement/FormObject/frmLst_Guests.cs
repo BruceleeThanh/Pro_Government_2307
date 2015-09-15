@@ -7,9 +7,9 @@ using System.Text;
 using System.Windows.Forms;
 using BussinessLogic;
 using DevExpress.XtraEditors;
-using SaleManagement;
+using SaleManager;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_Guests : DevExpress.XtraEditors.XtraForm
     {
@@ -17,6 +17,8 @@ namespace SaleManagement
         frmTsk_BookingHall_Group afrmTsk_BookingHall_Group = null;
         frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = null;
         frmTsk_UpdBooking afrmTsk_UpdBooking = null;
+        frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
+
         frmMain afrmMain = null;
         public frmLst_Guests()
         {
@@ -50,7 +52,11 @@ namespace SaleManagement
             InitializeComponent();
             this.afrmTsk_UpdBooking = afrmTsk_UpdBooking;
         }
-
+        public frmLst_Guests(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
+        }
        // private ILog Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private readonly GuestsBO _GuestsBO = new GuestsBO();
 
@@ -144,6 +150,10 @@ namespace SaleManagement
                  if (this.afrmTsk_UpdBooking != null)
                  {
                      this.afrmTsk_UpdBooking.CallBackGuest(ID);
+                 }
+                 if (this.afrmTsk_BookingHall_Customer_New != null)
+                 {
+                     this.afrmTsk_BookingHall_Customer_New.CallBackGuest(ID);
                  }
                  this.Close();
             }

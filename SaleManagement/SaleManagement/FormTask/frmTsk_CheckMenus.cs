@@ -12,7 +12,7 @@ using CORESYSTEM;
 using Entity;
 using DataAccess;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_CheckMenus : DevExpress.XtraEditors.XtraForm
     {
@@ -103,25 +103,24 @@ namespace SaleManagement
                 {
                     aBookingHallsEN = new BookingHallsEN();
                     aBookingHallsEN.IDBookingH = item.IDBookingH;
-                    aBookingHallsEN.DisplayCustomerType = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(item.CustomerTypeBookingH)).Name;
-                    aBookingHallsEN.IDBookingHall = item.IDBookingHall;
-                    aBookingHallsEN.BookingStatusBookingHall = item.BookingStatusBookingHall;
-                    aBookingHallsEN.NameCustomer = item.NameCustomer;
+                    aBookingHallsEN.DisplayCustomerType = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(item.CustomerType)).Name;
+                    aBookingHallsEN.ID = item.ID;
+                    aBookingHallsEN.BookingStatus = item.BookingStatus;
+                    
                     aBookingHallsEN.NameGuest = item.NameGuest;
-                    aBookingHallsEN.NameCustomerGroup = item.NameCustomerGroup;
-                    aBookingHallsEN.DateBookingHall = item.DateBookingHall;
-                    aBookingHallsEN.LunarDateBookingHall = item.LunarDateBookingHall;
-                    aBookingHallsEN.StartTimeBookingHall = item.StartTimeBookingHall;
-                    aBookingHallsEN.EndTimeBookingHall = item.EndTimeBookingHall;
+                   
+                    aBookingHallsEN.Date = item.Date;
+                    aBookingHallsEN.LunarDate= item.LunarDate;
+                    aBookingHallsEN.StartTime = item.StartTime;
+                    aBookingHallsEN.EndTime = item.EndTime;
                     aBookingHallsEN.BookingTypeBookingH = item.BookingTypeBookingH;
 
                     aBookingHallsEN.StatusPayBookingH = item.StatusPayBookingH;
-                    aBookingHallsEN.NoteBookingH = item.NoteBookingH;
                     aBookingHallsEN.DisplayBookingType = CORE.CONSTANTS.SelectedBookingType(Convert.ToInt32(item.BookingTypeBookingH)).Name;
 
                     aBookingHallsEN.DisplayLevel = CORE.CONSTANTS.SelectedLevel(Convert.ToInt32(item.LevelBookingH)).Name;
-                    aBookingHallsEN.SkuHall = item.SkuHall;
-                    List<Menus> aListMenus = aMenusBO.Select_ByIDBookingHall(item.IDBookingHall);
+                    aBookingHallsEN.HallSku = item.HallSku;
+                    List<Menus> aListMenus = aMenusBO.Select_ByIDBookingHall(item.ID);
                     if (aListMenus.Count > 0)
                     {
                         aBookingHallsEN.HasMenu = " Có";
@@ -177,7 +176,7 @@ namespace SaleManagement
 
         private void btnDetail_HaveMenus_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int IDBookingHall = Convert.ToInt32(grvBookingHalls_HaveMenus.GetFocusedRowCellValue("IDBookingHall"));
+            int IDBookingHall = Convert.ToInt32(grvBookingHalls_HaveMenus.GetFocusedRowCellValue("ID"));
             frmLst_DetailBookingHalls afrmLst_DetailBookingHalls = new frmLst_DetailBookingHalls(this, IDBookingHall);
             afrmLst_DetailBookingHalls.ShowDialog();
         }

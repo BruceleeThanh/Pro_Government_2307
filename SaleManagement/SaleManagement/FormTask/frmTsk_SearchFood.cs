@@ -11,7 +11,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DataAccess;
 using System.IO;
 using DevExpress.XtraReports.UI;
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_SearchFood : DevExpress.XtraEditors.XtraForm
     {
@@ -60,7 +60,7 @@ namespace SaleManagement
                     {
                         if (aFoods.Image1.Length <= 0)
                         {
-                            Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                            Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                             image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                             Byte[] aImageByte = this.ConvertImageToByteArray(image);
                             aFoods.Image1 = aImageByte;
@@ -68,7 +68,7 @@ namespace SaleManagement
                     }
                     else
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         aFoods.Image1 = aImageByte;
@@ -133,7 +133,7 @@ namespace SaleManagement
                     {
                         if (aFoods.Image1.Length <= 0)
                         {
-                            Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                            Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                             image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                             Byte[] aImageByte = this.ConvertImageToByteArray(image);
                             aFoods.Image1 = aImageByte;
@@ -141,7 +141,7 @@ namespace SaleManagement
                     }
                     else
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(70,70, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         aFoods.Image1 = aImageByte;

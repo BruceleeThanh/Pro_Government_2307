@@ -4,25 +4,60 @@ using DataAccess;
 using BussinessLogic;
 using CORESYSTEM;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_ServiceGroups : DevExpress.XtraEditors.XtraForm
     {
-        ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
-        ServiceGroups aServiceGroups = new ServiceGroups();
-        frmIns_Services afrmIns_Services_Old = null;
-       
+        frmIns_Services afrmIns_Services = null;
         public frmIns_ServiceGroups()
         {
             InitializeComponent();
-            //gridView1.RowCellClick += gridView1_RowCellClick;
         }
         public frmIns_ServiceGroups(frmIns_Services afrmIns_Services)
         {
             InitializeComponent();
-            afrmIns_Services_Old = afrmIns_Services;
+            this.afrmIns_Services = afrmIns_Services;
         }
+        private void bnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ValidateData() == true)
+                {                    
+                    ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+                    ServiceGroups aServiceGroups = new ServiceGroups();
+                    aServiceGroups.Name = txtName.Text;
+                    aServiceGroups.Type = Convert.ToInt32(lueType.EditValue);
 
+                    aServiceGroups.Disable = bool.Parse(cbxDisable.SelectedItem.ToString());
+
+                    int ret = aServiceGroupsBO.Insert(aServiceGroups);
+                    if (ret == 1)
+                    {
+                        lblID.Text = "";
+                        txtName.Text = "";
+                        lueType.EditValue = 0;
+                        cbxDisable.SelectedIndex = 0;
+                        MessageBox.Show("Thêm mới thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        this.ReloadData();
+                        if (afrmIns_Services != null)
+                        {
+                            this.afrmIns_Services.ReloadData();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thất mới nhóm dịch vụ thất bại.","Lỗi",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmIns_ServiceGroups.bnAdd_Click\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         private bool ValidateData()
         {
             if (txtName.Text == "")
@@ -32,43 +67,12 @@ namespace SaleManagement
             }
             return true;
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ValidateData() == true)
-                {
-                    aServiceGroups.Name = txtName.Text;
-                    aServiceGroups.Type = Convert.ToInt32(lueType.EditValue);
-                    aServiceGroups.Disable = bool.Parse(cbxDisable.SelectedItem.ToString());
-
-                    int ret = aServiceGroupsBO.Ins(aServiceGroups);
-                    if (ret == 1)
-                    {
-                        MessageBox.Show("Thêm mới thành công");
-                        ReloadData();
-                        if (afrmIns_Services_Old != null)
-                        {
-                            afrmIns_Services_Old.Reload();
-                            this.Close();
-                        }
-                    }
-                    else
-                        MessageBox.Show("Thất Bại");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("frmIns_ServiceGroups.bnAdd_Click\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
 
         public void ReloadData()
         {
             try
             {
+                ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
                 dgvSerGroup.DataSource = aServiceGroupsBO.Sel_all();
                 dgvSerGroup.RefreshDataSource();
 
@@ -88,7 +92,8 @@ namespace SaleManagement
         {
             try
             {
-                ReloadData();
+                lblID.Text = "";
+                this.ReloadData();
             }
             catch (Exception ex)
             {
@@ -111,21 +116,30 @@ namespace SaleManagement
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void bnEdit_Click(object sender, EventArgs e)
         {
             try
             {
-                if (ValidateData() == true)
+                if (String.IsNullOrEmpty(txtName.Text) == true)
                 {
-                    aServiceGroups.ID = int.Parse(lblID.Text); ;
+                    txtName.Focus();
+                    MessageBox.Show("Vui lòng nhập tên nhóm dịch vụ.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    bnAdd.Enabled = true;
+                    bnEdit.Enabled = false;
+                    ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+                    ServiceGroups aServiceGroups = new ServiceGroups();
+                    aServiceGroups.ID =Convert.ToInt32(lblID.Text);
                     aServiceGroups.Name = txtName.Text;
                     aServiceGroups.Type = Convert.ToInt32(lueType.EditValue);
                     aServiceGroups.Disable = bool.Parse(cbxDisable.SelectedItem.ToString());
-                    aServiceGroupsBO.Upd(aServiceGroups);
-                    if (afrmIns_Services_Old != null)
+                    aServiceGroupsBO.Update(aServiceGroups);
+                    this.ReloadData();
+                    if (afrmIns_Services != null)
                     {
-                        afrmIns_Services_Old.Reload();
-                        this.Close();
+                        this.afrmIns_Services.ReloadData();
                     }
                 }
             }
@@ -141,8 +155,10 @@ namespace SaleManagement
         {
             try
             {
+                bnEdit.Enabled = true;
+                bnAdd.Enabled = false;
+                ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
                 int ID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
-
                 txtName.Text = aServiceGroupsBO.Sel_ByID(ID).Name;
                 lueType.EditValue = aServiceGroupsBO.Sel_ByID(ID).Type;
                 cbxDisable.Text = aServiceGroupsBO.Sel_ByID(ID).Disable.ToString();
@@ -158,13 +174,24 @@ namespace SaleManagement
         {
             try
             {
-                int ID = int.Parse(gridView1.GetFocusedRowCellValue("ID").ToString());
+                int ID =Convert.ToInt32(gridView1.GetFocusedRowCellValue("ID"));
                 DialogResult result = MessageBox.Show("Bạn có muốn xóa nhóm dịch vụ " + ID + " này không?", "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    aServiceGroupsBO.Del_ByID(ID);
-                    MessageBox.Show("Xóa thành công");
-                    ReloadData();
+                    ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+                    aServiceGroupsBO.Delete_ByID(ID);
+                    MessageBox.Show("Xóa thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.ReloadData();
+
+                    bnAdd.Enabled = true;
+                    bnEdit.Enabled = false;
+                    lblID.Text = "";
+                    txtName.Text = "";                    
+                    cbxDisable.SelectedIndex = 0;
+                    if (afrmIns_Services != null)
+                    {
+                        this.afrmIns_Services.ReloadData();
+                    }
                 }
             }
             catch (Exception ex)
@@ -172,6 +199,5 @@ namespace SaleManagement
                 MessageBox.Show("frmIns_ServiceGroups.bnDelete_ButtonClick\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

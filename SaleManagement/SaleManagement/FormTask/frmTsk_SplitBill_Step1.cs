@@ -13,65 +13,58 @@ using Entity;
 using BussinessLogic;
 using System.Globalization;
 
-namespace SaleManagement
+
+namespace SaleManager
 {
     public partial class frmTsk_SplitBill_Step1 : DevExpress.XtraEditors.XtraForm
     {
-        public frmTsk_PaymentHall afrmTsk_PaymentHall = null;
-        private PaymentHallsEN aPaymentHallsEN = new PaymentHallsEN();
+        public frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = null;
+        private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
 
-
-        public frmTsk_SplitBill_Step1(frmTsk_PaymentHall afrmTsk_PaymentHall, PaymentHallsEN aPaymentHallsEN)
+        public frmTsk_SplitBill_Step1(frmTsk_Payment_Step2 afrmTsk_Payment_Step2, NewPaymentEN aNewPaymentEN)
         {
             InitializeComponent();
-            this.afrmTsk_PaymentHall = afrmTsk_PaymentHall;
-            this.aPaymentHallsEN = aPaymentHallsEN;
+            this.afrmTsk_Payment_Step2 = afrmTsk_Payment_Step2;
+            this.aNewPaymentEN = aNewPaymentEN;
         }
+
         //Hiennv
         private void frmTsk_SplitBill_Load(object sender, EventArgs e)
         {
             try
             {
-                this.LoadListHalls();
-                this.LoadListServices();
+                this.LoadData();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("frmTsk_SplitBill_Step1.frmTsk_SplitBill_Load\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Hiennv
-        private void LoadListHalls()
+
+        public void LoadData()
         {
             try
             {
-                dgvHalls.DataSource = this.aPaymentHallsEN.GetListHallsEN();
+                dgvRooms.DataSource = this.aNewPaymentEN.aListBookingRoomUsed;
+                dgvRooms.RefreshDataSource();
+                dgvHalls.DataSource = this.aNewPaymentEN.aListBookingHallUsed;
                 dgvHalls.RefreshDataSource();
+                dgvServicesRoom.DataSource = this.aNewPaymentEN.GetAllServiceUsedInRoom();
+                dgvServicesRoom.RefreshDataSource();
+                dgvServicesHall.DataSource = this.aNewPaymentEN.GetAllServiceUsedInHall();
+                dgvServicesHall.RefreshDataSource();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("frmTsk_SplitBill_Step1.LoadListHalls\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("frmTsk_SplitBill_Step1.LoadData\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Hiennv
-        private void LoadListServices()
-        {
-            try
-            {
-                dgvServices.DataSource =this.aPaymentHallsEN.GetListServicesHallsEN();
-                dgvServices.RefreshDataSource();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("frmTsk_SplitBill_Step1.LoadListServices\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        //Hiennv
         private void btnSplit_Click(object sender, EventArgs e)
         {
             try
             {
-                frmTsk_SplitBill_Step2 afrmTsk_SplitBill_Step2 = new frmTsk_SplitBill_Step2(this, this.aPaymentHallsEN);
+                this.aNewPaymentEN.Save();
+                frmTsk_SplitBill_Step2 afrmTsk_SplitBill_Step2 = new frmTsk_SplitBill_Step2(this,this.aNewPaymentEN);
                 afrmTsk_SplitBill_Step2.Show();
             }
             catch (Exception ex)
@@ -80,63 +73,82 @@ namespace SaleManagement
             }
         }
         //Hiennv
-        private void txtChooseHalls_EditValueChanged(object sender, EventArgs e)
+        private void txtAddToSubPaymentR_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
-                TextEdit txtChooseHall = (TextEdit)sender;
+                TextEdit txtChooseRooms = (TextEdit)sender;
 
-                int IDBookingHall = Convert.ToInt32(viewHalls.GetFocusedRowCellValue("IDBookingHall"));
-                this.aPaymentHallsEN.SetIndexSubHalls(IDBookingHall, Convert.ToInt32(txtChooseHall.EditValue));
-
-                List<IndexSubSplitBillEN> aListTemp = this.aPaymentHallsEN.aListIndexSubSplitBillH.Where(r => r.ID == IDBookingHall).ToList();
-                if (aListTemp.Count > 0)
-                {
-                    this.aPaymentHallsEN.aListIndexSubSplitBillH.Remove(aListTemp[0]);
-                }
-                IndexSubSplitBillEN aIndexSubSplitBillEN = new IndexSubSplitBillEN();
-                aIndexSubSplitBillEN.ID = IDBookingHall;
-                aIndexSubSplitBillEN.IndexSub = Convert.ToInt32(txtChooseHall.EditValue);
-                aIndexSubSplitBillEN.SubBookingMoney = 0;
-                aIndexSubSplitBillEN.SubStatus = 0;
-
-                this.aPaymentHallsEN.aListIndexSubSplitBillH.Add(aIndexSubSplitBillEN);
-
-                this.LoadListHalls();
+                int IDBookingRooms = Convert.ToInt32(viewRooms.GetFocusedRowCellValue("ID"));
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == IDBookingRooms).ToList()[0].IndexSubPayment = Convert.ToInt32(txtChooseRooms.EditValue);
+                this.aNewPaymentEN.ListIndex.Add(Convert.ToInt32(txtChooseRooms.EditValue));
+                this.LoadData();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("frmTsk_SplitBill_Step1.txtChooseHalls_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("frmTsk_SplitBill_Step1.txtChooseRooms_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Hiennv
-        private void txtChooseService_EditValueChanged(object sender, EventArgs e)
+        private void txtAddToSubPaymentServicesR_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
                 TextEdit txtChooseService = (TextEdit)sender;
-                int IDBookingHallService = Convert.ToInt32(viewServices.GetFocusedRowCellValue("IDBookingHallService"));
-                this.aPaymentHallsEN.SetIndexSubServices(IDBookingHallService, Convert.ToInt32(txtChooseService.EditValue));
-                List<IndexSubSplitBillEN> aListTemp = this.aPaymentHallsEN.aListIndexSubSplitBillH.Where(r => r.ID == IDBookingHallService).ToList();
-                if (aListTemp.Count > 0)
-                {
-                    this.aPaymentHallsEN.aListIndexSubSplitBillH.Remove(aListTemp[0]);
-                }
-                IndexSubSplitBillEN aIndexSubSplitBillEN = new IndexSubSplitBillEN();
-                aIndexSubSplitBillEN.ID = IDBookingHallService;
-                aIndexSubSplitBillEN.IndexSub = Convert.ToInt32(txtChooseService.EditValue);
-                aIndexSubSplitBillEN.SubBookingMoney = 0;
-                aIndexSubSplitBillEN.SubStatus = 0;
+                int IDBookingRoomsService = Convert.ToInt32(viewServicesRoom.GetFocusedRowCellValue("IDBookingService"));
+                BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
+                int IDBookingRoom = aBookingRooms_ServicesBO.Select_ByID(IDBookingRoomsService).IDBookingRoom;
+                this.aNewPaymentEN.ChangeIndexSubPaymentServiceRoom(IDBookingRoom, IDBookingRoomsService, Convert.ToInt32(txtChooseService.EditValue));
+                this.aNewPaymentEN.ListIndex.Add(Convert.ToInt32(txtChooseService.EditValue));
 
-                this.aPaymentHallsEN.aListIndexSubSplitBillH.Add(aIndexSubSplitBillEN);
-
-                this.LoadListServices();
+                this.LoadData();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("frmTsk_SplitBill_Step1.txtChooseService_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //Hiennv
+        private void txtAddSubPaymentH_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TextEdit txtChooseHalls = (TextEdit)sender;
+                int IDBookingHall = Convert.ToInt32(viewHalls.GetFocusedRowCellValue("ID"));
+                this.aNewPaymentEN.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].IndexSubPayment = Convert.ToInt32(txtChooseHalls.EditValue);
+                this.aNewPaymentEN.ListIndex.Add(Convert.ToInt32(txtChooseHalls.EditValue));
+
+                this.LoadData();
+              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_SplitBill_Step1.txtAddSubPaymentH_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }      
+
+        private void txtChooseService_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                TextEdit txtChooseService = (TextEdit)sender;
+                int IDBookingHallsService = Convert.ToInt32(viewServicesHall.GetFocusedRowCellValue("IDBookingService"));
+                BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
+                int IDBookingHall = aBookingHalls_ServicesBO.Select_ByID(IDBookingHallsService).IDBookingHall;
+                this.aNewPaymentEN.ChangeIndexSubPaymentServiceHall(IDBookingHall, IDBookingHallsService, Convert.ToInt32(txtChooseService.EditValue));
+                this.aNewPaymentEN.ListIndex.Add(Convert.ToInt32(txtChooseService.EditValue));
+
+                this.LoadData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_SplitBill_Step1.txtAddToSubPaymentServicesH_EditValueChanged\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
+
 
     }
 }

@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using BussinessLogic;
 using DataAccess;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_PermitDetail : DevExpress.XtraEditors.XtraForm
     {

@@ -43,7 +43,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(84, 123);
+            this.shapeContainer1.Size = new System.Drawing.Size(117, 151);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
@@ -57,7 +57,7 @@
             this.rectangleShape1.FillGradientColor = System.Drawing.Color.Gainsboro;
             this.rectangleShape1.Location = new System.Drawing.Point(5, 8);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(71, 103);
+            this.rectangleShape1.Size = new System.Drawing.Size(87, 137);
             this.rectangleShape1.Tag = "xxxxxxxxxxxxxxxxxxx";
             this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
             this.rectangleShape1.MouseEnter += new System.EventHandler(this.rectangleShape1_MouseEnter);
@@ -71,9 +71,10 @@
             this.lblSku.Appearance.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSku.Appearance.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblSku.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblSku.Location = new System.Drawing.Point(22, 18);
+            this.lblSku.Location = new System.Drawing.Point(29, 13);
+            this.lblSku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblSku.Name = "lblSku";
-            this.lblSku.Size = new System.Drawing.Size(36, 24);
+            this.lblSku.Size = new System.Drawing.Size(42, 30);
             this.lblSku.TabIndex = 4;
             this.lblSku.Text = "101";
             this.lblSku.ToolTipController = this.toolTip;
@@ -96,9 +97,10 @@
             this.lbWarning.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbWarning.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbWarning.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
-            this.lbWarning.Location = new System.Drawing.Point(8, 48);
+            this.lbWarning.Location = new System.Drawing.Point(11, 51);
+            this.lbWarning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(66, 62);
+            this.lbWarning.Size = new System.Drawing.Size(89, 88);
             this.lbWarning.TabIndex = 5;
             this.lbWarning.Text = "CheckOut";
             this.lbWarning.Visible = false;
@@ -106,7 +108,7 @@
             // 
             // uc_RoomStatusItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Controls.Add(this.lbWarning);
@@ -115,7 +117,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uc_RoomStatusItem";
-            this.Size = new System.Drawing.Size(84, 123);
+            this.Size = new System.Drawing.Size(117, 151);
             this.Load += new System.EventHandler(this.uc_RoomStatusItem_Load);
             this.Click += new System.EventHandler(this.uc_RoomStatusItem_Click);
             this.ResumeLayout(false);

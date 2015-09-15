@@ -15,7 +15,7 @@ using CORESYSTEM;
 using Library;
 using System.Globalization;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_BookingHall_Goverment : DevExpress.XtraEditors.XtraForm
     {
@@ -25,21 +25,49 @@ namespace SaleManagement
         GuestsBO aGuestsBO = new GuestsBO();
         private List<HallExtStatusEN> aListAvailableHall = new List<HallExtStatusEN>();
         List<HallsEN> aListSelected = new List<HallsEN>();
-        frmMain afrmMain = null;
+        frmMain_Halls afrmMain_Halls = null;
 
-        public frmTsk_BookingHall_Goverment(frmMain afrmMain)
+        private int? IDBookingR = 0;
+        private int? IDCompany = 0;
+        private int? IDCustomerGroup = 0;
+        private int? IDCustomer = 0;
+        private int? IDBookingH = 0;
+
+        public frmTsk_BookingHall_Goverment(int? IDBookingR, int? IDCompany, int? IDCustomerGroup, int? IDCustomer)
         {
             InitializeComponent();
-            this.afrmMain = afrmMain;
+            this.IDBookingR = IDBookingR;
+            this.IDCompany = IDCompany;
+            this.IDCustomerGroup = IDCustomerGroup;
+            this.IDCustomer = IDCustomer;
+        }
+
+
+        public frmTsk_BookingHall_Goverment(frmMain_Halls afrmMain_Halls)
+        {
+            InitializeComponent();
+            this.afrmMain_Halls = afrmMain_Halls;
         }
 
         private void frmTsk_BookingHall_Goverment_Load(object sender, EventArgs e)
         {
             this.ReloadData();
-            dtpFrom.DateTime = DateTime.Now;            
+            dtpFrom.DateTime = DateTime.Now;
         }
         public void ReloadData()
         {
+
+            if (this.IDCompany > 0 && this.IDCustomerGroup > 0 && this.IDCustomer > 0)
+            {
+                lueCompany.Enabled = false;
+                lueCustomerGroup.Enabled = false;
+                lueCustomer.Enabled = false;
+                btnAddCompany.Visible = false;
+                btnSearchCompany.Visible = false;
+                btnAddCustomerGroup.Visible = false;
+                btnSearchCustomerGroup.Visible = false;
+                btnAddCustomer.Visible = false;
+            }
 
             lueBookingStatus.Properties.DataSource = CORE.CONSTANTS.ListBookingHallStatus;
             lueBookingStatus.Properties.DisplayMember = "Name";
@@ -64,18 +92,40 @@ namespace SaleManagement
             lueCompany.Properties.DataSource = aCompaniesBO.Select_ByType(1);// [Company] Type = 1 : Nha nuoc, 1; 
             lueCompany.Properties.DisplayMember = "Name";
             lueCompany.Properties.ValueMember = "ID";
-
-            lueCustomer.Properties.DataSource = aCustomersBO.Select_All();
-            lueCustomer.Properties.DisplayMember = "Name";
-            lueCustomer.Properties.ValueMember = "ID";
-
+            if (this.IDCompany > 0)
+            {
+                lueCompany.EditValue = this.IDCompany;
+            }
+            else
+            {
+                lueCompany.EditValue = 0;
+            }
             lueCustomerGroup.Properties.DataSource = aCustomerGroupsBO.Select_All();
             lueCustomerGroup.Properties.DisplayMember = "Name";
             lueCustomerGroup.Properties.ValueMember = "ID";
+            if (this.IDCustomerGroup > 0)
+            {
+                lueCustomerGroup.EditValue = this.IDCustomerGroup;
+            }
+            else
+            {
+                lueCustomerGroup.EditValue = 0;
+            }
+            lueCustomer.Properties.DataSource = aCustomersBO.Select_All();
+            lueCustomer.Properties.DisplayMember = "Name";
+            lueCustomer.Properties.ValueMember = "ID";
+            if (this.IDCustomer > 0)
+            {
+                lueCustomer.EditValue = this.IDCustomer;
+            }
+            else
+            {
+                lueCustomer.EditValue = 0;
+            }
 
             lueGuest.Properties.DataSource = aGuestsBO.Select_All();
-           lueGuest.Properties.DisplayMember = "Name";
-           lueGuest.Properties.ValueMember = "ID";
+            lueGuest.Properties.DisplayMember = "Name";
+            lueGuest.Properties.ValueMember = "ID";
 
             LoadCompanies();
 
@@ -84,7 +134,7 @@ namespace SaleManagement
         {
             try
             {
-                CompaniesBO aCompaniesBO = new CompaniesBO();               
+                CompaniesBO aCompaniesBO = new CompaniesBO();
                 lueCompany.Properties.DataSource = aCompaniesBO.Select_ByType(1);// [Company] Type = 1 : Nha nuoc, 1; 
                 lueCompany.Properties.DisplayMember = "Name";
                 lueCompany.Properties.ValueMember = "ID";
@@ -101,16 +151,16 @@ namespace SaleManagement
                 CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
                 int IDCompany = Convert.ToInt32(lueCompany.EditValue.ToString());
                 List<CustomerGroups> aListCustomerGroups = aCustomerGroupsBO.Select_ByIDCompany(IDCompany);
-               lueCustomerGroup.Properties.DataSource = aListCustomerGroups;
-               lueCustomerGroup.Properties.DisplayMember = "Name";
-               lueCustomerGroup.Properties.ValueMember = "ID";
+                lueCustomerGroup.Properties.DataSource = aListCustomerGroups;
+                lueCustomerGroup.Properties.DisplayMember = "Name";
+                lueCustomerGroup.Properties.ValueMember = "ID";
                 if (aListCustomerGroups.Count > 0)
                 {
-                   lueCustomerGroup.EditValue = aListCustomerGroups.ToList()[0].ID;
+                    lueCustomerGroup.EditValue = aListCustomerGroups.ToList()[0].ID;
                 }
                 else
                 {
-                   lueCustomerGroup.EditValue = 0;
+                    lueCustomerGroup.EditValue = 0;
                 }
             }
             catch (Exception ex)
@@ -200,7 +250,7 @@ namespace SaleManagement
             {
                 MessageBox.Show("frmTsk_BookingHall_Goverment.btnAddCustomer_Click\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }      
+        }
 
         private void btnAddGuest_Click(object sender, EventArgs e)
         {
@@ -291,7 +341,7 @@ namespace SaleManagement
         {
             try
             {
-                 lueCustomer.Properties.DataSource = aList;
+                lueCustomer.Properties.DataSource = aList;
                 lueCustomer.Properties.DisplayMember = "Name";
                 lueCustomer.Properties.ValueMember = "ID";
             }
@@ -451,7 +501,7 @@ namespace SaleManagement
                     aBookingHs.CustomerType = 1;
                     aBookingHs.BookingType = Convert.ToInt32(lueBookingType.EditValue);
                     aBookingHs.Note = txtNote.Text;
-                    aBookingHs.IDGuest = Convert.ToInt32(lueGuest.EditValue);                    
+                    aBookingHs.IDGuest = Convert.ToInt32(lueGuest.EditValue);
                     if (txtBookingMoney.Text == "")
                     {
                         aBookingHs.BookingMoney = 0;
@@ -479,7 +529,7 @@ namespace SaleManagement
                     aBookingHs.Description = "";
                     aBookingHs.IDCustomer = Convert.ToInt32(lueCustomer.EditValue);
                     aBookingHs.IDCustomerGroup = Convert.ToInt32(lueCustomerGroup.EditValue);
-                    aBookingHs.IDSystemUser = 1;// Để tạm
+                    aBookingHs.IDSystemUser = CORE.CURRENTUSER.SystemUser.ID;
 
                     //Add du lieu cho BookingHall
                     List<BookingHalls> aListBookingHall = new List<BookingHalls>();
@@ -493,7 +543,7 @@ namespace SaleManagement
                         aTemp.CostRef_Halls = aListSelected[i].CostRef;
                         aTemp.Date = dtpFrom.DateTime;
                         IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
-                        DateTime Lunardate = DateTime.ParseExact(Convert.ToString(LunarDateExt.ToLunarDate(DateTime.Now, 7)),"d/M/yyyy",theCultureInfo);
+                        DateTime Lunardate = DateTime.ParseExact(Convert.ToString(LunarDateExt.ToLunarDate(DateTime.Now, 7)), "d/M/yyyy", theCultureInfo);
                         aTemp.LunarDate = Lunardate;
                         aTemp.BookingStatus = null;
                         aTemp.Unit = aListSelected[i].Unit;
@@ -505,11 +555,40 @@ namespace SaleManagement
 
                         aListBookingHall.Add(aTemp);
                     }
-                    aReceptionTaskBO.CheckIn(aBookingHs, aListBookingHall);
-                    MessageBox.Show("Đặt hội trường thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (afrmMain != null)
+                    this.IDBookingH = aReceptionTaskBO.CheckIn(aBookingHs, aListBookingHall);
+
+
+                    //Hiennv
+                    if (this.IDBookingR > 0)
                     {
-                        this.afrmMain.Reload();
+                        BookingRs_BookingHsBO aBookingRs_BookingHsBO = new BookingRs_BookingHsBO();
+
+                        BookingRs_BookingHs aBookingRs_BookingHs = new BookingRs_BookingHs();
+                        aBookingRs_BookingHs.IDBookingR = this.IDBookingR;
+                        aBookingRs_BookingHs.IDBookingH = this.IDBookingH;
+                        aBookingRs_BookingHs.Type = String.Empty;
+                        aBookingRs_BookingHs.Status = String.Empty;
+                        aBookingRs_BookingHs.Disable = false;
+                        aBookingRs_BookingHs.Extension1 = String.Empty;
+                        aBookingRs_BookingHs.Extension2 = String.Empty;
+                        aBookingRs_BookingHs.Extension3 = String.Empty;
+
+                        aBookingRs_BookingHsBO.Insert(aBookingRs_BookingHs);
+
+                    }
+
+
+
+                    MessageBox.Show("Đặt hội trường thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Bạn có thêm dịch vụ cho hội trường " + aBookingHs.Subject + " này không?", "Thêm dịch vụ hội trường", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        //frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(Convert.ToInt32(this.IDBookingR), Convert.ToInt32(this.IDBookingH));
+                        //afrmTsk_Payment_Step2.ShowDialog();
+                    }   
+                    if (afrmMain_Halls != null)
+                    {
+                        this.afrmMain_Halls.ReloadData();
                     }
                     this.Close();
                 }
@@ -536,7 +615,7 @@ namespace SaleManagement
         {
             try
             {
-              LoadCustomers();
+                LoadCustomers();
             }
             catch (Exception ex)
             {
@@ -549,13 +628,13 @@ namespace SaleManagement
             if (e.Column.Name == "gridColumn11")
             {
                 string Sku = grvSelectedHalls.GetRowCellValue(e.RowHandle, "Sku").ToString();
-                for (int i = 0 ; i < aListSelected.Count ; i++ )
+                for (int i = 0; i < aListSelected.Count; i++)
                 {
                     if (aListSelected[i].Sku == Sku)
                     {
                         aListSelected[i].Cost = Convert.ToDecimal(e.Value); ;
                     }
-                }               
+                }
             }
             else if (e.Column.Name == "gridColumn12")
             {
@@ -564,9 +643,9 @@ namespace SaleManagement
                 {
                     if (aListSelected[i].Sku == Sku)
                     {
-                        aListSelected[i].Unit = Convert.ToInt32(e.Value); 
+                        aListSelected[i].Unit = Convert.ToInt32(e.Value);
                     }
-                }  
+                }
             }
             else if (e.Column.Name == "gridColumn13")
             {
@@ -588,17 +667,16 @@ namespace SaleManagement
             }
         }
 
+        //Hiennv
         private void txtBookingMoney_Leave(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtBookingMoney.Text) == true || txtBookingMoney.Text == "0")
             {
-                lueStatusPay.EditValue = CORE.CONSTANTS.SelectedStatusPay(1).ID;
-                lueStatusPay.SelectedText = CORE.CONSTANTS.SelectedStatusPay(1).Name;
+                lueStatusPay.EditValue = 1;//Chua thanh toan
             }
             else
             {
-                lueStatusPay.EditValue = CORE.CONSTANTS.SelectedStatusPay(2).ID;
-                lueStatusPay.SelectedText = CORE.CONSTANTS.SelectedStatusPay(2).Name;
+                lueStatusPay.EditValue = 2;//Tam ung
             }
         }
 

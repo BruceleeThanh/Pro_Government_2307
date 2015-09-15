@@ -11,9 +11,9 @@ namespace RoomManager
     {
         private int IDCustomer;
         private int IDBookingRoom;
-        private frmLst_Customers afrmLst_Customers = null;
-        private frmIns_CustomerGroups_Customers afrmIns_CustomerGroups_Customers = null;
-        private frmTsk_EditBooking afrmTsk_EditBooking = null;
+       // private frmLst_Customers afrmLst_Customers = null;
+       // private frmIns_CustomerGroups_Customers afrmIns_CustomerGroups_Customers = null;
+       // private frmTsk_EditBooking afrmTsk_EditBooking = null;
         private frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = null;
 
         // Ngoc 
@@ -80,9 +80,6 @@ namespace RoomManager
                 lueGender.Properties.DisplayMember = "Name";
                 lueGender.Properties.ValueMember = "ID";
 
-
-
-
                 CustomersBO aCustomersBO = new CustomersBO();
                 // lấy IDCustomer này từ FormCustomers
                 if (this.IDCustomer > 0)
@@ -98,9 +95,13 @@ namespace RoomManager
                         {
                             dtpBirthday.EditValue = aCustomer.Birthday;
                         }
-                        if (String.IsNullOrEmpty(aCustomer.Gender) == false)
+                        if (aCustomer.Gender != null)
                         {
-                            lueGender.EditValue = Convert.ToInt32(aCustomer.Gender);
+                            lueGender.EditValue = int.Parse(aCustomer.Gender.ToString());
+                        }
+                        else
+                        {
+                            lueGender.EditValue = CORE.CONSTANTS.SelectedGender(1).ID;
                         }
 
                         txtAddress.EditValue = aCustomer.Address;
@@ -121,8 +122,28 @@ namespace RoomManager
                         {
                             lueCitizen.EditValue = CORE.CONSTANTS.SelectedCitizen(2).ID;
                         }
+                        //----------------------------------------------------------------
                         txtTel.EditValue = aCustomer.Tel;
                         txtEmail.EditValue = aCustomer.Email;
+                        //----------------------------------------------------------------
+                        CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                        aCustomerGroups_CustomersBO.InsertCustomerIntoCustomerGroup_ByIDBookingRs(this.IDCustomer, (new BookingRsBO()).Select_ByIDBookingRoom(this.IDBookingRoom).ID);
+                        /*--------------------------*/
+                        BookingRoomsMembers aBookingRoomsMembers = new BookingRoomsMembers();
+                        BookingRoomsMembersBO aBookingRoomsMembersBO = new BookingRoomsMembersBO();
+
+                        aBookingRoomsMembers = aBookingRoomsMembersBO.Select_ByIDBookingRoom_ByIDCustomer(this.IDBookingRoom, this.IDCustomer);
+                        if (aBookingRoomsMembers != null)
+                        {
+                            dtpDateEnterCountry.DateTime = aBookingRoomsMembers.DateEnterCountry.GetValueOrDefault() ;
+                            txtEnterGate.Text = aBookingRoomsMembers.EnterGate;
+                            dtpLeaveDate.DateTime = aBookingRoomsMembers.LeaveDate.GetValueOrDefault();
+                            dtpLimitDateEnterCountry.DateTime = aBookingRoomsMembers.LimitDateEnterCountry.GetValueOrDefault();
+                            txtOrganization.Text = aBookingRoomsMembers.Organization ;
+                            txtPurposeComeVietnam.Text = aBookingRoomsMembers.PurposeComeVietnam ;
+                            aBookingRoomsMembers.TemporaryResidenceDate = dtpTemporaryResidenceDate.DateTime ;
+                        }
+
                     }
 
                 }
@@ -166,81 +187,99 @@ namespace RoomManager
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            BookingRoomsMembersBO aBookingRoomsMembersBO = new BookingRoomsMembersBO();
-            BookingRoomsMembers aBookingRoomsMembers = new BookingRoomsMembers();
-
-            DateTime? dateTime = null;
-
-            CustomersBO aCustomersBO = new CustomersBO();
-            Customers aCustomers = new Customers();
-
-            //Update
-            if (this.IDCustomer > 0)
+            if (lueGender.EditValue == null)
             {
-                aCustomers = aCustomersBO.Select_ByID(IDCustomer);
+                MessageBox.Show("Chọn giới tính cho khách hàng");
             }
             else
             {
-                aCustomers = new Customers();
+                BookingRoomsMembersBO aBookingRoomsMembersBO = new BookingRoomsMembersBO();
+                BookingRoomsMembers aBookingRoomsMembers = new BookingRoomsMembers();
+
+                DateTime? dateTime = null;
+
+                CustomersBO aCustomersBO = new CustomersBO();
+                Customers aCustomers = new Customers();
+
+                //Update
+                if (this.IDCustomer > 0)
+                {
+                    aCustomers = aCustomersBO.Select_ByID(IDCustomer);
+                }
+                else
+                {
+                    aCustomers = new Customers();
+                }
+                aCustomers.Address = txtAddress.Text;
+                aCustomers.Birthday = String.IsNullOrEmpty(dtpBirthday.Text) ? dateTime : dtpBirthday.DateTime;
+                aCustomers.Citizen = Convert.ToInt32(lueCitizen.EditValue);
+
+                aCustomers.Email = txtEmail.Text;
+                aCustomers.Gender = lueGender.EditValue.ToString();
+                aCustomers.Identifier1 = txtIdentifier1.Text;
+                aCustomers.Identifier2 = txtIdentifier2.Text;
+                aCustomers.Identifier3 = txtIdentifier3.Text;
+
+                aCustomers.Name = txtNames.Text;
+                aCustomers.Nationality = lueNationality.EditValue.ToString();
+                aCustomers.Tel = txtTel.Text;
+
+                if (this.IDCustomer > 0)
+                {
+                    aCustomersBO.Update(aCustomers);
+                }
+                else
+                {
+                    this.IDCustomer = aCustomersBO.Insert(aCustomers);
+                }
+                /*Insert nguoi moi vao group*/
+                CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                aCustomerGroups_CustomersBO.InsertCustomerIntoCustomerGroup_ByIDBookingRs(this.IDCustomer, (new BookingRsBO()).Select_ByIDBookingRoom(this.IDBookingRoom).ID);
+                /*--------------------------*/
+
+                aBookingRoomsMembers = aBookingRoomsMembersBO.Select_ByIDBookingRoom_ByIDCustomer(this.IDBookingRoom, this.IDCustomer);
+                if (aBookingRoomsMembers == null)
+                {
+                    aBookingRoomsMembers = new BookingRoomsMembers();
+                    aBookingRoomsMembers.IDBookingRoom = this.IDBookingRoom;
+                    aBookingRoomsMembers.IDCustomer = this.IDCustomer;
+                }
+
+                aBookingRoomsMembers.EnterGate = txtEnterGate.Text;
+
+                if (dtpLimitDateEnterCountry.DateTime.Year == 1)
+                {aBookingRoomsMembers.LimitDateEnterCountry = null;}
+                else{aBookingRoomsMembers.LimitDateEnterCountry = dtpLimitDateEnterCountry.DateTime;}
+
+                if (dtpLeaveDate.DateTime.Year == 1)
+                { aBookingRoomsMembers.LeaveDate = null; }
+                else { aBookingRoomsMembers.LeaveDate = dtpLeaveDate.DateTime; }
+
+                if (dtpDateEnterCountry.DateTime.Year == 1)
+                { aBookingRoomsMembers.DateEnterCountry = null; }
+                else { aBookingRoomsMembers.DateEnterCountry = dtpDateEnterCountry.DateTime; }
+
+                if (dtpTemporaryResidenceDate.DateTime.Year == 1)
+                { aBookingRoomsMembers.TemporaryResidenceDate = null; }
+                else { aBookingRoomsMembers.TemporaryResidenceDate = dtpTemporaryResidenceDate.DateTime; }
+
+                aBookingRoomsMembers.Organization = txtOrganization.Text;
+                aBookingRoomsMembers.PurposeComeVietnam = txtPurposeComeVietnam.Text;
+             
+                if (aBookingRoomsMembers.ID > 0)
+                {
+                    aBookingRoomsMembersBO.Update(aBookingRoomsMembers);
+                }
+                else
+                {
+                    aBookingRoomsMembersBO.Insert(aBookingRoomsMembers);
+                }
+                MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.afrmTsk_Payment_Step2.Reload();
+                //  this.afrmTsk_Payment_Step2.ReloadMoneyRoom();
+                this.Close();
             }
-            aCustomers.Address = txtAddress.Text;
-            aCustomers.Birthday = String.IsNullOrEmpty(dtpBirthday.Text) ? dateTime : dtpBirthday.DateTime;
-            aCustomers.Citizen = Convert.ToInt32(lueCitizen.EditValue);
-
-            aCustomers.Email = txtEmail.Text;
-            aCustomers.Gender = lueGender.EditValue.ToString();
-            aCustomers.Identifier1 = txtIdentifier1.Text;
-            aCustomers.Identifier2 = txtIdentifier2.Text;
-            aCustomers.Identifier3 = txtIdentifier3.Text;
-
-            aCustomers.Name = txtNames.Text;
-            aCustomers.Nationality = lueNationality.EditValue.ToString();
-            aCustomers.Tel = txtTel.Text;
-
-            if (this.IDCustomer > 0)
-            {
-                aCustomersBO.Update(aCustomers);
-            }
-            else
-            {
-                this.IDCustomer = aCustomersBO.Insert(aCustomers);
-            }
-            /*Insert nguoi moi vao group*/
-            CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
-            aCustomerGroups_CustomersBO.InsertCustomerIntoCustomerGroup_ByIDBookingRs(this.IDCustomer, (new BookingRsBO()).Select_ByIDBookingRoom(this.IDBookingRoom).ID);
-            /*--------------------------*/
-
-            aBookingRoomsMembers = aBookingRoomsMembersBO.Select_ByIDBookingRoom_ByIDCustomer(this.IDBookingRoom, this.IDCustomer);
-            if (aBookingRoomsMembers == null)
-            {
-                aBookingRoomsMembers = new BookingRoomsMembers();
-                aBookingRoomsMembers.IDBookingRoom = this.IDBookingRoom;
-                aBookingRoomsMembers.IDCustomer = this.IDCustomer;
-            }
-
-
-            aBookingRoomsMembers.DateEnterCountry = String.IsNullOrEmpty(dtpDateEnterCountry.Text) ? dateTime : dtpDateEnterCountry.DateTime;
-            aBookingRoomsMembers.EnterGate = txtEnterGate.Text;
-
-            aBookingRoomsMembers.LeaveDate = String.IsNullOrEmpty(dtpLeaveDate.Text) ? dateTime : dtpLeaveDate.DateTime;
-            aBookingRoomsMembers.LimitDateEnterCountry = String.IsNullOrEmpty(dtpLimitDateEnterCountry.Text) ? dateTime : dtpLimitDateEnterCountry.DateTime;
-            aBookingRoomsMembers.Organization = txtOrganization.Text;
-            aBookingRoomsMembers.PurposeComeVietnam = txtPurposeComeVietnam.Text;
-            aBookingRoomsMembers.TemporaryResidenceDate = String.IsNullOrEmpty(dtpTemporaryResidenceDate.Text) ? dateTime : dtpTemporaryResidenceDate.DateTime;
-
-            if (aBookingRoomsMembers.ID > 0)
-            {
-                aBookingRoomsMembersBO.Update(aBookingRoomsMembers);
-            }
-            else
-            {
-                aBookingRoomsMembersBO.Insert(aBookingRoomsMembers);
-            }
-            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.afrmTsk_Payment_Step2.Reload();
-          //  this.afrmTsk_Payment_Step2.ReloadMoneyRoom();
-            this.Close();
         }
 
         private void btnRemoveAvaiableCustomers_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -269,6 +308,51 @@ namespace RoomManager
             txtNames.Text = aCustomers.Name;
             lueNationality.EditValue = aCustomers.Nationality;
             txtTel.Text = aCustomers.Tel;
+            //--------------------
+            txtNames.EditValue = aCustomers.Name;
+            txtIdentifier1.EditValue = aCustomers.Identifier1;
+            txtIdentifier2.EditValue = aCustomers.Identifier2;
+            txtIdentifier3.EditValue = aCustomers.Identifier3;
+            if (aCustomers.Birthday != null)
+            {
+                dtpBirthday.EditValue = aCustomers.Birthday;
+            }
+            if (String.IsNullOrEmpty(aCustomers.Gender) == false)
+            {
+                lueGender.EditValue = Convert.ToInt32(aCustomers.Gender);
+            }
+
+            txtAddress.EditValue = aCustomers.Address;
+
+            if (String.IsNullOrEmpty(aCustomers.Nationality) == false)
+            {
+                lueNationality.EditValue = aCustomers.Nationality;
+            }
+            if (lueNationality.EditValue == null)
+            {
+                lueNationality.EditValue = CORE.CONSTANTS.SelectedCountry(704).Code;
+            }
+            if (aCustomers.Citizen > 0)
+            {
+                lueCitizen.EditValue = aCustomers.Citizen;
+            }
+            else
+            {
+                lueCitizen.EditValue = CORE.CONSTANTS.SelectedCitizen(2).ID;
+            }
+            //----------------------------------------------------------------
+            if (aCustomers.Gender != null)
+            {
+                lueGender.EditValue = aCustomers.Citizen;
+            }
+            else
+            {
+                lueGender.EditValue = CORE.CONSTANTS.SelectedGender(1).ID;
+            }
+
+            txtTel.EditValue = aCustomers.Tel;
+            txtEmail.EditValue = aCustomers.Email;
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)

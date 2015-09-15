@@ -412,7 +412,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1158, 549);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1352, 679);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel14
@@ -425,7 +425,7 @@
             this.tableLayoutPanel14.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel14.Controls.Add(this.lblCaptionStatusRoom, 0, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(347, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(405, 0);
             this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 5;
@@ -433,8 +433,8 @@
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.44538F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.12605F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.97479F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(811, 549);
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(947, 679);
             this.tableLayoutPanel14.TabIndex = 30;
             // 
             // tableLayoutPanel6
@@ -447,13 +447,13 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel42, 0, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 476);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 589);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.54546F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(811, 73);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(947, 90);
             this.tableLayoutPanel6.TabIndex = 66;
             // 
             // tableLayoutPanel11
@@ -469,13 +469,14 @@
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(283, 39);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(331, 49);
             this.tableLayoutPanel11.TabIndex = 67;
             // 
             // lueBookingR_Paymethod
             // 
             this.lueBookingR_Paymethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueBookingR_Paymethod.Location = new System.Drawing.Point(144, 9);
+            this.lueBookingR_Paymethod.Location = new System.Drawing.Point(168, 13);
+            this.lueBookingR_Paymethod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueBookingR_Paymethod.Name = "lueBookingR_Paymethod";
             this.lueBookingR_Paymethod.Properties.Appearance.Options.UseTextOptions = true;
             this.lueBookingR_Paymethod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -484,7 +485,7 @@
             this.lueBookingR_Paymethod.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Type")});
             this.lueBookingR_Paymethod.Properties.NullText = "Chọn lựa";
-            this.lueBookingR_Paymethod.Size = new System.Drawing.Size(136, 20);
+            this.lueBookingR_Paymethod.Size = new System.Drawing.Size(159, 22);
             this.lueBookingR_Paymethod.TabIndex = 68;
             this.lueBookingR_Paymethod.EditValueChanged += new System.EventHandler(this.lueBookingR_Paymethod_EditValueChanged);
             // 
@@ -492,9 +493,10 @@
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.Location = new System.Drawing.Point(16, 13);
+            this.labelControl5.Location = new System.Drawing.Point(8, 16);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(122, 13);
+            this.labelControl5.Size = new System.Drawing.Size(154, 17);
             this.labelControl5.TabIndex = 69;
             this.labelControl5.Text = "Hình thức thanh toán:";
             // 
@@ -506,30 +508,32 @@
             this.tableLayoutPanel7.Controls.Add(this.labelControl11, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.lblTotalMoneyServiceR, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(283, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(331, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(528, 39);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(616, 49);
             this.tableLayoutPanel7.TabIndex = 70;
             // 
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl11.Location = new System.Drawing.Point(241, 13);
+            this.labelControl11.Location = new System.Drawing.Point(273, 16);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(99, 13);
+            this.labelControl11.Size = new System.Drawing.Size(124, 17);
             this.labelControl11.TabIndex = 71;
             this.labelControl11.Text = "Tổng tiền dịch vụ:";
             // 
             // lblTotalMoneyServiceR
             // 
             this.lblTotalMoneyServiceR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(346, 13);
+            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(403, 16);
+            this.lblTotalMoneyServiceR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyServiceR.Name = "lblTotalMoneyServiceR";
-            this.lblTotalMoneyServiceR.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalMoneyServiceR.Size = new System.Drawing.Size(43, 16);
             this.lblTotalMoneyServiceR.TabIndex = 72;
             this.lblTotalMoneyServiceR.Text = "0 (Vnđ)";
             // 
@@ -545,12 +549,12 @@
             this.tableLayoutPanel8.Controls.Add(this.btnPayment, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnBookHall, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(283, 39);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(331, 49);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(528, 34);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(616, 41);
             this.tableLayoutPanel8.TabIndex = 73;
             // 
             // btnPrintListCus
@@ -559,10 +563,10 @@
             this.btnPrintListCus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintListCus.Appearance.Options.UseFont = true;
             this.btnPrintListCus.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintListCus.Image")));
-            this.btnPrintListCus.Location = new System.Drawing.Point(69, 4);
-            this.btnPrintListCus.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPrintListCus.Location = new System.Drawing.Point(81, 5);
+            this.btnPrintListCus.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrintListCus.Name = "btnPrintListCus";
-            this.btnPrintListCus.Size = new System.Drawing.Size(117, 25);
+            this.btnPrintListCus.Size = new System.Drawing.Size(136, 31);
             this.btnPrintListCus.TabIndex = 78;
             this.btnPrintListCus.Text = "In d.sách khách";
             this.btnPrintListCus.Click += new System.EventHandler(this.btnPrintListCus_Click);
@@ -573,10 +577,10 @@
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(424, 4);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPrint.Location = new System.Drawing.Point(494, 5);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(98, 25);
+            this.btnPrint.Size = new System.Drawing.Size(114, 31);
             this.btnPrint.TabIndex = 76;
             this.btnPrint.Text = "In phiếu thu";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
@@ -587,10 +591,10 @@
             this.btnPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.Appearance.Options.UseFont = true;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
-            this.btnPayment.Location = new System.Drawing.Point(279, 4);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPayment.Location = new System.Drawing.Point(325, 5);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(136, 25);
+            this.btnPayment.Size = new System.Drawing.Size(159, 31);
             this.btnPayment.TabIndex = 75;
             this.btnPayment.Text = "Thanh toán phòng";
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
@@ -601,10 +605,10 @@
             this.btnBookHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookHall.Appearance.Options.UseFont = true;
             this.btnBookHall.Image = ((System.Drawing.Image)(resources.GetObject("btnBookHall.Image")));
-            this.btnBookHall.Location = new System.Drawing.Point(195, 4);
-            this.btnBookHall.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnBookHall.Location = new System.Drawing.Point(228, 5);
+            this.btnBookHall.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnBookHall.Name = "btnBookHall";
-            this.btnBookHall.Size = new System.Drawing.Size(75, 25);
+            this.btnBookHall.Size = new System.Drawing.Size(87, 31);
             this.btnBookHall.TabIndex = 77;
             this.btnBookHall.Text = "Đặt tiệc";
             this.btnBookHall.Click += new System.EventHandler(this.btnBookHall_Click);
@@ -613,14 +617,14 @@
             // 
             this.tableLayoutPanel42.ColumnCount = 1;
             this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel42.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel42.Controls.Add(this.btnPrintPayment_OldStyle, 0, 0);
-            this.tableLayoutPanel42.Location = new System.Drawing.Point(3, 41);
+            this.tableLayoutPanel42.Location = new System.Drawing.Point(3, 51);
             this.tableLayoutPanel42.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel42.Name = "tableLayoutPanel42";
             this.tableLayoutPanel42.RowCount = 1;
             this.tableLayoutPanel42.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel42.Size = new System.Drawing.Size(277, 28);
+            this.tableLayoutPanel42.Size = new System.Drawing.Size(323, 34);
             this.tableLayoutPanel42.TabIndex = 74;
             // 
             // btnPrintPayment_OldStyle
@@ -628,10 +632,10 @@
             this.btnPrintPayment_OldStyle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnPrintPayment_OldStyle.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.btnPrintPayment_OldStyle.Appearance.Options.UseFont = true;
-            this.btnPrintPayment_OldStyle.Location = new System.Drawing.Point(10, 3);
-            this.btnPrintPayment_OldStyle.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnPrintPayment_OldStyle.Location = new System.Drawing.Point(12, 4);
+            this.btnPrintPayment_OldStyle.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.btnPrintPayment_OldStyle.Name = "btnPrintPayment_OldStyle";
-            this.btnPrintPayment_OldStyle.Size = new System.Drawing.Size(131, 22);
+            this.btnPrintPayment_OldStyle.Size = new System.Drawing.Size(153, 26);
             this.btnPrintPayment_OldStyle.TabIndex = 74;
             this.btnPrintPayment_OldStyle.Text = "In phiếu thu kiểu cũ";
             this.btnPrintPayment_OldStyle.Click += new System.EventHandler(this.btnPrintPayment_OldStyle_Click);
@@ -642,12 +646,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.dgvServicesR, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 303);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 375);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.75F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(805, 160);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(939, 197);
             this.tableLayoutPanel4.TabIndex = 60;
             // 
             // tableLayoutPanel5
@@ -665,18 +670,18 @@
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(805, 26);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(939, 32);
             this.tableLayoutPanel5.TabIndex = 61;
             // 
             // labelControl10
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl10.Location = new System.Drawing.Point(20, 6);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.labelControl10.Location = new System.Drawing.Point(23, 7);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(23, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(89, 13);
+            this.labelControl10.Size = new System.Drawing.Size(111, 17);
             this.labelControl10.TabIndex = 62;
             this.labelControl10.Text = "Dịch vụ sử dụng";
             // 
@@ -686,9 +691,10 @@
             this.btnAddService.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnAddService.Appearance.Options.UseFont = true;
             this.btnAddService.Image = ((System.Drawing.Image)(resources.GetObject("btnAddService.Image")));
-            this.btnAddService.Location = new System.Drawing.Point(644, 3);
+            this.btnAddService.Location = new System.Drawing.Point(750, 4);
+            this.btnAddService.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(120, 20);
+            this.btnAddService.Size = new System.Drawing.Size(140, 24);
             this.btnAddService.TabIndex = 64;
             this.btnAddService.Text = "Thêm dịch vụ";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
@@ -696,15 +702,17 @@
             // dgvServicesR
             // 
             this.dgvServicesR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServicesR.Location = new System.Drawing.Point(3, 29);
+            this.dgvServicesR.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvServicesR.Location = new System.Drawing.Point(3, 36);
             this.dgvServicesR.MainView = this.viewServicesR;
+            this.dgvServicesR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServicesR.Name = "dgvServicesR";
             this.dgvServicesR.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.txtQuantity,
             this.txtPercentTaxService,
             this.txtServiceCost,
             this.btnDeleteService});
-            this.dgvServicesR.Size = new System.Drawing.Size(799, 128);
+            this.dgvServicesR.Size = new System.Drawing.Size(933, 157);
             this.dgvServicesR.TabIndex = 65;
             this.dgvServicesR.UseEmbeddedNavigator = true;
             this.dgvServicesR.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -932,26 +940,28 @@
             this.tableLayoutPanel3.Controls.Add(this.dgvCustomers, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel41, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 114);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 140);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.87709F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.1229F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(801, 181);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(935, 225);
             this.tableLayoutPanel3.TabIndex = 57;
             // 
             // dgvCustomers
             // 
             this.dgvCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCustomers.Location = new System.Drawing.Point(3, 35);
+            this.dgvCustomers.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvCustomers.Location = new System.Drawing.Point(3, 44);
             this.dgvCustomers.MainView = this.viewCustomers;
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectCustomer,
             this.btnEditCustomer,
             this.btnDeleteCus});
-            this.dgvCustomers.Size = new System.Drawing.Size(795, 143);
+            this.dgvCustomers.Size = new System.Drawing.Size(929, 177);
             this.dgvCustomers.TabIndex = 59;
             this.dgvCustomers.UseEmbeddedNavigator = true;
             this.dgvCustomers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1157,21 +1167,22 @@
             this.tableLayoutPanel41.Controls.Add(this.labelControl3, 0, 0);
             this.tableLayoutPanel41.Controls.Add(this.btnManageCustomer, 1, 0);
             this.tableLayoutPanel41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel41.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel41.Name = "tableLayoutPanel41";
             this.tableLayoutPanel41.RowCount = 1;
             this.tableLayoutPanel41.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel41.Size = new System.Drawing.Size(795, 26);
+            this.tableLayoutPanel41.Size = new System.Drawing.Size(929, 32);
             this.tableLayoutPanel41.TabIndex = 60;
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Location = new System.Drawing.Point(10, 6);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.labelControl3.Location = new System.Drawing.Point(12, 7);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(103, 13);
+            this.labelControl3.Size = new System.Drawing.Size(128, 17);
             this.labelControl3.TabIndex = 59;
             this.labelControl3.Text = "Danh sách người ở";
             // 
@@ -1181,9 +1192,10 @@
             this.btnManageCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnManageCustomer.Appearance.Options.UseFont = true;
             this.btnManageCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnManageCustomer.Image")));
-            this.btnManageCustomer.Location = new System.Drawing.Point(634, 3);
+            this.btnManageCustomer.Location = new System.Drawing.Point(741, 4);
+            this.btnManageCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnManageCustomer.Name = "btnManageCustomer";
-            this.btnManageCustomer.Size = new System.Drawing.Size(120, 20);
+            this.btnManageCustomer.Size = new System.Drawing.Size(140, 24);
             this.btnManageCustomer.TabIndex = 65;
             this.btnManageCustomer.Text = "Thêm khách";
             this.btnManageCustomer.Click += new System.EventHandler(this.btnManageCustomer_Click);
@@ -1210,14 +1222,14 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel17, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtBookingRoomsCost, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 50);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 61);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(801, 54);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(935, 67);
             this.tableLayoutPanel2.TabIndex = 31;
             // 
             // tableLayoutPanel13
@@ -1228,28 +1240,30 @@
             this.tableLayoutPanel13.Controls.Add(this.labelControl8, 0, 0);
             this.tableLayoutPanel13.Controls.Add(this.txtPercentTax_Room, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(383, 27);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(448, 33);
             this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(212, 27);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(248, 34);
             this.tableLayoutPanel13.TabIndex = 52;
             // 
             // labelControl8
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl8.Location = new System.Drawing.Point(3, 7);
+            this.labelControl8.Location = new System.Drawing.Point(3, 8);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(28, 13);
+            this.labelControl8.Size = new System.Drawing.Size(35, 17);
             this.labelControl8.TabIndex = 53;
             this.labelControl8.Text = "Thuế";
             // 
             // txtPercentTax_Room
             // 
             this.txtPercentTax_Room.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPercentTax_Room.Location = new System.Drawing.Point(76, 3);
+            this.txtPercentTax_Room.Location = new System.Drawing.Point(88, 6);
+            this.txtPercentTax_Room.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentTax_Room.Name = "txtPercentTax_Room";
             this.txtPercentTax_Room.Properties.DisplayFormat.FormatString = "n";
             this.txtPercentTax_Room.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1260,7 +1274,7 @@
             this.txtPercentTax_Room.Properties.MaxLength = 10;
             this.txtPercentTax_Room.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtPercentTax_Room.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtPercentTax_Room.Size = new System.Drawing.Size(111, 20);
+            this.txtPercentTax_Room.Size = new System.Drawing.Size(129, 22);
             this.txtPercentTax_Room.TabIndex = 54;
             this.txtPercentTax_Room.Leave += new System.EventHandler(this.txtPercentTax_Room_Leave);
             // 
@@ -1268,10 +1282,10 @@
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(10, 7);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.labelControl1.Location = new System.Drawing.Point(12, 8);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(38, 13);
+            this.labelControl1.Size = new System.Drawing.Size(50, 17);
             this.labelControl1.TabIndex = 32;
             this.labelControl1.Text = "Phòng:";
             // 
@@ -1279,17 +1293,18 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Location = new System.Drawing.Point(10, 34);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.labelControl2.Location = new System.Drawing.Point(12, 41);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(46, 13);
+            this.labelControl2.Size = new System.Drawing.Size(58, 17);
             this.labelControl2.TabIndex = 44;
             this.labelControl2.Text = "Đơn giá:";
             // 
             // cbbPriceType
             // 
             this.cbbPriceType.EditValue = "";
-            this.cbbPriceType.Location = new System.Drawing.Point(681, 3);
+            this.cbbPriceType.Location = new System.Drawing.Point(796, 4);
+            this.cbbPriceType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbbPriceType.Name = "cbbPriceType";
             this.cbbPriceType.Properties.Appearance.Options.UseTextOptions = true;
             this.cbbPriceType.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -1300,27 +1315,29 @@
             "G2",
             "G3"});
             this.cbbPriceType.Properties.ReadOnly = true;
-            this.cbbPriceType.Size = new System.Drawing.Size(104, 20);
+            this.cbbPriceType.Size = new System.Drawing.Size(121, 22);
             this.cbbPriceType.TabIndex = 43;
+            this.cbbPriceType.SelectedIndexChanged += new System.EventHandler(this.cbbPriceType_SelectedIndexChanged);
             this.cbbPriceType.EditValueChanged += new System.EventHandler(this.cbbPriceType_EditValueChanged);
             // 
             // labelControl37
             // 
             this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl37.Location = new System.Drawing.Point(598, 7);
+            this.labelControl37.Location = new System.Drawing.Point(699, 8);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(43, 13);
+            this.labelControl37.Size = new System.Drawing.Size(52, 17);
             this.labelControl37.TabIndex = 42;
             this.labelControl37.Text = "Loại giá";
             // 
             // lblSkuRooms
             // 
             this.lblSkuRooms.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSkuRooms.Location = new System.Drawing.Point(70, 7);
-            this.lblSkuRooms.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblSkuRooms.Location = new System.Drawing.Point(81, 8);
+            this.lblSkuRooms.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblSkuRooms.Name = "lblSkuRooms";
-            this.lblSkuRooms.Size = new System.Drawing.Size(12, 13);
+            this.lblSkuRooms.Size = new System.Drawing.Size(15, 16);
             this.lblSkuRooms.TabIndex = 1;
             this.lblSkuRooms.Text = "---";
             // 
@@ -1328,26 +1345,28 @@
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl9.Location = new System.Drawing.Point(598, 34);
+            this.labelControl9.Location = new System.Drawing.Point(699, 41);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(60, 13);
+            this.labelControl9.Size = new System.Drawing.Size(74, 17);
             this.labelControl9.TabIndex = 55;
             this.labelControl9.Text = "Thành tiền";
             // 
             // lblMoneyRoom
             // 
             this.lblMoneyRoom.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMoneyRoom.Location = new System.Drawing.Point(681, 34);
+            this.lblMoneyRoom.Location = new System.Drawing.Point(796, 42);
+            this.lblMoneyRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblMoneyRoom.Name = "lblMoneyRoom";
-            this.lblMoneyRoom.Size = new System.Drawing.Size(35, 13);
+            this.lblMoneyRoom.Size = new System.Drawing.Size(43, 16);
             this.lblMoneyRoom.TabIndex = 56;
             this.lblMoneyRoom.Text = "0 (Vnđ)";
             // 
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.ColumnCount = 5;
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.78572F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.96428F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.03759F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.23214F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.51786F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.05357F));
@@ -1357,36 +1376,40 @@
             this.tableLayoutPanel12.Controls.Add(this.btnCaculateTimeUsed, 4, 0);
             this.tableLayoutPanel12.Controls.Add(this.txtAddTimeStart, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(156, 27);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(182, 33);
             this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(227, 27);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(266, 34);
             this.tableLayoutPanel12.TabIndex = 46;
             // 
             // txtAddTimeEnd
             // 
             this.txtAddTimeEnd.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddTimeEnd.Location = new System.Drawing.Point(164, 3);
+            this.txtAddTimeEnd.Location = new System.Drawing.Point(191, 6);
+            this.txtAddTimeEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddTimeEnd.Name = "txtAddTimeEnd";
-            this.txtAddTimeEnd.Size = new System.Drawing.Size(31, 20);
+            this.txtAddTimeEnd.Size = new System.Drawing.Size(36, 22);
             this.txtAddTimeEnd.TabIndex = 50;
+            this.txtAddTimeEnd.EditValueChanged += new System.EventHandler(this.txtAddTimeEnd_EditValueChanged);
             // 
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl4.Location = new System.Drawing.Point(3, 7);
+            this.labelControl4.Location = new System.Drawing.Point(3, 8);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 13);
+            this.labelControl4.Size = new System.Drawing.Size(69, 17);
             this.labelControl4.TabIndex = 47;
             this.labelControl4.Text = "Số ngày ở";
             // 
             // txtNumberDate
             // 
             this.txtNumberDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtNumberDate.Location = new System.Drawing.Point(102, 3);
+            this.txtNumberDate.Location = new System.Drawing.Point(119, 6);
+            this.txtNumberDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumberDate.Name = "txtNumberDate";
             this.txtNumberDate.Properties.DisplayFormat.FormatString = "n";
             this.txtNumberDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1398,7 +1421,7 @@
             this.txtNumberDate.Properties.NullValuePrompt = "Chỉ nhập số";
             this.txtNumberDate.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtNumberDate.Properties.ReadOnly = true;
-            this.txtNumberDate.Size = new System.Drawing.Size(56, 20);
+            this.txtNumberDate.Size = new System.Drawing.Size(65, 22);
             this.txtNumberDate.TabIndex = 49;
             this.txtNumberDate.Leave += new System.EventHandler(this.txtNumberDate_Leave);
             // 
@@ -1407,19 +1430,22 @@
             this.btnCaculateTimeUsed.Appearance.Options.UseTextOptions = true;
             this.btnCaculateTimeUsed.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.btnCaculateTimeUsed.Image = ((System.Drawing.Image)(resources.GetObject("btnCaculateTimeUsed.Image")));
-            this.btnCaculateTimeUsed.Location = new System.Drawing.Point(201, 3);
+            this.btnCaculateTimeUsed.Location = new System.Drawing.Point(235, 4);
+            this.btnCaculateTimeUsed.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCaculateTimeUsed.Name = "btnCaculateTimeUsed";
-            this.btnCaculateTimeUsed.Size = new System.Drawing.Size(23, 21);
+            this.btnCaculateTimeUsed.Size = new System.Drawing.Size(27, 26);
             this.btnCaculateTimeUsed.TabIndex = 51;
             this.btnCaculateTimeUsed.Click += new System.EventHandler(this.btnCaculateTimeUsed_Click);
             // 
             // txtAddTimeStart
             // 
             this.txtAddTimeStart.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddTimeStart.Location = new System.Drawing.Point(64, 3);
+            this.txtAddTimeStart.Location = new System.Drawing.Point(79, 6);
+            this.txtAddTimeStart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddTimeStart.Name = "txtAddTimeStart";
-            this.txtAddTimeStart.Size = new System.Drawing.Size(32, 20);
+            this.txtAddTimeStart.Size = new System.Drawing.Size(34, 22);
             this.txtAddTimeStart.TabIndex = 48;
+            this.txtAddTimeStart.EditValueChanged += new System.EventHandler(this.txtAddTimeStart_EditValueChanged);
             // 
             // tableLayoutPanel16
             // 
@@ -1431,21 +1457,22 @@
             this.tableLayoutPanel16.Controls.Add(this.dtpCheckInActual, 2, 0);
             this.tableLayoutPanel16.Controls.Add(this.chkCheckIn, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(156, 0);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(182, 0);
             this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(227, 27);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(266, 33);
             this.tableLayoutPanel16.TabIndex = 34;
             // 
             // lblCI
             // 
             this.lblCI.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCI.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblCI.Location = new System.Drawing.Point(3, 7);
+            this.lblCI.Location = new System.Drawing.Point(3, 8);
+            this.lblCI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCI.Name = "lblCI";
-            this.lblCI.Size = new System.Drawing.Size(56, 13);
+            this.lblCI.Size = new System.Drawing.Size(71, 17);
             this.lblCI.TabIndex = 35;
             this.lblCI.Text = "CI thực tế";
             // 
@@ -1453,7 +1480,8 @@
             // 
             this.dtpCheckInActual.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpCheckInActual.EditValue = null;
-            this.dtpCheckInActual.Location = new System.Drawing.Point(100, 3);
+            this.dtpCheckInActual.Location = new System.Drawing.Point(117, 5);
+            this.dtpCheckInActual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpCheckInActual.Name = "dtpCheckInActual";
             this.dtpCheckInActual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1466,17 +1494,18 @@
             this.dtpCheckInActual.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.dtpCheckInActual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpCheckInActual.Size = new System.Drawing.Size(115, 20);
+            this.dtpCheckInActual.Size = new System.Drawing.Size(134, 22);
             this.dtpCheckInActual.TabIndex = 37;
             this.dtpCheckInActual.Leave += new System.EventHandler(this.dtpCheckInActual_Leave);
             // 
             // chkCheckIn
             // 
             this.chkCheckIn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkCheckIn.Location = new System.Drawing.Point(72, 4);
+            this.chkCheckIn.Location = new System.Drawing.Point(85, 7);
+            this.chkCheckIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkCheckIn.Name = "chkCheckIn";
             this.chkCheckIn.Properties.Caption = "";
-            this.chkCheckIn.Size = new System.Drawing.Size(19, 19);
+            this.chkCheckIn.Size = new System.Drawing.Size(22, 19);
             this.chkCheckIn.TabIndex = 36;
             this.chkCheckIn.CheckedChanged += new System.EventHandler(this.chkCheckIn_CheckedChanged);
             // 
@@ -1489,21 +1518,22 @@
             this.tableLayoutPanel17.Controls.Add(this.lblCO, 0, 0);
             this.tableLayoutPanel17.Controls.Add(this.dtpCheckOutActual, 1, 0);
             this.tableLayoutPanel17.Controls.Add(this.chkCheckOut, 2, 0);
-            this.tableLayoutPanel17.Location = new System.Drawing.Point(383, 0);
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(448, 0);
             this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(212, 27);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(247, 33);
             this.tableLayoutPanel17.TabIndex = 38;
             // 
             // lblCO
             // 
             this.lblCO.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCO.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.lblCO.Location = new System.Drawing.Point(3, 7);
+            this.lblCO.Location = new System.Drawing.Point(3, 8);
+            this.lblCO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCO.Name = "lblCO";
-            this.lblCO.Size = new System.Drawing.Size(60, 13);
+            this.lblCO.Size = new System.Drawing.Size(76, 17);
             this.lblCO.TabIndex = 39;
             this.lblCO.Text = "CO dự kiến";
             // 
@@ -1511,7 +1541,8 @@
             // 
             this.dtpCheckOutActual.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpCheckOutActual.EditValue = null;
-            this.dtpCheckOutActual.Location = new System.Drawing.Point(76, 3);
+            this.dtpCheckOutActual.Location = new System.Drawing.Point(88, 5);
+            this.dtpCheckOutActual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpCheckOutActual.Name = "dtpCheckOutActual";
             this.dtpCheckOutActual.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1524,25 +1555,26 @@
             this.dtpCheckOutActual.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.dtpCheckOutActual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpCheckOutActual.Size = new System.Drawing.Size(106, 20);
+            this.dtpCheckOutActual.Size = new System.Drawing.Size(124, 22);
             this.dtpCheckOutActual.TabIndex = 40;
-            this.dtpCheckOutActual.EditValueChanged += new System.EventHandler(this.dtpCheckOutActual_EditValueChanged);
             this.dtpCheckOutActual.Leave += new System.EventHandler(this.dtpCheckOutActual_Leave);
             // 
             // chkCheckOut
             // 
             this.chkCheckOut.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.chkCheckOut.Location = new System.Drawing.Point(189, 4);
+            this.chkCheckOut.Location = new System.Drawing.Point(220, 7);
+            this.chkCheckOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkCheckOut.Name = "chkCheckOut";
             this.chkCheckOut.Properties.Caption = "";
-            this.chkCheckOut.Size = new System.Drawing.Size(19, 19);
+            this.chkCheckOut.Size = new System.Drawing.Size(22, 19);
             this.chkCheckOut.TabIndex = 41;
             this.chkCheckOut.CheckedChanged += new System.EventHandler(this.chkCheckOut_CheckedChanged);
             // 
             // txtBookingRoomsCost
             // 
             this.txtBookingRoomsCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBookingRoomsCost.Location = new System.Drawing.Point(67, 30);
+            this.txtBookingRoomsCost.Location = new System.Drawing.Point(77, 39);
+            this.txtBookingRoomsCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookingRoomsCost.Name = "txtBookingRoomsCost";
             this.txtBookingRoomsCost.Properties.DisplayFormat.FormatString = "n";
             this.txtBookingRoomsCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -1553,7 +1585,7 @@
             this.txtBookingRoomsCost.Properties.MaxLength = 10;
             this.txtBookingRoomsCost.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBookingRoomsCost.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingRoomsCost.Size = new System.Drawing.Size(86, 20);
+            this.txtBookingRoomsCost.Size = new System.Drawing.Size(100, 22);
             this.txtBookingRoomsCost.TabIndex = 45;
             this.txtBookingRoomsCost.Leave += new System.EventHandler(this.txtBookingRoomsCost_Leave);
             // 
@@ -1561,10 +1593,10 @@
             // 
             this.lblCaptionStatusRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblCaptionStatusRoom.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblCaptionStatusRoom.Location = new System.Drawing.Point(9, 8);
-            this.lblCaptionStatusRoom.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.lblCaptionStatusRoom.Location = new System.Drawing.Point(10, 10);
+            this.lblCaptionStatusRoom.Margin = new System.Windows.Forms.Padding(10);
             this.lblCaptionStatusRoom.Name = "lblCaptionStatusRoom";
-            this.lblCaptionStatusRoom.Size = new System.Drawing.Size(137, 29);
+            this.lblCaptionStatusRoom.Size = new System.Drawing.Size(172, 36);
             this.lblCaptionStatusRoom.TabIndex = 67;
             this.lblCaptionStatusRoom.Text = "Xin chào bạn";
             // 
@@ -1575,24 +1607,24 @@
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel9, 0, 2);
             this.tableLayoutPanel10.Controls.Add(this.dgvRooms, 0, 1);
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel15, 0, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.7473F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.38521F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.63826F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(337, 505);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(393, 622);
             this.tableLayoutPanel10.TabIndex = 4;
             // 
             // tableLayoutPanel9
             // 
             this.tableLayoutPanel9.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel9.ColumnCount = 4;
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.46428F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.71429F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.67347F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.846939F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.80612F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.16327F));
             this.tableLayoutPanel9.Controls.Add(this.labelControl13, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.labelControl15, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.labelControl17, 3, 0);
@@ -1601,42 +1633,46 @@
             this.tableLayoutPanel9.Controls.Add(this.lblTotalMoneyR, 3, 1);
             this.tableLayoutPanel9.Controls.Add(this.lblTotalMoneyRooms, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 435);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 536);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.72839F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.27161F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(337, 70);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(393, 86);
             this.tableLayoutPanel9.TabIndex = 23;
             // 
             // labelControl13
             // 
             this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl13.Location = new System.Drawing.Point(19, 13);
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.labelControl13.Location = new System.Drawing.Point(6, 17);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(62, 17);
+            this.labelControl13.Size = new System.Drawing.Size(121, 18);
             this.labelControl13.TabIndex = 24;
-            this.labelControl13.Text = "Tổng tiền ";
+            this.labelControl13.Text = "Tổng tiền sau thuế";
             // 
             // labelControl15
             // 
             this.labelControl15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl15.Location = new System.Drawing.Point(123, 13);
+            this.labelControl15.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl15.Location = new System.Drawing.Point(161, 17);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(87, 17);
+            this.labelControl15.Size = new System.Drawing.Size(90, 18);
             this.labelControl15.TabIndex = 25;
             this.labelControl15.Text = "Tiền đặt trước";
             // 
             // labelControl17
             // 
             this.labelControl17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl17.Location = new System.Drawing.Point(223, 13);
+            this.labelControl17.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl17.Location = new System.Drawing.Point(270, 17);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(106, 17);
+            this.labelControl17.Size = new System.Drawing.Size(113, 18);
             this.labelControl17.TabIndex = 26;
             this.labelControl17.Text = "Thành tiền (VND)";
             // 
@@ -1644,18 +1680,21 @@
             // 
             this.labelControl19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.labelControl19.Location = new System.Drawing.Point(106, 49);
+            this.labelControl19.Location = new System.Drawing.Point(139, 61);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(5, 13);
+            this.labelControl19.Size = new System.Drawing.Size(6, 16);
             this.labelControl19.TabIndex = 170;
             this.labelControl19.Text = "-";
             // 
             // txtBookingRMoney
             // 
             this.txtBookingRMoney.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBookingRMoney.Location = new System.Drawing.Point(120, 46);
+            this.txtBookingRMoney.Location = new System.Drawing.Point(152, 57);
             this.txtBookingRMoney.Margin = new System.Windows.Forms.Padding(0);
             this.txtBookingRMoney.Name = "txtBookingRMoney";
+            this.txtBookingRMoney.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBookingRMoney.Properties.Appearance.Options.UseFont = true;
             this.txtBookingRMoney.Properties.DisplayFormat.FormatString = "n0";
             this.txtBookingRMoney.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtBookingRMoney.Properties.EditFormat.FormatString = "n0";
@@ -1666,34 +1705,36 @@
             this.txtBookingRMoney.Properties.MaxLength = 10;
             this.txtBookingRMoney.Properties.NullValuePrompt = "Chỉ nhập số";
             this.txtBookingRMoney.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingRMoney.Size = new System.Drawing.Size(92, 20);
+            this.txtBookingRMoney.Size = new System.Drawing.Size(107, 24);
             this.txtBookingRMoney.TabIndex = 28;
             this.txtBookingRMoney.EditValueChanged += new System.EventHandler(this.txtBookingMoney_EditValueChanged);
             // 
             // lblTotalMoneyR
             // 
             this.lblTotalMoneyR.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalMoneyR.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalMoneyR.Location = new System.Drawing.Point(272, 48);
+            this.lblTotalMoneyR.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMoneyR.Location = new System.Drawing.Point(322, 60);
+            this.lblTotalMoneyR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyR.Name = "lblTotalMoneyR";
-            this.lblTotalMoneyR.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalMoneyR.Size = new System.Drawing.Size(8, 18);
             this.lblTotalMoneyR.TabIndex = 29;
             this.lblTotalMoneyR.Text = "0";
             // 
             // lblTotalMoneyRooms
             // 
             this.lblTotalMoneyRooms.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalMoneyRooms.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalMoneyRooms.Location = new System.Drawing.Point(53, 48);
-            this.lblTotalMoneyRooms.Margin = new System.Windows.Forms.Padding(15, 3, 3, 3);
+            this.lblTotalMoneyRooms.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMoneyRooms.Location = new System.Drawing.Point(69, 60);
+            this.lblTotalMoneyRooms.Margin = new System.Windows.Forms.Padding(17, 4, 3, 4);
             this.lblTotalMoneyRooms.Name = "lblTotalMoneyRooms";
-            this.lblTotalMoneyRooms.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalMoneyRooms.Size = new System.Drawing.Size(8, 18);
             this.lblTotalMoneyRooms.TabIndex = 27;
             this.lblTotalMoneyRooms.Text = "0";
             // 
             // dgvRooms
             // 
-            this.dgvRooms.Location = new System.Drawing.Point(0, 180);
+            this.dgvRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvRooms.Location = new System.Drawing.Point(0, 222);
             this.dgvRooms.MainView = this.viewRooms;
             this.dgvRooms.Margin = new System.Windows.Forms.Padding(0);
             this.dgvRooms.Name = "dgvRooms";
@@ -1701,7 +1742,7 @@
             this.btnDetailRooms,
             this.chbPaymentStatusR,
             this.btnDeleteRoom});
-            this.dgvRooms.Size = new System.Drawing.Size(337, 255);
+            this.dgvRooms.Size = new System.Drawing.Size(393, 314);
             this.dgvRooms.TabIndex = 22;
             this.dgvRooms.UseEmbeddedNavigator = true;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1856,7 +1897,8 @@
             this.tableLayoutPanel15.Controls.Add(this.txtInvoiceNumberR, 1, 6);
             this.tableLayoutPanel15.Controls.Add(this.dtpInvoiceDateR, 1, 5);
             this.tableLayoutPanel15.Controls.Add(this.dtpAcceptDateR, 1, 7);
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 8;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.663865F));
@@ -1867,30 +1909,31 @@
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.15929F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.38938F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.48673F));
-            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(331, 174);
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(386, 214);
             this.tableLayoutPanel15.TabIndex = 5;
             // 
             // labelControl46
             // 
             this.labelControl46.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl46.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl46.Location = new System.Drawing.Point(3, 152);
+            this.labelControl46.Location = new System.Drawing.Point(3, 187);
+            this.labelControl46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(111, 13);
+            this.labelControl46.Size = new System.Drawing.Size(141, 17);
             this.labelControl46.TabIndex = 20;
             this.labelControl46.Text = "Ngày ghi nhận d.thu";
             // 
             // txtAddressR
             // 
             this.txtAddressR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddressR.Location = new System.Drawing.Point(123, 40);
-            this.txtAddressR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtAddressR.Location = new System.Drawing.Point(150, 50);
+            this.txtAddressR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddressR.Name = "txtAddressR";
             this.txtAddressR.Properties.MaxLength = 100;
             this.txtAddressR.Properties.NullValuePrompt = "Nhập tối đa 100 ký tự.";
             this.txtAddressR.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtAddressR.Size = new System.Drawing.Size(205, 20);
+            this.txtAddressR.Size = new System.Drawing.Size(234, 22);
             this.txtAddressR.TabIndex = 11;
             this.txtAddressR.Leave += new System.EventHandler(this.txtAddressR_Leave);
             // 
@@ -1898,32 +1941,33 @@
             // 
             this.labelControl16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl16.Location = new System.Drawing.Point(3, 3);
+            this.labelControl16.Location = new System.Drawing.Point(3, 4);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(43, 13);
+            this.labelControl16.Size = new System.Drawing.Size(55, 17);
             this.labelControl16.TabIndex = 6;
             this.labelControl16.Text = "Công ty";
             // 
             // txtTaxNumberCodeR
             // 
             this.txtTaxNumberCodeR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtTaxNumberCodeR.Location = new System.Drawing.Point(123, 19);
-            this.txtTaxNumberCodeR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtTaxNumberCodeR.Location = new System.Drawing.Point(150, 24);
+            this.txtTaxNumberCodeR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaxNumberCodeR.Name = "txtTaxNumberCodeR";
             this.txtTaxNumberCodeR.Properties.MaxLength = 100;
             this.txtTaxNumberCodeR.Properties.NullValuePrompt = "Nhập tối đa 100 ký tự.";
             this.txtTaxNumberCodeR.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtTaxNumberCodeR.Size = new System.Drawing.Size(205, 20);
+            this.txtTaxNumberCodeR.Size = new System.Drawing.Size(234, 22);
             this.txtTaxNumberCodeR.TabIndex = 9;
             this.txtTaxNumberCodeR.Leave += new System.EventHandler(this.txtTaxNumberCodeR_Leave);
             // 
             // lblNameCompany_BookingR
             // 
             this.lblNameCompany_BookingR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCompany_BookingR.Location = new System.Drawing.Point(123, 3);
-            this.lblNameCompany_BookingR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCompany_BookingR.Location = new System.Drawing.Point(154, 4);
+            this.lblNameCompany_BookingR.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCompany_BookingR.Name = "lblNameCompany_BookingR";
-            this.lblNameCompany_BookingR.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCompany_BookingR.Size = new System.Drawing.Size(15, 16);
             this.lblNameCompany_BookingR.TabIndex = 7;
             this.lblNameCompany_BookingR.Text = "---";
             // 
@@ -1931,9 +1975,10 @@
             // 
             this.labelControl29.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl29.Location = new System.Drawing.Point(3, 20);
+            this.labelControl29.Location = new System.Drawing.Point(3, 24);
+            this.labelControl29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(62, 13);
+            this.labelControl29.Size = new System.Drawing.Size(76, 17);
             this.labelControl29.TabIndex = 8;
             this.labelControl29.Text = "Mã số thuế";
             // 
@@ -1941,19 +1986,20 @@
             // 
             this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl12.Location = new System.Drawing.Point(3, 81);
+            this.labelControl12.Location = new System.Drawing.Point(3, 101);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(79, 13);
+            this.labelControl12.Size = new System.Drawing.Size(99, 17);
             this.labelControl12.TabIndex = 14;
             this.labelControl12.Text = "Người đại diện";
             // 
             // lblNameCustomer_BookingR
             // 
             this.lblNameCustomer_BookingR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomer_BookingR.Location = new System.Drawing.Point(123, 81);
-            this.lblNameCustomer_BookingR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCustomer_BookingR.Location = new System.Drawing.Point(154, 101);
+            this.lblNameCustomer_BookingR.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCustomer_BookingR.Name = "lblNameCustomer_BookingR";
-            this.lblNameCustomer_BookingR.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCustomer_BookingR.Size = new System.Drawing.Size(15, 16);
             this.lblNameCustomer_BookingR.TabIndex = 15;
             this.lblNameCustomer_BookingR.Text = "---";
             // 
@@ -1961,19 +2007,20 @@
             // 
             this.labelControl14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl14.Location = new System.Drawing.Point(3, 62);
+            this.labelControl14.Location = new System.Drawing.Point(3, 77);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(32, 13);
+            this.labelControl14.Size = new System.Drawing.Size(42, 17);
             this.labelControl14.TabIndex = 12;
             this.labelControl14.Text = "Nhóm";
             // 
             // lblNameCustomerGroup_BookingR
             // 
             this.lblNameCustomerGroup_BookingR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomerGroup_BookingR.Location = new System.Drawing.Point(123, 62);
-            this.lblNameCustomerGroup_BookingR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCustomerGroup_BookingR.Location = new System.Drawing.Point(154, 77);
+            this.lblNameCustomerGroup_BookingR.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCustomerGroup_BookingR.Name = "lblNameCustomerGroup_BookingR";
-            this.lblNameCustomerGroup_BookingR.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCustomerGroup_BookingR.Size = new System.Drawing.Size(15, 16);
             this.lblNameCustomerGroup_BookingR.TabIndex = 13;
             this.lblNameCustomerGroup_BookingR.Text = "---";
             // 
@@ -1982,10 +2029,10 @@
             this.labelControl23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl23.Location = new System.Drawing.Point(3, 44);
-            this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 7, 3, 3);
+            this.labelControl23.Location = new System.Drawing.Point(3, 55);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 9, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(38, 13);
+            this.labelControl23.Size = new System.Drawing.Size(45, 17);
             this.labelControl23.TabIndex = 10;
             this.labelControl23.Text = "Địa chỉ";
             // 
@@ -1993,9 +2040,10 @@
             // 
             this.labelControl43.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl43.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl43.Location = new System.Drawing.Point(3, 103);
+            this.labelControl43.Location = new System.Drawing.Point(3, 128);
+            this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(63, 13);
+            this.labelControl43.Size = new System.Drawing.Size(82, 17);
             this.labelControl43.TabIndex = 16;
             this.labelControl43.Text = "Ngày H.đơn";
             // 
@@ -2003,19 +2051,20 @@
             // 
             this.labelControl39.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl39.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl39.Location = new System.Drawing.Point(3, 126);
+            this.labelControl39.Location = new System.Drawing.Point(3, 156);
+            this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(49, 13);
+            this.labelControl39.Size = new System.Drawing.Size(64, 17);
             this.labelControl39.TabIndex = 18;
             this.labelControl39.Text = "Số H.đơn";
             // 
             // txtInvoiceNumberR
             // 
             this.txtInvoiceNumberR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtInvoiceNumberR.Location = new System.Drawing.Point(123, 125);
-            this.txtInvoiceNumberR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtInvoiceNumberR.Location = new System.Drawing.Point(150, 156);
+            this.txtInvoiceNumberR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInvoiceNumberR.Name = "txtInvoiceNumberR";
-            this.txtInvoiceNumberR.Size = new System.Drawing.Size(205, 20);
+            this.txtInvoiceNumberR.Size = new System.Drawing.Size(234, 22);
             this.txtInvoiceNumberR.TabIndex = 19;
             this.txtInvoiceNumberR.EditValueChanged += new System.EventHandler(this.txtInvoiceNumber_EditValueChanged);
             // 
@@ -2023,8 +2072,8 @@
             // 
             this.dtpInvoiceDateR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpInvoiceDateR.EditValue = null;
-            this.dtpInvoiceDateR.Location = new System.Drawing.Point(123, 101);
-            this.dtpInvoiceDateR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.dtpInvoiceDateR.Location = new System.Drawing.Point(150, 126);
+            this.dtpInvoiceDateR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpInvoiceDateR.Name = "dtpInvoiceDateR";
             this.dtpInvoiceDateR.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2032,7 +2081,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpInvoiceDateR.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpInvoiceDateR.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpInvoiceDateR.Size = new System.Drawing.Size(205, 20);
+            this.dtpInvoiceDateR.Size = new System.Drawing.Size(234, 22);
             this.dtpInvoiceDateR.TabIndex = 17;
             this.dtpInvoiceDateR.EditValueChanged += new System.EventHandler(this.dtpInvoiceDate_EditValueChanged);
             // 
@@ -2040,8 +2089,8 @@
             // 
             this.dtpAcceptDateR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpAcceptDateR.EditValue = null;
-            this.dtpAcceptDateR.Location = new System.Drawing.Point(123, 148);
-            this.dtpAcceptDateR.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.dtpAcceptDateR.Location = new System.Drawing.Point(150, 185);
+            this.dtpAcceptDateR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpAcceptDateR.Name = "dtpAcceptDateR";
             this.dtpAcceptDateR.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2049,7 +2098,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpAcceptDateR.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpAcceptDateR.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpAcceptDateR.Size = new System.Drawing.Size(205, 20);
+            this.dtpAcceptDateR.Size = new System.Drawing.Size(234, 22);
             this.dtpAcceptDateR.TabIndex = 21;
             this.dtpAcceptDateR.EditValueChanged += new System.EventHandler(this.dtpAcceptDate_EditValueChanged);
             // 
@@ -2060,10 +2109,10 @@
             this.btnEnableEdit.Appearance.Options.UseFont = true;
             this.btnEnableEdit.Enabled = false;
             this.btnEnableEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEnableEdit.Image")));
-            this.btnEnableEdit.Location = new System.Drawing.Point(9, 12);
-            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.btnEnableEdit.Location = new System.Drawing.Point(10, 14);
+            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.btnEnableEdit.Name = "btnEnableEdit";
-            this.btnEnableEdit.Size = new System.Drawing.Size(84, 24);
+            this.btnEnableEdit.Size = new System.Drawing.Size(98, 30);
             this.btnEnableEdit.TabIndex = 77;
             this.btnEnableEdit.Text = "Sửa h.đơn";
             this.btnEnableEdit.Click += new System.EventHandler(this.btnEnableEdit_Click);
@@ -2078,7 +2127,7 @@
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1164, 577);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1358, 711);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -2088,8 +2137,9 @@
             // 
             this.xtraTabPage1.Controls.Add(this.panel1);
             this.xtraTabPage1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1158, 549);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1352, 679);
             this.xtraTabPage1.Text = "Danh sách phòng";
             // 
             // panel1
@@ -2100,14 +2150,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1158, 549);
+            this.panel1.Size = new System.Drawing.Size(1352, 679);
             this.panel1.TabIndex = 2;
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.panel2);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1158, 549);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1352, 679);
             this.xtraTabPage2.Text = "Danh sách hội trường";
             // 
             // panel2
@@ -2118,7 +2169,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1158, 549);
+            this.panel2.Size = new System.Drawing.Size(1352, 679);
             this.panel2.TabIndex = 77;
             // 
             // tableLayoutPanel27
@@ -2131,11 +2182,11 @@
             this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel27.ImeMode = System.Windows.Forms.ImeMode.Katakana;
             this.tableLayoutPanel27.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
+            this.tableLayoutPanel27.Margin = new System.Windows.Forms.Padding(23, 4, 23, 4);
             this.tableLayoutPanel27.Name = "tableLayoutPanel27";
             this.tableLayoutPanel27.RowCount = 1;
             this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel27.Size = new System.Drawing.Size(1158, 549);
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(1352, 679);
             this.tableLayoutPanel27.TabIndex = 78;
             // 
             // tableLayoutPanel28
@@ -2147,7 +2198,7 @@
             this.tableLayoutPanel28.Controls.Add(this.tableLayoutPanel25, 0, 2);
             this.tableLayoutPanel28.Controls.Add(this.tableLayoutPanel31, 0, 3);
             this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel28.Location = new System.Drawing.Point(347, 0);
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(405, 0);
             this.tableLayoutPanel28.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel28.Name = "tableLayoutPanel28";
             this.tableLayoutPanel28.RowCount = 4;
@@ -2155,7 +2206,7 @@
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.61567F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
             this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13F));
-            this.tableLayoutPanel28.Size = new System.Drawing.Size(811, 549);
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(947, 679);
             this.tableLayoutPanel28.TabIndex = 130;
             // 
             // tableLayoutPanel19
@@ -2176,22 +2227,23 @@
             this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel24, 4, 0);
             this.tableLayoutPanel19.Controls.Add(this.txtBookingHallsCost, 1, 1);
             this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel19.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel19.Name = "tableLayoutPanel19";
             this.tableLayoutPanel19.RowCount = 2;
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.82609F));
             this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.17391F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(801, 46);
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(935, 57);
             this.tableLayoutPanel19.TabIndex = 107;
             // 
             // labelControl21
             // 
             this.labelControl21.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl21.Location = new System.Drawing.Point(3, 4);
+            this.labelControl21.Location = new System.Drawing.Point(3, 5);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(60, 13);
+            this.labelControl21.Size = new System.Drawing.Size(76, 17);
             this.labelControl21.TabIndex = 110;
             this.labelControl21.Text = "Hội trường";
             // 
@@ -2199,18 +2251,20 @@
             // 
             this.labelControl22.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl22.Location = new System.Drawing.Point(3, 27);
+            this.labelControl22.Location = new System.Drawing.Point(3, 33);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(43, 13);
+            this.labelControl22.Size = new System.Drawing.Size(53, 17);
             this.labelControl22.TabIndex = 1230;
             this.labelControl22.Text = "Đơn giá";
             // 
             // lblSkuHalls
             // 
             this.lblSkuHalls.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSkuHalls.Location = new System.Drawing.Point(75, 4);
+            this.lblSkuHalls.Location = new System.Drawing.Point(87, 5);
+            this.lblSkuHalls.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblSkuHalls.Name = "lblSkuHalls";
-            this.lblSkuHalls.Size = new System.Drawing.Size(0, 13);
+            this.lblSkuHalls.Size = new System.Drawing.Size(0, 16);
             this.lblSkuHalls.TabIndex = 111;
             // 
             // tableLayoutPanel20
@@ -2221,18 +2275,19 @@
             this.tableLayoutPanel20.Controls.Add(this.txtPercentTax_Hall, 1, 0);
             this.tableLayoutPanel20.Controls.Add(this.labelControl24, 0, 0);
             this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(184, 22);
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(215, 27);
             this.tableLayoutPanel20.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel20.Name = "tableLayoutPanel20";
             this.tableLayoutPanel20.RowCount = 1;
             this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(164, 24);
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(191, 30);
             this.tableLayoutPanel20.TabIndex = 23;
             // 
             // txtPercentTax_Hall
             // 
             this.txtPercentTax_Hall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPercentTax_Hall.Location = new System.Drawing.Point(60, 3);
+            this.txtPercentTax_Hall.Location = new System.Drawing.Point(69, 4);
+            this.txtPercentTax_Hall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPercentTax_Hall.Name = "txtPercentTax_Hall";
             this.txtPercentTax_Hall.Properties.DisplayFormat.FormatString = "n";
             this.txtPercentTax_Hall.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -2243,7 +2298,7 @@
             this.txtPercentTax_Hall.Properties.MaxLength = 6;
             this.txtPercentTax_Hall.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtPercentTax_Hall.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtPercentTax_Hall.Size = new System.Drawing.Size(100, 20);
+            this.txtPercentTax_Hall.Size = new System.Drawing.Size(117, 22);
             this.txtPercentTax_Hall.TabIndex = 126;
             this.txtPercentTax_Hall.EditValueChanged += new System.EventHandler(this.txtPercentTax_Hall_EditValueChanged);
             // 
@@ -2251,9 +2306,10 @@
             // 
             this.labelControl24.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl24.Location = new System.Drawing.Point(3, 5);
+            this.labelControl24.Location = new System.Drawing.Point(3, 6);
+            this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(28, 13);
+            this.labelControl24.Size = new System.Drawing.Size(35, 17);
             this.labelControl24.TabIndex = 125;
             this.labelControl24.Text = "Thuế";
             // 
@@ -2265,30 +2321,32 @@
             this.tableLayoutPanel21.Controls.Add(this.labelControl25, 0, 0);
             this.tableLayoutPanel21.Controls.Add(this.lblLunarDate, 1, 0);
             this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(184, 0);
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(215, 0);
             this.tableLayoutPanel21.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel21.Name = "tableLayoutPanel21";
             this.tableLayoutPanel21.RowCount = 1;
             this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(164, 22);
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(191, 27);
             this.tableLayoutPanel21.TabIndex = 112;
             // 
             // labelControl25
             // 
             this.labelControl25.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl25.Location = new System.Drawing.Point(3, 4);
+            this.labelControl25.Location = new System.Drawing.Point(3, 5);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(49, 13);
+            this.labelControl25.Size = new System.Drawing.Size(61, 17);
             this.labelControl25.TabIndex = 113;
             this.labelControl25.Text = "Ngày âm";
             // 
             // lblLunarDate
             // 
             this.lblLunarDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblLunarDate.Location = new System.Drawing.Point(60, 4);
+            this.lblLunarDate.Location = new System.Drawing.Point(69, 5);
+            this.lblLunarDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblLunarDate.Name = "lblLunarDate";
-            this.lblLunarDate.Size = new System.Drawing.Size(0, 13);
+            this.lblLunarDate.Size = new System.Drawing.Size(0, 16);
             this.lblLunarDate.TabIndex = 114;
             // 
             // tableLayoutPanel22
@@ -2299,29 +2357,31 @@
             this.tableLayoutPanel22.Controls.Add(this.lblDate, 1, 0);
             this.tableLayoutPanel22.Controls.Add(this.labelControl20, 0, 0);
             this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(348, 0);
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(406, 0);
             this.tableLayoutPanel22.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel22.Name = "tableLayoutPanel22";
             this.tableLayoutPanel22.RowCount = 1;
             this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(203, 22);
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(237, 27);
             this.tableLayoutPanel22.TabIndex = 115;
             // 
             // lblDate
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDate.Location = new System.Drawing.Point(88, 4);
+            this.lblDate.Location = new System.Drawing.Point(102, 5);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(0, 13);
+            this.lblDate.Size = new System.Drawing.Size(0, 16);
             this.lblDate.TabIndex = 117;
             // 
             // labelControl20
             // 
             this.labelControl20.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl20.Location = new System.Drawing.Point(3, 4);
+            this.labelControl20.Location = new System.Drawing.Point(3, 5);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(67, 13);
+            this.labelControl20.Size = new System.Drawing.Size(86, 17);
             this.labelControl20.TabIndex = 116;
             this.labelControl20.Text = "Ngày dương";
             // 
@@ -2333,30 +2393,32 @@
             this.tableLayoutPanel23.Controls.Add(this.labelControl26, 0, 0);
             this.tableLayoutPanel23.Controls.Add(this.lblMoneyHall, 1, 0);
             this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(348, 22);
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(406, 27);
             this.tableLayoutPanel23.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel23.Name = "tableLayoutPanel23";
             this.tableLayoutPanel23.RowCount = 1;
             this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(203, 24);
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(237, 30);
             this.tableLayoutPanel23.TabIndex = 127;
             // 
             // labelControl26
             // 
             this.labelControl26.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl26.Location = new System.Drawing.Point(3, 5);
+            this.labelControl26.Location = new System.Drawing.Point(3, 6);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(60, 13);
+            this.labelControl26.Size = new System.Drawing.Size(74, 17);
             this.labelControl26.TabIndex = 128;
             this.labelControl26.Text = "Thành tiền";
             // 
             // lblMoneyHall
             // 
             this.lblMoneyHall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblMoneyHall.Location = new System.Drawing.Point(88, 5);
+            this.lblMoneyHall.Location = new System.Drawing.Point(102, 7);
+            this.lblMoneyHall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblMoneyHall.Name = "lblMoneyHall";
-            this.lblMoneyHall.Size = new System.Drawing.Size(0, 13);
+            this.lblMoneyHall.Size = new System.Drawing.Size(0, 16);
             this.lblMoneyHall.TabIndex = 129;
             // 
             // tableLayoutPanel24
@@ -2371,57 +2433,59 @@
             this.tableLayoutPanel24.Controls.Add(this.labelControl27, 2, 0);
             this.tableLayoutPanel24.Controls.Add(this.lblEndTime, 3, 0);
             this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel24.Location = new System.Drawing.Point(551, 0);
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(643, 0);
             this.tableLayoutPanel24.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
             this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel24.Size = new System.Drawing.Size(250, 22);
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(292, 27);
             this.tableLayoutPanel24.TabIndex = 118;
             // 
             // labelControl18
             // 
             this.labelControl18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl18.Location = new System.Drawing.Point(3, 4);
+            this.labelControl18.Location = new System.Drawing.Point(3, 5);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(59, 13);
+            this.labelControl18.Size = new System.Drawing.Size(74, 17);
             this.labelControl18.TabIndex = 119;
             this.labelControl18.Text = "Bắt đầu từ";
             // 
             // lblStartTime
             // 
             this.lblStartTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStartTime.Location = new System.Drawing.Point(75, 4);
-            this.lblStartTime.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.lblStartTime.Location = new System.Drawing.Point(92, 5);
+            this.lblStartTime.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(0, 13);
+            this.lblStartTime.Size = new System.Drawing.Size(0, 16);
             this.lblStartTime.TabIndex = 120;
             // 
             // labelControl27
             // 
             this.labelControl27.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl27.Location = new System.Drawing.Point(88, 4);
-            this.labelControl27.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.labelControl27.Location = new System.Drawing.Point(107, 5);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(23, 13);
+            this.labelControl27.Size = new System.Drawing.Size(28, 17);
             this.labelControl27.TabIndex = 121;
             this.labelControl27.Text = "Đến";
             // 
             // lblEndTime
             // 
             this.lblEndTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblEndTime.Location = new System.Drawing.Point(124, 4);
-            this.lblEndTime.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.lblEndTime.Location = new System.Drawing.Point(150, 5);
+            this.lblEndTime.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(0, 13);
+            this.lblEndTime.Size = new System.Drawing.Size(0, 16);
             this.lblEndTime.TabIndex = 122;
             // 
             // txtBookingHallsCost
             // 
             this.txtBookingHallsCost.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBookingHallsCost.Location = new System.Drawing.Point(75, 25);
+            this.txtBookingHallsCost.Location = new System.Drawing.Point(87, 31);
+            this.txtBookingHallsCost.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBookingHallsCost.Name = "txtBookingHallsCost";
             this.txtBookingHallsCost.Properties.DisplayFormat.FormatString = "n0";
             this.txtBookingHallsCost.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -2432,7 +2496,7 @@
             this.txtBookingHallsCost.Properties.MaxLength = 12;
             this.txtBookingHallsCost.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBookingHallsCost.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingHallsCost.Size = new System.Drawing.Size(100, 20);
+            this.txtBookingHallsCost.Size = new System.Drawing.Size(117, 22);
             this.txtBookingHallsCost.TabIndex = 124;
             this.txtBookingHallsCost.EditValueChanged += new System.EventHandler(this.txtBookingHallsCost_EditValueChanged);
             // 
@@ -2443,24 +2507,26 @@
             this.tableLayoutPanel29.Controls.Add(this.dgvFoods, 0, 1);
             this.tableLayoutPanel29.Controls.Add(this.tableLayoutPanel30, 0, 0);
             this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel29.Location = new System.Drawing.Point(5, 61);
-            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel29.Location = new System.Drawing.Point(6, 75);
+            this.tableLayoutPanel29.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel29.Name = "tableLayoutPanel29";
             this.tableLayoutPanel29.RowCount = 2;
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.36634F));
             this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.63367F));
-            this.tableLayoutPanel29.Size = new System.Drawing.Size(801, 202);
+            this.tableLayoutPanel29.Size = new System.Drawing.Size(935, 250);
             this.tableLayoutPanel29.TabIndex = 130;
             // 
             // dgvFoods
             // 
             this.dgvFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFoods.Location = new System.Drawing.Point(3, 30);
+            this.dgvFoods.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvFoods.Location = new System.Drawing.Point(3, 37);
             this.dgvFoods.MainView = this.viewFoods;
+            this.dgvFoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvFoods.Name = "dgvFoods";
             this.dgvFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit3});
-            this.dgvFoods.Size = new System.Drawing.Size(795, 169);
+            this.dgvFoods.Size = new System.Drawing.Size(929, 209);
             this.dgvFoods.TabIndex = 134;
             this.dgvFoods.UseEmbeddedNavigator = true;
             this.dgvFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2590,8 +2656,8 @@
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.92444F));
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.69185F));
             this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.50177F));
-            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel30.Controls.Add(this.labelControl30, 0, 0);
             this.tableLayoutPanel30.Controls.Add(this.lueMenus, 1, 0);
             this.tableLayoutPanel30.Controls.Add(this.btnPrintMenu, 2, 0);
@@ -2601,22 +2667,24 @@
             this.tableLayoutPanel30.Name = "tableLayoutPanel30";
             this.tableLayoutPanel30.RowCount = 1;
             this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel30.Size = new System.Drawing.Size(801, 27);
+            this.tableLayoutPanel30.Size = new System.Drawing.Size(935, 33);
             this.tableLayoutPanel30.TabIndex = 131;
             // 
             // labelControl30
             // 
             this.labelControl30.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl30.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl30.Location = new System.Drawing.Point(3, 7);
+            this.labelControl30.Location = new System.Drawing.Point(3, 8);
+            this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(77, 13);
+            this.labelControl30.Size = new System.Drawing.Size(98, 17);
             this.labelControl30.TabIndex = 132;
             this.labelControl30.Text = "Tên thực đơn:";
             // 
             // lueMenus
             // 
-            this.lueMenus.Location = new System.Drawing.Point(98, 3);
+            this.lueMenus.Location = new System.Drawing.Point(114, 4);
+            this.lueMenus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueMenus.Name = "lueMenus";
             this.lueMenus.Properties.Appearance.Options.UseTextOptions = true;
             this.lueMenus.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -2625,7 +2693,7 @@
             this.lueMenus.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Tên thực đơn")});
             this.lueMenus.Properties.NullText = "[Chọn tên thực đơn]";
-            this.lueMenus.Size = new System.Drawing.Size(136, 20);
+            this.lueMenus.Size = new System.Drawing.Size(159, 22);
             this.lueMenus.TabIndex = 133;
             this.lueMenus.EditValueChanged += new System.EventHandler(this.lueMenus_EditValueChanged);
             // 
@@ -2635,10 +2703,10 @@
             this.btnPrintMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnPrintMenu.Appearance.Options.UseFont = true;
             this.btnPrintMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintMenu.Image")));
-            this.btnPrintMenu.Location = new System.Drawing.Point(606, 3);
-            this.btnPrintMenu.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnPrintMenu.Location = new System.Drawing.Point(708, 4);
+            this.btnPrintMenu.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.btnPrintMenu.Name = "btnPrintMenu";
-            this.btnPrintMenu.Size = new System.Drawing.Size(100, 21);
+            this.btnPrintMenu.Size = new System.Drawing.Size(117, 25);
             this.btnPrintMenu.TabIndex = 141;
             this.btnPrintMenu.Text = "In thực đơn";
             this.btnPrintMenu.Click += new System.EventHandler(this.btnPrintMenu_Click);
@@ -2650,26 +2718,29 @@
             this.tableLayoutPanel25.Controls.Add(this.dgvServicesH, 0, 1);
             this.tableLayoutPanel25.Controls.Add(this.tableLayoutPanel26, 0, 0);
             this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 271);
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 335);
+            this.tableLayoutPanel25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel25.Name = "tableLayoutPanel25";
             this.tableLayoutPanel25.RowCount = 2;
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.tableLayoutPanel25.Size = new System.Drawing.Size(805, 203);
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(941, 250);
             this.tableLayoutPanel25.TabIndex = 135;
             // 
             // dgvServicesH
             // 
             this.dgvServicesH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServicesH.Location = new System.Drawing.Point(3, 33);
+            this.dgvServicesH.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvServicesH.Location = new System.Drawing.Point(3, 41);
             this.dgvServicesH.MainView = this.viewServicesH;
+            this.dgvServicesH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServicesH.Name = "dgvServicesH";
             this.dgvServicesH.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnServicesQuantityForHalls,
             this.btnServicesPercentTaxForHalls,
             this.btnServicesCostForHalls,
             this.btnDeleteServiceHall});
-            this.dgvServicesH.Size = new System.Drawing.Size(799, 167);
+            this.dgvServicesH.Size = new System.Drawing.Size(935, 205);
             this.dgvServicesH.TabIndex = 139;
             this.dgvServicesH.UseEmbeddedNavigator = true;
             this.dgvServicesH.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2910,18 +2981,18 @@
             this.tableLayoutPanel26.Name = "tableLayoutPanel26";
             this.tableLayoutPanel26.RowCount = 1;
             this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel26.Size = new System.Drawing.Size(805, 30);
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(941, 37);
             this.tableLayoutPanel26.TabIndex = 136;
             // 
             // labelControl28
             // 
             this.labelControl28.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl28.Location = new System.Drawing.Point(20, 8);
-            this.labelControl28.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.labelControl28.Location = new System.Drawing.Point(23, 10);
+            this.labelControl28.Margin = new System.Windows.Forms.Padding(23, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(89, 13);
+            this.labelControl28.Size = new System.Drawing.Size(111, 17);
             this.labelControl28.TabIndex = 137;
             this.labelControl28.Text = "Dịch vụ sử dụng";
             // 
@@ -2931,10 +3002,10 @@
             this.btnAddServicesForHalls.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnAddServicesForHalls.Appearance.Options.UseFont = true;
             this.btnAddServicesForHalls.Image = ((System.Drawing.Image)(resources.GetObject("btnAddServicesForHalls.Image")));
-            this.btnAddServicesForHalls.Location = new System.Drawing.Point(613, 4);
-            this.btnAddServicesForHalls.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.btnAddServicesForHalls.Location = new System.Drawing.Point(717, 5);
+            this.btnAddServicesForHalls.Margin = new System.Windows.Forms.Padding(12, 4, 3, 4);
             this.btnAddServicesForHalls.Name = "btnAddServicesForHalls";
-            this.btnAddServicesForHalls.Size = new System.Drawing.Size(108, 22);
+            this.btnAddServicesForHalls.Size = new System.Drawing.Size(126, 27);
             this.btnAddServicesForHalls.TabIndex = 138;
             this.btnAddServicesForHalls.Text = "Thêm dịch vụ";
             this.btnAddServicesForHalls.Click += new System.EventHandler(this.btnAddServicesForHalls_Click);
@@ -2948,13 +3019,13 @@
             this.tableLayoutPanel31.Controls.Add(this.tableLayoutPanel33, 1, 0);
             this.tableLayoutPanel31.Controls.Add(this.tableLayoutPanel34, 1, 1);
             this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel31.Location = new System.Drawing.Point(5, 482);
-            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel31.Location = new System.Drawing.Point(6, 595);
+            this.tableLayoutPanel31.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel31.Name = "tableLayoutPanel31";
             this.tableLayoutPanel31.RowCount = 2;
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel31.Size = new System.Drawing.Size(801, 62);
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(935, 78);
             this.tableLayoutPanel31.TabIndex = 140;
             // 
             // tableLayoutPanel32
@@ -2970,13 +3041,14 @@
             this.tableLayoutPanel32.Name = "tableLayoutPanel32";
             this.tableLayoutPanel32.RowCount = 1;
             this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel32.Size = new System.Drawing.Size(280, 24);
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(327, 31);
             this.tableLayoutPanel32.TabIndex = 140;
             // 
             // lueBookingH_PayMethod
             // 
             this.lueBookingH_PayMethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueBookingH_PayMethod.Location = new System.Drawing.Point(143, 3);
+            this.lueBookingH_PayMethod.Location = new System.Drawing.Point(166, 4);
+            this.lueBookingH_PayMethod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueBookingH_PayMethod.Name = "lueBookingH_PayMethod";
             this.lueBookingH_PayMethod.Properties.Appearance.Options.UseTextOptions = true;
             this.lueBookingH_PayMethod.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -2985,7 +3057,7 @@
             this.lueBookingH_PayMethod.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Type")});
             this.lueBookingH_PayMethod.Properties.NullText = "Chọn lựa";
-            this.lueBookingH_PayMethod.Size = new System.Drawing.Size(134, 20);
+            this.lueBookingH_PayMethod.Size = new System.Drawing.Size(156, 22);
             this.lueBookingH_PayMethod.TabIndex = 142;
             this.lueBookingH_PayMethod.EditValueChanged += new System.EventHandler(this.lueBookingH_PayMethod_EditValueChanged);
             // 
@@ -2993,9 +3065,10 @@
             // 
             this.labelControl31.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl31.Location = new System.Drawing.Point(15, 5);
+            this.labelControl31.Location = new System.Drawing.Point(6, 7);
+            this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(122, 13);
+            this.labelControl31.Size = new System.Drawing.Size(154, 17);
             this.labelControl31.TabIndex = 141;
             this.labelControl31.Text = "Hình thức thanh toán:";
             // 
@@ -3007,30 +3080,32 @@
             this.tableLayoutPanel33.Controls.Add(this.labelControl32, 0, 0);
             this.tableLayoutPanel33.Controls.Add(this.lblTotalMoneyServiceH, 1, 0);
             this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel33.Location = new System.Drawing.Point(280, 0);
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(327, 0);
             this.tableLayoutPanel33.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel33.Name = "tableLayoutPanel33";
             this.tableLayoutPanel33.RowCount = 1;
             this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel33.Size = new System.Drawing.Size(521, 24);
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(608, 31);
             this.tableLayoutPanel33.TabIndex = 143;
             // 
             // labelControl32
             // 
             this.labelControl32.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl32.Location = new System.Drawing.Point(236, 5);
+            this.labelControl32.Location = new System.Drawing.Point(268, 7);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(99, 13);
+            this.labelControl32.Size = new System.Drawing.Size(124, 17);
             this.labelControl32.TabIndex = 144;
             this.labelControl32.Text = "Tổng tiền dịch vụ:";
             // 
             // lblTotalMoneyServiceH
             // 
             this.lblTotalMoneyServiceH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalMoneyServiceH.Location = new System.Drawing.Point(341, 5);
+            this.lblTotalMoneyServiceH.Location = new System.Drawing.Point(398, 7);
+            this.lblTotalMoneyServiceH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyServiceH.Name = "lblTotalMoneyServiceH";
-            this.lblTotalMoneyServiceH.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalMoneyServiceH.Size = new System.Drawing.Size(43, 16);
             this.lblTotalMoneyServiceH.TabIndex = 145;
             this.lblTotalMoneyServiceH.Text = "0 (Vnđ)";
             // 
@@ -3044,12 +3119,12 @@
             this.tableLayoutPanel34.Controls.Add(this.btnPrintBookingH, 3, 0);
             this.tableLayoutPanel34.Controls.Add(this.btnPaymentHall, 2, 0);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(280, 24);
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(327, 31);
             this.tableLayoutPanel34.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel34.Name = "tableLayoutPanel34";
             this.tableLayoutPanel34.RowCount = 1;
             this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(521, 38);
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(608, 47);
             this.tableLayoutPanel34.TabIndex = 146;
             // 
             // btnPrintBookingH
@@ -3058,10 +3133,10 @@
             this.btnPrintBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintBookingH.Appearance.Options.UseFont = true;
             this.btnPrintBookingH.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintBookingH.Image")));
-            this.btnPrintBookingH.Location = new System.Drawing.Point(424, 6);
-            this.btnPrintBookingH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.btnPrintBookingH.Location = new System.Drawing.Point(495, 8);
+            this.btnPrintBookingH.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.btnPrintBookingH.Name = "btnPrintBookingH";
-            this.btnPrintBookingH.Size = new System.Drawing.Size(94, 25);
+            this.btnPrintBookingH.Size = new System.Drawing.Size(110, 31);
             this.btnPrintBookingH.TabIndex = 5;
             this.btnPrintBookingH.Text = "In hóa đơn";
             this.btnPrintBookingH.Click += new System.EventHandler(this.btnPrintBookingH_Click);
@@ -3072,10 +3147,10 @@
             this.btnPaymentHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentHall.Appearance.Options.UseFont = true;
             this.btnPaymentHall.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentHall.Image")));
-            this.btnPaymentHall.Location = new System.Drawing.Point(261, 6);
-            this.btnPaymentHall.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPaymentHall.Location = new System.Drawing.Point(305, 8);
+            this.btnPaymentHall.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPaymentHall.Name = "btnPaymentHall";
-            this.btnPaymentHall.Size = new System.Drawing.Size(151, 25);
+            this.btnPaymentHall.Size = new System.Drawing.Size(176, 31);
             this.btnPaymentHall.TabIndex = 148;
             this.btnPaymentHall.Text = "Thanh toán h.trường";
             this.btnPaymentHall.Click += new System.EventHandler(this.btnPaymentHall_Click);
@@ -3088,14 +3163,14 @@
             this.tableLayoutPanel35.Controls.Add(this.dgvHalls, 0, 1);
             this.tableLayoutPanel35.Controls.Add(this.tableLayoutPanel37, 0, 2);
             this.tableLayoutPanel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel35.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel35.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel35.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel35.Name = "tableLayoutPanel35";
             this.tableLayoutPanel35.RowCount = 3;
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.40984F));
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.81967F));
             this.tableLayoutPanel35.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.63826F));
-            this.tableLayoutPanel35.Size = new System.Drawing.Size(337, 539);
+            this.tableLayoutPanel35.Size = new System.Drawing.Size(393, 667);
             this.tableLayoutPanel35.TabIndex = 79;
             // 
             // tableLayoutPanel36
@@ -3120,7 +3195,8 @@
             this.tableLayoutPanel36.Controls.Add(this.txtInvoiceNumberH, 1, 6);
             this.tableLayoutPanel36.Controls.Add(this.dtpAcceptDateH, 1, 7);
             this.tableLayoutPanel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel36.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel36.Name = "tableLayoutPanel36";
             this.tableLayoutPanel36.RowCount = 8;
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -3131,49 +3207,54 @@
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel36.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel36.Size = new System.Drawing.Size(331, 185);
+            this.tableLayoutPanel36.Size = new System.Drawing.Size(387, 228);
             this.tableLayoutPanel36.TabIndex = 80;
             // 
             // labelControl53
             // 
             this.labelControl53.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl53.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl53.Location = new System.Drawing.Point(3, 166);
+            this.labelControl53.Location = new System.Drawing.Point(3, 203);
+            this.labelControl53.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(111, 13);
+            this.labelControl53.Size = new System.Drawing.Size(141, 17);
             this.labelControl53.TabIndex = 95;
             this.labelControl53.Text = "Ngày ghi nhận d.thu";
             // 
             // txtAddressH
             // 
             this.txtAddressH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddressH.Location = new System.Drawing.Point(120, 49);
+            this.txtAddressH.Location = new System.Drawing.Point(150, 60);
+            this.txtAddressH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddressH.Name = "txtAddressH";
             this.txtAddressH.Properties.MaxLength = 100;
             this.txtAddressH.Properties.NullValuePrompt = "Nhập tối đa 100 ký tự.";
             this.txtAddressH.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtAddressH.Size = new System.Drawing.Size(208, 20);
+            this.txtAddressH.Size = new System.Drawing.Size(232, 22);
             this.txtAddressH.TabIndex = 86;
             this.txtAddressH.Leave += new System.EventHandler(this.txtAddressH_Leave);
             // 
             // txtTaxNumberCodeH
             // 
-            this.txtTaxNumberCodeH.Location = new System.Drawing.Point(120, 26);
+            this.txtTaxNumberCodeH.Location = new System.Drawing.Point(150, 32);
+            this.txtTaxNumberCodeH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaxNumberCodeH.Name = "txtTaxNumberCodeH";
             this.txtTaxNumberCodeH.Properties.MaxLength = 100;
             this.txtTaxNumberCodeH.Properties.NullValuePrompt = "Nhập tối đa 100 ký tự.";
             this.txtTaxNumberCodeH.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtTaxNumberCodeH.Size = new System.Drawing.Size(208, 20);
+            this.txtTaxNumberCodeH.Size = new System.Drawing.Size(232, 22);
             this.txtTaxNumberCodeH.TabIndex = 84;
+            this.txtTaxNumberCodeH.EditValueChanged += new System.EventHandler(this.txtTaxNumberCodeH_EditValueChanged);
             this.txtTaxNumberCodeH.Leave += new System.EventHandler(this.txtTaxNumberCodeH_Leave);
             // 
             // labelControl36
             // 
             this.labelControl36.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl36.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl36.Location = new System.Drawing.Point(3, 28);
+            this.labelControl36.Location = new System.Drawing.Point(3, 33);
+            this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(62, 13);
+            this.labelControl36.Size = new System.Drawing.Size(76, 17);
             this.labelControl36.TabIndex = 83;
             this.labelControl36.Text = "Mã số thuế";
             // 
@@ -3182,18 +3263,19 @@
             this.labelControl38.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl38.Location = new System.Drawing.Point(3, 5);
+            this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(43, 13);
+            this.labelControl38.Size = new System.Drawing.Size(55, 17);
             this.labelControl38.TabIndex = 81;
             this.labelControl38.Text = "Công ty";
             // 
             // lblNameCompany_BookingH
             // 
             this.lblNameCompany_BookingH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCompany_BookingH.Location = new System.Drawing.Point(123, 5);
-            this.lblNameCompany_BookingH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCompany_BookingH.Location = new System.Drawing.Point(154, 6);
+            this.lblNameCompany_BookingH.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCompany_BookingH.Name = "lblNameCompany_BookingH";
-            this.lblNameCompany_BookingH.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCompany_BookingH.Size = new System.Drawing.Size(15, 16);
             this.lblNameCompany_BookingH.TabIndex = 82;
             this.lblNameCompany_BookingH.Text = "---";
             // 
@@ -3201,19 +3283,20 @@
             // 
             this.labelControl34.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl34.Location = new System.Drawing.Point(3, 97);
+            this.labelControl34.Location = new System.Drawing.Point(3, 117);
+            this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(79, 13);
+            this.labelControl34.Size = new System.Drawing.Size(99, 17);
             this.labelControl34.TabIndex = 89;
             this.labelControl34.Text = "Người đại diện";
             // 
             // lblNameCustomer_BookingH
             // 
             this.lblNameCustomer_BookingH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomer_BookingH.Location = new System.Drawing.Point(123, 97);
-            this.lblNameCustomer_BookingH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCustomer_BookingH.Location = new System.Drawing.Point(154, 118);
+            this.lblNameCustomer_BookingH.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCustomer_BookingH.Name = "lblNameCustomer_BookingH";
-            this.lblNameCustomer_BookingH.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCustomer_BookingH.Size = new System.Drawing.Size(15, 16);
             this.lblNameCustomer_BookingH.TabIndex = 90;
             this.lblNameCustomer_BookingH.Text = "---";
             // 
@@ -3221,29 +3304,30 @@
             // 
             this.labelControl33.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl33.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl33.Location = new System.Drawing.Point(3, 74);
+            this.labelControl33.Location = new System.Drawing.Point(3, 89);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(32, 13);
+            this.labelControl33.Size = new System.Drawing.Size(42, 17);
             this.labelControl33.TabIndex = 87;
             this.labelControl33.Text = "Nhóm";
             // 
             // lblNameCustomerGroup_BookingH
             // 
             this.lblNameCustomerGroup_BookingH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomerGroup_BookingH.Location = new System.Drawing.Point(123, 74);
-            this.lblNameCustomerGroup_BookingH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.lblNameCustomerGroup_BookingH.Location = new System.Drawing.Point(154, 90);
+            this.lblNameCustomerGroup_BookingH.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.lblNameCustomerGroup_BookingH.Name = "lblNameCustomerGroup_BookingH";
-            this.lblNameCustomerGroup_BookingH.Size = new System.Drawing.Size(12, 13);
+            this.lblNameCustomerGroup_BookingH.Size = new System.Drawing.Size(15, 16);
             this.lblNameCustomerGroup_BookingH.TabIndex = 88;
             this.lblNameCustomerGroup_BookingH.Text = "---";
             // 
             // labelControl35
             // 
             this.labelControl35.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl35.Location = new System.Drawing.Point(3, 53);
-            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 7, 3, 3);
+            this.labelControl35.Location = new System.Drawing.Point(3, 65);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 9, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(38, 13);
+            this.labelControl35.Size = new System.Drawing.Size(45, 17);
             this.labelControl35.TabIndex = 85;
             this.labelControl35.Text = "Địa chỉ";
             // 
@@ -3251,9 +3335,10 @@
             // 
             this.labelControl49.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl49.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl49.Location = new System.Drawing.Point(3, 120);
+            this.labelControl49.Location = new System.Drawing.Point(3, 145);
+            this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(63, 13);
+            this.labelControl49.Size = new System.Drawing.Size(82, 17);
             this.labelControl49.TabIndex = 91;
             this.labelControl49.Text = "Ngày H.đơn";
             // 
@@ -3261,9 +3346,10 @@
             // 
             this.labelControl52.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl52.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl52.Location = new System.Drawing.Point(3, 143);
+            this.labelControl52.Location = new System.Drawing.Point(3, 173);
+            this.labelControl52.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl52.Name = "labelControl52";
-            this.labelControl52.Size = new System.Drawing.Size(49, 13);
+            this.labelControl52.Size = new System.Drawing.Size(64, 17);
             this.labelControl52.TabIndex = 93;
             this.labelControl52.Text = "Số H.đơn";
             // 
@@ -3271,48 +3357,51 @@
             // 
             this.dtpInvoiceDateH.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpInvoiceDateH.EditValue = null;
-            this.dtpInvoiceDateH.Location = new System.Drawing.Point(123, 118);
-            this.dtpInvoiceDateH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.dtpInvoiceDateH.Location = new System.Drawing.Point(150, 144);
+            this.dtpInvoiceDateH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpInvoiceDateH.Name = "dtpInvoiceDateH";
             this.dtpInvoiceDateH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpInvoiceDateH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpInvoiceDateH.Properties.ReadOnly = true;
-            this.dtpInvoiceDateH.Size = new System.Drawing.Size(205, 20);
+            this.dtpInvoiceDateH.Size = new System.Drawing.Size(234, 22);
             this.dtpInvoiceDateH.TabIndex = 92;
             this.dtpInvoiceDateH.EditValueChanged += new System.EventHandler(this.dtpInvoiceDateH_EditValueChanged);
             // 
             // txtInvoiceNumberH
             // 
             this.txtInvoiceNumberH.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtInvoiceNumberH.Location = new System.Drawing.Point(123, 141);
-            this.txtInvoiceNumberH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtInvoiceNumberH.Location = new System.Drawing.Point(150, 172);
+            this.txtInvoiceNumberH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInvoiceNumberH.Name = "txtInvoiceNumberH";
             this.txtInvoiceNumberH.Properties.ReadOnly = true;
-            this.txtInvoiceNumberH.Size = new System.Drawing.Size(205, 20);
+            this.txtInvoiceNumberH.Size = new System.Drawing.Size(234, 22);
             this.txtInvoiceNumberH.TabIndex = 94;
+            this.txtInvoiceNumberH.EditValueChanged += new System.EventHandler(this.txtInvoiceNumberH_EditValueChanged);
+            this.txtInvoiceNumberH.Leave += new System.EventHandler(this.txtInvoiceNumberH_Leave);
             // 
             // dtpAcceptDateH
             // 
             this.dtpAcceptDateH.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpAcceptDateH.EditValue = null;
-            this.dtpAcceptDateH.Location = new System.Drawing.Point(123, 164);
-            this.dtpAcceptDateH.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.dtpAcceptDateH.Location = new System.Drawing.Point(150, 201);
+            this.dtpAcceptDateH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpAcceptDateH.Name = "dtpAcceptDateH";
             this.dtpAcceptDateH.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpAcceptDateH.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpAcceptDateH.Properties.ReadOnly = true;
-            this.dtpAcceptDateH.Size = new System.Drawing.Size(205, 20);
+            this.dtpAcceptDateH.Size = new System.Drawing.Size(234, 22);
             this.dtpAcceptDateH.TabIndex = 96;
             this.dtpAcceptDateH.EditValueChanged += new System.EventHandler(this.dtpAcceptDateH_EditValueChanged);
             // 
             // dgvHalls
             // 
             this.dgvHalls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHalls.Location = new System.Drawing.Point(0, 191);
+            this.dgvHalls.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvHalls.Location = new System.Drawing.Point(0, 236);
             this.dgvHalls.MainView = this.viewHalls;
             this.dgvHalls.Margin = new System.Windows.Forms.Padding(0);
             this.dgvHalls.Name = "dgvHalls";
@@ -3320,7 +3409,7 @@
             this.btnEditBookingHall,
             this.btnDeleteHall,
             this.chbPaymentStatusH});
-            this.dgvHalls.Size = new System.Drawing.Size(337, 274);
+            this.dgvHalls.Size = new System.Drawing.Size(393, 339);
             this.dgvHalls.TabIndex = 97;
             this.dgvHalls.UseEmbeddedNavigator = true;
             this.dgvHalls.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3466,22 +3555,23 @@
             this.tableLayoutPanel37.Controls.Add(this.labelControl44, 1, 1);
             this.tableLayoutPanel37.Controls.Add(this.txtBookingHMoney, 2, 1);
             this.tableLayoutPanel37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel37.Location = new System.Drawing.Point(0, 465);
+            this.tableLayoutPanel37.Location = new System.Drawing.Point(0, 575);
             this.tableLayoutPanel37.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel37.Name = "tableLayoutPanel37";
             this.tableLayoutPanel37.RowCount = 2;
             this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.72839F));
             this.tableLayoutPanel37.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.27161F));
-            this.tableLayoutPanel37.Size = new System.Drawing.Size(337, 74);
+            this.tableLayoutPanel37.Size = new System.Drawing.Size(393, 92);
             this.tableLayoutPanel37.TabIndex = 98;
             // 
             // labelControl40
             // 
             this.labelControl40.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl40.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl40.Location = new System.Drawing.Point(19, 14);
+            this.labelControl40.Location = new System.Drawing.Point(21, 17);
+            this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(62, 17);
+            this.labelControl40.Size = new System.Drawing.Size(75, 21);
             this.labelControl40.TabIndex = 99;
             this.labelControl40.Text = "Tổng tiền ";
             // 
@@ -3489,9 +3579,10 @@
             // 
             this.lblTotalMoneyHalls.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotalMoneyHalls.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalMoneyHalls.Location = new System.Drawing.Point(47, 51);
+            this.lblTotalMoneyHalls.Location = new System.Drawing.Point(54, 63);
+            this.lblTotalMoneyHalls.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyHalls.Name = "lblTotalMoneyHalls";
-            this.lblTotalMoneyHalls.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalMoneyHalls.Size = new System.Drawing.Size(9, 21);
             this.lblTotalMoneyHalls.TabIndex = 102;
             this.lblTotalMoneyHalls.Text = "0";
             // 
@@ -3499,9 +3590,10 @@
             // 
             this.labelControl41.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl41.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl41.Location = new System.Drawing.Point(121, 14);
+            this.labelControl41.Location = new System.Drawing.Point(141, 17);
+            this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(87, 17);
+            this.labelControl41.Size = new System.Drawing.Size(106, 21);
             this.labelControl41.TabIndex = 100;
             this.labelControl41.Text = "Tiền đặt trước";
             // 
@@ -3509,9 +3601,10 @@
             // 
             this.labelControl42.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl42.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl42.Location = new System.Drawing.Point(220, 14);
+            this.labelControl42.Location = new System.Drawing.Point(254, 17);
+            this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(106, 17);
+            this.labelControl42.Size = new System.Drawing.Size(131, 21);
             this.labelControl42.TabIndex = 101;
             this.labelControl42.Text = "Thành tiền (VND)";
             // 
@@ -3519,9 +3612,10 @@
             // 
             this.lblTotalMoneyH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTotalMoneyH.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalMoneyH.Location = new System.Drawing.Point(270, 51);
+            this.lblTotalMoneyH.Location = new System.Drawing.Point(315, 63);
+            this.lblTotalMoneyH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyH.Name = "lblTotalMoneyH";
-            this.lblTotalMoneyH.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalMoneyH.Size = new System.Drawing.Size(9, 21);
             this.lblTotalMoneyH.TabIndex = 105;
             this.lblTotalMoneyH.Text = "0";
             // 
@@ -3529,9 +3623,10 @@
             // 
             this.labelControl44.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl44.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.labelControl44.Location = new System.Drawing.Point(106, 52);
+            this.labelControl44.Location = new System.Drawing.Point(124, 65);
+            this.labelControl44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(5, 13);
+            this.labelControl44.Size = new System.Drawing.Size(6, 16);
             this.labelControl44.TabIndex = 103;
             this.labelControl44.Text = "-";
             // 
@@ -3539,8 +3634,8 @@
             // 
             this.txtBookingHMoney.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBookingHMoney.EditValue = "";
-            this.txtBookingHMoney.Location = new System.Drawing.Point(118, 49);
-            this.txtBookingHMoney.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.txtBookingHMoney.Location = new System.Drawing.Point(138, 62);
+            this.txtBookingHMoney.Margin = new System.Windows.Forms.Padding(0, 4, 3, 4);
             this.txtBookingHMoney.Name = "txtBookingHMoney";
             this.txtBookingHMoney.Properties.DisplayFormat.FormatString = "n0";
             this.txtBookingHMoney.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -3551,7 +3646,7 @@
             this.txtBookingHMoney.Properties.MaxLength = 12;
             this.txtBookingHMoney.Properties.NullValuePrompt = "Chỉ nhập số.";
             this.txtBookingHMoney.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingHMoney.Size = new System.Drawing.Size(89, 20);
+            this.txtBookingHMoney.Size = new System.Drawing.Size(104, 22);
             this.txtBookingHMoney.TabIndex = 104;
             this.txtBookingHMoney.EditValueChanged += new System.EventHandler(this.txtBookingH_BookingMoney_EditValueChanged);
             // 
@@ -3559,16 +3654,17 @@
             // 
             this.tableLayoutPanel18.ColumnCount = 1;
             this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel18.Controls.Add(this.xtraTabControl1, 0, 0);
             this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel38, 0, 1);
             this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel18.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel18.Name = "tableLayoutPanel18";
             this.tableLayoutPanel18.RowCount = 2;
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.73634F));
             this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.263658F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(1164, 637);
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(1358, 784);
             this.tableLayoutPanel18.TabIndex = 0;
             // 
             // tableLayoutPanel38
@@ -3579,11 +3675,12 @@
             this.tableLayoutPanel38.Controls.Add(this.tableLayoutPanel39, 0, 0);
             this.tableLayoutPanel38.Controls.Add(this.tableLayoutPanel40, 1, 0);
             this.tableLayoutPanel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel38.Location = new System.Drawing.Point(3, 580);
+            this.tableLayoutPanel38.Location = new System.Drawing.Point(3, 715);
+            this.tableLayoutPanel38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel38.Name = "tableLayoutPanel38";
             this.tableLayoutPanel38.RowCount = 1;
             this.tableLayoutPanel38.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel38.Size = new System.Drawing.Size(1158, 54);
+            this.tableLayoutPanel38.Size = new System.Drawing.Size(1352, 65);
             this.tableLayoutPanel38.TabIndex = 150;
             // 
             // tableLayoutPanel39
@@ -3611,46 +3708,50 @@
             this.tableLayoutPanel39.RowCount = 2;
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.81818F));
             this.tableLayoutPanel39.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.18182F));
-            this.tableLayoutPanel39.Size = new System.Drawing.Size(492, 54);
+            this.tableLayoutPanel39.Size = new System.Drawing.Size(574, 65);
             this.tableLayoutPanel39.TabIndex = 151;
             // 
             // lblTotalBookingRAndBookingHAfterTax
             // 
             this.lblTotalBookingRAndBookingHAfterTax.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalBookingRAndBookingHAfterTax.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalBookingRAndBookingHAfterTax.Location = new System.Drawing.Point(198, 33);
+            this.lblTotalBookingRAndBookingHAfterTax.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBookingRAndBookingHAfterTax.Location = new System.Drawing.Point(231, 41);
+            this.lblTotalBookingRAndBookingHAfterTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalBookingRAndBookingHAfterTax.Name = "lblTotalBookingRAndBookingHAfterTax";
-            this.lblTotalBookingRAndBookingHAfterTax.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalBookingRAndBookingHAfterTax.Size = new System.Drawing.Size(8, 18);
             this.lblTotalBookingRAndBookingHAfterTax.TabIndex = 157;
             this.lblTotalBookingRAndBookingHAfterTax.Text = "0";
             // 
             // labelControl47
             // 
             this.labelControl47.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl47.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl47.Location = new System.Drawing.Point(278, 6);
+            this.labelControl47.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl47.Location = new System.Drawing.Point(328, 9);
+            this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(87, 17);
+            this.labelControl47.Size = new System.Drawing.Size(94, 18);
             this.labelControl47.TabIndex = 154;
             this.labelControl47.Text = "Tiền đặt trước";
             // 
             // labelControl48
             // 
             this.labelControl48.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl48.Location = new System.Drawing.Point(376, 6);
+            this.labelControl48.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl48.Location = new System.Drawing.Point(443, 9);
+            this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(106, 17);
+            this.labelControl48.Size = new System.Drawing.Size(116, 18);
             this.labelControl48.TabIndex = 155;
             this.labelControl48.Text = "Thành tiền (VND)";
             // 
             // lblTotalBookingRAndBookingH
             // 
             this.lblTotalBookingRAndBookingH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalBookingRAndBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalBookingRAndBookingH.Location = new System.Drawing.Point(426, 33);
+            this.lblTotalBookingRAndBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBookingRAndBookingH.Location = new System.Drawing.Point(497, 41);
+            this.lblTotalBookingRAndBookingH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalBookingRAndBookingH.Name = "lblTotalBookingRAndBookingH";
-            this.lblTotalBookingRAndBookingH.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalBookingRAndBookingH.Size = new System.Drawing.Size(8, 18);
             this.lblTotalBookingRAndBookingH.TabIndex = 160;
             this.lblTotalBookingRAndBookingH.Text = "0";
             // 
@@ -3658,49 +3759,54 @@
             // 
             this.labelControl50.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl50.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.labelControl50.Location = new System.Drawing.Point(266, 35);
+            this.labelControl50.Location = new System.Drawing.Point(310, 42);
+            this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(5, 13);
+            this.labelControl50.Size = new System.Drawing.Size(6, 16);
             this.labelControl50.TabIndex = 158;
             this.labelControl50.Text = "-";
             // 
             // labelControl51
             // 
             this.labelControl51.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl51.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl51.Location = new System.Drawing.Point(6, 6);
+            this.labelControl51.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl51.Location = new System.Drawing.Point(15, 9);
+            this.labelControl51.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(128, 17);
+            this.labelControl51.Size = new System.Drawing.Size(135, 18);
             this.labelControl51.TabIndex = 152;
             this.labelControl51.Text = "Tổng tiền trước thuế";
             // 
             // lblBookingMoney_BookingRAndBookingH
             // 
             this.lblBookingMoney_BookingRAndBookingH.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblBookingMoney_BookingRAndBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblBookingMoney_BookingRAndBookingH.Location = new System.Drawing.Point(317, 33);
+            this.lblBookingMoney_BookingRAndBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookingMoney_BookingRAndBookingH.Location = new System.Drawing.Point(371, 41);
+            this.lblBookingMoney_BookingRAndBookingH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblBookingMoney_BookingRAndBookingH.Name = "lblBookingMoney_BookingRAndBookingH";
-            this.lblBookingMoney_BookingRAndBookingH.Size = new System.Drawing.Size(7, 16);
+            this.lblBookingMoney_BookingRAndBookingH.Size = new System.Drawing.Size(8, 18);
             this.lblBookingMoney_BookingRAndBookingH.TabIndex = 159;
             this.lblBookingMoney_BookingRAndBookingH.Text = "0";
             // 
             // lblTotalBookingRAndBookingHBeforeTax
             // 
             this.lblTotalBookingRAndBookingHBeforeTax.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTotalBookingRAndBookingHBeforeTax.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.lblTotalBookingRAndBookingHBeforeTax.Location = new System.Drawing.Point(67, 33);
+            this.lblTotalBookingRAndBookingHBeforeTax.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalBookingRAndBookingHBeforeTax.Location = new System.Drawing.Point(78, 41);
+            this.lblTotalBookingRAndBookingHBeforeTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalBookingRAndBookingHBeforeTax.Name = "lblTotalBookingRAndBookingHBeforeTax";
-            this.lblTotalBookingRAndBookingHBeforeTax.Size = new System.Drawing.Size(7, 16);
+            this.lblTotalBookingRAndBookingHBeforeTax.Size = new System.Drawing.Size(8, 18);
             this.lblTotalBookingRAndBookingHBeforeTax.TabIndex = 156;
             this.lblTotalBookingRAndBookingHBeforeTax.Text = "0";
             // 
             // labelControl45
             // 
             this.labelControl45.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl45.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl45.Location = new System.Drawing.Point(144, 6);
+            this.labelControl45.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl45.Location = new System.Drawing.Point(173, 9);
+            this.labelControl45.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl45.Name = "labelControl45";
-            this.labelControl45.Size = new System.Drawing.Size(115, 17);
+            this.labelControl45.Size = new System.Drawing.Size(124, 18);
             this.labelControl45.TabIndex = 153;
             this.labelControl45.Text = "Tổng tiền sau thuế";
             // 
@@ -3719,12 +3825,12 @@
             this.tableLayoutPanel40.Controls.Add(this.btnPaymentTotal, 3, 0);
             this.tableLayoutPanel40.Controls.Add(this.btnSplitBill, 2, 0);
             this.tableLayoutPanel40.Controls.Add(this.btnĐeleteBookingR, 5, 0);
-            this.tableLayoutPanel40.Location = new System.Drawing.Point(492, 0);
+            this.tableLayoutPanel40.Location = new System.Drawing.Point(574, 0);
             this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 1;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(657, 48);
+            this.tableLayoutPanel40.Size = new System.Drawing.Size(766, 59);
             this.tableLayoutPanel40.TabIndex = 61;
             // 
             // btnSave
@@ -3733,13 +3839,13 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(102, 11);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnSave.Location = new System.Drawing.Point(118, 14);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(102, 25);
+            this.btnSave.Size = new System.Drawing.Size(119, 31);
             this.btnSave.TabIndex = 162;
             this.btnSave.Text = "Lưu thay đổi";
-            this.btnSave.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnPrintPaymentTotal
             // 
@@ -3747,10 +3853,10 @@
             this.btnPrintPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintPaymentTotal.Appearance.Options.UseFont = true;
             this.btnPrintPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPaymentTotal.Image")));
-            this.btnPrintPaymentTotal.Location = new System.Drawing.Point(461, 11);
-            this.btnPrintPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPrintPaymentTotal.Location = new System.Drawing.Point(537, 14);
+            this.btnPrintPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrintPaymentTotal.Name = "btnPrintPaymentTotal";
-            this.btnPrintPaymentTotal.Size = new System.Drawing.Size(93, 25);
+            this.btnPrintPaymentTotal.Size = new System.Drawing.Size(108, 31);
             this.btnPrintPaymentTotal.TabIndex = 165;
             this.btnPrintPaymentTotal.Text = "In phiếu thu";
             this.btnPrintPaymentTotal.Click += new System.EventHandler(this.btnPrintPaymentTotal_Click);
@@ -3761,10 +3867,10 @@
             this.btnPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentTotal.Appearance.Options.UseFont = true;
             this.btnPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentTotal.Image")));
-            this.btnPaymentTotal.Location = new System.Drawing.Point(333, 11);
-            this.btnPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnPaymentTotal.Location = new System.Drawing.Point(388, 14);
+            this.btnPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPaymentTotal.Name = "btnPaymentTotal";
-            this.btnPaymentTotal.Size = new System.Drawing.Size(119, 25);
+            this.btnPaymentTotal.Size = new System.Drawing.Size(139, 31);
             this.btnPaymentTotal.TabIndex = 164;
             this.btnPaymentTotal.Text = "Thanh toán tổng";
             this.btnPaymentTotal.Click += new System.EventHandler(this.btnPaymentTotal_Click);
@@ -3775,10 +3881,10 @@
             this.btnSplitBill.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSplitBill.Appearance.Options.UseFont = true;
             this.btnSplitBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSplitBill.Image")));
-            this.btnSplitBill.Location = new System.Drawing.Point(213, 11);
-            this.btnSplitBill.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnSplitBill.Location = new System.Drawing.Point(247, 14);
+            this.btnSplitBill.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnSplitBill.Name = "btnSplitBill";
-            this.btnSplitBill.Size = new System.Drawing.Size(109, 25);
+            this.btnSplitBill.Size = new System.Drawing.Size(127, 31);
             this.btnSplitBill.TabIndex = 163;
             this.btnSplitBill.Text = "Tách phiếu thu";
             this.btnSplitBill.Click += new System.EventHandler(this.btnSplitBill_Click);
@@ -3789,22 +3895,23 @@
             this.btnĐeleteBookingR.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnĐeleteBookingR.Appearance.Options.UseFont = true;
             this.btnĐeleteBookingR.Image = ((System.Drawing.Image)(resources.GetObject("btnĐeleteBookingR.Image")));
-            this.btnĐeleteBookingR.Location = new System.Drawing.Point(566, 11);
-            this.btnĐeleteBookingR.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
+            this.btnĐeleteBookingR.Location = new System.Drawing.Point(659, 14);
+            this.btnĐeleteBookingR.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnĐeleteBookingR.Name = "btnĐeleteBookingR";
-            this.btnĐeleteBookingR.Size = new System.Drawing.Size(85, 25);
+            this.btnĐeleteBookingR.Size = new System.Drawing.Size(99, 31);
             this.btnĐeleteBookingR.TabIndex = 166;
             this.btnĐeleteBookingR.Text = "Hủy h.đơn";
             this.btnĐeleteBookingR.Click += new System.EventHandler(this.btnDeleteBookingR_Click);
             // 
             // frmTsk_Payment_Step2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 637);
+            this.ClientSize = new System.Drawing.Size(1358, 784);
             this.Controls.Add(this.tableLayoutPanel18);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTsk_Payment_Step2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh toán bước 2";

@@ -117,8 +117,13 @@ namespace RoomManager
             {
                 BookingHall_ServiceEN aBookingHall_ServiceEN = new BookingHall_ServiceEN();
                 int IDService = Convert.ToInt32(grvService.GetFocusedRowCellValue("ID"));
+                //-----------
+                // Ngoc mới thêm
+                aBookingHall_ServiceEN.ID = -IDService;
+                //-----------
                 aBookingHall_ServiceEN.IDService = IDService;
                 aBookingHall_ServiceEN.IDBookingHall = this.IDBookingHall;
+                
                 aBookingHall_ServiceEN.Service_Name = grvService.GetFocusedRowCellValue("Name").ToString();
                 aBookingHall_ServiceEN.Cost = Convert.ToDecimal(grvService.GetFocusedRowCellValue("CostRef"));
                 aBookingHall_ServiceEN.CostRef_Services = Convert.ToDecimal(grvService.GetFocusedRowCellValue("CostRef"));

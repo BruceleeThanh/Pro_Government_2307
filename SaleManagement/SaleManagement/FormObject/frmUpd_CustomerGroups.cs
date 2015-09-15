@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using BussinessLogic;
 using DataAccess;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_CustomerGroups : DevExpress.XtraEditors.XtraForm
     {
@@ -18,36 +18,23 @@ namespace SaleManagement
             this.afrmLst_CustomerGroups = afrmLst_CustomerGroups;
             this.IDCompany_Old = IDCompany;
             this.IDCustomerGroups_Old = IDCustomerGoup;
-        }
+        }    
 
-        private bool ValidateData()
-        {
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Nhập tên nhóm trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            if (cboType.Text == "--- Chọn lựa ---")
-            {
-                MessageBox.Show("Chọn loại nhóm trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            if (cboStatus.Text == "--- Chọn lựa ---")
-            {
-                MessageBox.Show("Chọn trạng thái nhóm trước khi sửa !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            return true;
-        }
+       
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                if (ValidateData() == true)
+                if (String.IsNullOrEmpty(txtName.Text) == true)
+                {
+                    txtName.Focus();
+                    MessageBox.Show("Vui lòng nhập tên nhóm .", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
                 {
                     CustomerGroups aCustomerGroups = new CustomerGroups();
                     aCustomerGroups.ID = IDCustomerGroups_Old;
-                    aCustomerGroups.IDCompany = int.Parse(lueCompany.EditValue.ToString());
+                    aCustomerGroups.IDCompany = Convert.ToInt32(lueCompany.EditValue);
                     aCustomerGroups.Name = txtName.Text;
                     aCustomerGroups.Status = cboStatus.SelectedIndex + 1;
                     aCustomerGroups.Type = cboType.SelectedIndex + 1;
@@ -69,17 +56,17 @@ namespace SaleManagement
         {
             try
             {
-                CustomerGroups aCustomerGroups = aCustomerGroupsBO.Select_ByID(IDCustomerGroups_Old);
                 CompaniesBO aCompaniesBO = new CompaniesBO();
                 lueCompany.Properties.DataSource = aCompaniesBO.Select_All();
                 lueCompany.Properties.DisplayMember = "Name";
                 lueCompany.Properties.ValueMember = "ID";
-                lueCompany.EditValue = aCustomerGroups.IDCompany;
+
+                CustomerGroups aCustomerGroups = aCustomerGroupsBO.Select_ByID(IDCustomerGroups_Old);
                 lblIDCustomerGroup.Text = aCustomerGroups.ID.ToString();
-               
+                lueCompany.EditValue = aCustomerGroups.IDCompany;
                 txtName.Text = aCustomerGroups.Name.ToString();
-                cboType.Text = aCustomerGroups.Type.ToString();
-                cboStatus.Text = aCustomerGroups.Status.ToString();
+                cboType.SelectedIndex = Convert.ToInt32(aCustomerGroups.Type -1);
+                cboStatus.SelectedIndex = Convert.ToInt32(aCustomerGroups.Status -1);
                 cboDisable.Text = aCustomerGroups.Disable.ToString();
                 
             }

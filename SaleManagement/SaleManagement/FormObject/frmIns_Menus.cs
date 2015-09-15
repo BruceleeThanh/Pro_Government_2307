@@ -17,7 +17,7 @@ using System.IO;
 using DataAccess;
 using Entity;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_Menus : DevExpress.XtraEditors.XtraForm
     {
@@ -25,6 +25,7 @@ namespace SaleManagement
         private List<Foods> aListFoods = new List<Foods>();
         private frmTsk_SearchBookingHalls afrmTsk_SearchBookingHalls = null;
         frmLst_DetailBookingHalls afrmLst_DetailBookingHalls = null;
+        private frmTsk_UpdBookingHall afrmTsk_UpdBookingHall = null;
         frmTsk_CheckMenus afrmTsk_CheckMenus = null;
         frmLst_Menus afrmLst_Menus = null;
         private int Type;
@@ -58,6 +59,13 @@ namespace SaleManagement
         {
             InitializeComponent();
             this.afrmTsk_CheckMenus = afrmTsk_CheckMenus;
+            this.IDBookingHall = IDBookingHall;
+            this.Type = Type;
+        }
+        public frmIns_Menus(frmTsk_UpdBookingHall afrmTsk_UpdBookingHall, int IDBookingHall, int Type)
+        {
+            InitializeComponent();
+            this.afrmTsk_UpdBookingHall = afrmTsk_UpdBookingHall;
             this.IDBookingHall = IDBookingHall;
             this.Type = Type;
         }
@@ -227,6 +235,10 @@ namespace SaleManagement
                         aMenusEN.IDSystemUser = 1;//de tam
                         aReceptionTaskBO.CreateMenus(aMenusEN);
                     }
+                    if (this.afrmTsk_UpdBookingHall != null)
+                    {
+                        this.afrmTsk_UpdBookingHall.Reload();
+                    }
                     MessageBox.Show("Tạo thực đơn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
@@ -335,7 +347,7 @@ namespace SaleManagement
                     {
                         if (aFoods.Image1.Length <= 0)
                         {
-                            Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                            Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                             image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                             Byte[] aImageByte = this.ConvertImageToByteArray(image);
                             aFoods.Image1 = aImageByte;
@@ -343,7 +355,7 @@ namespace SaleManagement
                     }
                     else
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         aFoods.Image1 = aImageByte;
@@ -388,7 +400,7 @@ namespace SaleManagement
                     }
                     else
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(50, 50, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         aFoods.Image1 = aImageByte;
@@ -396,7 +408,7 @@ namespace SaleManagement
                 }
                 else
                 {
-                    Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                    Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                     image = image.GetThumbnailImage(50, 50, null, IntPtr.Zero);
                     Byte[] aImageByte = this.ConvertImageToByteArray(image);
                     aFoods.Image1 = aImageByte;

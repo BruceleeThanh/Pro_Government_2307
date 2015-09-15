@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using BussinessLogic;
 using DevExpress.Utils;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_Services : DevExpress.XtraEditors.XtraForm
     {
@@ -11,7 +11,6 @@ namespace SaleManagement
         {
             InitializeComponent();
         }
-
       
 
         public void ReloadData()
@@ -22,7 +21,6 @@ namespace SaleManagement
                 this.colPrice.DisplayFormat.FormatType = FormatType.Numeric;
                 this.colPrice.DisplayFormat.FormatString = "{0:0,0}";
                 dgvServices.DataSource = aServicesBO.Select_All();
-                dgvServices.RefreshDataSource();
             }
             catch (Exception ex)
             {
@@ -92,8 +90,6 @@ namespace SaleManagement
                 MessageBox.Show("frmLst_Services.btnDel_ButtonClick\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-
-     
+       
     }
 }

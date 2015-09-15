@@ -13,33 +13,32 @@ using Entity;
 using BussinessLogic;
 using DevExpress.XtraReports.UI;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_SplitBill_Step2 : DevExpress.XtraEditors.XtraForm
     {
 
         private frmTsk_SplitBill_Step1 afrmTsk_SplitBill_Step1 = null;
-        private PaymentHallsEN aPaymentHallsEN = new PaymentHallsEN();
-        private List<ServicesHallsEN> aListServices = new List<ServicesHallsEN>();
-        private List<HallsEN> aListHalls = new List<HallsEN>();
+        private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
 
-        public frmTsk_SplitBill_Step2(frmTsk_SplitBill_Step1 afrmTsk_SplitBill_Step1, PaymentHallsEN aPaymentHallsEN)
+        private List<ServiceUsedEN> aListServicesR = new List<ServiceUsedEN>();
+        private List<ServiceUsedEN> aListServicesH = new List<ServiceUsedEN>();
+
+        private List<BookingRoomUsedEN> aListRooms = new List<BookingRoomUsedEN>();
+        private List<BookingHallUsedEN> aListHalls = new List<BookingHallUsedEN>();
+
+        public frmTsk_SplitBill_Step2(frmTsk_SplitBill_Step1 afrmTsk_SplitBill_Step1, NewPaymentEN aNewPaymentEN)
         {
             InitializeComponent();
             this.afrmTsk_SplitBill_Step1 = afrmTsk_SplitBill_Step1;
-            this.aPaymentHallsEN = aPaymentHallsEN;
+            this.aNewPaymentEN = aNewPaymentEN;
         }
-
-
+        
         private void frmTsk_SplitBill_Step2_Load(object sender, EventArgs e)
         {
             try
-            {
-                if (this.aPaymentHallsEN.Status_BookingH == 8)
-                {
-                    btnPayment.Enabled = false;
-                }
-                lueIndexSub.Properties.DataSource = this.aPaymentHallsEN.aListIndexSubSplitBillH.Select(i => i.IndexSub).Distinct();
+            {               
+                lueIndexSub.Properties.DataSource = this.aNewPaymentEN.ListIndex.Distinct();
             }
             catch (Exception ex)
             {
@@ -47,88 +46,83 @@ namespace SaleManagement
             }
         }
         //Hiennv
-        public void LoadListHall_ByIndexSubHall(PaymentHallsEN aPaymentHallsEN, int IndexSubHall)
+        public void LoadListRooms_ByIndexSubPayment(NewPaymentEN aNewPaymentEN, int IndexSubPayment)
         {
             try
             {
-                this.aListHalls.Clear();
-                this.aListHalls = aPaymentHallsEN.GetListHallsEN().Where(r => r.IndexSubHalls == IndexSubHall).OrderBy(r => r.Sku).ToList();
-                dgvHalls.DataSource = this.aListHalls;
-                dgvHalls.RefreshDataSource();
+                this.aListRooms.Clear();
+                this.aListRooms = aNewPaymentEN.aListBookingRoomUsed.Where(r => r.IndexSubPayment == IndexSubPayment).OrderBy(r => r.RoomSku).ToList();
+                dgvRooms.DataSource = this.aListRooms;
+                dgvRooms.RefreshDataSource();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("frmTsk_SplitBill_Step2.LoadListHall_ByIndexSubHall\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("frmTsk_SplitBill_Step2.LoadListRooms_ByIndexSubRooms\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         //Hiennv
-        public void LoadListServices_ByIndexSubServices(PaymentHallsEN aPaymentHallsEN, int IndexSubServices)
+        public void LoadListServicesR_ByIndexSubPayment(NewPaymentEN aNewPaymentEN, int IndexSubPayment)
         {
             try
             {
-                this.aListServices.Clear();
-                this.aListServices = aPaymentHallsEN.GetListServicesHallsEN().Where(r => r.IndexSubServices == IndexSubServices).OrderBy(r => r.SkuHall).ToList();
-                dgvServices.DataSource = this.aListServices;
-                dgvServices.RefreshDataSource();
+                this.aListServicesR.Clear();
+                this.aListServicesR = aNewPaymentEN.GetAllServiceUsedInRoom().Where(r => r.IndexSubPayment == IndexSubPayment).OrderBy(r => r.Sku).ToList();
+                dgvServicesR.DataSource = this.aListServicesR;
+                dgvServicesR.RefreshDataSource();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("frmTsk_SplitBill_Step2.LoadListServices_ByIndexSubServices\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //Hiennv
+        public void LoadListHalls_ByIndexSubPayment(NewPaymentEN aNewPaymentEN, int IndexSubPayment)
+        {
+            try
+            {
+                this.aListHalls.Clear();
+                this.aListHalls = aNewPaymentEN.aListBookingHallUsed.Where(r => r.IndexSubPayment == IndexSubPayment).OrderBy(r => r.HallSku).ToList();
+                dgvHalls.DataSource = this.aListHalls;
+                dgvHalls.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_SplitBill_Step2.LoadListHalls_ByIndexSubPayment\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //Hiennv
+        public void LoadListServicesH_ByIndexSubPayment(NewPaymentEN aNewPaymentEN, int IndexSubPayment)
+        {
+            try
+            {
+                this.aListServicesH.Clear();
+                this.aListServicesH = aNewPaymentEN.GetAllServiceUsedInHall().Where(r => r.IndexSubPayment == IndexSubPayment).OrderBy(r => r.Sku).ToList();
+                dgvServicesHall.DataSource = this.aListServicesH;
+                dgvServicesHall.RefreshDataSource();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_SplitBill_Step2.LoadListServices_ByIndexSubServices\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         //Hiennv
         private void lueIndexSub_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
+                dtpAcceptDate.EditValue = null;
+                dtpInvoiceDate.EditValue = null;
+                txtInvoiceNumber.ResetText();
                 int indexSub = Convert.ToInt32(lueIndexSub.Text);
-                this.LoadListHall_ByIndexSubHall(this.aPaymentHallsEN, indexSub);
-                this.LoadListServices_ByIndexSubServices(this.aPaymentHallsEN, indexSub);
 
-
-                List<IndexSubSplitBillEN> aListIndexSubSplitBillEN = this.aPaymentHallsEN.aListIndexSubSplitBillH.Where(sub => sub.IndexSub == indexSub && sub.SubStatus > 0).ToList();
-                if (aListIndexSubSplitBillEN.Count < 1)
-                {
-                    decimal? totalBill = this.aListServices.Sum(s => s.Total) + this.aListServices.Sum(r => r.Total);
-
-                    decimal? totalBookingMoney = this.aPaymentHallsEN.GetBookingMoney();
-
-                    if ((totalBill - totalBookingMoney) == 0)
-                    {
-                        this.aPaymentHallsEN.SetSubBookingMoney(indexSub, totalBookingMoney);
-                        this.aPaymentHallsEN.SetSubStatus(indexSub, indexSub); //SubStatus dung de phan biet so tien ung truoc cho tung subBookingmoney
-
-                        this.aPaymentHallsEN.SetBookingMoney(0); // set lai so tien ung truoc bang 0;
-                    }
-                    else if ((totalBill - totalBookingMoney) > 0)
-                    {
-                        this.aPaymentHallsEN.SetSubBookingMoney(indexSub, totalBookingMoney);
-                        this.aPaymentHallsEN.SetSubStatus(indexSub, indexSub);//SubStatus dung de phan biet so tien ung truoc cho tung subBookingmoney
-
-                        this.aPaymentHallsEN.SetBookingMoney(0); // set lai so tien ung truoc bang 0;
-                    }
-                    else if ((totalBill - totalBookingMoney) < 0)
-                    {
-                        BookingHallsBO aBookingHallsBO = new BookingHallsBO();
-                        List<BookingHalls> aListBookingHalls = aBookingHallsBO.Select_ByIDBookingH_ByStatus(this.aPaymentHallsEN.IDBookingH, 8);
-                        if (aListBookingHalls.Count < 2)
-                        {
-                            this.aPaymentHallsEN.SetSubBookingMoney(indexSub, totalBookingMoney);
-                            this.aPaymentHallsEN.SetSubStatus(indexSub, indexSub);//SubStatus dung de phan biet so tien ung truoc cho tung subBookingmoney
-
-                            this.aPaymentHallsEN.SetBookingMoney(0); // set lai so tien ung truoc bang 0;
-                        }
-                        else
-                        {
-                            this.aPaymentHallsEN.SetSubBookingMoney(indexSub, totalBill);
-                            this.aPaymentHallsEN.SetSubStatus(indexSub, indexSub);//SubStatus dung de phan biet so tien ung truoc cho tung subBookingmoney
-
-                            this.aPaymentHallsEN.SetBookingMoney((totalBookingMoney - totalBill));
-                        }
-                    }
-
-                }
-
+                this.LoadListRooms_ByIndexSubPayment(this.aNewPaymentEN, indexSub);
+                this.LoadListServicesR_ByIndexSubPayment(this.aNewPaymentEN, indexSub);
+                this.LoadListHalls_ByIndexSubPayment(this.aNewPaymentEN, indexSub);
+                this.LoadListServicesH_ByIndexSubPayment(this.aNewPaymentEN, indexSub);
+               
             }
             catch (Exception ex)
             {
@@ -148,9 +142,26 @@ namespace SaleManagement
                 else
                 {
                     int indexSub = Convert.ToInt32(lueIndexSub.Text);
-                    frmRpt_SplitPayment_BookingHs afrmRpt_SplitPayment_BookingHs = new frmRpt_SplitPayment_BookingHs(this.aPaymentHallsEN,indexSub);
-                    ReportPrintTool tool = new ReportPrintTool(afrmRpt_SplitPayment_BookingHs);
-                    tool.ShowPreview();
+                    if ((this.aListRooms.Count() == 0 && this.aListServicesR.Count() == 0) && (this.aListHalls.Count() > 0 || this.aListServicesH.Count() > 0))
+                    {
+                        frmRpt_SplitPayment_BookingHs afrmRpt_SplitPayment_BookingHs = new frmRpt_SplitPayment_BookingHs(this.aNewPaymentEN, indexSub);
+                        ReportPrintTool toolHall = new ReportPrintTool(afrmRpt_SplitPayment_BookingHs);
+                        toolHall.ShowPreview();
+                    }
+                    else if ((this.aListHalls.Count() == 0 && this.aListServicesH.Count() == 0) && (this.aListRooms.Count() > 0 || this.aListServicesR.Count() > 0))
+                    {
+                        frmRpt_SplitPayment_BookingRs afrmRpt_SplitPayment_BookingRs = new frmRpt_SplitPayment_BookingRs(this.aNewPaymentEN, indexSub);
+                        ReportPrintTool toolRoom = new ReportPrintTool(afrmRpt_SplitPayment_BookingRs);
+                        toolRoom.ShowPreview();
+                    }
+                    else
+                    {
+                        frmRpt_SplitPayment_BookingRsAndBookingHs afrmRpt_SplitPayment_BookingRsAndBookingHs = new frmRpt_SplitPayment_BookingRsAndBookingHs(this.aNewPaymentEN, indexSub);
+                        ReportPrintTool tool = new ReportPrintTool(afrmRpt_SplitPayment_BookingRsAndBookingHs);
+                        tool.ShowPreview();
+                    }
+
+
                 }
             }
             catch (Exception ex)
@@ -170,48 +181,34 @@ namespace SaleManagement
                 }
                 else
                 {
-                    BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
-                    foreach (ServicesHallsEN aServicesHallsEN in this.aListServices)
+                    ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+                    if (this.aListRooms.Count > 0)
                     {
-                        BookingHalls_Services aBookingHalls_Services = aBookingHalls_ServicesBO.Select_ByID(aServicesHallsEN.IDBookingHallService);
-                        if (aBookingHalls_Services != null && aBookingHalls_Services.Status != 8)
+                        aReceptionTaskBO.SplitPaymentRoom(this.aNewPaymentEN, this.aListRooms);
+                    }
+                    if (this.aListHalls.Count > 0)
+                    {
+                        aReceptionTaskBO.SplitPaymentHall(this.aNewPaymentEN, this.aListHalls);
+                    }
+                    if (this.aListServicesR.Count > 0)
+                    {
+                        aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesR, 1); //1 - trạng thái thanh toán set cho dịch vụ phòng
+                    }
+                    if (this.aListServicesH.Count > 0)
+                    {
+                        aReceptionTaskBO.SplitPaymentService(this.aNewPaymentEN, this.aListServicesH, 2); //2 - trạng thái thanh toán set cho dịch vụ phòng
+                    }
+                    if (this.afrmTsk_SplitBill_Step1.afrmTsk_Payment_Step2.afrmTsk_Payment_Step1 != null)
+                    {
+                        this.afrmTsk_SplitBill_Step1.afrmTsk_Payment_Step2.afrmTsk_Payment_Step1.LoadListBookingR();
+                        if (this.afrmTsk_SplitBill_Step1.afrmTsk_Payment_Step2.afrmTsk_Payment_Step1.afrmMain != null)
                         {
-                            aBookingHalls_Services.ID = aServicesHallsEN.IDBookingHallService;
-                            aBookingHalls_Services.Quantity = aServicesHallsEN.Quantity;
-                            aBookingHalls_Services.PercentTax = aServicesHallsEN.PercentTax;
-                            aBookingHalls_Services.Cost = aServicesHallsEN.Cost;
-                            aBookingHalls_Services.Status = 8;// da thanh toan
-                            aBookingHalls_ServicesBO.Update(aBookingHalls_Services);
+                            this.afrmTsk_SplitBill_Step1.afrmTsk_Payment_Step2.afrmTsk_Payment_Step1.afrmMain.ReloadData();
                         }
                     }
 
-                    BookingHallsBO aBookingHallsBO = new BookingHallsBO();
-                    foreach (HallsEN aHallsEN in this.aListHalls)
-                    {
-                        BookingHalls aBookingHalls = aBookingHallsBO.Select_ByID(aHallsEN.IDBookingHall);
-                        if (aBookingHalls != null && aBookingHalls.Status != 8)
-                        {
-                            aBookingHalls.ID = aHallsEN.IDBookingHall;
-                            aBookingHalls.PercentTax = aHallsEN.PercentTax;
-                            aBookingHalls.Cost = aHallsEN.Cost;
-                            aBookingHalls.Status = 8;//da thanh toan
-                            aBookingHallsBO.Update(aBookingHalls);
-                        }
-                    }
-                    BookingHsBO aBookingHsBO = new BookingHsBO();
-                    BookingHs aBookingHs = aBookingHsBO.Select_ByID(this.aPaymentHallsEN.IDBookingH);
-                    List<BookingHalls> aListBookingHalls = aBookingHallsBO.Select_ByIDBookingH_ByStatus(this.aPaymentHallsEN.IDBookingH,8);
-                    if (aListBookingHalls.Count < 1)
-                    {
-                        aBookingHs.ID = aPaymentHallsEN.IDBookingH;
-                        aBookingHs.PayMenthod = this.aPaymentHallsEN.PayMenthod;
-                        aBookingHs.StatusPay = 3;
-                        aBookingHs.Status = 8;
-                        btnPayment.Enabled = false;
-                    }
-                    aBookingHs.BookingMoney = this.aPaymentHallsEN.GetBookingMoney();
-                    aBookingHsBO.Update(aBookingHs);
 
+                    //this.InsertDataToPayment();
 
                     MessageBox.Show("Thanh toán thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -221,5 +218,257 @@ namespace SaleManagement
                 MessageBox.Show("frmTsk_SplitBill_Step2_Load.btnPayment_Click\n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dtpInvoiceDate_EditValueChanged(object sender, EventArgs e)
+        {
+
+            if (dtpInvoiceDate.EditValue == null)
+            {
+                dtpAcceptDate.EditValue = null;
+
+            }
+            else
+            {
+                DateTime aTemp = dtpInvoiceDate.DateTime;
+                dtpAcceptDate.DateTime = aTemp;
+                if (aListRooms.Count > 0)
+                {
+                    foreach (BookingRoomUsedEN aBookingRoom in aListRooms)
+                    {
+                        aBookingRoom.InvoiceDate = aTemp;
+
+                    }
+                }
+                else if (aListHalls.Count > 0)
+                {
+                    foreach (BookingHallUsedEN aBookingHall in aListHalls)
+                    {
+                        aBookingHall.InvoiceDate = aTemp;
+                    }
+                }
+                else if (aListServicesH.Count > 0)
+                {
+                    foreach (ServiceUsedEN aServiceH in aListServicesH)
+                    {
+                        aServiceH.InvoiceDate = aTemp;
+                    }
+                }
+                else if (aListServicesR.Count > 0)
+                {
+                    foreach (ServiceUsedEN aServiceR in aListServicesR)
+                    {
+                        aServiceR.InvoiceDate = aTemp;
+                    }
+                }
+            }
+        }
+
+        private void txtInvoiceNumber_Leave(object sender, EventArgs e)
+        {
+            string aTemp = txtInvoiceNumber.Text;
+            if (aListRooms.Count > 0)
+            {
+                foreach (BookingRoomUsedEN aBookingRoom in aListRooms)
+                {
+                    aBookingRoom.InvoiceNumber = aTemp;
+                }
+            }
+            else if (aListHalls.Count > 0)
+            {
+                foreach (BookingHallUsedEN aBookingHall in aListHalls)
+                {
+                    aBookingHall.InvoiceNumber = aTemp;
+                }
+            }
+            else if (aListServicesH.Count > 0)
+            {
+                foreach (ServiceUsedEN aServiceH in aListServicesH)
+                {
+                    aServiceH.InvoiceNumber = aTemp;
+                }
+            }
+            else if (aListServicesR.Count > 0)
+            {
+                foreach (ServiceUsedEN aServiceR in aListServicesR)
+                {
+                    aServiceR.InvoiceNumber = aTemp;
+                }
+            }
+        }
+
+        private void dtpAcceptDate_EditValueChanged(object sender, EventArgs e)
+        {
+            DateTime aTemp = dtpAcceptDate.DateTime;
+            if (aListRooms.Count > 0)
+            {
+                foreach (BookingRoomUsedEN aBookingRoom in aListRooms)
+                {
+                    aBookingRoom.AcceptDate = aTemp;
+
+                }
+            }
+            else if (aListHalls.Count > 0)
+            {
+                foreach (BookingHallUsedEN aBookingHall in aListHalls)
+                {
+                    aBookingHall.AcceptDate = aTemp;
+                }
+            }
+            else if (aListServicesH.Count > 0)
+            {
+                foreach (ServiceUsedEN aServiceH in aListServicesH)
+                {
+                    aServiceH.AcceptDate = aTemp;
+                }
+            }
+            else if (aListServicesR.Count > 0)
+            {
+                foreach (ServiceUsedEN aServiceR in aListServicesR)
+                {
+                    aServiceR.AcceptDate = aTemp;
+                }
+            }
+        }
+
+        
+
+       
+
+        //Hiennv
+        //private void InsertDataToPayment()
+        //{
+        //    try
+        //    {
+        //        /*-------*/
+        //        RoomsBO aRoomsBO = new RoomsBO();
+        //        ServicesBO aServicesBO = new ServicesBO();
+        //        PaymentBO aPaymentBO = new PaymentBO();
+        //        Payment aPayment = new Payment();
+
+
+
+        //        aPayment.IDBookingR = this.aNewPaymentEN.IDBookingR;
+        //        aPayment.IDCustomer = this.aNewPaymentEN.IDCustomer;
+        //        aPayment.NameCustomer = this.aNewPaymentEN.NameCustomer;
+        //        aPayment.IDSystemUser = this.aNewPaymentEN.IDSystemUser;
+        //        aPayment.NameSystemUser = this.aNewPaymentEN.NameSystemUser;
+        //        aPayment.IDCustomerGroup = this.aNewPaymentEN.IDCustomerGroup;
+        //        aPayment.NameCustomerGroup = this.aNewPaymentEN.NameCustomerGroup;
+        //        aPayment.IDCompany = this.aNewPaymentEN.IDCompany;
+        //        aPayment.NameCompany = this.aNewPaymentEN.NameCustomer;
+        //        aPayment.CreatedDate_BookingR = this.aNewPaymentEN.CreatedDate_BookingR;
+        //        aPayment.CustomerType = this.aNewPaymentEN.CustomerType;
+        //        aPayment.BookingType = this.aNewPaymentEN.BookingType;
+        //        aPayment.PayMenthod = this.aNewPaymentEN.PayMenthod;
+        //        aPayment.StatusPay = 3;
+        //        aPayment.BookingMoney = this.aNewPaymentEN.GetBookingMoney();
+        //        aPayment.ExchangeRate = this.aNewPaymentEN.ExchangeRate;
+        //        aPayment.Status_BookingR = 8;
+        //        aPayment.Level = this.aNewPaymentEN.Level;
+        //        aPayment.Status = 8; // de tam
+        //        aPayment.Type = 1; // de tam
+
+
+        //        if (this.aListRooms.Count > 0 && this.aListServicesR.Count < 1)
+        //        {
+        //            foreach (RoomsEN aRoomsEN in this.aListRooms)
+        //            {
+
+        //                aPayment.IDBookingRoom = aRoomsEN.IDBookingRooms;
+        //                aPayment.CodeRoom = aRoomsEN.Code;
+        //                Rooms aRooms = aRoomsBO.Select_ByCodeRoom(aRoomsEN.Code, 1);
+        //                if (aRooms != null)
+        //                {
+        //                    aPayment.Sku = aRooms.Sku;
+        //                }
+        //                aPayment.Cost_BookingRoom = aRoomsEN.Cost;
+        //                aPayment.PercentTax_BookingRoom = aRoomsEN.PercentTax;
+        //                aPayment.CostRef_Rooms = aRoomsEN.CostRef;
+        //                aPayment.CheckInActual = aRoomsEN.CheckInActual;
+        //                aPayment.CheckOutActual = aRoomsEN.CheckOutActual;
+        //                aPayment.Status_BookingRoom = 8;
+        //                aPayment.TimeInUse = Convert.ToDecimal(aRoomsEN.TimeInUse * 24 * 60);
+        //                aPayment.IndexSubRooms = aRoomsEN.IndexSubPayment;
+
+        //                aPaymentBO.Insert(aPayment);
+        //            }
+        //        }
+
+
+        //        if (this.aListServicesR.Count > 0 && this.aListRooms.Count < 1)
+        //        {
+        //            foreach (ServicesEN aServicesEN in this.aListServicesR)
+        //            {
+        //                aPayment.IDService = aServicesEN.IDService;
+        //                aPayment.NameService = aServicesEN.Name;
+        //                aPayment.Cost_Services = aServicesEN.Cost;
+        //                aPayment.DateUseServices = aServicesEN.Date;
+        //                aPayment.PercentTax_Services = aServicesEN.PercentTax;
+        //                aPayment.CostRef_Services = aServicesEN.CostRef_Service;
+        //                aPayment.Quantity_Services = aServicesEN.Quantity;
+        //                aPayment.Status_Services = 8;
+        //                aPayment.IndexSubRooms = aServicesEN.IndexSubPayment;
+
+        //                aPaymentBO.Insert(aPayment);
+        //            }
+        //        }
+
+
+
+
+        //        if (this.aListRooms.Count > 0 && this.aListServicesR.Count > 0)
+        //        {
+        //            foreach (InfoDetailNewPaymentEN item1 in this.aNewPaymentEN.aListInfoDetailNewPaymentEN)
+        //            {
+        //                List<RoomsEN> aListTemp1 = this.aListRooms.Where(r => r.IDBookingRooms == item1.aBookingRooms.ID).ToList();
+        //                if (aListTemp1.Count > 0)
+        //                {
+        //                    aPayment.IDBookingRoom = item1.aBookingRooms.ID;
+        //                    aPayment.CodeRoom = item1.aBookingRooms.CodeRoom;
+        //                    Rooms aRooms = aRoomsBO.Select_ByCodeRoom(item1.aBookingRooms.CodeRoom, 1);
+        //                    if (aRooms != null)
+        //                    {
+        //                        aPayment.Sku = aRooms.Sku;
+        //                    }
+        //                    aPayment.Cost_BookingRoom = item1.aBookingRooms.Cost;
+        //                    aPayment.PercentTax_BookingRoom = item1.aBookingRooms.PercentTax;
+        //                    aPayment.CostRef_Rooms = item1.aBookingRooms.CostRef_Rooms;
+        //                    aPayment.CheckInActual = item1.aBookingRooms.CheckInActual;
+        //                    aPayment.CheckOutActual = item1.aBookingRooms.CheckOutActual;
+        //                    aPayment.Status_BookingRoom = 8;
+        //                    aPayment.TimeInUse = Convert.ToDecimal(item1.DateInUse * 24 * 60);
+        //                    aPayment.IndexSubRooms = item1.IndexSubRooms;
+        //                }
+        //                foreach (ServicesEN item2 in item1.aListService)
+        //                {
+        //                    List<ServicesEN> aListTemp2 = this.aListServicesR.Where(s => s.IDBookingRoomService == item2.IDBookingRoomService).ToList();
+
+        //                    if (aListTemp2.Count > 0)
+        //                    {
+        //                        aPayment.IDService = item2.IDService;
+        //                        aPayment.NameService = item2.Name;
+        //                        aPayment.Cost_Services = item2.Cost;
+        //                        aPayment.DateUseServices = item2.Date;
+        //                        aPayment.PercentTax_Services = item2.PercentTax;
+        //                        aPayment.CostRef_Services = item2.CostRef_Service;
+        //                        aPayment.Quantity_Services = item2.Quantity;
+        //                        aPayment.Status_Services = 8;
+        //                        aPayment.IndexSubRooms = item2.IndexSubPayment;
+
+        //                        aPaymentBO.Insert(aPayment);
+        //                    }
+
+        //                }
+
+        //            }
+        //        }
+
+        //        /*-------*/
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("frmTsk_SplitBill_Step2.InsertDataToPayment\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
     }
 }

@@ -105,6 +105,12 @@
     <Compile Include="FormObject\frmIns_BookingHalls_Services.Designer.cs">
       <DependentUpon>frmIns_BookingHalls_Services.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmIns_CheckPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmIns_CheckPoint.Designer.cs">
+      <DependentUpon>frmIns_CheckPoint.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmIns_Companies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     <Compile Include="FormObject\frmIns_Customers.Designer.cs">
       <DependentUpon>frmIns_Customers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmIns_ExtraCostRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmIns_ExtraCostRooms.Designer.cs">
+      <DependentUpon>frmIns_ExtraCostRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmIns_Menus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +171,12 @@
     <Compile Include="FormObject\frmIns_Permits.Designer.cs">
       <DependentUpon>frmIns_Permits.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmIns_Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmIns_Rooms.Designer.cs">
+      <DependentUpon>frmIns_Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmIns_ServiceGroups.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +194,12 @@
     </Compile>
     <Compile Include="FormObject\frmIns_SystemUsers.Designer.cs">
       <DependentUpon>frmIns_SystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObject\frmLst_CheckPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmLst_CheckPoint.Designer.cs">
+      <DependentUpon>frmLst_CheckPoint.cs</DependentUpon>
     </Compile>
     <Compile Include="FormObject\frmLst_Companies.cs">
       <SubType>Form</SubType>
@@ -195,6 +219,12 @@
     <Compile Include="FormObject\frmLst_CustomerGroups.designer.cs">
       <DependentUpon>frmLst_CustomerGroups.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmLst_CustomerGroups_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmLst_CustomerGroups_2.designer.cs">
+      <DependentUpon>frmLst_CustomerGroups_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmLst_Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +242,12 @@
     </Compile>
     <Compile Include="FormObject\frmLst_DetailMenus.Designer.cs">
       <DependentUpon>frmLst_DetailMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObject\frmLst_ExtraCostRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmLst_ExtraCostRooms.Designer.cs">
+      <DependentUpon>frmLst_ExtraCostRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="FormObject\frmLst_Guests.cs">
       <SubType>Form</SubType>
@@ -237,6 +273,12 @@
     <Compile Include="FormObject\frmLst_Permits.Designer.cs">
       <DependentUpon>frmLst_Permits.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmLst_Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmLst_Rooms.Designer.cs">
+      <DependentUpon>frmLst_Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmLst_Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +290,15 @@
     </Compile>
     <Compile Include="FormObject\frmLst_SystemUsers.Designer.cs">
       <DependentUpon>frmLst_SystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_BookingRoomByType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_CheckPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_CheckPoint.Designer.cs">
+      <DependentUpon>frmUpd_CheckPoint.cs</DependentUpon>
     </Compile>
     <Compile Include="FormObject\frmUpd_Companies.cs">
       <SubType>Form</SubType>
@@ -273,6 +324,18 @@
     <Compile Include="FormObject\frmUpd_Customers.Designer.cs">
       <DependentUpon>frmUpd_Customers.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmUpd_Customers_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_Customers_2.Designer.cs">
+      <DependentUpon>frmUpd_Customers_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_ExtraCostRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_ExtraCostRooms.Designer.cs">
+      <DependentUpon>frmUpd_ExtraCostRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmUpd_Menus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -291,6 +354,12 @@
     <Compile Include="FormObject\frmUpd_Permits.Designer.cs">
       <DependentUpon>frmUpd_Permits.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormObject\frmUpd_Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObject\frmUpd_Rooms.Designer.cs">
+      <DependentUpon>frmUpd_Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormObject\frmUpd_Services.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -302,6 +371,72 @@
     </Compile>
     <Compile Include="FormObject\frmUpd_SystemUsers.Designer.cs">
       <DependentUpon>frmUpd_SystemUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_GroupPayment_Rs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_GroupPayment_Rs.Designer.cs">
+      <DependentUpon>frmRpt_GroupPayment_Rs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_ListCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_ListCompanies.Designer.cs">
+      <DependentUpon>frmRpt_ListCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_ListCustomersInGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_ListCustomersInGroup.Designer.cs">
+      <DependentUpon>frmRpt_ListCustomersInGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_OverNightCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_OverNightCustomer.Designer.cs">
+      <DependentUpon>frmRpt_OverNightCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRs.Designer.cs">
+      <DependentUpon>frmRpt_Payment_BookingRs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRsAndBookingHs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRsAndBookingHs.Designer.cs">
+      <DependentUpon>frmRpt_Payment_BookingRsAndBookingHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRsUnPay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Payment_BookingRsUnPay.Designer.cs">
+      <DependentUpon>frmRpt_Payment_BookingRsUnPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Performance_Rooms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Performance_Rooms.Designer.cs">
+      <DependentUpon>frmRpt_Performance_Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_PersonalPayment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_PersonalPayment.Designer.cs">
+      <DependentUpon>frmRpt_PersonalPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Revenues.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Revenues.Designer.cs">
+      <DependentUpon>frmRpt_Revenues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Revenue_Rooms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_Revenue_Rooms.Designer.cs">
+      <DependentUpon>frmRpt_Revenue_Rooms.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReport\frmRpt_SplitPayment_BookingHs.cs">
       <SubType>Component</SubType>
@@ -363,17 +498,71 @@
     <Compile Include="FormObject\frmLst_Halls.Designer.cs">
       <DependentUpon>frmLst_Halls.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport\frmRpt_SplitPayment_BookingRs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_SplitPayment_BookingRs.Designer.cs">
+      <DependentUpon>frmRpt_SplitPayment_BookingRs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_SplitPayment_BookingRsAndBookingHs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_SplitPayment_BookingRsAndBookingHs.Designer.cs">
+      <DependentUpon>frmRpt_SplitPayment_BookingRsAndBookingHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_StatusInMonth_Rooms.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_StatusInMonth_Rooms.Designer.cs">
+      <DependentUpon>frmRpt_StatusInMonth_Rooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReport\frmRpt_UnSelectMenus.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="FormReport\frmRpt_UnSelectMenus.Designer.cs">
       <DependentUpon>frmRpt_UnSelectMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReport\frmRpt_VietnameseCustomer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormReport\frmRpt_VietnameseCustomer.Designer.cs">
+      <DependentUpon>frmRpt_VietnameseCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTskPaymentViewAll_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTskPaymentViewAll_New.Designer.cs">
+      <DependentUpon>frmTskPaymentViewAll_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_AllRevenues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_AllRevenues.Designer.cs">
+      <DependentUpon>frmTsk_AllRevenues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingForRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingForRoom.Designer.cs">
+      <DependentUpon>frmTsk_BookingForRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingForRoomByType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingForRoomByType.Designer.cs">
+      <DependentUpon>frmTsk_BookingForRoomByType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_BookingHall_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTask\frmTsk_BookingHall_Customer.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingHall_Customer_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_BookingHall_Customer_New.Designer.cs">
+      <DependentUpon>frmTsk_BookingHall_Customer_New.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTask\frmTsk_BookingHall_Goverment.cs">
       <SubType>Form</SubType>
@@ -387,11 +576,179 @@
     <Compile Include="FormTask\frmTsk_BookingHall_Group.Designer.cs">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_Booking_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Booking_Step1.Designer.cs">
+      <DependentUpon>frmTsk_Booking_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Booking_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Booking_Step2.Designer.cs">
+      <DependentUpon>frmTsk_Booking_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CalculationEfficiency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CalculationEfficiency.Designer.cs">
+      <DependentUpon>frmTsk_CalculationEfficiency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Calculator_Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Calculator_Revenue.Designer.cs">
+      <DependentUpon>frmTsk_Calculator_Revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ChangeRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ChangeRoom.Designer.cs">
+      <DependentUpon>frmTsk_ChangeRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ChangeRoom_New2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ChangeRoom_New2.Designer.cs">
+      <DependentUpon>frmTsk_ChangeRoom_New2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step2.Designer.cs">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step3.Designer.cs">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInForRoomBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInForRoomBooking.Designer.cs">
+      <DependentUpon>frmTsk_CheckInForRoomBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step2.designer.cs">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step3.designer.cs">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step2.designer.cs">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step3.designer.cs">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step2.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Customer_Step3.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step2.designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Goverment_Step3.designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step1.Designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Group_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step2.designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Group_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckIn_Group_Step3.designer.cs">
+      <DependentUpon>frmTsk_CheckIn_Group_Step3.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_CheckMenus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTask\frmTsk_CheckMenus.Designer.cs">
       <DependentUpon>frmTsk_CheckMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckOut.Designer.cs">
+      <DependentUpon>frmTsk_CheckOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckoutExpire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_CheckoutExpire.Designer.cs">
+      <DependentUpon>frmTsk_CheckoutExpire.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTask\frmTsk_DetailMenus.cs">
       <SubType>Form</SubType>
@@ -399,11 +756,53 @@
     <Compile Include="FormTask\frmTsk_DetailMenus.Designer.cs">
       <DependentUpon>frmTsk_DetailMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_EditBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_EditBooking.Designer.cs">
+      <DependentUpon>frmTsk_EditBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_GetCheckOutTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_GetCheckOutTime.Designer.cs">
+      <DependentUpon>frmTsk_GetCheckOutTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_GetListOverNightCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_GetListOverNightCustomer.Designer.cs">
+      <DependentUpon>frmTsk_GetListOverNightCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_ListBookingHs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTask\frmTsk_ListBookingHs.Designer.cs">
       <DependentUpon>frmTsk_ListBookingHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingRs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingRs.Designer.cs">
+      <DependentUpon>frmTsk_ListBookingRs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingR_New.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListBookingR_New.Designer.cs">
+      <DependentUpon>frmTsk_ListBookingR_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListCustomersCurrentInRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListCustomersCurrentInRoom.Designer.cs">
+      <DependentUpon>frmTsk_ListCustomersCurrentInRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListForeignCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ListForeignCustomer.Designer.cs">
+      <DependentUpon>frmTsk_ListForeignCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTask\frmTsk_ManageBookingHs.cs">
       <SubType>Form</SubType>
@@ -416,6 +815,54 @@
     </Compile>
     <Compile Include="FormTask\frmTsk_PaymentHall.Designer.cs">
       <DependentUpon>frmTsk_PaymentHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Payment_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Payment_Step1.Designer.cs">
+      <DependentUpon>frmTsk_Payment_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Payment_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_Payment_Step2.Designer.cs">
+      <DependentUpon>frmTsk_Payment_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingCheckIn_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingCheckIn_Step1.Designer.cs">
+      <DependentUpon>frmTsk_PendingCheckIn_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingCheckIn_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingCheckIn_Step2.Designer.cs">
+      <DependentUpon>frmTsk_PendingCheckIn_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Fee_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Fee_Step2.Designer.cs">
+      <DependentUpon>frmTsk_PendingRoom_Fee_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Free_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Free_Step2.Designer.cs">
+      <DependentUpon>frmTsk_PendingRoom_Free_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_PendingRoom_Step1.Designer.cs">
+      <DependentUpon>frmTsk_PendingRoom_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ReportPaymentStyle1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ReportPaymentStyle1.Designer.cs">
+      <DependentUpon>frmTsk_ReportPaymentStyle1.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTask\frmTsk_SearchBookingHalls.cs">
       <SubType>Form</SubType>
@@ -435,6 +882,24 @@
     <Compile Include="FormTask\frmTsk_SelectMenus.Designer.cs">
       <DependentUpon>frmTsk_SelectMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_SendReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SendReport.Designer.cs">
+      <DependentUpon>frmTsk_SendReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitBillHalls_Step1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitBillHalls_Step1.Designer.cs">
+      <DependentUpon>frmTsk_SplitBillHalls_Step1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitBillHalls_Step2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitBillHalls_Step2.Designer.cs">
+      <DependentUpon>frmTsk_SplitBillHalls_Step2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_SplitBill_Step1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -446,6 +911,24 @@
     </Compile>
     <Compile Include="FormTask\frmTsk_SplitBill_Step2.Designer.cs">
       <DependentUpon>frmTsk_SplitBill_Step2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_SplitRoom.Designer.cs">
+      <DependentUpon>frmTsk_SplitRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_StatusInMonth_Room.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_StatusInMonth_Room.Designer.cs">
+      <DependentUpon>frmTsk_StatusInMonth_Room.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_UnPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_UnPay.Designer.cs">
+      <DependentUpon>frmTsk_UnPay.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTask\frmTsk_UnpayBookingHs.cs">
       <SubType>Form</SubType>
@@ -459,11 +942,29 @@
     <Compile Include="FormTask\frmTsk_UpdBooking.Designer.cs">
       <DependentUpon>frmTsk_UpdBooking.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_UpdBookingHall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_UpdBookingHall.Designer.cs">
+      <DependentUpon>frmTsk_UpdBookingHall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_UseServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_UseServices.Designer.cs">
+      <DependentUpon>frmTsk_UseServices.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain_Halls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain_Halls.Designer.cs">
+      <DependentUpon>frmMain_Halls.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -478,6 +979,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmIns_BookingHalls_Services.resx">
       <DependentUpon>frmIns_BookingHalls_Services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmIns_CheckPoint.resx">
+      <DependentUpon>frmIns_CheckPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmIns_Companies.resx">
       <DependentUpon>frmIns_Companies.cs</DependentUpon>
@@ -494,6 +998,9 @@
     <EmbeddedResource Include="FormObject\frmIns_Customers.resx">
       <DependentUpon>frmIns_Customers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmIns_ExtraCostRooms.resx">
+      <DependentUpon>frmIns_ExtraCostRooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmIns_Menus.resx">
       <DependentUpon>frmIns_Menus.cs</DependentUpon>
     </EmbeddedResource>
@@ -506,6 +1013,9 @@
     <EmbeddedResource Include="FormObject\frmIns_Permits.resx">
       <DependentUpon>frmIns_Permits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmIns_Rooms.resx">
+      <DependentUpon>frmIns_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmIns_ServiceGroups.resx">
       <DependentUpon>frmIns_ServiceGroups.cs</DependentUpon>
     </EmbeddedResource>
@@ -514,6 +1024,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmIns_SystemUsers.resx">
       <DependentUpon>frmIns_SystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmLst_CheckPoint.resx">
+      <DependentUpon>frmLst_CheckPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_Companies.resx">
       <DependentUpon>frmLst_Companies.cs</DependentUpon>
@@ -524,6 +1037,9 @@
     <EmbeddedResource Include="FormObject\frmLst_CustomerGroups.resx">
       <DependentUpon>frmLst_CustomerGroups.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmLst_CustomerGroups_2.resx">
+      <DependentUpon>frmLst_CustomerGroups_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_Customers.resx">
       <DependentUpon>frmLst_Customers.cs</DependentUpon>
     </EmbeddedResource>
@@ -532,6 +1048,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_DetailMenus.resx">
       <DependentUpon>frmLst_DetailMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmLst_ExtraCostRooms.resx">
+      <DependentUpon>frmLst_ExtraCostRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_Guests.resx">
       <DependentUpon>frmLst_Guests.cs</DependentUpon>
@@ -545,11 +1064,17 @@
     <EmbeddedResource Include="FormObject\frmLst_Permits.resx">
       <DependentUpon>frmLst_Permits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmLst_Rooms.resx">
+      <DependentUpon>frmLst_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_Services.resx">
       <DependentUpon>frmLst_Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmLst_SystemUsers.resx">
       <DependentUpon>frmLst_SystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmUpd_CheckPoint.resx">
+      <DependentUpon>frmUpd_CheckPoint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmUpd_Companies.resx">
       <DependentUpon>frmUpd_Companies.cs</DependentUpon>
@@ -563,6 +1088,12 @@
     <EmbeddedResource Include="FormObject\frmUpd_Customers.resx">
       <DependentUpon>frmUpd_Customers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmUpd_Customers_2.resx">
+      <DependentUpon>frmUpd_Customers_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmUpd_ExtraCostRooms.resx">
+      <DependentUpon>frmUpd_ExtraCostRooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmUpd_Menus.resx">
       <DependentUpon>frmUpd_Menus.cs</DependentUpon>
     </EmbeddedResource>
@@ -572,11 +1103,47 @@
     <EmbeddedResource Include="FormObject\frmUpd_Permits.resx">
       <DependentUpon>frmUpd_Permits.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormObject\frmUpd_Rooms.resx">
+      <DependentUpon>frmUpd_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmUpd_Services.resx">
       <DependentUpon>frmUpd_Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormObject\frmUpd_SystemUsers.resx">
       <DependentUpon>frmUpd_SystemUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_GroupPayment_Rs.resx">
+      <DependentUpon>frmRpt_GroupPayment_Rs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_ListCompanies.resx">
+      <DependentUpon>frmRpt_ListCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_ListCustomersInGroup.resx">
+      <DependentUpon>frmRpt_ListCustomersInGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_OverNightCustomer.resx">
+      <DependentUpon>frmRpt_OverNightCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Payment_BookingRs.resx">
+      <DependentUpon>frmRpt_Payment_BookingRs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Payment_BookingRsAndBookingHs.resx">
+      <DependentUpon>frmRpt_Payment_BookingRsAndBookingHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Payment_BookingRsUnPay.resx">
+      <DependentUpon>frmRpt_Payment_BookingRsUnPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Performance_Rooms.resx">
+      <DependentUpon>frmRpt_Performance_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_PersonalPayment.resx">
+      <DependentUpon>frmRpt_PersonalPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Revenues.resx">
+      <DependentUpon>frmRpt_Revenues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_Revenue_Rooms.resx">
+      <DependentUpon>frmRpt_Revenue_Rooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormReport\frmRpt_SplitPayment_BookingHs.resx">
       <DependentUpon>frmRpt_SplitPayment_BookingHs.cs</DependentUpon>
@@ -608,11 +1175,38 @@
     <EmbeddedResource Include="FormObject\frmLst_Halls.resx">
       <DependentUpon>frmLst_Halls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_SplitPayment_BookingRs.resx">
+      <DependentUpon>frmRpt_SplitPayment_BookingRs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_SplitPayment_BookingRsAndBookingHs.resx">
+      <DependentUpon>frmRpt_SplitPayment_BookingRsAndBookingHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_StatusInMonth_Rooms.resx">
+      <DependentUpon>frmRpt_StatusInMonth_Rooms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReport\frmRpt_UnSelectMenus.resx">
       <DependentUpon>frmRpt_UnSelectMenus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReport\frmRpt_VietnameseCustomer.resx">
+      <DependentUpon>frmRpt_VietnameseCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTskPaymentViewAll_New.resx">
+      <DependentUpon>frmTskPaymentViewAll_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_AllRevenues.resx">
+      <DependentUpon>frmTsk_AllRevenues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_BookingForRoom.resx">
+      <DependentUpon>frmTsk_BookingForRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_BookingForRoomByType.resx">
+      <DependentUpon>frmTsk_BookingForRoomByType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Customer.resx">
       <DependentUpon>frmTsk_BookingHall_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Customer_New.resx">
+      <DependentUpon>frmTsk_BookingHall_Customer_New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Goverment.resx">
       <DependentUpon>frmTsk_BookingHall_Goverment.cs</DependentUpon>
@@ -621,20 +1215,149 @@
     <EmbeddedResource Include="FormTask\frmTsk_BookingHall_Group.resx">
       <DependentUpon>frmTsk_BookingHall_Group.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_Booking_Step1.resx">
+      <DependentUpon>frmTsk_Booking_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_Booking_Step2.resx">
+      <DependentUpon>frmTsk_Booking_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CalculationEfficiency.resx">
+      <DependentUpon>frmTsk_CalculationEfficiency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_Calculator_Revenue.resx">
+      <DependentUpon>frmTsk_Calculator_Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ChangeRoom.resx">
+      <DependentUpon>frmTsk_ChangeRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ChangeRoom_New2.resx">
+      <DependentUpon>frmTsk_ChangeRoom_New2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn.resx">
+      <DependentUpon>frmTsk_CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step1.resx">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step2.resx">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInCustomer_ForRoomBooking_Step3.resx">
+      <DependentUpon>frmTsk_CheckInCustomer_ForRoomBooking_Step3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInForRoomBooking.resx">
+      <DependentUpon>frmTsk_CheckInForRoomBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step1.resx">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step2.resx">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGoverment_ForRoomBooking_Step3.resx">
+      <DependentUpon>frmTsk_CheckInGoverment_ForRoomBooking_Step3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step1.resx">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step2.resx">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckInGroup_ForRoomBooking_Step3.resx">
+      <DependentUpon>frmTsk_CheckInGroup_ForRoomBooking_Step3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Customer_Step1.resx">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Customer_Step2.resx">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Customer_Step3.resx">
+      <DependentUpon>frmTsk_CheckIn_Customer_Step3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Goverment_Step1.resx">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Goverment_Step2.resx">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Goverment_Step3.resx">
+      <DependentUpon>frmTsk_CheckIn_Goverment_Step3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Group_Step1.resx">
+      <DependentUpon>frmTsk_CheckIn_Group_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Group_Step2.resx">
+      <DependentUpon>frmTsk_CheckIn_Group_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckIn_Group_Step3.resx">
+      <DependentUpon>frmTsk_CheckIn_Group_Step3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_CheckMenus.resx">
       <DependentUpon>frmTsk_CheckMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckOut.resx">
+      <DependentUpon>frmTsk_CheckOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_CheckoutExpire.resx">
+      <DependentUpon>frmTsk_CheckoutExpire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_DetailMenus.resx">
       <DependentUpon>frmTsk_DetailMenus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_EditBooking.resx">
+      <DependentUpon>frmTsk_EditBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_GetCheckOutTime.resx">
+      <DependentUpon>frmTsk_GetCheckOutTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_GetListOverNightCustomer.resx">
+      <DependentUpon>frmTsk_GetListOverNightCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_ListBookingHs.resx">
       <DependentUpon>frmTsk_ListBookingHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ListBookingRs.resx">
+      <DependentUpon>frmTsk_ListBookingRs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ListBookingR_New.resx">
+      <DependentUpon>frmTsk_ListBookingR_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ListCustomersCurrentInRoom.resx">
+      <DependentUpon>frmTsk_ListCustomersCurrentInRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ListForeignCustomer.resx">
+      <DependentUpon>frmTsk_ListForeignCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_ManageBookingHs.resx">
       <DependentUpon>frmTsk_ManageBookingHs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_PaymentHall.resx">
       <DependentUpon>frmTsk_PaymentHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_Payment_Step1.resx">
+      <DependentUpon>frmTsk_Payment_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_Payment_Step2.resx">
+      <DependentUpon>frmTsk_Payment_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_PendingCheckIn_Step1.resx">
+      <DependentUpon>frmTsk_PendingCheckIn_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_PendingCheckIn_Step2.resx">
+      <DependentUpon>frmTsk_PendingCheckIn_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_PendingRoom_Fee_Step2.resx">
+      <DependentUpon>frmTsk_PendingRoom_Fee_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_PendingRoom_Free_Step2.resx">
+      <DependentUpon>frmTsk_PendingRoom_Free_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_PendingRoom_Step1.resx">
+      <DependentUpon>frmTsk_PendingRoom_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ReportPaymentStyle1.resx">
+      <DependentUpon>frmTsk_ReportPaymentStyle1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_SearchBookingHalls.resx">
       <DependentUpon>frmTsk_SearchBookingHalls.cs</DependentUpon>
@@ -645,11 +1368,29 @@
     <EmbeddedResource Include="FormTask\frmTsk_SelectMenus.resx">
       <DependentUpon>frmTsk_SelectMenus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_SendReport.resx">
+      <DependentUpon>frmTsk_SendReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_SplitBillHalls_Step1.resx">
+      <DependentUpon>frmTsk_SplitBillHalls_Step1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_SplitBillHalls_Step2.resx">
+      <DependentUpon>frmTsk_SplitBillHalls_Step2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_SplitBill_Step1.resx">
       <DependentUpon>frmTsk_SplitBill_Step1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_SplitBill_Step2.resx">
       <DependentUpon>frmTsk_SplitBill_Step2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_SplitRoom.resx">
+      <DependentUpon>frmTsk_SplitRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_StatusInMonth_Room.resx">
+      <DependentUpon>frmTsk_StatusInMonth_Room.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_UnPay.resx">
+      <DependentUpon>frmTsk_UnPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_UnpayBookingHs.resx">
       <DependentUpon>frmTsk_UnpayBookingHs.cs</DependentUpon>
@@ -657,8 +1398,17 @@
     <EmbeddedResource Include="FormTask\frmTsk_UpdBooking.resx">
       <DependentUpon>frmTsk_UpdBooking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_UpdBookingHall.resx">
+      <DependentUpon>frmTsk_UpdBookingHall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_UseServices.resx">
+      <DependentUpon>frmTsk_UseServices.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain_Halls.resx">
+      <DependentUpon>frmMain_Halls.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -733,7 +1483,7 @@
       <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Entity\Entity.csproj">
-      <Project>{e147da4a-d0e8-43a4-b93f-f22bfd10963d}</Project>
+      <Project>{4fab3d0a-0241-4fa2-bcc4-852b6e609722}</Project>
       <Name>Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Library\Library.csproj">

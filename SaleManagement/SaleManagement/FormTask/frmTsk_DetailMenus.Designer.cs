@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmTsk_DetailMenus
     {
@@ -97,10 +97,10 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.06684F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.80463F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.10797F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.27764F));
             this.tableLayoutPanel3.Controls.Add(this.labelControl2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.labelControl6, 0, 5);
             this.tableLayoutPanel3.Controls.Add(this.labelControl8, 2, 4);
@@ -140,272 +140,272 @@
             // labelControl2
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(3, 32);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Location = new System.Drawing.Point(3, 31);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(100, 13);
+            this.labelControl2.Size = new System.Drawing.Size(113, 16);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Nhóm khách hàng";
             // 
             // labelControl6
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(3, 142);
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Location = new System.Drawing.Point(3, 140);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(51, 13);
+            this.labelControl6.Size = new System.Drawing.Size(63, 17);
             this.labelControl6.TabIndex = 2;
             this.labelControl6.Text = "Thời gian";
             // 
             // labelControl8
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(391, 111);
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl8.Location = new System.Drawing.Point(389, 109);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(123, 13);
+            this.labelControl8.Size = new System.Drawing.Size(152, 17);
             this.labelControl8.TabIndex = 2;
             this.labelControl8.Text = "Trạng thái thanh toán";
             // 
             // labelControl1
             // 
             this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Location = new System.Drawing.Point(3, 6);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Location = new System.Drawing.Point(3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 13);
+            this.labelControl1.Size = new System.Drawing.Size(99, 17);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Người đại diện";
             // 
             // labelControl4
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(3, 111);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Location = new System.Drawing.Point(3, 110);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(67, 13);
+            this.labelControl4.Size = new System.Drawing.Size(77, 16);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "Ngày dương";
             // 
             // labelControl3
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(3, 84);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Location = new System.Drawing.Point(3, 82);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(71, 13);
+            this.labelControl3.Size = new System.Drawing.Size(87, 17);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "Ngày âm lịch";
             // 
             // labelControl5
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl5.Location = new System.Drawing.Point(3, 58);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Location = new System.Drawing.Point(3, 56);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(60, 13);
+            this.labelControl5.Size = new System.Drawing.Size(76, 17);
             this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "Hội trường";
             // 
             // labelControl10
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(391, 84);
+            this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl10.Location = new System.Drawing.Point(389, 82);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(70, 13);
+            this.labelControl10.Size = new System.Drawing.Size(85, 17);
             this.labelControl10.TabIndex = 2;
             this.labelControl10.Text = "Kiểu đặt tiệc";
             // 
             // labelControl12
             // 
             this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(391, 58);
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl12.Location = new System.Drawing.Point(389, 56);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(38, 13);
+            this.labelControl12.Size = new System.Drawing.Size(48, 17);
             this.labelControl12.TabIndex = 2;
             this.labelControl12.Text = "Cấp vụ";
             // 
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(391, 32);
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl11.Location = new System.Drawing.Point(389, 30);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(91, 13);
+            this.labelControl11.Size = new System.Drawing.Size(112, 17);
             this.labelControl11.TabIndex = 2;
             this.labelControl11.Text = "Loại khách hàng";
             // 
             // labelControl9
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(391, 6);
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl9.Location = new System.Drawing.Point(389, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(82, 13);
+            this.labelControl9.Size = new System.Drawing.Size(99, 17);
             this.labelControl9.TabIndex = 2;
             this.labelControl9.Text = "Trạng thái tiệc";
             // 
             // lblNameCustomer
             // 
             this.lblNameCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameCustomer.Location = new System.Drawing.Point(111, 6);
+            this.lblNameCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameCustomer.Location = new System.Drawing.Point(127, 5);
             this.lblNameCustomer.Name = "lblNameCustomer";
-            this.lblNameCustomer.Size = new System.Drawing.Size(19, 13);
+            this.lblNameCustomer.Size = new System.Drawing.Size(23, 16);
             this.lblNameCustomer.TabIndex = 2;
             this.lblNameCustomer.Text = "null";
             // 
             // lblCustomerGroup
             // 
             this.lblCustomerGroup.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCustomerGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerGroup.Location = new System.Drawing.Point(111, 32);
+            this.lblCustomerGroup.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerGroup.Location = new System.Drawing.Point(127, 31);
             this.lblCustomerGroup.Name = "lblCustomerGroup";
-            this.lblCustomerGroup.Size = new System.Drawing.Size(19, 13);
+            this.lblCustomerGroup.Size = new System.Drawing.Size(23, 16);
             this.lblCustomerGroup.TabIndex = 2;
             this.lblCustomerGroup.Text = "null";
             // 
             // lblSku
             // 
             this.lblSku.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblSku.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSku.Location = new System.Drawing.Point(111, 58);
+            this.lblSku.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSku.Location = new System.Drawing.Point(127, 57);
             this.lblSku.Name = "lblSku";
-            this.lblSku.Size = new System.Drawing.Size(19, 13);
+            this.lblSku.Size = new System.Drawing.Size(23, 16);
             this.lblSku.TabIndex = 2;
             this.lblSku.Text = "null";
             // 
             // lblLunarDate
             // 
             this.lblLunarDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblLunarDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLunarDate.Location = new System.Drawing.Point(111, 84);
+            this.lblLunarDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLunarDate.Location = new System.Drawing.Point(127, 83);
             this.lblLunarDate.Name = "lblLunarDate";
-            this.lblLunarDate.Size = new System.Drawing.Size(19, 13);
+            this.lblLunarDate.Size = new System.Drawing.Size(23, 16);
             this.lblLunarDate.TabIndex = 2;
             this.lblLunarDate.Text = "null";
             // 
             // lblDate
             // 
             this.lblDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(111, 111);
+            this.lblDate.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(127, 110);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(19, 13);
+            this.lblDate.Size = new System.Drawing.Size(23, 16);
             this.lblDate.TabIndex = 2;
             this.lblDate.Text = "null";
             // 
             // lblStatusPay
             // 
             this.lblStatusPay.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStatusPay.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusPay.Location = new System.Drawing.Point(523, 111);
+            this.lblStatusPay.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusPay.Location = new System.Drawing.Point(560, 110);
             this.lblStatusPay.Name = "lblStatusPay";
-            this.lblStatusPay.Size = new System.Drawing.Size(19, 13);
+            this.lblStatusPay.Size = new System.Drawing.Size(23, 16);
             this.lblStatusPay.TabIndex = 2;
             this.lblStatusPay.Text = "null";
             // 
             // lblBookingType
             // 
             this.lblBookingType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblBookingType.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBookingType.Location = new System.Drawing.Point(523, 84);
+            this.lblBookingType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBookingType.Location = new System.Drawing.Point(560, 83);
             this.lblBookingType.Name = "lblBookingType";
-            this.lblBookingType.Size = new System.Drawing.Size(19, 13);
+            this.lblBookingType.Size = new System.Drawing.Size(23, 16);
             this.lblBookingType.TabIndex = 2;
             this.lblBookingType.Text = "null";
             // 
             // lblLevel
             // 
             this.lblLevel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLevel.Location = new System.Drawing.Point(523, 58);
+            this.lblLevel.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLevel.Location = new System.Drawing.Point(560, 57);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(19, 13);
+            this.lblLevel.Size = new System.Drawing.Size(23, 16);
             this.lblLevel.TabIndex = 2;
             this.lblLevel.Text = "null";
             // 
             // lblCustomerType
             // 
             this.lblCustomerType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblCustomerType.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerType.Location = new System.Drawing.Point(523, 32);
+            this.lblCustomerType.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerType.Location = new System.Drawing.Point(560, 31);
             this.lblCustomerType.Name = "lblCustomerType";
-            this.lblCustomerType.Size = new System.Drawing.Size(19, 13);
+            this.lblCustomerType.Size = new System.Drawing.Size(23, 16);
             this.lblCustomerType.TabIndex = 2;
             this.lblCustomerType.Text = "null";
             // 
             // lblStatusBookingHall
             // 
             this.lblStatusBookingHall.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStatusBookingHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusBookingHall.Location = new System.Drawing.Point(523, 6);
+            this.lblStatusBookingHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatusBookingHall.Location = new System.Drawing.Point(560, 5);
             this.lblStatusBookingHall.Name = "lblStatusBookingHall";
-            this.lblStatusBookingHall.Size = new System.Drawing.Size(19, 13);
+            this.lblStatusBookingHall.Size = new System.Drawing.Size(23, 16);
             this.lblStatusBookingHall.TabIndex = 2;
             this.lblStatusBookingHall.Text = "null";
             // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel6.Controls.Add(this.lblStartTime, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.lblEndTime, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.labelControl7, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.labelControl13, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(108, 132);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(124, 132);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(280, 33);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(262, 33);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // lblStartTime
             // 
             this.lblStartTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblStartTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartTime.Location = new System.Drawing.Point(25, 10);
+            this.lblStartTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStartTime.Location = new System.Drawing.Point(68, 8);
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(19, 13);
+            this.lblStartTime.Size = new System.Drawing.Size(23, 16);
             this.lblStartTime.TabIndex = 2;
             this.lblStartTime.Text = "null";
             // 
             // lblEndTime
             // 
             this.lblEndTime.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblEndTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndTime.Location = new System.Drawing.Point(93, 10);
+            this.lblEndTime.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndTime.Location = new System.Drawing.Point(198, 8);
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(19, 13);
+            this.lblEndTime.Size = new System.Drawing.Size(23, 16);
             this.lblEndTime.TabIndex = 2;
             this.lblEndTime.Text = "null";
             // 
             // labelControl7
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(62, 10);
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl7.Location = new System.Drawing.Point(153, 8);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(15, 3, 0, 3);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(28, 13);
+            this.labelControl7.Size = new System.Drawing.Size(33, 17);
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "Đến:";
             // 
             // labelControl13
             // 
             this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(2, 10);
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Location = new System.Drawing.Point(21, 8);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(2, 3, 0, 3);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(20, 13);
+            this.labelControl13.Size = new System.Drawing.Size(24, 17);
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "Từ:";
             // 
@@ -429,20 +429,20 @@
             // lblNameMenu
             // 
             this.lblNameMenu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblNameMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameMenu.Location = new System.Drawing.Point(111, 10);
+            this.lblNameMenu.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameMenu.Location = new System.Drawing.Point(111, 8);
             this.lblNameMenu.Name = "lblNameMenu";
-            this.lblNameMenu.Size = new System.Drawing.Size(19, 13);
+            this.lblNameMenu.Size = new System.Drawing.Size(23, 16);
             this.lblNameMenu.TabIndex = 2;
             this.lblNameMenu.Text = "null";
             // 
             // labelControl23
             // 
             this.labelControl23.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl23.Location = new System.Drawing.Point(3, 10);
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl23.Location = new System.Drawing.Point(3, 8);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(74, 13);
+            this.labelControl23.Size = new System.Drawing.Size(93, 17);
             this.labelControl23.TabIndex = 2;
             this.labelControl23.Text = "Tên thực đơn";
             // 
@@ -461,7 +461,7 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl2.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupControl2.AppearanceCaption.Options.UseFont = true;
             this.groupControl2.Controls.Add(this.dgvMenu1);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -474,10 +474,10 @@
             // dgvMenu1
             // 
             this.dgvMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvMenu1.Location = new System.Drawing.Point(2, 21);
+            this.dgvMenu1.Location = new System.Drawing.Point(2, 24);
             this.dgvMenu1.MainView = this.grvMenu1;
             this.dgvMenu1.Name = "dgvMenu1";
-            this.dgvMenu1.Size = new System.Drawing.Size(762, 370);
+            this.dgvMenu1.Size = new System.Drawing.Size(762, 367);
             this.dgvMenu1.TabIndex = 1;
             this.dgvMenu1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvMenu1});
@@ -496,7 +496,7 @@
             // 
             this.gridColumn1.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn1.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn1.AppearanceHeader.Options.UseFont = true;
             this.gridColumn1.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -511,7 +511,7 @@
             // 
             this.gridColumn2.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridColumn2.AppearanceHeader.Options.UseFont = true;
             this.gridColumn2.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn2.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;

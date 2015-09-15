@@ -20,7 +20,9 @@ namespace RoomManager
 
         public frmTsk_Payment_Step1 afrmTsk_Payment_Step1 = null;
         public frmTsk_PaymentViewAll_New afrmTsk_PaymentViewAll_New = null; // Chuyen tu form chi tiet thanh toan sang
+        
         public frmMain afrmMain = null;
+        public frmMain_Halls afrmMain_Halls = null;
 
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
         
@@ -86,6 +88,19 @@ namespace RoomManager
                 xtraTabControl1.SelectedTabPageIndex = 2;
             }
         
+        }
+        public frmTsk_Payment_Step2(frmMain_Halls frm, int IDBookingR, int IDBookingH, int StatusInitForm, bool IsForcusTab1)
+        {
+            InitializeComponent();
+            this.IDBookingR = IDBookingR;
+            this.IDBookingH = IDBookingH;
+            this.StatusPay = StatusInitForm;
+            if (IsForcusTab1 == false)
+            {
+                xtraTabControl1.SelectedTabPageIndex = 2;
+            }
+            this.afrmMain_Halls = frm;
+
         }
 
         // ===============================================================================
@@ -1251,7 +1266,8 @@ namespace RoomManager
             {
                 int NewTypeBookingRoom = this.ConvertTypeBookingRoom(chkCheckIn.Checked, chkCheckOut.Checked);
                 this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, NewTypeBookingRoom);
-                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeEnd = aReceptionTaskBO.GetAddTimeStart(NewTypeBookingRoom, dtpCheckInActual.DateTime);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = aReceptionTaskBO.GetAddTimeStart(NewTypeBookingRoom, dtpCheckInActual.DateTime);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeEnd = aReceptionTaskBO.GetAddTimeEnd(NewTypeBookingRoom, dtpCheckOutActual.DateTime);
                 this.ShowControlAutoCost(this.aNewPaymentEN.GetTypeBookingRoom(this.CurrentIDBookingRoom));
                 this.LoadDataCurrentRoomForControl();
             }
@@ -1266,7 +1282,9 @@ namespace RoomManager
                 int NewTypeBookingRoom = this.ConvertTypeBookingRoom(chkCheckIn.Checked, chkCheckOut.Checked);
                 this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, NewTypeBookingRoom);
 
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = aReceptionTaskBO.GetAddTimeStart(NewTypeBookingRoom, dtpCheckInActual.DateTime);
                 this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeEnd = aReceptionTaskBO.GetAddTimeEnd(NewTypeBookingRoom, dtpCheckOutActual.DateTime);
+
                 this.ShowControlAutoCost(this.aNewPaymentEN.GetTypeBookingRoom(this.CurrentIDBookingRoom));
                 this.LoadDataCurrentRoomForControl();
             }
@@ -1831,18 +1849,6 @@ namespace RoomManager
 
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            aAccountancyBO.Save(this.aNewPaymentEN);
-            this.aNewPaymentEN = new NewPaymentEN();
-            this.InitData(this.IDBookingR, this.IDBookingH);
-            //this.LoadData();
-            MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            if (this.afrmMain != null)
-            {
-                this.afrmMain.ReloadData();
-            }
-        }
 
 
         private void btnEnableEdit_Click(object sender, EventArgs e)
@@ -2106,6 +2112,10 @@ namespace RoomManager
                 {
                     this.afrmMain.ReloadData();
                 }
+                else if (this.afrmMain_Halls != null)
+                {
+                    this.afrmMain_Halls.ReloadData();
+                }
             }
             catch (Exception ex)
             {
@@ -2116,20 +2126,14 @@ namespace RoomManager
 
         private void btnPrintPayment_OldStyle_Click(object sender, EventArgs e)
         {
+            ServiceGroupsBO aServiceGroupsBO = new ServiceGroupsBO();
+            List<ServiceGroups> aListServiceGroups = new List<ServiceGroups>();
+            aListServiceGroups = aServiceGroupsBO.Sel_all().OrderBy(p => p.Order).ToList();
             List<int> ListIDServiceGroup = new List<int>();
-
-            ListIDServiceGroup.Add(18);
-            ListIDServiceGroup.Add(21);
-            ListIDServiceGroup.Add(26);
-            ListIDServiceGroup.Add(27);
-            ListIDServiceGroup.Add(28);
-
-            ListIDServiceGroup.Add(23);
-            ListIDServiceGroup.Add(15);
-            ListIDServiceGroup.Add(16);
-
+            ListIDServiceGroup.AddRange(aListServiceGroups.Select(p => p.ID).ToList());
+           
             List<RptPaymentStyle1_ForDisplay> aList = this.aNewPaymentEN.ConvertDataFor_RptPaymentStyle1(ListIDServiceGroup);
-            frmTsk_ReportPaymentStyle1 afrm = new frmTsk_ReportPaymentStyle1(aList.OrderBy(p=>p.Date).ToList(), ListIDServiceGroup, this.aNewPaymentEN.NameCompany, this.aNewPaymentEN.AddressCompany, this.aNewPaymentEN.NameCustomerGroup, this.aNewPaymentEN.InvoiceNumber, this.aNewPaymentEN.GetFirstDate(), this.aNewPaymentEN.GetLastDate(), this.aNewPaymentEN.BookingHMoney, this.aNewPaymentEN.BookingRMoney, this.IDBookingR);
+            frmTsk_ReportPaymentStyle1 afrm = new frmTsk_ReportPaymentStyle1(aList.OrderBy(p => p.Date).ToList(), aListServiceGroups, this.aNewPaymentEN.NameCompany, this.aNewPaymentEN.AddressCompany, this.aNewPaymentEN.NameCustomerGroup, this.aNewPaymentEN.InvoiceNumber, this.aNewPaymentEN.GetFirstDate(), this.aNewPaymentEN.GetLastDate(), this.aNewPaymentEN.BookingHMoney, this.aNewPaymentEN.BookingRMoney, this.IDBookingR);
             afrm.ShowDialog();
         }
 
@@ -2197,10 +2201,7 @@ namespace RoomManager
             this.aNewPaymentEN.ChangeAcceptDate(aTemp);
         }
 
-        private void dtpCheckOutActual_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
        
         private bool CheckChangeTime(int IDBookingRoom, string CodeRoom, DateTime From, DateTime To)
         {
@@ -2222,6 +2223,78 @@ namespace RoomManager
               return false;
           }
           return true;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            aAccountancyBO.Save(this.aNewPaymentEN);
+            this.aNewPaymentEN = new NewPaymentEN();
+            this.InitData(this.IDBookingR, this.IDBookingH);
+            //this.LoadData();
+            MessageBox.Show("Lưu thông tin hóa đơn thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (this.afrmMain != null)
+            {
+                this.afrmMain.ReloadData();
+            }
+        }
+
+        private void txtInvoiceNumberH_EditValueChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void txtTaxNumberCodeH_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInvoiceNumberH_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtInvoiceNumberR.Text))
+            {
+                this.aNewPaymentEN.ChangeInvoiceNumber(txtInvoiceNumberH.Text);
+            }
+            
+        }
+
+        private void txtAddTimeEnd_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.CurrentIDBookingRoom > 0)
+            {
+                ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+
+                int NewTypeBookingRoom = this.ConvertTypeBookingRoom(chkCheckIn.Checked, chkCheckOut.Checked);
+                this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, NewTypeBookingRoom);
+
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = aReceptionTaskBO.GetAddTimeStart(NewTypeBookingRoom, dtpCheckInActual.DateTime);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeEnd = aReceptionTaskBO.GetAddTimeEnd(NewTypeBookingRoom, dtpCheckOutActual.DateTime);
+
+                this.ShowControlAutoCost(this.aNewPaymentEN.GetTypeBookingRoom(this.CurrentIDBookingRoom));
+                this.LoadDataCurrentRoomForControl();
+            }
+        }
+
+        private void txtAddTimeStart_EditValueChanged(object sender, EventArgs e)
+        {
+            if (this.CurrentIDBookingRoom > 0)
+            {
+                ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+
+                int NewTypeBookingRoom = this.ConvertTypeBookingRoom(chkCheckIn.Checked, chkCheckOut.Checked);
+                this.aNewPaymentEN.ChangeTypeBookingRoom(this.CurrentIDBookingRoom, NewTypeBookingRoom);
+
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeStart = aReceptionTaskBO.GetAddTimeStart(NewTypeBookingRoom, dtpCheckInActual.DateTime);
+                this.aNewPaymentEN.aListBookingRoomUsed.Where(a => a.ID == this.CurrentIDBookingRoom).ToList()[0].AddTimeEnd = aReceptionTaskBO.GetAddTimeEnd(NewTypeBookingRoom, dtpCheckOutActual.DateTime);
+
+                this.ShowControlAutoCost(this.aNewPaymentEN.GetTypeBookingRoom(this.CurrentIDBookingRoom));
+                this.LoadDataCurrentRoomForControl();
+            }
+        }
+
+        private void cbbPriceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
 

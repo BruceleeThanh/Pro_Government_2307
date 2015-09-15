@@ -12,7 +12,7 @@ using CORESYSTEM;
 using DevExpress.XtraEditors.Controls;
 using System.IO;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_Halls : DevExpress.XtraEditors.XtraForm
     {

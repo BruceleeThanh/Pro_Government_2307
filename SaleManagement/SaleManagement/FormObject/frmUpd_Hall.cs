@@ -13,7 +13,7 @@ using System.IO;
 using DevExpress.XtraEditors.Controls;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmUpd_Halls : DevExpress.XtraEditors.XtraForm
     {

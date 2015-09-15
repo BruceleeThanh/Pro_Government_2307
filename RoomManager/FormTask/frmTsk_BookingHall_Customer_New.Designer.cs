@@ -198,9 +198,10 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.xtraTabControl1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1086, 569);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1267, 700);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -210,8 +211,9 @@
             // 
             this.xtraTabPage1.Controls.Add(this.tableLayoutPanel1);
             this.xtraTabPage1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1080, 541);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1261, 668);
             this.xtraTabPage1.Text = "Thông tin đặt tiệc";
             // 
             // tableLayoutPanel1
@@ -223,13 +225,14 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.93838F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.62678F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.43485F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 541);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1261, 668);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -240,13 +243,14 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1074, 96);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1255, 118);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -262,18 +266,19 @@
             this.tableLayoutPanel5.Controls.Add(this.btnSearchHall, 3, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtBookingMoney, 4, 0);
             this.tableLayoutPanel5.Controls.Add(this.comboBoxEdit1, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 67);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 82);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(669, 25);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(780, 31);
             this.tableLayoutPanel5.TabIndex = 2;
             // 
             // cbbType
             // 
             this.cbbType.EditValue = "Ngoài nấu";
-            this.cbbType.Location = new System.Drawing.Point(9, 3);
-            this.cbbType.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.cbbType.Location = new System.Drawing.Point(10, 4);
+            this.cbbType.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.cbbType.Name = "cbbType";
             this.cbbType.Properties.Appearance.Options.UseTextOptions = true;
             this.cbbType.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -282,13 +287,14 @@
             this.cbbType.Properties.Items.AddRange(new object[] {
             "Ngoài nấu",
             "Bếp nấu"});
-            this.cbbType.Size = new System.Drawing.Size(76, 20);
+            this.cbbType.Size = new System.Drawing.Size(89, 22);
             this.cbbType.TabIndex = 55;
             // 
             // dtpFrom
             // 
             this.dtpFrom.EditValue = null;
-            this.dtpFrom.Location = new System.Drawing.Point(185, 3);
+            this.dtpFrom.Location = new System.Drawing.Point(214, 4);
+            this.dtpFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -300,7 +306,7 @@
             this.dtpFrom.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpFrom.Properties.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9]";
             this.dtpFrom.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.dtpFrom.Size = new System.Drawing.Size(180, 20);
+            this.dtpFrom.Size = new System.Drawing.Size(210, 22);
             this.dtpFrom.TabIndex = 52;
             // 
             // btnSearchHall
@@ -309,18 +315,18 @@
             this.btnSearchHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchHall.Appearance.Options.UseFont = true;
             this.btnSearchHall.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchHall.Image")));
-            this.btnSearchHall.Location = new System.Drawing.Point(372, 3);
-            this.btnSearchHall.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.btnSearchHall.Location = new System.Drawing.Point(433, 4);
+            this.btnSearchHall.Margin = new System.Windows.Forms.Padding(5, 4, 3, 4);
             this.btnSearchHall.Name = "btnSearchHall";
-            this.btnSearchHall.Size = new System.Drawing.Size(23, 19);
+            this.btnSearchHall.Size = new System.Drawing.Size(27, 23);
             this.btnSearchHall.TabIndex = 53;
             this.btnSearchHall.Click += new System.EventHandler(this.btnSearchHall_Click);
             // 
             // txtBookingMoney
             // 
             this.txtBookingMoney.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBookingMoney.Location = new System.Drawing.Point(404, 3);
-            this.txtBookingMoney.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtBookingMoney.Location = new System.Drawing.Point(470, 4);
+            this.txtBookingMoney.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.txtBookingMoney.Name = "txtBookingMoney";
             this.txtBookingMoney.Properties.Appearance.Options.UseTextOptions = true;
             this.txtBookingMoney.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -329,14 +335,14 @@
             this.txtBookingMoney.Properties.MaxLength = 250;
             this.txtBookingMoney.Properties.NullValuePrompt = "Tiền đặt trước";
             this.txtBookingMoney.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtBookingMoney.Size = new System.Drawing.Size(231, 20);
+            this.txtBookingMoney.Size = new System.Drawing.Size(269, 22);
             this.txtBookingMoney.TabIndex = 54;
             // 
             // comboBoxEdit1
             // 
             this.comboBoxEdit1.EditValue = "Sáng";
-            this.comboBoxEdit1.Location = new System.Drawing.Point(103, 3);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(119, 4);
+            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Appearance.Options.UseTextOptions = true;
             this.comboBoxEdit1.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -346,7 +352,7 @@
             "Sáng",
             "Trưa",
             "Tối"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(76, 20);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(89, 22);
             this.comboBoxEdit1.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -360,18 +366,19 @@
             this.tableLayoutPanel4.Controls.Add(this.txtPhoneNumber, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnSearchCustomer, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtCustomerName, 3, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 35);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 43);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(669, 25);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(780, 31);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // lueCustomer
             // 
             this.lueCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueCustomer.Location = new System.Drawing.Point(9, 3);
-            this.lueCustomer.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.lueCustomer.Location = new System.Drawing.Point(10, 4);
+            this.lueCustomer.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.lueCustomer.Name = "lueCustomer";
             this.lueCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -381,7 +388,7 @@
             this.lueCustomer.Properties.NullValuePrompt = "Người đặt";
             this.lueCustomer.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCustomer.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueCustomer.Size = new System.Drawing.Size(169, 20);
+            this.lueCustomer.Size = new System.Drawing.Size(197, 22);
             this.lueCustomer.TabIndex = 16;
             this.lueCustomer.EditValueChanged += new System.EventHandler(this.lueCustomer_EditValueChanged);
             this.lueCustomer.Leave += new System.EventHandler(this.lueCustomer_Leave);
@@ -389,15 +396,15 @@
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(188, 3);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(219, 4);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Properties.Appearance.Options.UseTextOptions = true;
             this.txtPhoneNumber.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtPhoneNumber.Properties.MaxLength = 250;
             this.txtPhoneNumber.Properties.NullValuePrompt = "Điện thoại người đặt";
             this.txtPhoneNumber.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(175, 20);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(204, 22);
             this.txtPhoneNumber.TabIndex = 17;
             // 
             // btnSearchCustomer
@@ -406,25 +413,25 @@
             this.btnSearchCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchCustomer.Appearance.Options.UseFont = true;
             this.btnSearchCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchCustomer.Image")));
-            this.btnSearchCustomer.Location = new System.Drawing.Point(370, 3);
-            this.btnSearchCustomer.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.btnSearchCustomer.Location = new System.Drawing.Point(431, 4);
+            this.btnSearchCustomer.Margin = new System.Windows.Forms.Padding(5, 4, 3, 4);
             this.btnSearchCustomer.Name = "btnSearchCustomer";
-            this.btnSearchCustomer.Size = new System.Drawing.Size(24, 19);
+            this.btnSearchCustomer.Size = new System.Drawing.Size(28, 23);
             this.btnSearchCustomer.TabIndex = 18;
             this.btnSearchCustomer.Click += new System.EventHandler(this.btnSearchCustomer_Click);
             // 
             // txtCustomerName
             // 
             this.txtCustomerName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCustomerName.Location = new System.Drawing.Point(404, 3);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtCustomerName.Location = new System.Drawing.Point(470, 4);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCustomerName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtCustomerName.Properties.MaxLength = 250;
             this.txtCustomerName.Properties.NullValuePrompt = "Nhập tên khách đặt cần thêm mới";
             this.txtCustomerName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtCustomerName.Size = new System.Drawing.Size(231, 20);
+            this.txtCustomerName.Size = new System.Drawing.Size(269, 22);
             this.txtCustomerName.TabIndex = 19;
             // 
             // tableLayoutPanel3
@@ -438,31 +445,33 @@
             this.tableLayoutPanel3.Controls.Add(this.lueCompany, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSearchCompany, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtCompanyName, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(669, 25);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(780, 31);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // txtSubject
             // 
             this.txtSubject.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtSubject.Location = new System.Drawing.Point(9, 3);
-            this.txtSubject.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.txtSubject.Location = new System.Drawing.Point(10, 4);
+            this.txtSubject.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.txtSubject.Name = "txtSubject";
             this.txtSubject.Properties.Appearance.Options.UseTextOptions = true;
             this.txtSubject.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtSubject.Properties.MaxLength = 250;
             this.txtSubject.Properties.NullValuePrompt = "Tiêu đề";
             this.txtSubject.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtSubject.Size = new System.Drawing.Size(169, 20);
+            this.txtSubject.Size = new System.Drawing.Size(197, 22);
             this.txtSubject.TabIndex = 5;
             // 
             // lueCompany
             // 
             this.lueCompany.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueCompany.Location = new System.Drawing.Point(184, 3);
+            this.lueCompany.Location = new System.Drawing.Point(214, 4);
+            this.lueCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueCompany.Name = "lueCompany";
             this.lueCompany.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -472,7 +481,7 @@
             this.lueCompany.Properties.NullValuePrompt = "Công ty";
             this.lueCompany.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueCompany.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueCompany.Size = new System.Drawing.Size(211, 20);
+            this.lueCompany.Size = new System.Drawing.Size(246, 22);
             this.lueCompany.TabIndex = 8;
             this.lueCompany.EditValueChanged += new System.EventHandler(this.lueCompany_EditValueChanged);
             this.lueCompany.Leave += new System.EventHandler(this.lueCompany_Leave);
@@ -483,25 +492,25 @@
             this.btnSearchCompany.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchCompany.Appearance.Options.UseFont = true;
             this.btnSearchCompany.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchCompany.Image")));
-            this.btnSearchCompany.Location = new System.Drawing.Point(642, 3);
-            this.btnSearchCompany.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.btnSearchCompany.Location = new System.Drawing.Point(749, 4);
+            this.btnSearchCompany.Margin = new System.Windows.Forms.Padding(5, 4, 3, 4);
             this.btnSearchCompany.Name = "btnSearchCompany";
-            this.btnSearchCompany.Size = new System.Drawing.Size(23, 19);
+            this.btnSearchCompany.Size = new System.Drawing.Size(27, 23);
             this.btnSearchCompany.TabIndex = 13;
             this.btnSearchCompany.Click += new System.EventHandler(this.btnSearchCompany_Click);
             // 
             // txtCompanyName
             // 
             this.txtCompanyName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCompanyName.Location = new System.Drawing.Point(404, 3);
-            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(6, 3, 3, 3);
+            this.txtCompanyName.Location = new System.Drawing.Point(471, 4);
+            this.txtCompanyName.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Properties.Appearance.Options.UseTextOptions = true;
             this.txtCompanyName.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.txtCompanyName.Properties.MaxLength = 250;
             this.txtCompanyName.Properties.NullValuePrompt = "Nhập tên công ty cần thêm mới";
             this.txtCompanyName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtCompanyName.Size = new System.Drawing.Size(231, 20);
+            this.txtCompanyName.Size = new System.Drawing.Size(269, 22);
             this.txtCompanyName.TabIndex = 14;
             // 
             // tableLayoutPanel6
@@ -509,23 +518,26 @@
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.40741F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.59259F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel6.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.groupBox3, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 105);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 130);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1074, 201);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1253, 247);
             this.tableLayoutPanel6.TabIndex = 46;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvSelectedHalls);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(404, 3);
+            this.groupBox2.Location = new System.Drawing.Point(471, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(667, 195);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(779, 239);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Hội trường đã chọn";
@@ -533,9 +545,10 @@
             // dgvSelectedHalls
             // 
             this.dgvSelectedHalls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSelectedHalls.Location = new System.Drawing.Point(3, 17);
+            this.dgvSelectedHalls.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvSelectedHalls.Location = new System.Drawing.Point(3, 21);
             this.dgvSelectedHalls.MainView = this.grvSelectedHalls;
-            this.dgvSelectedHalls.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.dgvSelectedHalls.Margin = new System.Windows.Forms.Padding(7, 4, 7, 4);
             this.dgvSelectedHalls.Name = "dgvSelectedHalls";
             this.dgvSelectedHalls.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelect,
@@ -543,7 +556,7 @@
             this.repositoryItemImageComboBox1,
             this.txtCost,
             this.txtTableOfPepole});
-            this.dgvSelectedHalls.Size = new System.Drawing.Size(661, 175);
+            this.dgvSelectedHalls.Size = new System.Drawing.Size(773, 214);
             this.dgvSelectedHalls.TabIndex = 57;
             this.dgvSelectedHalls.UseEmbeddedNavigator = true;
             this.dgvSelectedHalls.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -733,9 +746,11 @@
             // 
             this.groupBox3.Controls.Add(this.dgvAvailableHalls);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Location = new System.Drawing.Point(3, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(395, 195);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox3.Size = new System.Drawing.Size(462, 239);
             this.groupBox3.TabIndex = 46;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách hội trường trống";
@@ -743,12 +758,14 @@
             // dgvAvailableHalls
             // 
             this.dgvAvailableHalls.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAvailableHalls.Location = new System.Drawing.Point(3, 17);
+            this.dgvAvailableHalls.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAvailableHalls.Location = new System.Drawing.Point(3, 21);
             this.dgvAvailableHalls.MainView = this.grvAvailableHalls;
+            this.dgvAvailableHalls.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAvailableHalls.Name = "dgvAvailableHalls";
             this.dgvAvailableHalls.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelect});
-            this.dgvAvailableHalls.Size = new System.Drawing.Size(389, 175);
+            this.dgvAvailableHalls.Size = new System.Drawing.Size(456, 214);
             this.dgvAvailableHalls.TabIndex = 56;
             this.dgvAvailableHalls.UseEmbeddedNavigator = true;
             this.dgvAvailableHalls.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -856,11 +873,12 @@
             this.tableLayoutPanel7.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.groupBox4, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 313);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 388);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1074, 225);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1255, 276);
             this.tableLayoutPanel7.TabIndex = 47;
             // 
             // groupBox1
@@ -868,9 +886,11 @@
             this.groupBox1.Controls.Add(this.btnAddService);
             this.groupBox1.Controls.Add(this.dgvService);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(479, 219);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(561, 268);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách dịch vụ";
@@ -880,9 +900,10 @@
             this.btnAddService.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnAddService.Appearance.Options.UseFont = true;
             this.btnAddService.Image = ((System.Drawing.Image)(resources.GetObject("btnAddService.Image")));
-            this.btnAddService.Location = new System.Drawing.Point(387, 9);
+            this.btnAddService.Location = new System.Drawing.Point(451, 11);
+            this.btnAddService.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddService.Name = "btnAddService";
-            this.btnAddService.Size = new System.Drawing.Size(89, 21);
+            this.btnAddService.Size = new System.Drawing.Size(104, 26);
             this.btnAddService.TabIndex = 3;
             this.btnAddService.Text = "Thêm DV";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
@@ -890,15 +911,15 @@
             // dgvService
             // 
             this.dgvService.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvService.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.dgvService.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.dgvService.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.dgvService.Location = new System.Drawing.Point(3, 38);
+            this.dgvService.Location = new System.Drawing.Point(3, 45);
             this.dgvService.MainView = this.grvService;
-            this.dgvService.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.dgvService.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.dgvService.Name = "dgvService";
             this.dgvService.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectService});
-            this.dgvService.Size = new System.Drawing.Size(473, 178);
+            this.dgvService.Size = new System.Drawing.Size(555, 219);
             this.dgvService.TabIndex = 2;
             this.dgvService.UseEmbeddedNavigator = true;
             this.dgvService.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1000,9 +1021,11 @@
             // 
             this.groupBox4.Controls.Add(this.dgvServiceInHall);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(488, 3);
+            this.groupBox4.Location = new System.Drawing.Point(570, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(583, 219);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox4.Size = new System.Drawing.Size(682, 268);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dịch vụ trong hội trường";
@@ -1010,17 +1033,17 @@
             // dgvServiceInHall
             // 
             this.dgvServiceInHall.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvServiceInHall.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.dgvServiceInHall.Location = new System.Drawing.Point(3, 17);
+            this.dgvServiceInHall.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.dgvServiceInHall.Location = new System.Drawing.Point(3, 21);
             this.dgvServiceInHall.MainView = this.grvServiceInHall;
-            this.dgvServiceInHall.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.dgvServiceInHall.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.dgvServiceInHall.Name = "dgvServiceInHall";
             this.dgvServiceInHall.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCancel,
             this.txtQuantity,
             this.txtCostService,
             this.txtMoneyTax});
-            this.dgvServiceInHall.Size = new System.Drawing.Size(577, 199);
+            this.dgvServiceInHall.Size = new System.Drawing.Size(676, 243);
             this.dgvServiceInHall.TabIndex = 2;
             this.dgvServiceInHall.UseEmbeddedNavigator = true;
             this.dgvServiceInHall.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1257,8 +1280,9 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.tableLayoutPanel8);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1080, 541);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1261, 668);
             this.xtraTabPage2.Text = "Các thông tin khác";
             // 
             // tableLayoutPanel8
@@ -1271,14 +1295,15 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel15, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 4;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.985917F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.690142F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.32394F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(1080, 541);
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1261, 668);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // tableLayoutPanel10
@@ -1287,12 +1312,13 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 101);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 125);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 437F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1074, 437);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 539F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1255, 539);
             this.tableLayoutPanel10.TabIndex = 21;
             // 
             // tableLayoutPanel11
@@ -1304,22 +1330,25 @@
             this.tableLayoutPanel11.Controls.Add(this.dgvAvailableFoods, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.dgvSelectFoods, 2, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1068, 431);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1249, 531);
             this.tableLayoutPanel11.TabIndex = 10;
             // 
             // dgvAvailableFoods
             // 
             this.dgvAvailableFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAvailableFoods.Location = new System.Drawing.Point(3, 3);
+            this.dgvAvailableFoods.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvAvailableFoods.Location = new System.Drawing.Point(3, 4);
             this.dgvAvailableFoods.MainView = this.viewAvailableFoods;
+            this.dgvAvailableFoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAvailableFoods.Name = "dgvAvailableFoods";
             this.dgvAvailableFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectFoods});
-            this.dgvAvailableFoods.Size = new System.Drawing.Size(517, 425);
+            this.dgvAvailableFoods.Size = new System.Drawing.Size(606, 523);
             this.dgvAvailableFoods.TabIndex = 11;
             this.dgvAvailableFoods.UseEmbeddedNavigator = true;
             this.dgvAvailableFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1427,12 +1456,14 @@
             // dgvSelectFoods
             // 
             this.dgvSelectFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvSelectFoods.Location = new System.Drawing.Point(547, 3);
+            this.dgvSelectFoods.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvSelectFoods.Location = new System.Drawing.Point(639, 4);
             this.dgvSelectFoods.MainView = this.viewSelectFoods;
+            this.dgvSelectFoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSelectFoods.Name = "dgvSelectFoods";
             this.dgvSelectFoods.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelectFoods});
-            this.dgvSelectFoods.Size = new System.Drawing.Size(518, 425);
+            this.dgvSelectFoods.Size = new System.Drawing.Size(607, 523);
             this.dgvSelectFoods.TabIndex = 12;
             this.dgvSelectFoods.UseEmbeddedNavigator = true;
             this.dgvSelectFoods.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1539,8 +1570,8 @@
             // lueHalls
             // 
             this.lueHalls.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueHalls.Location = new System.Drawing.Point(9, 36);
-            this.lueHalls.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.lueHalls.Location = new System.Drawing.Point(10, 46);
+            this.lueHalls.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.lueHalls.Name = "lueHalls";
             this.lueHalls.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1549,7 +1580,7 @@
             this.lueHalls.Properties.NullText = "";
             this.lueHalls.Properties.NullValuePrompt = "Danh sách hội trường đã đặt";
             this.lueHalls.Properties.NullValuePromptShowForEmptyValue = true;
-            this.lueHalls.Size = new System.Drawing.Size(287, 20);
+            this.lueHalls.Size = new System.Drawing.Size(335, 22);
             this.lueHalls.TabIndex = 20;
             this.lueHalls.EditValueChanged += new System.EventHandler(this.lueHalls_EditValueChanged);
             // 
@@ -1562,19 +1593,19 @@
             this.tableLayoutPanel9.Controls.Add(this.lueGuest, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnSearchGuest, 2, 0);
             this.tableLayoutPanel9.Controls.Add(this.btnAddGuest, 1, 0);
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(9, 3);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(10, 4);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(368, 24);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(429, 29);
             this.tableLayoutPanel9.TabIndex = 19;
             // 
             // lueGuest
             // 
             this.lueGuest.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueGuest.Location = new System.Drawing.Point(0, 3);
-            this.lueGuest.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.lueGuest.Location = new System.Drawing.Point(0, 4);
+            this.lueGuest.Margin = new System.Windows.Forms.Padding(0, 4, 3, 4);
             this.lueGuest.Name = "lueGuest";
             this.lueGuest.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1584,7 +1615,7 @@
             this.lueGuest.Properties.NullValuePrompt = "Khách mời.";
             this.lueGuest.Properties.NullValuePromptShowForEmptyValue = true;
             this.lueGuest.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            this.lueGuest.Size = new System.Drawing.Size(287, 20);
+            this.lueGuest.Size = new System.Drawing.Size(335, 22);
             this.lueGuest.TabIndex = 19;
             this.lueGuest.EditValueChanged += new System.EventHandler(this.lueGuest_EditValueChanged);
             // 
@@ -1594,10 +1625,10 @@
             this.btnSearchGuest.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchGuest.Appearance.Options.UseFont = true;
             this.btnSearchGuest.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchGuest.Image")));
-            this.btnSearchGuest.Location = new System.Drawing.Point(337, 3);
-            this.btnSearchGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.btnSearchGuest.Location = new System.Drawing.Point(394, 4);
+            this.btnSearchGuest.Margin = new System.Windows.Forms.Padding(5, 4, 3, 4);
             this.btnSearchGuest.Name = "btnSearchGuest";
-            this.btnSearchGuest.Size = new System.Drawing.Size(24, 17);
+            this.btnSearchGuest.Size = new System.Drawing.Size(28, 21);
             this.btnSearchGuest.TabIndex = 21;
             this.btnSearchGuest.Click += new System.EventHandler(this.btnSearchGuest_Click);
             // 
@@ -1607,10 +1638,10 @@
             this.btnAddGuest.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddGuest.Appearance.Options.UseFont = true;
             this.btnAddGuest.Image = ((System.Drawing.Image)(resources.GetObject("btnAddGuest.Image")));
-            this.btnAddGuest.Location = new System.Drawing.Point(300, 3);
-            this.btnAddGuest.Margin = new System.Windows.Forms.Padding(4, 3, 3, 3);
+            this.btnAddGuest.Location = new System.Drawing.Point(350, 4);
+            this.btnAddGuest.Margin = new System.Windows.Forms.Padding(5, 4, 3, 4);
             this.btnAddGuest.Name = "btnAddGuest";
-            this.btnAddGuest.Size = new System.Drawing.Size(25, 17);
+            this.btnAddGuest.Size = new System.Drawing.Size(29, 21);
             this.btnAddGuest.TabIndex = 20;
             this.btnAddGuest.Click += new System.EventHandler(this.btnAddGuest_Click);
             // 
@@ -1619,27 +1650,27 @@
             this.tableLayoutPanel15.ColumnCount = 2;
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.04085F));
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.95914F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel15.Controls.Add(this.txtMenusName, 0, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 66);
-            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 82);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(0, 4, 3, 4);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(1077, 29);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(1258, 35);
             this.tableLayoutPanel15.TabIndex = 22;
             // 
             // txtMenusName
             // 
             this.txtMenusName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtMenusName.Location = new System.Drawing.Point(9, 4);
-            this.txtMenusName.Margin = new System.Windows.Forms.Padding(9, 3, 3, 3);
+            this.txtMenusName.Location = new System.Drawing.Point(10, 6);
+            this.txtMenusName.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
             this.txtMenusName.Name = "txtMenusName";
             this.txtMenusName.Properties.NullValuePrompt = "Tên thực đơn mới";
             this.txtMenusName.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtMenusName.Size = new System.Drawing.Size(287, 20);
+            this.txtMenusName.Size = new System.Drawing.Size(335, 22);
             this.txtMenusName.TabIndex = 4;
             this.txtMenusName.Leave += new System.EventHandler(this.txtMenusName_Leave);
             // 
@@ -1649,23 +1680,24 @@
             this.btnBook.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBook.Appearance.Options.UseFont = true;
             this.btnBook.Image = ((System.Drawing.Image)(resources.GetObject("btnBook.Image")));
-            this.btnBook.Location = new System.Drawing.Point(961, 569);
-            this.btnBook.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.btnBook.Location = new System.Drawing.Point(1121, 700);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(3, 4, 12, 4);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(110, 25);
+            this.btnBook.Size = new System.Drawing.Size(128, 31);
             this.btnBook.TabIndex = 59;
             this.btnBook.Text = "Đặt tiệc";
             this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // frmTsk_BookingHall_Customer_New
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1086, 596);
+            this.ClientSize = new System.Drawing.Size(1267, 734);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.xtraTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmTsk_BookingHall_Customer_New";
             this.Text = "Đặt tiệc mới";

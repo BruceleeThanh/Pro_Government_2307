@@ -11,7 +11,7 @@ using DataAccess;
 using Entity;
 using CORESYSTEM;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_Halls : DevExpress.XtraEditors.XtraForm
     {

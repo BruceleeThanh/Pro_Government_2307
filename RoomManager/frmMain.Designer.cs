@@ -268,6 +268,7 @@
             this.btnBookingByType1,
             this.btnBookingByType2});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
+            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 214;
             this.ribbon.Name = "ribbon";
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -287,8 +288,9 @@
             this.ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.True;
-            this.ribbon.Size = new System.Drawing.Size(1173, 144);
+            this.ribbon.Size = new System.Drawing.Size(1368, 155);
             this.ribbon.StatusBar = this.ribbonStatusBar;
+            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // applicationMenu1
             // 
@@ -1257,10 +1259,11 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 599);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 744);
+            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1173, 31);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1368, 31);
             // 
             // dockPanel1
             // 
@@ -1283,7 +1286,7 @@
             // 
             this.lbName.Location = new System.Drawing.Point(9, 132);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(41, 13);
+            this.lbName.Size = new System.Drawing.Size(53, 17);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Họ Tên :";
             // 
@@ -1291,7 +1294,7 @@
             // 
             this.lbTimeLogin.Location = new System.Drawing.Point(9, 162);
             this.lbTimeLogin.Name = "lbTimeLogin";
-            this.lbTimeLogin.Size = new System.Drawing.Size(108, 13);
+            this.lbTimeLogin.Size = new System.Drawing.Size(138, 17);
             this.lbTimeLogin.TabIndex = 2;
             this.lbTimeLogin.Text = "Thời Gian Đăng Nhập :";
             // 
@@ -1299,7 +1302,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(9, 191);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(0, 13);
+            this.labelControl3.Size = new System.Drawing.Size(0, 16);
             this.labelControl3.TabIndex = 3;
             // 
             // dockPanel1_Container
@@ -1319,9 +1322,10 @@
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.HeaderButtons = DevExpress.XtraTab.TabButtons.Close;
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(996, 451);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1191, 585);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -1333,8 +1337,9 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.tableLayoutPanel1);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(990, 423);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1185, 553);
             this.xtraTabPage1.Text = "Danh sách Phòng";
             // 
             // tableLayoutPanel1
@@ -1345,11 +1350,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(990, 423);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1185, 553);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -1361,21 +1367,23 @@
             this.tableLayoutPanel2.Controls.Add(this.btnView, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.dtpSearch, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(984, 29);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1179, 36);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // btnView
             // 
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnView.Image = ((System.Drawing.Image)(resources.GetObject("btnView.Image")));
-            this.btnView.Location = new System.Drawing.Point(158, 3);
+            this.btnView.Location = new System.Drawing.Point(183, 4);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnView.Name = "btnView";
-            this.btnView.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnView.Size = new System.Drawing.Size(100, 23);
+            this.btnView.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.btnView.Size = new System.Drawing.Size(117, 28);
             this.btnView.TabIndex = 2;
             this.btnView.Text = "Xem";
             this.btnView.ToolTip = "Xem phòng theo ngày tháng cụ thể";
@@ -1385,7 +1393,8 @@
             // 
             this.dtpSearch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dtpSearch.EditValue = null;
-            this.dtpSearch.Location = new System.Drawing.Point(3, 4);
+            this.dtpSearch.Location = new System.Drawing.Point(3, 7);
+            this.dtpSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpSearch.MenuManager = this.ribbon;
             this.dtpSearch.Name = "dtpSearch";
             this.dtpSearch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1396,7 +1405,7 @@
             this.dtpSearch.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpSearch.Properties.EditFormat.FormatString = "dd/MM/yyyy HH:mm";
             this.dtpSearch.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
-            this.dtpSearch.Size = new System.Drawing.Size(149, 20);
+            this.dtpSearch.Size = new System.Drawing.Size(174, 22);
             this.dtpSearch.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -1405,40 +1414,45 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.panStatusRoom, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 48);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(984, 423);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1179, 521);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // panStatusRoom
             // 
             this.panStatusRoom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panStatusRoom.Location = new System.Drawing.Point(3, 3);
+            this.panStatusRoom.Location = new System.Drawing.Point(3, 4);
+            this.panStatusRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panStatusRoom.Name = "panStatusRoom";
-            this.panStatusRoom.Size = new System.Drawing.Size(978, 417);
+            this.panStatusRoom.Size = new System.Drawing.Size(1173, 513);
             this.panStatusRoom.TabIndex = 0;
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(990, 423);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1156, 523);
             this.xtraTabPage2.Text = "Chi tiết ";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Controls.Add(this.panLuongNghiepVu);
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(990, 423);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1156, 523);
             this.xtraTabPage3.Text = "Luồng nghiệp vụ";
             // 
             // panLuongNghiepVu
             // 
             this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
+            this.panLuongNghiepVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panLuongNghiepVu.Name = "panLuongNghiepVu";
-            this.panLuongNghiepVu.Size = new System.Drawing.Size(990, 423);
+            this.panLuongNghiepVu.Size = new System.Drawing.Size(1156, 523);
             this.panLuongNghiepVu.TabIndex = 0;
             // 
             // dockPanel3
@@ -1514,35 +1528,39 @@
             this.dockCurrentUser.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockCurrentUser.FloatSize = new System.Drawing.Size(200, 180);
             this.dockCurrentUser.ID = new System.Guid("7aad232f-c29e-4fff-853b-6b18beca6b3a");
-            this.dockCurrentUser.Location = new System.Drawing.Point(0, 144);
+            this.dockCurrentUser.Location = new System.Drawing.Point(0, 155);
+            this.dockCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockCurrentUser.Name = "dockCurrentUser";
             this.dockCurrentUser.OriginalSize = new System.Drawing.Size(173, 200);
-            this.dockCurrentUser.Size = new System.Drawing.Size(173, 455);
+            this.dockCurrentUser.Size = new System.Drawing.Size(173, 589);
             this.dockCurrentUser.Text = "Welcome";
             // 
             // dockPanel5_Container
             // 
             this.dockPanel5_Container.Controls.Add(this.panCurrentUser);
-            this.dockPanel5_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel5_Container.Location = new System.Drawing.Point(4, 24);
+            this.dockPanel5_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dockPanel5_Container.Name = "dockPanel5_Container";
-            this.dockPanel5_Container.Size = new System.Drawing.Size(165, 428);
+            this.dockPanel5_Container.Size = new System.Drawing.Size(165, 561);
             this.dockPanel5_Container.TabIndex = 0;
             // 
             // panCurrentUser
             // 
             this.panCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panCurrentUser.Location = new System.Drawing.Point(0, 0);
+            this.panCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panCurrentUser.Name = "panCurrentUser";
-            this.panCurrentUser.Size = new System.Drawing.Size(165, 428);
+            this.panCurrentUser.Size = new System.Drawing.Size(165, 561);
             this.panCurrentUser.TabIndex = 0;
             // 
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.xtraTabControl1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(173, 144);
+            this.panelControl1.Location = new System.Drawing.Point(173, 155);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1000, 455);
+            this.panelControl1.Size = new System.Drawing.Size(1195, 589);
             this.panelControl1.TabIndex = 4;
             // 
             // popupMenu1
@@ -1568,10 +1586,10 @@
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1173, 630);
+            this.ClientSize = new System.Drawing.Size(1368, 775);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.dockCurrentUser);
             this.Controls.Add(this.ribbonStatusBar);
@@ -1580,6 +1598,7 @@
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Ribbon = this.ribbon;

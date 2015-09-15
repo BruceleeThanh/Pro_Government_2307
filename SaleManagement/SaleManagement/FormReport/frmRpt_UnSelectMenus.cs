@@ -11,7 +11,7 @@ using BussinessLogic;
 using CORESYSTEM;
 using System.Collections.Generic;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmRpt_UnSelectMenus : DevExpress.XtraReports.UI.XtraReport
     {
@@ -78,7 +78,7 @@ namespace SaleManagement
                         {
                             if (item.Image1.Length <= 0)
                             {
-                                Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                                Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                                 image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                                 Byte[] aImageByte = this.ConvertImageToByteArray(image);
                                 item.Image1 = aImageByte;
@@ -86,7 +86,7 @@ namespace SaleManagement
                         }
                         else
                         {
-                            Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                            Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                             image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                             Byte[] aImageByte = this.ConvertImageToByteArray(image);
                             item.Image1 = aImageByte;
@@ -153,7 +153,7 @@ namespace SaleManagement
                         {
                             if (item.Image1.Length <= 0)
                             {
-                                Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                                Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                                 image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                                 Byte[] aImageByte = this.ConvertImageToByteArray(image);
                                 item.Image1 = aImageByte;
@@ -161,7 +161,7 @@ namespace SaleManagement
                         }
                         else
                         {
-                            Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                            Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                             image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                             Byte[] aImageByte = this.ConvertImageToByteArray(image);
                             item.Image1 = aImageByte;

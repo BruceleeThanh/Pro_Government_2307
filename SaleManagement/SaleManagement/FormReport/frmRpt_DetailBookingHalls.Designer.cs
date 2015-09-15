@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmRpt_DetailBookingHalls
     {
@@ -819,7 +819,6 @@
             this.DetailReportServiceInUse.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.DetailListServieInUse,
             this.ReportHeader2});
-            this.DetailReportServiceInUse.Expanded = false;
             this.DetailReportServiceInUse.Level = 1;
             this.DetailReportServiceInUse.Name = "DetailReportServiceInUse";
             // 

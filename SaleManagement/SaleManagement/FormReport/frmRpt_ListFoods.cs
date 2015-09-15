@@ -15,7 +15,7 @@ using Entity;
 using DevExpress.XtraReports.UI;
 using System.IO;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmRpt_ListFoods : DevExpress.XtraReports.UI.XtraReport
     {

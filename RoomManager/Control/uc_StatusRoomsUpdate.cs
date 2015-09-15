@@ -55,9 +55,12 @@ namespace RoomManager {
                 aNavBarGroup.Caption = "Tầng " + i;
                 aNavBarGroup.Name = "navBarGroup" + i;
                 aNavBarGroup.GroupClientHeight = 140;
+              
                 aNavBarGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
                 aNavBarGroup.Expanded = true;
                 AddFloor(aNavBarGroup, i, aListRoom);
+     
+
             }
         }
 
@@ -66,8 +69,11 @@ namespace RoomManager {
 
             NavBarGroupControlContainer aNavBarGroupControlContainer = new NavBarGroupControlContainer();
             aNavBarGroupControlContainer.Name = "navBarGroupControlContainer" + LevelSku;
-            aNavBarGroupControlContainer.Size = new System.Drawing.Size(865, 267);
+            //aNavBarGroupControlContainer.Size =  new System.Drawing.Size(865, 300);
             aNavBarGroupControlContainer.TabIndex = 0;
+            aNavBarGroupControlContainer.Height = 500;
+
+
             aNavBarGroup.ControlContainer = aNavBarGroupControlContainer;
 
             aNavBarGroupControlContainer.Controls.Add(aListFlowLayoutPanel[LevelSku - 1]);
@@ -76,6 +82,17 @@ namespace RoomManager {
             this.navBarControl1.Groups.Add(aNavBarGroup);
 
             this.AddRoom(aListFlowLayoutPanel[LevelSku - 1], LevelSku, aListRoom);
+
+
+            aNavBarGroupControlContainer.Dock = DockStyle.Fill;
+            aNavBarGroupControlContainer.AutoSize = true;
+            
+            //aNavBarGroupControlContainer.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            aListFlowLayoutPanel[LevelSku - 1].Dock = DockStyle.Fill;
+            aListFlowLayoutPanel[LevelSku - 1].AutoSize = true;
+            aListFlowLayoutPanel[LevelSku - 1].AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
         }
 
         private void AddRoom (FlowLayoutPanel aFlowLayoutPanel, int LevelSku, uc_RoomStatusItem[] aListRoom) {
@@ -85,6 +102,7 @@ namespace RoomManager {
                     aFlowLayoutPanel.Controls.Add(aListRoom[i]);
                 }
             }
+
         }
 
         private void FlowLayoutPanel_Load(int maxLevelSku) {
@@ -93,6 +111,7 @@ namespace RoomManager {
                 aFlowLayoutPanel.Dock = DockStyle.Fill;
                 aFlowLayoutPanel.Name = "flowLayoutPanel" + i;
                 aFlowLayoutPanel.TabIndex = 0;
+                
                 this.aListFlowLayoutPanel.Add(aFlowLayoutPanel);
             }
         }
@@ -121,6 +140,12 @@ namespace RoomManager {
                 aListFlowLayoutPanel[i - 1].Controls.Clear();
                 this.AddRoom(aListFlowLayoutPanel[i - 1], i, aListRoom);
             }
+        }
+
+        private void navBarControl1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this.Height.ToString());
+            this.Height = this.Height + 100;
         }
     }
 

@@ -18,7 +18,7 @@ using DataAccess;
 using Entity;
 using CORESYSTEM;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_SelectMenus : DevExpress.XtraEditors.XtraForm
     {
@@ -86,19 +86,19 @@ namespace SaleManagement
             BookingHallDetailEN aBookingHallDetailEN = aReceptionTaskBO.GetDetailBookingHalls_ByIDBookingHall(this.IDBookingHall);
             lblNameCustomer.Text = aBookingHallDetailEN.NameCustomer;
             lblCustomerGroup.Text = aBookingHallDetailEN.NameCustomerGroup;
-            lblSku.Text = aBookingHallDetailEN.SkuHall;
-            lblLunarDate.Text = String.Format("{0:dd/MM/yyyy}", aBookingHallDetailEN.LunarDateBookingHall);
-            lblDate.Text = String.Format("{0:dd/MM/yyyy}", aBookingHallDetailEN.DateBookingHall);
+            lblSku.Text = aBookingHallDetailEN.HallSku;
+            lblLunarDate.Text = String.Format("{0:dd/MM/yyyy}", aBookingHallDetailEN.LunarDate);
+            lblDate.Text = String.Format("{0:dd/MM/yyyy}", aBookingHallDetailEN.Date);
 
-            lblStartTime.Text = String.Format(@"{0:hh\:mm}", aBookingHallDetailEN.StartTimeBookingHall);
-            lblEndTime.Text = String.Format(@"{0:hh\:mm}", aBookingHallDetailEN.EndTimeBookingHall);
+            lblStartTime.Text = String.Format(@"{0:hh\:mm}", aBookingHallDetailEN.StartTime);
+            lblEndTime.Text = String.Format(@"{0:hh\:mm}", aBookingHallDetailEN.EndTime);
 
             lblNameMenu.Text = aBookingHallDetailEN.NameMenu;
 
-            lblCustomerType.Text = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(aBookingHallDetailEN.CustomerTypeBookingH)).Name;
+            lblCustomerType.Text = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(aBookingHallDetailEN.CustomerType)).Name;
             lblLevel.Text = CORE.CONSTANTS.SelectedLevel(Convert.ToInt32(aBookingHallDetailEN.LevelBookingH)).Name;
             lblBookingType.Text = CORE.CONSTANTS.SelectedBookingType(Convert.ToInt32(aBookingHallDetailEN.BookingTypeBookingH)).Name;
-            lblStatusBookingHall.Text = CORE.CONSTANTS.SelectedBookingHallStatus(Convert.ToInt32(aBookingHallDetailEN.StatusBookingHall)).Name;
+            lblStatusBookingHall.Text = CORE.CONSTANTS.SelectedBookingHallStatus(Convert.ToInt32(aBookingHallDetailEN.Status)).Name;
             lblStatusPay.Text = CORE.CONSTANTS.SelectedStatusPay(Convert.ToInt32(aBookingHallDetailEN.StatusPayBookingH)).Name;
 
             LoadMenus();
@@ -139,7 +139,7 @@ namespace SaleManagement
                 {
                     if (item.Image1.Length <= 0)
                     {
-                        Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                        Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                         image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                         Byte[] aImageByte = this.ConvertImageToByteArray(image);
                         item.Image1 = aImageByte;
@@ -147,7 +147,7 @@ namespace SaleManagement
                 }
                 else
                 {
-                    Image image = SaleManagement.Properties.Resources.logo_nkcp_small;
+                    Image image = SaleManager.Properties.Resources.logo_nkcp_small;
                     image = image.GetThumbnailImage(70, 70, null, IntPtr.Zero);
                     Byte[] aImageByte = this.ConvertImageToByteArray(image);
                     item.Image1 = aImageByte;

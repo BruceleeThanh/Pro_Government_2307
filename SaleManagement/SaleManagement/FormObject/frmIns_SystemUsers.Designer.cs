@@ -1,4 +1,4 @@
-﻿namespace SaleManagement
+﻿namespace SaleManager
 {
     partial class frmIns_SystemUsers
     {
@@ -61,22 +61,22 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(284, 251);
+            this.panelControl1.Size = new System.Drawing.Size(308, 251);
             this.panelControl1.TabIndex = 0;
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Location = new System.Drawing.Point(42, 64);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(59, 13);
+            this.labelControl3.Size = new System.Drawing.Size(75, 17);
             this.labelControl3.TabIndex = 8;
             this.labelControl3.Text = "Mật Khẩu :";
             // 
             // txtPass
             // 
             this.txtPass.EditValue = "*******";
-            this.txtPass.Location = new System.Drawing.Point(108, 57);
+            this.txtPass.Location = new System.Drawing.Point(135, 63);
             this.txtPass.Name = "txtPass";
             this.txtPass.Properties.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(151, 20);
@@ -122,10 +122,10 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Location = new System.Drawing.Point(12, 31);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(91, 13);
+            this.labelControl1.Size = new System.Drawing.Size(117, 17);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "Tên Đăng Nhập :";
             // 
@@ -140,20 +140,20 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(108, 24);
+            this.txtUserName.Location = new System.Drawing.Point(135, 30);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(151, 20);
             this.txtUserName.TabIndex = 0;
             // 
-            // frmAddSysUser
+            // frmIns_SystemUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 251);
+            this.ClientSize = new System.Drawing.Size(308, 251);
             this.Controls.Add(this.panelControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmAddSysUser";
+            this.Name = "frmIns_SystemUsers";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

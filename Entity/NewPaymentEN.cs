@@ -820,7 +820,9 @@ namespace Entity
                {
                    if (ListDataInOnceDay[i].IDServiceGroup == IDServiceGroup)
                    {
+                       //SumFee = SumFee + ListDataInOnceDay[i].GetMoneyService().GetValueOrDefault(0) ;
                        SumFee = SumFee + ListDataInOnceDay[i].GetMoneyServiceBeforeTax().GetValueOrDefault(0);
+                       
                    }
                }
                return SumFee;
@@ -959,16 +961,19 @@ namespace Entity
                
                if ((IsFirstDayOrLastDay.CheckInActual.Date == CheckDate.Date) && (IsFirstDayOrLastDay.CheckOutActual.Date != CheckDate.Date)) // Tinh theo gia phong moi sang
                {
-
-                   Ret = Ret + EstimateCostRoomInFirstDay(IsFirstDayOrLastDay);
+                   // Tinh ca thue
+                   //Ret = Ret + EstimateCostRoomInFirstDayBeforeTax(IsFirstDayOrLastDay) * (1 + Convert.ToDecimal(this.aListBookingRoomUsed[0].PercentTax.GetValueOrDefault(0) * 0.01)); 
+                   Ret = Ret + EstimateCostRoomInFirstDayBeforeTax(IsFirstDayOrLastDay);
 
                }
                else if ((IsFirstDayOrLastDay.CheckOutActual.Date == CheckDate.Date) && (IsFirstDayOrLastDay.CheckInActual.Date != CheckDate.Date))// Tinh theo gia phong moi sang
                {
-                   Ret = Ret + EstimateCostRoomInLastDay(IsFirstDayOrLastDay);
+                   //Ret = Ret + EstimateCostRoomInLastDayBeforeTax(IsFirstDayOrLastDay) * (1 + Convert.ToDecimal(this.aListBookingRoomUsed[0].PercentTax.GetValueOrDefault(0) * 0.01)); 
+                   Ret = Ret + EstimateCostRoomInLastDayBeforeTax(IsFirstDayOrLastDay);
                }
                else if ((IsFirstDayOrLastDay.CheckOutActual.Date == CheckDate.Date) && (IsFirstDayOrLastDay.CheckInActual.Date == CheckDate.Date))// Tinh theo gia phong moi sang
                {
+                   //Ret = Ret + List1[i].Cost.GetValueOrDefault(0) * (1 + Convert.ToDecimal(this.aListBookingRoomUsed[0].PercentTax.GetValueOrDefault(0) * 0.01)); 
                    Ret = Ret + List1[i].Cost.GetValueOrDefault(0);
                }
                //else if (IsFirstDayOrLastDay.Status == 3) // Tinh theo gia phong moi sang
@@ -978,7 +983,8 @@ namespace Entity
                //}
                else
                {
-                   Ret = Ret + List1[i].Cost.GetValueOrDefault(0);
+                   //Ret = Ret + List1[i].Cost.GetValueOrDefault(0) * (1 + Convert.ToDecimal(this.aListBookingRoomUsed[0].PercentTax.GetValueOrDefault(0) * 0.01)); 
+                   Ret = Ret + List1[i].Cost.GetValueOrDefault(0) ; 
                }
 
                //if (IsChangeRoomInDay > 1)  // Chuyen sang phong khac hoac dung them phong khac trong cung 1 ngay
@@ -1020,7 +1026,8 @@ namespace Entity
            decimal Ret = 0;
            for (int i = 0; i < List1.Count; i++)
            {
-               Ret = Ret + List1[i].Cost.GetValueOrDefault(0);
+               //Ret = Ret + List1[i].Cost.GetValueOrDefault(0) * (1 + Convert.ToDecimal(this.aListBookingHallUsed[0].PercentTax.GetValueOrDefault(0) * 0.01)); 
+               Ret = Ret + List1[i].Cost.GetValueOrDefault(0) ; 
            }
            return Ret;
        }
@@ -1071,7 +1078,8 @@ namespace Entity
 
            double Loop = (LastDateReport.Date - FirstDateReport.Date).TotalDays ;
            for (double i = 0; i <= Loop; i++)
-           {
+           
+            {
                
                ItemSumGroupInOnceDay = new RptPaymentStyle1();
                // Lay tong so nguoi cua doan
@@ -1128,7 +1136,7 @@ namespace Entity
            return aListRetView;
        }
 
-       private decimal EstimateCostRoomInFirstDay (BookingRoomUsedEN FirstDay)
+       private decimal EstimateCostRoomInFirstDayBeforeTax (BookingRoomUsedEN FirstDay)
        {
 
          
@@ -1137,8 +1145,6 @@ namespace Entity
            double AddTimeStart = FirstDay.AddTimeStart.GetValueOrDefault(0);
            double AddTimeEnd = FirstDay.AddTimeEnd.GetValueOrDefault(0) ;
            decimal Cost = FirstDay.Cost.GetValueOrDefault(0);
-
-
 
            if ((BookingRoom_Type == 0) && (BookingRoom_Type == 1))// Khong tinh checkInsom 
            {
@@ -1150,7 +1156,7 @@ namespace Entity
            }
          
        }
-       private decimal EstimateCostRoomInLastDay (BookingRoomUsedEN LastDay) {
+       private decimal EstimateCostRoomInLastDayBeforeTax (BookingRoomUsedEN LastDay) {
 
 
            int BookingRoom_Type = LastDay.Type.GetValueOrDefault(0);
@@ -1172,7 +1178,7 @@ namespace Entity
 
          
        }
-       private decimal EstimateCostRoomInUse (BookingRoomUsedEN RoomInUse) {
+       private decimal EstimateCostRoomInUseBeforeTax (BookingRoomUsedEN RoomInUse) {
 
 
            //int BookingRoom_Type = RoomInUse.Type.GetValueOrDefault(0);
@@ -1196,6 +1202,9 @@ namespace Entity
 
            return 0;
        }
+       
+
+
        public int GetTypeBookingRoom(int IDBookingRoom)
        {
            try

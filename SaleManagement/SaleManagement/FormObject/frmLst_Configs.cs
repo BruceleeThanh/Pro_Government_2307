@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using BussinessLogic;
 using DataAccess;
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmLst_Configs : DevExpress.XtraEditors.XtraForm
     {

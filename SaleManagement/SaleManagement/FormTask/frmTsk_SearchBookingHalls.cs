@@ -14,7 +14,7 @@ using BussinessLogic;
 using Entity;
 using CORESYSTEM;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_SearchBookingHalls : DevExpress.XtraEditors.XtraForm
     {
@@ -109,22 +109,23 @@ namespace SaleManagement
                     {
                         aBookingHallsEN = new BookingHallsEN();
                         aBookingHallsEN.IDBookingH = item.IDBookingH;
-                        aBookingHallsEN.DisplayCustomerType = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(item.CustomerTypeBookingH)).Name;
-                        aBookingHallsEN.IDBookingHall = item.IDBookingHall;
-                        aBookingHallsEN.BookingStatusBookingHall = item.BookingStatusBookingHall;
-                        aBookingHallsEN.NameCustomer = item.NameCustomer;
-                        aBookingHallsEN.NameCustomerGroup = item.NameCustomerGroup;
-                        aBookingHallsEN.DateBookingHall = item.DateBookingHall;
-                        aBookingHallsEN.LunarDateBookingHall = item.LunarDateBookingHall;
-                        aBookingHallsEN.StartTimeBookingHall = item.StartTimeBookingHall;
-                        aBookingHallsEN.EndTimeBookingHall = item.EndTimeBookingHall;
+                        aBookingHallsEN.DisplayCustomerType = CORE.CONSTANTS.SelectedCustomerType(Convert.ToInt32(item.CustomerType)).Name;
+                        aBookingHallsEN.ID = item.ID;
+                        aBookingHallsEN.BookingStatus = item.BookingStatus;
+
+                        aBookingHallsEN.NameGuest = item.NameGuest;
+
+                        aBookingHallsEN.Date = item.Date;
+                        aBookingHallsEN.LunarDate = item.LunarDate;
+                        aBookingHallsEN.StartTime = item.StartTime;
+                        aBookingHallsEN.EndTime = item.EndTime;
                         aBookingHallsEN.BookingTypeBookingH = item.BookingTypeBookingH;
 
                         aBookingHallsEN.StatusPayBookingH = item.StatusPayBookingH;
-                        aBookingHallsEN.NoteBookingH = item.NoteBookingH;
                         aBookingHallsEN.DisplayBookingType = CORE.CONSTANTS.SelectedBookingType(Convert.ToInt32(item.BookingTypeBookingH)).Name;
+
                         aBookingHallsEN.DisplayLevel = CORE.CONSTANTS.SelectedLevel(Convert.ToInt32(item.LevelBookingH)).Name;
-                        aBookingHallsEN.SkuHall = item.SkuHall;
+                        aBookingHallsEN.HallSku = item.HallSku;
                         aBookingHallsEN.NameGuest = item.NameGuest;
                         aListBookingHallsEN.Add(aBookingHallsEN);
                     }

@@ -12,7 +12,7 @@ using Entity;
 using CORESYSTEM;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_Guest : DevExpress.XtraEditors.XtraForm
     {
@@ -21,6 +21,7 @@ namespace SaleManagement
         frmTsk_BookingHall_Group afrmTsk_BookingHall_Group = null;
         frmTsk_BookingHall_Customer afrmTsk_BookingHall_Customer = null;
         frmTsk_UpdBooking afrmTsk_UpdBooking = null;
+        frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New = null;
 
         public frmIns_Guest()
         {
@@ -45,6 +46,11 @@ namespace SaleManagement
         {
             InitializeComponent();
             this.afrmTsk_BookingHall_Customer = afrmTsk_BookingHall_Customer;
+        }
+        public frmIns_Guest(frmTsk_BookingHall_Customer_New afrmTsk_BookingHall_Customer_New)
+        {
+            InitializeComponent();
+            this.afrmTsk_BookingHall_Customer_New = afrmTsk_BookingHall_Customer_New;
         }
         public frmIns_Guest(frmTsk_UpdBooking afrmTsk_UpdBooking)
         {
@@ -90,7 +96,7 @@ namespace SaleManagement
                     aGuests.Type = int.Parse(cbbType.Text);
                     aGuests.Info = txtInfo.Text;
                     aGuests.GroupName = "Khách mời";
-                    aGuestsBO.Insert(aGuests);
+                    int ID = aGuestsBO.Insert(aGuests);
                     if (afrmLst_Guests != null)
                     {
                         afrmLst_Guests.Reload();
@@ -98,14 +104,22 @@ namespace SaleManagement
                     if (afrmTsk_BookingHall_Goverment != null)
                     {
                         this.afrmTsk_BookingHall_Goverment.ReloadData();
+                        this.afrmTsk_BookingHall_Goverment.CallBackGuest(ID);
                     }
                     if (afrmTsk_BookingHall_Group != null)
                     {
                         this.afrmTsk_BookingHall_Group.ReloadData();
+                        this.afrmTsk_BookingHall_Group.CallBackGuest(ID);
                     }
                     if (afrmTsk_BookingHall_Customer != null)
                     {
                         this.afrmTsk_BookingHall_Customer.ReloadData();
+                        this.afrmTsk_BookingHall_Customer.CallBackGuest(ID);
+                    }
+                    if (afrmTsk_BookingHall_Customer_New != null)
+                    {
+                        this.afrmTsk_BookingHall_Customer_New.LoadGuest();
+                        this.afrmTsk_BookingHall_Customer_New.CallBackGuest(ID);
                     }
                     if (afrmTsk_UpdBooking != null)
                     {

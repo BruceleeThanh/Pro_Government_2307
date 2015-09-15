@@ -15,7 +15,7 @@ using CORESYSTEM;
 using Library;
 
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmTsk_UpdBooking : DevExpress.XtraEditors.XtraForm
     {
@@ -28,6 +28,7 @@ namespace SaleManagement
         private List<HallExtStatusEN> aListAvailableHall = new List<HallExtStatusEN>();
         List<HallsEN> aListSelected = new List<HallsEN>();
         frmTsk_ManageBookingHs afrmTsk_ManageBookingHs = null;
+        frmMain_Halls afrmMain_Halls = null;
 
         public void ReloadData()
         {
@@ -120,8 +121,8 @@ namespace SaleManagement
             txtNote.Text = aBookingHs.Note;
             //Fill data for BookingHall
             dtpFrom.DateTime = Convert.ToDateTime(aListBookingHalls[0].Date);
-            tedEnd.Time = DateTime.Parse( aListBookingHalls[0].EndTime.ToString());
-            tedStart.Time = DateTime.Parse(aListBookingHalls[0].StartTime.ToString());
+           //tedEnd.Time = DateTime.Parse( aListBookingHalls[0].EndTime.ToString());
+            //tedStart.Time = DateTime.Parse(aListBookingHalls[0].StartTime.ToString());
 
             for (int i = 0; i < aListBookingHalls.Count; i++)
             {
@@ -149,6 +150,12 @@ namespace SaleManagement
             InitializeComponent();
             this.IDBookingH = IDBookingH;
             this.afrmTsk_ManageBookingHs = afrmTsk_ManageBookingHs;
+        }
+        public frmTsk_UpdBooking(frmMain_Halls afrmMain_Halls, int IDBookingH)
+        {
+            InitializeComponent();
+            this.IDBookingH = IDBookingH;
+            this.afrmMain_Halls = afrmMain_Halls;
         }
 
         public void LoadCompanies()
@@ -608,8 +615,8 @@ namespace SaleManagement
                         aTemp.CostRef_Halls = aListSelected[i].CostRef;
                         aTemp.Date = dtpFrom.DateTime;
                         IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
-                        DateTime Lunardate = DateTime.ParseExact(LunarDateExt.ToLunarDate(dtpFrom.DateTime, 7).ToString(), "dd/MM/yyyy", theCultureInfo);
-                        aTemp.LunarDate = Lunardate;
+                        //DateTime Lunardate = DateTime.ParseExact(LunarDateExt.ToLunarDate(dtpFrom.DateTime, 7).ToString(), "dd/MM/yyyy", theCultureInfo);
+                        //aTemp.LunarDate = Lunardate;
                         aTemp.BookingStatus = null;
                         aTemp.Unit = aListSelected[i].Unit;
                         aTemp.TableOrPerson = aListSelected[i].TableOrPerson;
@@ -621,7 +628,14 @@ namespace SaleManagement
                         aListBookingHall.Add(aTemp);
                     }
                     aReceptionTaskBO.UpdateCheckIn(aBookingHs, aListBookingHall);
-                    afrmTsk_ManageBookingHs.ReloadData();
+                    if (afrmTsk_ManageBookingHs != null)
+                    {
+                        afrmTsk_ManageBookingHs.ReloadData();
+                    }
+                    else if (afrmMain_Halls != null)
+                    {
+                        afrmMain_Halls.ReloadData();
+                    }
                     MessageBox.Show("Đặt hội trường thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }

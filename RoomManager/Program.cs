@@ -30,8 +30,8 @@ namespace RoomManager
 
             CORE.INIT(ConfigurationManager.AppSettings["SystemKey"].ToString());
 
-            //Application.Run(new frmMain());
-            Application.Run(new frmLogin());
+            Application.Run(new Form1());
+            //Application.Run(new frmLogin());
             
         }
 

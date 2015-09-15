@@ -54,6 +54,7 @@ namespace RoomManager
                 Item[i].Visible = true;
                 Item[i].StatusButtonPopup = this.StatusButtonPopup;
                 flowLayoutPanel1.Controls.Add(Item[i]);
+                
             }
         }
 

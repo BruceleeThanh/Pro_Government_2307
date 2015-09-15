@@ -634,7 +634,7 @@ namespace RoomManager
                     }
                     else if (afrmMain_Halls != null)
                     {
-                        afrmMain_Halls.Reload();
+                        afrmMain_Halls.ReloadData();
                     }
                     MessageBox.Show("Đặt hội trường thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();

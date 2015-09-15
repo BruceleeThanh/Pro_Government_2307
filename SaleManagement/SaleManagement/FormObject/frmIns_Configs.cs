@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 using DataAccess;
 using BussinessLogic;
 
-namespace SaleManagement
+namespace SaleManager
 {
     public partial class frmIns_Configs : DevExpress.XtraEditors.XtraForm
     {
