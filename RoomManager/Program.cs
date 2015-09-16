@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using CORESYSTEM;
 using DevExpress.LookAndFeel;
 using System.Configuration;
+using Entity;
 namespace RoomManager
 {
     static class Program
@@ -29,9 +30,11 @@ namespace RoomManager
 
 
             CORE.INIT(ConfigurationManager.AppSettings["SystemKey"].ToString());
+            RoomExtStatusEN From = new RoomExtStatusEN();
+            RoomExtStatusEN To = new RoomExtStatusEN();
 
-            Application.Run(new Form1());
-            //Application.Run(new frmLogin());
+            //Application.Run(new Form1());
+            Application.Run(new frmLogin());
             
         }
 
