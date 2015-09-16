@@ -2215,7 +2215,7 @@ namespace RoomManager
              result = MessageBox.Show("Không chuyển được thời gian do xung đột thời gian với mã đặt phòng :" + string.Join(",", aListIDBookingRoom.ToArray()) +". Bạn có muốn search xem chi tiết không ?","Thông báo", buttons);
               if (result == System.Windows.Forms.DialogResult.Yes)
               {
-                  frmTsk_PaymentViewAll_New aFrm = new frmTsk_PaymentViewAll_New();
+                  frmTsk_Payment_Step1 aFrm = new frmTsk_Payment_Step1();
                   aFrm.ShowDialog();
                   this.Close();
 
@@ -2293,6 +2293,11 @@ namespace RoomManager
         }
 
         private void cbbPriceType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpCheckOutActual_EditValueChanged(object sender, EventArgs e)
         {
 
         }

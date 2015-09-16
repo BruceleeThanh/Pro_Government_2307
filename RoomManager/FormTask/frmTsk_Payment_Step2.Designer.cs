@@ -277,11 +277,11 @@
             this.lblTotalBookingRAndBookingHBeforeTax = new DevExpress.XtraEditors.LabelControl();
             this.labelControl45 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel40 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPrintPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
-            this.btnPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
-            this.btnSplitBill = new DevExpress.XtraEditors.SimpleButton();
             this.btnĐeleteBookingR = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSplitBill = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrintPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -540,10 +540,10 @@
             // tableLayoutPanel8
             // 
             this.tableLayoutPanel8.ColumnCount = 4;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.42072F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.01256F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.47253F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.89247F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.8961F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.74675F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.94805F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.73377F));
             this.tableLayoutPanel8.Controls.Add(this.btnPrintListCus, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnPrint, 3, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnPayment, 2, 0);
@@ -563,7 +563,7 @@
             this.btnPrintListCus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintListCus.Appearance.Options.UseFont = true;
             this.btnPrintListCus.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintListCus.Image")));
-            this.btnPrintListCus.Location = new System.Drawing.Point(81, 5);
+            this.btnPrintListCus.Location = new System.Drawing.Point(34, 5);
             this.btnPrintListCus.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrintListCus.Name = "btnPrintListCus";
             this.btnPrintListCus.Size = new System.Drawing.Size(136, 31);
@@ -577,12 +577,12 @@
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(494, 5);
+            this.btnPrint.Location = new System.Drawing.Point(441, 5);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(114, 31);
+            this.btnPrint.Size = new System.Drawing.Size(155, 31);
             this.btnPrint.TabIndex = 76;
-            this.btnPrint.Text = "In phiếu thu";
+            this.btnPrint.Text = "In báo thanh toán";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnPayment
@@ -591,10 +591,10 @@
             this.btnPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.Appearance.Options.UseFont = true;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
-            this.btnPayment.Location = new System.Drawing.Point(325, 5);
+            this.btnPayment.Location = new System.Drawing.Point(276, 5);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(159, 31);
+            this.btnPayment.Size = new System.Drawing.Size(155, 31);
             this.btnPayment.TabIndex = 75;
             this.btnPayment.Text = "Thanh toán phòng";
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
@@ -605,10 +605,10 @@
             this.btnBookHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookHall.Appearance.Options.UseFont = true;
             this.btnBookHall.Image = ((System.Drawing.Image)(resources.GetObject("btnBookHall.Image")));
-            this.btnBookHall.Location = new System.Drawing.Point(228, 5);
+            this.btnBookHall.Location = new System.Drawing.Point(180, 5);
             this.btnBookHall.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnBookHall.Name = "btnBookHall";
-            this.btnBookHall.Size = new System.Drawing.Size(87, 31);
+            this.btnBookHall.Size = new System.Drawing.Size(86, 31);
             this.btnBookHall.TabIndex = 77;
             this.btnBookHall.Text = "Đặt tiệc";
             this.btnBookHall.Click += new System.EventHandler(this.btnBookHall_Click);
@@ -1557,6 +1557,7 @@
             this.dtpCheckOutActual.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.dtpCheckOutActual.Size = new System.Drawing.Size(124, 22);
             this.dtpCheckOutActual.TabIndex = 40;
+            this.dtpCheckOutActual.EditValueChanged += new System.EventHandler(this.dtpCheckOutActual_EditValueChanged);
             this.dtpCheckOutActual.Leave += new System.EventHandler(this.dtpCheckOutActual_Leave);
             // 
             // chkCheckOut
@@ -2109,12 +2110,12 @@
             this.btnEnableEdit.Appearance.Options.UseFont = true;
             this.btnEnableEdit.Enabled = false;
             this.btnEnableEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEnableEdit.Image")));
-            this.btnEnableEdit.Location = new System.Drawing.Point(10, 14);
-            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(10, 4, 3, 4);
+            this.btnEnableEdit.Location = new System.Drawing.Point(593, 14);
+            this.btnEnableEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEnableEdit.Name = "btnEnableEdit";
-            this.btnEnableEdit.Size = new System.Drawing.Size(98, 30);
+            this.btnEnableEdit.Size = new System.Drawing.Size(53, 30);
             this.btnEnableEdit.TabIndex = 77;
-            this.btnEnableEdit.Text = "Sửa h.đơn";
+            this.btnEnableEdit.Text = "Sửa";
             this.btnEnableEdit.Click += new System.EventHandler(this.btnEnableEdit_Click);
             // 
             // xtraTabControl1
@@ -3113,9 +3114,9 @@
             // 
             this.tableLayoutPanel34.ColumnCount = 4;
             this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.31942F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.3762F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.47793F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.41924F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.61184F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.26316F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.11184F));
             this.tableLayoutPanel34.Controls.Add(this.btnPrintBookingH, 3, 0);
             this.tableLayoutPanel34.Controls.Add(this.btnPaymentHall, 2, 0);
             this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -3133,12 +3134,12 @@
             this.btnPrintBookingH.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintBookingH.Appearance.Options.UseFont = true;
             this.btnPrintBookingH.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintBookingH.Image")));
-            this.btnPrintBookingH.Location = new System.Drawing.Point(495, 8);
+            this.btnPrintBookingH.Location = new System.Drawing.Point(437, 8);
             this.btnPrintBookingH.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.btnPrintBookingH.Name = "btnPrintBookingH";
-            this.btnPrintBookingH.Size = new System.Drawing.Size(110, 31);
+            this.btnPrintBookingH.Size = new System.Drawing.Size(168, 31);
             this.btnPrintBookingH.TabIndex = 5;
-            this.btnPrintBookingH.Text = "In hóa đơn";
+            this.btnPrintBookingH.Text = "In báo thanh toán";
             this.btnPrintBookingH.Click += new System.EventHandler(this.btnPrintBookingH_Click);
             // 
             // btnPaymentHall
@@ -3147,10 +3148,10 @@
             this.btnPaymentHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPaymentHall.Appearance.Options.UseFont = true;
             this.btnPaymentHall.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentHall.Image")));
-            this.btnPaymentHall.Location = new System.Drawing.Point(305, 8);
+            this.btnPaymentHall.Location = new System.Drawing.Point(250, 8);
             this.btnPaymentHall.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPaymentHall.Name = "btnPaymentHall";
-            this.btnPaymentHall.Size = new System.Drawing.Size(176, 31);
+            this.btnPaymentHall.Size = new System.Drawing.Size(173, 31);
             this.btnPaymentHall.TabIndex = 148;
             this.btnPaymentHall.Text = "Thanh toán h.trường";
             this.btnPaymentHall.Click += new System.EventHandler(this.btnPaymentHall_Click);
@@ -3813,81 +3814,25 @@
             // tableLayoutPanel40
             // 
             this.tableLayoutPanel40.ColumnCount = 6;
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.04702F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.89498F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.96043F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.78691F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.98174F));
-            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.00304F));
-            this.tableLayoutPanel40.Controls.Add(this.btnSave, 1, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnPrintPaymentTotal, 4, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnEnableEdit, 0, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnPaymentTotal, 3, 0);
-            this.tableLayoutPanel40.Controls.Add(this.btnSplitBill, 2, 0);
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.98454F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.81443F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.23196F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.603093F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.505155F));
+            this.tableLayoutPanel40.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.731959F));
             this.tableLayoutPanel40.Controls.Add(this.btnĐeleteBookingR, 5, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnPaymentTotal, 2, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnEnableEdit, 3, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnSave, 4, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnSplitBill, 1, 0);
+            this.tableLayoutPanel40.Controls.Add(this.btnPrintPaymentTotal, 0, 0);
             this.tableLayoutPanel40.Location = new System.Drawing.Point(574, 0);
             this.tableLayoutPanel40.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel40.Name = "tableLayoutPanel40";
             this.tableLayoutPanel40.RowCount = 1;
             this.tableLayoutPanel40.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel40.Size = new System.Drawing.Size(766, 59);
+            this.tableLayoutPanel40.Size = new System.Drawing.Size(776, 59);
             this.tableLayoutPanel40.TabIndex = 61;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(118, 14);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(119, 31);
-            this.btnSave.TabIndex = 162;
-            this.btnSave.Text = "Lưu thay đổi";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnPrintPaymentTotal
-            // 
-            this.btnPrintPaymentTotal.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnPrintPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintPaymentTotal.Appearance.Options.UseFont = true;
-            this.btnPrintPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPaymentTotal.Image")));
-            this.btnPrintPaymentTotal.Location = new System.Drawing.Point(537, 14);
-            this.btnPrintPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
-            this.btnPrintPaymentTotal.Name = "btnPrintPaymentTotal";
-            this.btnPrintPaymentTotal.Size = new System.Drawing.Size(108, 31);
-            this.btnPrintPaymentTotal.TabIndex = 165;
-            this.btnPrintPaymentTotal.Text = "In phiếu thu";
-            this.btnPrintPaymentTotal.Click += new System.EventHandler(this.btnPrintPaymentTotal_Click);
-            // 
-            // btnPaymentTotal
-            // 
-            this.btnPaymentTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaymentTotal.Appearance.Options.UseFont = true;
-            this.btnPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentTotal.Image")));
-            this.btnPaymentTotal.Location = new System.Drawing.Point(388, 14);
-            this.btnPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
-            this.btnPaymentTotal.Name = "btnPaymentTotal";
-            this.btnPaymentTotal.Size = new System.Drawing.Size(139, 31);
-            this.btnPaymentTotal.TabIndex = 164;
-            this.btnPaymentTotal.Text = "Thanh toán tổng";
-            this.btnPaymentTotal.Click += new System.EventHandler(this.btnPaymentTotal_Click);
-            // 
-            // btnSplitBill
-            // 
-            this.btnSplitBill.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnSplitBill.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSplitBill.Appearance.Options.UseFont = true;
-            this.btnSplitBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSplitBill.Image")));
-            this.btnSplitBill.Location = new System.Drawing.Point(247, 14);
-            this.btnSplitBill.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
-            this.btnSplitBill.Name = "btnSplitBill";
-            this.btnSplitBill.Size = new System.Drawing.Size(127, 31);
-            this.btnSplitBill.TabIndex = 163;
-            this.btnSplitBill.Text = "Tách phiếu thu";
-            this.btnSplitBill.Click += new System.EventHandler(this.btnSplitBill_Click);
             // 
             // btnĐeleteBookingR
             // 
@@ -3895,13 +3840,69 @@
             this.btnĐeleteBookingR.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnĐeleteBookingR.Appearance.Options.UseFont = true;
             this.btnĐeleteBookingR.Image = ((System.Drawing.Image)(resources.GetObject("btnĐeleteBookingR.Image")));
-            this.btnĐeleteBookingR.Location = new System.Drawing.Point(659, 14);
-            this.btnĐeleteBookingR.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
+            this.btnĐeleteBookingR.Location = new System.Drawing.Point(718, 14);
+            this.btnĐeleteBookingR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnĐeleteBookingR.Name = "btnĐeleteBookingR";
-            this.btnĐeleteBookingR.Size = new System.Drawing.Size(99, 31);
+            this.btnĐeleteBookingR.Size = new System.Drawing.Size(55, 31);
             this.btnĐeleteBookingR.TabIndex = 166;
-            this.btnĐeleteBookingR.Text = "Hủy h.đơn";
+            this.btnĐeleteBookingR.Text = "Hủy";
             this.btnĐeleteBookingR.Click += new System.EventHandler(this.btnDeleteBookingR_Click);
+            // 
+            // btnPaymentTotal
+            // 
+            this.btnPaymentTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaymentTotal.Appearance.Options.UseFont = true;
+            this.btnPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymentTotal.Image")));
+            this.btnPaymentTotal.Location = new System.Drawing.Point(437, 14);
+            this.btnPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
+            this.btnPaymentTotal.Name = "btnPaymentTotal";
+            this.btnPaymentTotal.Size = new System.Drawing.Size(146, 31);
+            this.btnPaymentTotal.TabIndex = 164;
+            this.btnPaymentTotal.Text = "Thanh toán tổng";
+            this.btnPaymentTotal.Click += new System.EventHandler(this.btnPaymentTotal_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Appearance.Options.UseFont = true;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(652, 14);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 4, 4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(59, 31);
+            this.btnSave.TabIndex = 162;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnSplitBill
+            // 
+            this.btnSplitBill.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSplitBill.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSplitBill.Appearance.Options.UseFont = true;
+            this.btnSplitBill.Image = ((System.Drawing.Image)(resources.GetObject("btnSplitBill.Image")));
+            this.btnSplitBill.Location = new System.Drawing.Point(290, 14);
+            this.btnSplitBill.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
+            this.btnSplitBill.Name = "btnSplitBill";
+            this.btnSplitBill.Size = new System.Drawing.Size(136, 31);
+            this.btnSplitBill.TabIndex = 163;
+            this.btnSplitBill.Text = "Tách phiếu thu";
+            this.btnSplitBill.Click += new System.EventHandler(this.btnSplitBill_Click);
+            // 
+            // btnPrintPaymentTotal
+            // 
+            this.btnPrintPaymentTotal.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPrintPaymentTotal.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintPaymentTotal.Appearance.Options.UseFont = true;
+            this.btnPrintPaymentTotal.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPaymentTotal.Image")));
+            this.btnPrintPaymentTotal.Location = new System.Drawing.Point(123, 14);
+            this.btnPrintPaymentTotal.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
+            this.btnPrintPaymentTotal.Name = "btnPrintPaymentTotal";
+            this.btnPrintPaymentTotal.Size = new System.Drawing.Size(157, 31);
+            this.btnPrintPaymentTotal.TabIndex = 165;
+            this.btnPrintPaymentTotal.Text = "In báo thanh toán";
+            this.btnPrintPaymentTotal.Click += new System.EventHandler(this.btnPrintPaymentTotal_Click);
             // 
             // frmTsk_Payment_Step2
             // 

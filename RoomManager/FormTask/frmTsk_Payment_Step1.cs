@@ -26,7 +26,7 @@ namespace RoomManager
         private int CustomerType;
         private DateTime CheckInPlan;
         private DateTime CheckOutPlan;
-
+        private List<int> ListSelectedIDBookingRoom = new List<int>();
         //Hiennv
         public frmTsk_Payment_Step1(frmMain afrmMain, int CustomerType)
         {
@@ -54,6 +54,16 @@ namespace RoomManager
             InitializeComponent();
             this.afrmMain = afrmMain;
 
+        }
+        public frmTsk_Payment_Step1(List<int> ListIDBookingRoom)
+        {
+            this.ListSelectedIDBookingRoom = ListIDBookingRoom;
+
+            InitializeComponent();
+        }
+        public frmTsk_Payment_Step1()
+        {
+            InitializeComponent();
         }
         //Hiennv
         // Ngoc da sua lai ten ham 26/12
@@ -165,7 +175,17 @@ namespace RoomManager
 
         private void frmTsk_Payment_Step1_Load(object sender, EventArgs e)
         {
-            LoadData();
+            if (this.ListSelectedIDBookingRoom.Count > 0) // Goi tu form chi tiet, trong truong hop noi dung gap sua doi bi xung dot ve time
+            {
+                //ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+                //dgvOwePay.DataSource = aReceptionTaskBO.GetListBookingRByStatus(From, To, CustomerType, StatusPay).Where(r => r.IDBookingR == this.IDBookingR).ToList();
+                //dgvOwePay.RefreshDataSource();
+                LoadData();
+            }
+            else
+            {
+                LoadData();
+            }
         }
         public void LoadData()
         {
@@ -201,6 +221,11 @@ namespace RoomManager
             {
                 MessageBox.Show("frmTsk_Payment_Step1.frmTsk_Check_StatusPay_Load \n" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lueCustomerType_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
 
        
