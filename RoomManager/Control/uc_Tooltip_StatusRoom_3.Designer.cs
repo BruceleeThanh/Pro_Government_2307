@@ -66,6 +66,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblStatus_3 = new DevExpress.XtraEditors.LabelControl();
+            this.btnMergerRoom = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.lueRooms = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pan_Status_3)).BeginInit();
             this.pan_Status_3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -76,10 +79,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pan_Status_3
             // 
+            this.pan_Status_3.Controls.Add(this.lueRooms);
+            this.pan_Status_3.Controls.Add(this.labelControl9);
+            this.pan_Status_3.Controls.Add(this.btnMergerRoom);
             this.pan_Status_3.Controls.Add(this.btnCheckInHalls);
             this.pan_Status_3.Controls.Add(this.simpleButton1);
             this.pan_Status_3.Controls.Add(this.btnLockRoom);
@@ -102,7 +109,7 @@
             this.pan_Status_3.Controls.Add(this.lblStatus_3);
             this.pan_Status_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pan_Status_3.Location = new System.Drawing.Point(0, 0);
-            this.pan_Status_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pan_Status_3.Margin = new System.Windows.Forms.Padding(4);
             this.pan_Status_3.Name = "pan_Status_3";
             this.pan_Status_3.Size = new System.Drawing.Size(523, 606);
             this.pan_Status_3.TabIndex = 0;
@@ -112,7 +119,7 @@
             // 
             this.btnCheckInHalls.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckInHalls.Image")));
             this.btnCheckInHalls.Location = new System.Drawing.Point(165, 506);
-            this.btnCheckInHalls.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckInHalls.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckInHalls.Name = "btnCheckInHalls";
             this.btnCheckInHalls.Size = new System.Drawing.Size(167, 28);
             this.btnCheckInHalls.TabIndex = 32;
@@ -123,7 +130,7 @@
             // 
             this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(165, 470);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(167, 28);
             this.simpleButton1.TabIndex = 32;
@@ -134,7 +141,7 @@
             // 
             this.btnLockRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnLockRoom.Image")));
             this.btnLockRoom.Location = new System.Drawing.Point(11, 470);
-            this.btnLockRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLockRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnLockRoom.Name = "btnLockRoom";
             this.btnLockRoom.Size = new System.Drawing.Size(133, 28);
             this.btnLockRoom.TabIndex = 31;
@@ -144,7 +151,7 @@
             // lblBookingMoney
             // 
             this.lblBookingMoney.Location = new System.Drawing.Point(151, 138);
-            this.lblBookingMoney.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblBookingMoney.Margin = new System.Windows.Forms.Padding(4);
             this.lblBookingMoney.Name = "lblBookingMoney";
             this.lblBookingMoney.Size = new System.Drawing.Size(57, 16);
             this.lblBookingMoney.TabIndex = 22;
@@ -162,7 +169,7 @@
             this.groupControl2.Controls.Add(this.labelControl12);
             this.groupControl2.Controls.Add(this.lblCustomerType_3);
             this.groupControl2.Location = new System.Drawing.Point(5, 160);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(509, 139);
             this.groupControl2.TabIndex = 29;
@@ -172,7 +179,7 @@
             // 
             this.lblIDBookingR_3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDBookingR_3.Location = new System.Drawing.Point(95, 41);
-            this.lblIDBookingR_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblIDBookingR_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblIDBookingR_3.Name = "lblIDBookingR_3";
             this.lblIDBookingR_3.Size = new System.Drawing.Size(32, 16);
             this.lblIDBookingR_3.TabIndex = 21;
@@ -181,7 +188,7 @@
             // lblBookingRoomName_3
             // 
             this.lblBookingRoomName_3.Location = new System.Drawing.Point(160, 75);
-            this.lblBookingRoomName_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblBookingRoomName_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblBookingRoomName_3.Name = "lblBookingRoomName_3";
             this.lblBookingRoomName_3.Size = new System.Drawing.Size(25, 16);
             this.lblBookingRoomName_3.TabIndex = 20;
@@ -192,7 +199,7 @@
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl8.Location = new System.Drawing.Point(15, 75);
-            this.labelControl8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(56, 16);
             this.labelControl8.TabIndex = 5;
@@ -202,7 +209,7 @@
             // 
             this.lblIDBookingRoom_3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDBookingRoom_3.Location = new System.Drawing.Point(95, 75);
-            this.lblIDBookingRoom_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblIDBookingRoom_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblIDBookingRoom_3.Name = "lblIDBookingRoom_3";
             this.lblIDBookingRoom_3.Size = new System.Drawing.Size(32, 16);
             this.lblIDBookingRoom_3.TabIndex = 6;
@@ -213,7 +220,7 @@
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl10.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl10.Location = new System.Drawing.Point(15, 41);
-            this.labelControl10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(29, 16);
             this.labelControl10.TabIndex = 7;
@@ -222,7 +229,7 @@
             // lblBookingR_3
             // 
             this.lblBookingR_3.Location = new System.Drawing.Point(160, 41);
-            this.lblBookingR_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblBookingR_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblBookingR_3.Name = "lblBookingR_3";
             this.lblBookingR_3.Size = new System.Drawing.Size(86, 17);
             this.lblBookingR_3.TabIndex = 8;
@@ -233,7 +240,7 @@
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl12.Location = new System.Drawing.Point(15, 103);
-            this.labelControl12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(78, 17);
             this.labelControl12.TabIndex = 9;
@@ -242,7 +249,7 @@
             // lblCustomerType_3
             // 
             this.lblCustomerType_3.Location = new System.Drawing.Point(133, 106);
-            this.lblCustomerType_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblCustomerType_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblCustomerType_3.Name = "lblCustomerType_3";
             this.lblCustomerType_3.Size = new System.Drawing.Size(61, 17);
             this.lblCustomerType_3.TabIndex = 10;
@@ -252,7 +259,7 @@
             // 
             this.btnDetailRooms.Image = ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Image")));
             this.btnDetailRooms.Location = new System.Drawing.Point(348, 506);
-            this.btnDetailRooms.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDetailRooms.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetailRooms.Name = "btnDetailRooms";
             this.btnDetailRooms.Size = new System.Drawing.Size(167, 28);
             this.btnDetailRooms.TabIndex = 26;
@@ -263,7 +270,7 @@
             // 
             this.btnPaymen_3.Image = ((System.Drawing.Image)(resources.GetObject("btnPaymen_3.Image")));
             this.btnPaymen_3.Location = new System.Drawing.Point(348, 542);
-            this.btnPaymen_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPaymen_3.Margin = new System.Windows.Forms.Padding(4);
             this.btnPaymen_3.Name = "btnPaymen_3";
             this.btnPaymen_3.Size = new System.Drawing.Size(167, 28);
             this.btnPaymen_3.TabIndex = 26;
@@ -274,7 +281,7 @@
             // 
             this.btnUseService_3.Image = ((System.Drawing.Image)(resources.GetObject("btnUseService_3.Image")));
             this.btnUseService_3.Location = new System.Drawing.Point(348, 470);
-            this.btnUseService_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUseService_3.Margin = new System.Windows.Forms.Padding(4);
             this.btnUseService_3.Name = "btnUseService_3";
             this.btnUseService_3.Size = new System.Drawing.Size(167, 28);
             this.btnUseService_3.TabIndex = 25;
@@ -285,7 +292,7 @@
             // 
             this.btnCheckOut_3.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckOut_3.Image")));
             this.btnCheckOut_3.Location = new System.Drawing.Point(11, 506);
-            this.btnCheckOut_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheckOut_3.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckOut_3.Name = "btnCheckOut_3";
             this.btnCheckOut_3.Size = new System.Drawing.Size(133, 28);
             this.btnCheckOut_3.TabIndex = 24;
@@ -296,7 +303,7 @@
             // 
             this.pictureEdit8.EditValue = ((object)(resources.GetObject("pictureEdit8.EditValue")));
             this.pictureEdit8.Location = new System.Drawing.Point(15, 133);
-            this.pictureEdit8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureEdit8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit8.Name = "pictureEdit8";
             this.pictureEdit8.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit8.Properties.Appearance.Options.UseBackColor = true;
@@ -309,7 +316,7 @@
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl7.Location = new System.Drawing.Point(40, 135);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(67, 17);
             this.labelControl7.TabIndex = 22;
@@ -327,7 +334,7 @@
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.lblTel_3);
             this.groupControl1.Location = new System.Drawing.Point(5, 306);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(509, 139);
             this.groupControl1.TabIndex = 21;
@@ -338,7 +345,7 @@
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl3.Location = new System.Drawing.Point(15, 37);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(74, 17);
             this.labelControl3.TabIndex = 5;
@@ -347,7 +354,7 @@
             // lblCustomer_3
             // 
             this.lblCustomer_3.Location = new System.Drawing.Point(121, 39);
-            this.lblCustomer_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblCustomer_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblCustomer_3.Name = "lblCustomer_3";
             this.lblCustomer_3.Size = new System.Drawing.Size(86, 17);
             this.lblCustomer_3.TabIndex = 6;
@@ -358,7 +365,7 @@
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl5.Location = new System.Drawing.Point(15, 69);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(40, 16);
             this.labelControl5.TabIndex = 7;
@@ -367,7 +374,7 @@
             // lblCustomerGroup_3
             // 
             this.lblCustomerGroup_3.Location = new System.Drawing.Point(121, 71);
-            this.lblCustomerGroup_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblCustomerGroup_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblCustomerGroup_3.Name = "lblCustomerGroup_3";
             this.lblCustomerGroup_3.Size = new System.Drawing.Size(86, 17);
             this.lblCustomerGroup_3.TabIndex = 8;
@@ -378,7 +385,7 @@
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl6.Location = new System.Drawing.Point(15, 103);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(64, 16);
             this.labelControl6.TabIndex = 9;
@@ -387,7 +394,7 @@
             // lblCompany_3
             // 
             this.lblCompany_3.Location = new System.Drawing.Point(124, 106);
-            this.lblCompany_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblCompany_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblCompany_3.Name = "lblCompany_3";
             this.lblCompany_3.Size = new System.Drawing.Size(61, 17);
             this.lblCompany_3.TabIndex = 10;
@@ -398,7 +405,7 @@
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl4.Location = new System.Drawing.Point(369, 37);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(23, 16);
             this.labelControl4.TabIndex = 11;
@@ -407,7 +414,7 @@
             // lblTel_3
             // 
             this.lblTel_3.Location = new System.Drawing.Point(408, 39);
-            this.lblTel_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTel_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblTel_3.Name = "lblTel_3";
             this.lblTel_3.Size = new System.Drawing.Size(71, 16);
             this.lblTel_3.TabIndex = 12;
@@ -417,7 +424,7 @@
             // 
             this.pictureEdit3.EditValue = ((object)(resources.GetObject("pictureEdit3.EditValue")));
             this.pictureEdit3.Location = new System.Drawing.Point(265, 97);
-            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureEdit3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit3.Name = "pictureEdit3";
             this.pictureEdit3.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit3.Properties.Appearance.Options.UseBackColor = true;
@@ -429,7 +436,7 @@
             // 
             this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
             this.pictureEdit2.Location = new System.Drawing.Point(15, 97);
-            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureEdit2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit2.Properties.Appearance.Options.UseBackColor = true;
@@ -441,7 +448,7 @@
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
             this.pictureEdit1.Location = new System.Drawing.Point(31, 34);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
@@ -452,7 +459,7 @@
             // lblTo_3
             // 
             this.lblTo_3.Location = new System.Drawing.Point(348, 100);
-            this.lblTo_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblTo_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblTo_3.Name = "lblTo_3";
             this.lblTo_3.Size = new System.Drawing.Size(66, 16);
             this.lblTo_3.TabIndex = 4;
@@ -461,7 +468,7 @@
             // lblFrom_3
             // 
             this.lblFrom_3.Location = new System.Drawing.Point(80, 100);
-            this.lblFrom_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblFrom_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblFrom_3.Name = "lblFrom_3";
             this.lblFrom_3.Size = new System.Drawing.Size(66, 16);
             this.lblFrom_3.TabIndex = 3;
@@ -472,7 +479,7 @@
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl2.Location = new System.Drawing.Point(291, 97);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(33, 17);
             this.labelControl2.TabIndex = 2;
@@ -483,7 +490,7 @@
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.labelControl1.Location = new System.Drawing.Point(40, 97);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(24, 17);
             this.labelControl1.TabIndex = 1;
@@ -494,18 +501,50 @@
             this.lblStatus_3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus_3.Appearance.ForeColor = System.Drawing.Color.DimGray;
             this.lblStatus_3.Location = new System.Drawing.Point(84, 42);
-            this.lblStatus_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblStatus_3.Margin = new System.Windows.Forms.Padding(4);
             this.lblStatus_3.Name = "lblStatus_3";
             this.lblStatus_3.Size = new System.Drawing.Size(174, 24);
             this.lblStatus_3.TabIndex = 0;
             this.lblStatus_3.Text = "Trạng thái phòng";
+            // 
+            // btnMergerRoom
+            // 
+            this.btnMergerRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnMergerRoom.Image")));
+            this.btnMergerRoom.Location = new System.Drawing.Point(237, 542);
+            this.btnMergerRoom.Name = "btnMergerRoom";
+            this.btnMergerRoom.Size = new System.Drawing.Size(95, 28);
+            this.btnMergerRoom.TabIndex = 33;
+            this.btnMergerRoom.Text = "Gộp phòng";
+            this.btnMergerRoom.Click += new System.EventHandler(this.btnMergerRoom_Click);
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(18, 549);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(126, 17);
+            this.labelControl9.TabIndex = 35;
+            this.labelControl9.Text = "Gộp sang đặt phòng";
+            // 
+            // lueRooms
+            // 
+            this.lueRooms.Location = new System.Drawing.Point(165, 546);
+            this.lueRooms.Name = "lueRooms";
+            this.lueRooms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueRooms.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Rooms_Sku", "Sku"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CustomerGroups_Name", 50, "CustomerGroups Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BookingRs_ID", "IDBookingRs")});
+            this.lueRooms.Size = new System.Drawing.Size(66, 22);
+            this.lueRooms.TabIndex = 36;
+            this.lueRooms.EditValueChanged += new System.EventHandler(this.lueRooms_EditValueChanged);
             // 
             // uc_Tooltip_StatusRoom_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pan_Status_3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "uc_Tooltip_StatusRoom_3";
             this.Size = new System.Drawing.Size(523, 606);
             ((System.ComponentModel.ISupportInitialize)(this.pan_Status_3)).EndInit();
@@ -521,6 +560,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -564,5 +604,8 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnCheckInHalls;
         private DevExpress.XtraEditors.SimpleButton btnDetailRooms;
+        private DevExpress.XtraEditors.SimpleButton btnMergerRoom;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
+        private DevExpress.XtraEditors.LookUpEdit lueRooms;
     }
 }

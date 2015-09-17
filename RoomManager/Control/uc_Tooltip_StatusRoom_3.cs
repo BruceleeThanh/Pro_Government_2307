@@ -80,7 +80,36 @@ namespace RoomManager
 
           
             pan_Status_3.Dock = DockStyle.Fill;
+            //------------------------
+            List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> Datasource = new List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups>();
+            Datasource = this.GetAvaiableRoom();
+            lueRooms.Properties.DataSource = Datasource;
+            lueRooms.Properties.ValueMember = "BookingRs_ID";
+            lueRooms.Properties.DisplayMember = "Rooms_Sku";
+            if (Datasource.Count >= 0)
+            {
+                lueRooms.Properties.NullText = Datasource[0].Rooms_Sku;
+                lueRooms.SelectedText = Datasource[0].Rooms_Sku;
+                lueRooms.EditValue = Datasource[0].BookingRs_ID;
 
+         
+                
+            }
+        
+
+
+        }
+
+        private List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> GetAvaiableRoom()
+        {
+            ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+            BookingRsBO aBookingRsBO = new BookingRsBO();
+
+            List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> aListRoomsInUse = aReceptionTaskBO.GetListRoomInUse();
+
+            aListRoomsInUse = aListRoomsInUse.Where(p => p.BookingRs_ID != this.Datasource.BookingRs_ID).ToList();
+   
+            return aListRoomsInUse; // Nối và loại trừ trùng lặp
         }
 
         public void ShowDialog()
@@ -221,6 +250,35 @@ namespace RoomManager
         }
 
         private void pan_Status_3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnMergerRoom_Click(object sender, EventArgs e)
+        {
+
+           DialogResult Check = MessageBox.Show("Bạn có chắc muốn gộp với hóa đơn phòng " + lueRooms.SelectedText + " ?", "Warning", MessageBoxButtons.OKCancel);
+           if (Check == DialogResult.OK)
+           {
+               BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+               BookingRooms aItem = aBookingRoomsBO.Select_ByID(this.Datasource.BookingRooms_ID);
+               aItem.IDBookingR = int.Parse(lueRooms.EditValue.ToString());
+               int ret = aBookingRoomsBO.Update(aItem);
+               if (ret > 0)
+               {
+                   MessageBox.Show("Gộp phòng thành công, dữ liệu sẽ reload lại, xin đợi trong 5s");
+                   this.afrmMain.ReloadData();
+                   this.Dispose();
+               }
+               else
+               {
+                   MessageBox.Show("Gộp phòng có lỗi");
+               }
+
+           }
+        }
+
+        private void lueRooms_EditValueChanged(object sender, EventArgs e)
         {
 
         }

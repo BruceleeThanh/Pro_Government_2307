@@ -16,13 +16,22 @@ using System.Globalization;
 namespace RoomManager {
     public partial class frmRpt_PersonalPayment : DevExpress.XtraReports.UI.XtraReport {
         public frmRpt_PersonalPayment (List<RptPaymentStyle1_ForPrint> aListData, string CompanyName, string Address, string NameCustomerGroup, string InvoiceNumber
-            , DateTime FirstDate, DateTime LastDate, decimal? BookingHMoney, decimal? BookingRMoney, int IDBookingR) {
+            , DateTime FirstDate, DateTime LastDate, decimal? BookingHMoney, decimal? BookingRMoney, int IDBookingR, int Div) {
             InitializeComponent();
             //Load dữ liệu
             BookingRoomsBO aBookingRoomBO = new BookingRoomsBO();
             CustomersBO aCustomersBO = new CustomersBO();
             RoomsBO aRoomsBO = new RoomsBO();
-
+            if (string.IsNullOrEmpty(Div.ToString()) || Div==1)
+            {
+                Div = 1;
+                lblTitle.Text = "PHIẾU BÁO THANH TOÁN";
+            }
+            else
+            {
+                lblTitle.Text = "PHIẾU BÁO THANH TOÁN (CHIA " + Div + ")" ;
+            }
+            
             string RoomSku = "";
             string CustomerNames = "";
             List<BookingRooms> aListBookingRooms = aBookingRoomBO.Select_ByIDBookingRs(IDBookingR);
@@ -94,21 +103,21 @@ namespace RoomManager {
             lblCustomerName.Text = CustomerNames;
             lblRoomSku.Text = RoomSku;
 
-            lblMealChargeVN.Text = MealCharge.ToString("0,0") + " VNĐ";
-            lblDrinkChargeVN.Text = DrinkCharge.ToString("0,0") + " VNĐ";
-            lblRoomChargeVN.Text = RoomCharge.ToString("0,0") + " VNĐ"; ;
-            lblRoomServiceVN.Text = RoomServiceCharge.ToString("0,0") + " VNĐ";
-            lblTelVN.Text = Tel.ToString("0,0") + " VNĐ";
-            lblLaundryVN.Text = Laundry.ToString("0,0") + " VNĐ";
-            lblOtherServiceVN.Text = OtherServiceCharge.ToString("0,0") + " VNĐ";
+            lblMealChargeVN.Text = (MealCharge/Div).ToString("0,0") + " VNĐ";
+            lblDrinkChargeVN.Text = (DrinkCharge/Div).ToString("0,0") + " VNĐ";
+            lblRoomChargeVN.Text = (RoomCharge/Div).ToString("0,0") + " VNĐ"; ;
+            lblRoomServiceVN.Text = (RoomServiceCharge/Div).ToString("0,0") + " VNĐ";
+            lblTelVN.Text = (Tel/Div).ToString("0,0") + " VNĐ";
+            lblLaundryVN.Text = (Laundry/Div).ToString("0,0") + " VNĐ";
+            lblOtherServiceVN.Text = (OtherServiceCharge/Div).ToString("0,0") + " VNĐ";
 
-            lblServiceChargeVN.Text = TotalServiceMoney.ToString("0,0") + " VNĐ";
-            lblTotalBTVN.Text = TotalMoneyBeforeTax.ToString("0,0") + " VNĐ";
-            lblTaxVN.Text = (TotalMoneyBeforeTax * 10 / 100).ToString("0,0") + " VNĐ";
-            lblMoneyAfterTaxVN.Text = (TotalMoneyBeforeTax * 110 / 100).ToString("0,0") + " VNĐ";
-            lblBookingMoneyVN.Text = Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0)).ToString("0,0") + " VNĐ";
-            lblTotalMoneyVN.Text = ((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))).ToString("0,0") + " VNĐ";
-            string TotalMoney_String = UppercaseFirst(StringUtility.ConvertDecimalToString((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))));
+            lblServiceChargeVN.Text = (TotalServiceMoney/Div).ToString("0,0") + " VNĐ";
+            lblTotalBTVN.Text = (TotalMoneyBeforeTax/Div).ToString("0,0") + " VNĐ";
+            lblTaxVN.Text = ((TotalMoneyBeforeTax * 10 / 100)/Div).ToString("0,0") + " VNĐ";
+            lblMoneyAfterTaxVN.Text = ((TotalMoneyBeforeTax * 110 / 100)/Div).ToString("0,0") + " VNĐ";
+            lblBookingMoneyVN.Text = (Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))/Div).ToString("0,0") + " VNĐ";
+            lblTotalMoneyVN.Text = (((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0)))/Div).ToString("0,0") + " VNĐ";
+            string TotalMoney_String = UppercaseFirst(StringUtility.ConvertDecimalToString(((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))) / Div));
             lblConvertToString.Text = TotalMoney_String;
 
             int day = DateTime.Now.Day;

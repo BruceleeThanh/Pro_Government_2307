@@ -118,6 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnMergerRoom.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAcdEVYdFRpdGxlAERyaWxsO0Rvd247Q2hhcnQ7QXJyb3fGOahOAAAC5klEQVQ4T32Ta0jTURjG
+        /82ZM6U+FASFJH2IqKQLgRVCZn1rWjTQMjUS0hDzMi2bf2/TlXmhFLU0W3lbiZCJqc0t3eZtXuYlkZBy
+        VpuW2oWYZs1LT+esKabVgYfznve8/M7D+3IYAMyCmD/XKnJcrmUl5LgcEHKz0k5Uog2LLe3SsGVdZotK
+        OzWiYm2YH5vPo1CSY9gyHcPKulYAVkVL2/vUryZgmJrBxNxPDJvMaNZ/xgP1EKIeaF8EpT/ZQiFvpueZ
+        y0UdKwCcsII2jJrnIWvRQ5BQhaPhDxGa24iesUlUdBhxKb914KhfzJpX3+aYsALtSgfnbtR4uJy+Y95+
+        6lbSDi+J884TKc57ffPEh0NkZrVhEll1gwjMrBcSF5zgnJbFnnBowto0G7IvaKGJ3D1nchIDMhQo072H
+        X5qCPM1wAzJVFgAnTtaPK9JuQ/Q9XX3k3fZw/wTZOgoTSrvpPYXYOh86v9XtQjEe66fgI1HMkJwjzdMC
+        m5iSF+g2mKAc+IjC58OIuqcbD85SeVudcPlsbb9nvBwCsRJFgybQ2DNODj5b95oCuEJpL+SDX1He9xnK
+        1ya0vTEho/IlfFMVYvqKq3/2gbNp6ln5yA/Ihn+gzvgd7sGls5sORrpTgG3oXR0q+78gWzNm0e3WD6gl
+        QLakD/yYyrOkhucaeJ8NkvagcGgaPtcV2OgqkpC8HQWsvpjXiUc9n5CuHEGqwgjxMwNS5EaU68YhSG74
+        sPt4xAZS57AvsKyJrTdg/f5YLddh81prfxi7M+ktKNSOI6H2HeJrDYivMSCOKLPxPUQlvfCIqKBjW+3k
+        FrLNxV+m5zmd3EX747jjimUKPO/UJuQ2jyG2+i1ET3/rKonjat4ho06PY8IqDQVYm0pt0zEvLnvBNQ1u
+        qkYhIbZTnhkX92QSpxHLRyKrJ+hDS//N0g9odzJZhRNUYhW8iDyTfouf2IjjSUQJDXTu/wRQO/SXOfxH
+        9uSO8zcHvwC5++lhJpuwSgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnCheckInHalls.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACF0RVh0VGl0

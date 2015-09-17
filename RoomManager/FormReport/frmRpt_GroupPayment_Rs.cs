@@ -20,17 +20,56 @@ namespace RoomManager
         decimal TotalServiceMoney, TotalMoneyBeforeTax = 0;
         List<RptPaymentStyle1_ForPrint> aListData = null;
         public frmRpt_GroupPayment_Rs(List<RptPaymentStyle1_ForPrint> aListData,string CompanyName, string Address, string NameCustomerGroup,string InvoiceNumber
-            , DateTime FirstDate, DateTime LastDate, decimal? BookingHMoney, decimal? BookingRMoney, int IDBookingR)
+            , DateTime FirstDate, DateTime LastDate, decimal? BookingHMoney, decimal? BookingRMoney, int IDBookingR, int Div)
         {
             InitializeComponent();
 
             this.aListData = aListData;
-            foreach (RptPaymentStyle1_ForPrint aItem in aListData)
+
+            if (string.IsNullOrEmpty(Div.ToString()) || Div == 1)
             {
-                TotalServiceMoney = TotalServiceMoney + aItem.TotalServiceMoney;
-                TotalMoneyBeforeTax = TotalMoneyBeforeTax + aItem.TotalMoney;
-                aItem.Room_Fee = aItem.Room_Fee + aItem.Hall_Fee;  // Gộp 2 cột
+                Div = 1;
+                lblTitle.Text = "PHIẾU BÁO THANH TOÁN";
             }
+            else
+            {
+                lblTitle.Text = "PHIẾU BÁO THANH TOÁN (CHIA " + Div + ")";
+            }
+
+
+            for (int i = 0; i < this.aListData.Count; i++)
+            {
+                this.aListData[i].DrinkMoney = this.aListData[i].DrinkMoney / Div;
+                this.aListData[i].Hall_Fee = this.aListData[i].Hall_Fee / Div;
+                this.aListData[i].MealMoney = this.aListData[i].MealMoney / Div;
+                this.aListData[i].OtherMoney = this.aListData[i].OtherMoney / Div;
+                this.aListData[i].Room_Fee = this.aListData[i].Room_Fee / Div;
+                this.aListData[i].RoomServiceMoney = this.aListData[i].RoomServiceMoney / Div;
+
+                this.aListData[i].ServiceGroup10_Fee = this.aListData[i].ServiceGroup10_Fee / Div;
+                this.aListData[i].ServiceGroup11_Fee = this.aListData[i].ServiceGroup11_Fee / Div;
+                this.aListData[i].ServiceGroup12_Fee = this.aListData[i].ServiceGroup12_Fee / Div;
+                this.aListData[i].ServiceGroup13_Fee = this.aListData[i].ServiceGroup13_Fee / Div;
+                this.aListData[i].ServiceGroup14_Fee = this.aListData[i].ServiceGroup14_Fee / Div;
+                this.aListData[i].ServiceGroup15_Fee = this.aListData[i].ServiceGroup15_Fee / Div;
+                this.aListData[i].ServiceGroup2_Fee = this.aListData[i].ServiceGroup2_Fee / Div;
+                this.aListData[i].ServiceGroup3_Fee = this.aListData[i].ServiceGroup3_Fee / Div;
+
+                this.aListData[i].ServiceGroup4_Fee = this.aListData[i].ServiceGroup4_Fee / Div;
+                this.aListData[i].ServiceGroup5_Fee = this.aListData[i].ServiceGroup5_Fee / Div;
+                this.aListData[i].ServiceGroup6_Fee = this.aListData[i].ServiceGroup6_Fee / Div;
+                this.aListData[i].ServiceGroup7_Fee = this.aListData[i].ServiceGroup7_Fee / Div;
+                this.aListData[i].ServiceGroup8_Fee = this.aListData[i].ServiceGroup8_Fee / Div;
+                this.aListData[i].ServiceGroup9_Fee = this.aListData[i].ServiceGroup9_Fee / Div;
+                this.aListData[i].TotalMoney = this.aListData[i].TotalMoney / Div;
+                this.aListData[i].TotalServiceMoney = this.aListData[i].TotalServiceMoney / Div;
+
+                //----------------------------------------------------------------------
+                TotalServiceMoney = TotalServiceMoney + this.aListData[i].TotalServiceMoney;
+                TotalMoneyBeforeTax = TotalMoneyBeforeTax + this.aListData[i].TotalMoney;
+                this.aListData[i].Room_Fee = this.aListData[i].Room_Fee + this.aListData[i].Hall_Fee;
+            }
+
             //Truyền dữ liệu cho Detail
             lblCompanyName.Text = CompanyName;
             lblAddress.Text = Address;
@@ -68,9 +107,9 @@ namespace RoomManager
             colMoneyBeforeTax.Text = TotalMoneyBeforeTax.ToString("0,0");
             colMoneyTax.Text = (TotalMoneyBeforeTax * 10 / 100).ToString("0,0");
             colMoneyAfterTax.Text = (TotalMoneyBeforeTax * 110 / 100).ToString("0,0");
-            colBookingMoney.Text = Convert.ToDecimal(BookingHMoney + BookingHMoney).ToString("0,0");
-            colTotalMoneyPay.Text = ((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney + BookingHMoney)).ToString("0,0");
-            string TotalMoney_String = UppercaseFirst(StringUtility.ConvertDecimalToString((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney + BookingHMoney)));
+            colBookingMoney.Text = Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0)).ToString("0,0");
+            colTotalMoneyPay.Text = ((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))).ToString("0,0");
+            string TotalMoney_String = UppercaseFirst(StringUtility.ConvertDecimalToString((TotalMoneyBeforeTax * 110 / 100) - Convert.ToDecimal(BookingHMoney.GetValueOrDefault(0) + BookingRMoney.GetValueOrDefault(0))));
             lblConvertToString.Text = TotalMoney_String;
 
             int day = DateTime.Now.Day;

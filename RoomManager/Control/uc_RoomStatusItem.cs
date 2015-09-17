@@ -30,6 +30,13 @@ namespace RoomManager
         private string Mess_Tra_phong = "Trả phòng lúc ";
         private string Mess_Mai_tra_phong = "Mai trả phòng lúc ";
 
+
+
+        public RoomExtStatusEN From = new RoomExtStatusEN();
+        public RoomExtStatusEN To = new RoomExtStatusEN();
+
+
+
         public uc_RoomStatusItem()
         {
             InitializeComponent();
@@ -39,10 +46,11 @@ namespace RoomManager
         {
             InitializeComponent();
             this.Datasource = Datasource;
-
-            string a =Datasource.Sku;
-            string b = Datasource.Code;
-           
+            
+            //string a =Datasource.Sku;
+            //string b = Datasource.Code;
+            this.From = Datasource;
+            
             if (Datasource.RoomStatus == 0)
             {
                 this.rectangleShape_BackColor = System.Drawing.Color.Gainsboro;
@@ -68,11 +76,7 @@ namespace RoomManager
                 this.lblSku_BackColor = System.Drawing.Color.Gold;
                 this.lblSku_ForeColor = System.Drawing.Color.Goldenrod;
 
-                //this.rectangleShape_BackColor = System.Drawing.Color.LightPink;
-                //this.rectangleShape_BorderColor = System.Drawing.Color.Salmon;
 
-                //this.lblSku_BackColor = System.Drawing.Color.LightPink;
-                //this.lblSku_ForeColor = System.Drawing.Color.Salmon;
             }
             if (Datasource.RoomStatus == 3) // Dang o
             {
@@ -330,6 +334,8 @@ namespace RoomManager
         {
             this.OpenPopup();
         }
+
+
 
     }
 }

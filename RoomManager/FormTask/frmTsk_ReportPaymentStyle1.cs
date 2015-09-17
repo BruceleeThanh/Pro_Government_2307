@@ -111,16 +111,22 @@ namespace RoomManager
                     this.grvReportPaymentStyle1.Columns.Add(aCol);
               
             }
-       
+
             this.dgvReportPaymentStyle1.MainView = this.grvReportPaymentStyle1;
             this.dgvReportPaymentStyle1.DataSource = this.aListRet;
-          
+            this.cbbDiv.Properties.Items.Add(1);
+            this.cbbDiv.Properties.Items.Add(2);
+            this.cbbDiv.Properties.Items.Add(3);
+            this.cbbDiv.Properties.Items.Add(4);
+            this.cbbDiv.Properties.Items.Add(5);
+            this.cbbDiv.SelectedIndex= 0;
 
         }
 
         private void btnPrintGroupPayment_Click(object sender, EventArgs e)
         {
-            frmRpt_GroupPayment_Rs afrmRpt_GroupPayment_Rs = new frmRpt_GroupPayment_Rs(this.aListRet, CompanyName, Address, NameCustomerGroup, InvoiceNumber, FirstDate, LastDate, BookingHMoney, BookingRMoney, this.IDBookingR);
+            int Div = int.Parse(cbbDiv.EditValue.ToString());
+            frmRpt_GroupPayment_Rs afrmRpt_GroupPayment_Rs = new frmRpt_GroupPayment_Rs(this.aListRet, CompanyName, Address, NameCustomerGroup, InvoiceNumber, FirstDate, LastDate, BookingHMoney, BookingRMoney, this.IDBookingR, Div);
             ReportPrintTool tool = new ReportPrintTool(afrmRpt_GroupPayment_Rs);
             tool.ShowPreview();
 
@@ -128,7 +134,8 @@ namespace RoomManager
 
         private void btnPrintPersonalPayment_Click(object sender, EventArgs e)
         {
-            frmRpt_PersonalPayment afrmRpt_PersonalPayment = new frmRpt_PersonalPayment(this.aListRet, CompanyName, Address, NameCustomerGroup, InvoiceNumber, FirstDate, LastDate, BookingHMoney, BookingRMoney, IDBookingR);
+            int Div = int.Parse(cbbDiv.EditValue.ToString());
+            frmRpt_PersonalPayment afrmRpt_PersonalPayment = new frmRpt_PersonalPayment(this.aListRet, CompanyName, Address, NameCustomerGroup, InvoiceNumber, FirstDate, LastDate, BookingHMoney, BookingRMoney, IDBookingR, Div);
             ReportPrintTool tool = new ReportPrintTool(afrmRpt_PersonalPayment);
             tool.ShowPreview();
         }

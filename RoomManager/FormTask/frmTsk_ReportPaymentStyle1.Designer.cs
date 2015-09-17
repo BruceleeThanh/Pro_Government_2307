@@ -41,11 +41,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrintGroupPayment = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrintPersonalPayment = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cbbDiv = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReportPaymentStyle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grvReportPaymentStyle1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDiv.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -150,12 +153,16 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.05264F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.94737F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 193F));
-            this.tableLayoutPanel2.Controls.Add(this.btnPrintGroupPayment, 2, 0);
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.25725F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.74275F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 214F));
             this.tableLayoutPanel2.Controls.Add(this.btnPrintPersonalPayment, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnPrintGroupPayment, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cbbDiv, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 475);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -169,10 +176,10 @@
             this.btnPrintGroupPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnPrintGroupPayment.Appearance.Options.UseFont = true;
             this.btnPrintGroupPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintGroupPayment.Image")));
-            this.btnPrintGroupPayment.Location = new System.Drawing.Point(959, 6);
+            this.btnPrintGroupPayment.Location = new System.Drawing.Point(955, 6);
             this.btnPrintGroupPayment.Margin = new System.Windows.Forms.Padding(3, 4, 23, 4);
             this.btnPrintGroupPayment.Name = "btnPrintGroupPayment";
-            this.btnPrintGroupPayment.Size = new System.Drawing.Size(162, 33);
+            this.btnPrintGroupPayment.Size = new System.Drawing.Size(166, 33);
             this.btnPrintGroupPayment.TabIndex = 2;
             this.btnPrintGroupPayment.Text = "In  phiếu thu tiệc";
             this.btnPrintGroupPayment.Click += new System.EventHandler(this.btnPrintGroupPayment_Click);
@@ -183,13 +190,32 @@
             this.btnPrintPersonalPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnPrintPersonalPayment.Appearance.Options.UseFont = true;
             this.btnPrintPersonalPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPersonalPayment.Image")));
-            this.btnPrintPersonalPayment.Location = new System.Drawing.Point(738, 6);
+            this.btnPrintPersonalPayment.Location = new System.Drawing.Point(630, 6);
             this.btnPrintPersonalPayment.Margin = new System.Windows.Forms.Padding(3, 4, 23, 4);
             this.btnPrintPersonalPayment.Name = "btnPrintPersonalPayment";
             this.btnPrintPersonalPayment.Size = new System.Drawing.Size(189, 33);
             this.btnPrintPersonalPayment.TabIndex = 3;
             this.btnPrintPersonalPayment.Text = "In phiếu thu khách lẻ";
             this.btnPrintPersonalPayment.Click += new System.EventHandler(this.btnPrintPersonalPayment_Click);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(845, 15);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(23, 16);
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "chia";
+            // 
+            // cbbDiv
+            // 
+            this.cbbDiv.Location = new System.Drawing.Point(879, 13);
+            this.cbbDiv.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
+            this.cbbDiv.Name = "cbbDiv";
+            this.cbbDiv.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbbDiv.Size = new System.Drawing.Size(47, 22);
+            this.cbbDiv.TabIndex = 5;
             // 
             // frmTsk_ReportPaymentStyle1
             // 
@@ -206,6 +232,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.grvReportPaymentStyle1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNote)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbbDiv.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +252,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit txtNote;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbbDiv;
 
     }
 }

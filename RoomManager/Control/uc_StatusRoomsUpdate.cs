@@ -27,7 +27,17 @@ namespace RoomManager {
         public DateTime CheckTime { set; get; }
         public int StatusButtonPopup = 0;
         public List<FlowLayoutPanel> aListFlowLayoutPanel = new List<FlowLayoutPanel>();
+        //------------------------------------------------------------------------------
+        //  Gộp phòng
+        //------------------------------------------------------------------------------
+        public int From_IDBookingR = 0;
+        public int From_IDBookingRoom = 0;
+        public int From_IDCustomer = 0;
 
+        public int To_IDBookingR = 0;
+        public int To_IDBookingRoom = 0;
+        public int To_IDCustomer = 0;
+        //------------------------------------------------------------------------------
 
         public void DataBind () {
             uc_RoomStatusItem[] aListRoom;
@@ -75,6 +85,7 @@ namespace RoomManager {
 
 
             aNavBarGroup.ControlContainer = aNavBarGroupControlContainer;
+            aNavBarGroup.GroupClientHeight = 300;
 
             aNavBarGroupControlContainer.Controls.Add(aListFlowLayoutPanel[LevelSku - 1]);
 
@@ -144,8 +155,7 @@ namespace RoomManager {
 
         private void navBarControl1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this.Height.ToString());
-            this.Height = this.Height + 100;
+           
         }
     }
 

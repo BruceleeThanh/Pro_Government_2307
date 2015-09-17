@@ -58,10 +58,12 @@
             this.rectangleShape1.Location = new System.Drawing.Point(5, 8);
             this.rectangleShape1.Name = "rectangleShape1";
             this.rectangleShape1.Size = new System.Drawing.Size(87, 137);
-            this.rectangleShape1.Tag = "xxxxxxxxxxxxxxxxxxx";
+            this.rectangleShape1.Tag = "";
             this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
+
             this.rectangleShape1.MouseEnter += new System.EventHandler(this.rectangleShape1_MouseEnter);
             this.rectangleShape1.MouseLeave += new System.EventHandler(this.rectangleShape1_MouseLeave);
+
             // 
             // lblSku
             // 
@@ -72,7 +74,7 @@
             this.lblSku.Appearance.ForeColor = System.Drawing.SystemColors.GrayText;
             this.lblSku.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.lblSku.Location = new System.Drawing.Point(29, 13);
-            this.lblSku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblSku.Margin = new System.Windows.Forms.Padding(4);
             this.lblSku.Name = "lblSku";
             this.lblSku.Size = new System.Drawing.Size(42, 30);
             this.lblSku.TabIndex = 4;
@@ -98,7 +100,7 @@
             this.lbWarning.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbWarning.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
             this.lbWarning.Location = new System.Drawing.Point(11, 51);
-            this.lbWarning.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbWarning.Margin = new System.Windows.Forms.Padding(4);
             this.lbWarning.Name = "lbWarning";
             this.lbWarning.Size = new System.Drawing.Size(89, 88);
             this.lbWarning.TabIndex = 5;
