@@ -11,7 +11,7 @@ namespace DataAccess
 {
     using System;
     
-    public partial class sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result
+    public partial class sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result
     {
         public int ID { get; set; }
         public Nullable<int> Bed1 { get; set; }

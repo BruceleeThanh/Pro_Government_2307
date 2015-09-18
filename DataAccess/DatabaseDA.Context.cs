@@ -299,6 +299,32 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime", iDRoomParameter, nowParameter);
         }
     
+        public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string listCodeRoom, Nullable<System.DateTime> now)
+        {
+            var listCodeRoomParameter = listCodeRoom != null ?
+                new ObjectParameter("ListCodeRoom", listCodeRoom) :
+                new ObjectParameter("ListCodeRoom", typeof(string));
+    
+            var nowParameter = now.HasValue ?
+                new ObjectParameter("Now", now) :
+                new ObjectParameter("Now", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime", listCodeRoomParameter, nowParameter);
+        }
+    
+        public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime(string listIDRoom, Nullable<System.DateTime> now)
+        {
+            var listIDRoomParameter = listIDRoom != null ?
+                new ObjectParameter("ListIDRoom", listIDRoom) :
+                new ObjectParameter("ListIDRoom", typeof(string));
+    
+            var nowParameter = now.HasValue ?
+                new ObjectParameter("Now", now) :
+                new ObjectParameter("Now", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime", listIDRoomParameter, nowParameter);
+        }
+    
         public virtual ObjectResult<sp_Rooms_GetAvailable_ByTime_ByLang_Result> sp_Rooms_GetAvailable_ByTime_ByLang(Nullable<System.DateTime> start, Nullable<System.DateTime> end, Nullable<int> iDLang)
         {
             var startParameter = start.HasValue ?

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using System.Dynamic;
 using System.Text;
 using System.Threading.Tasks;
@@ -126,92 +127,90 @@ namespace BussinessLogic
                 throw new Exception(string.Format("RoomBO.Select_ByListCodeRoom :" + ex.Message));
             }
         }
-        public RoomExtStatusEN GetStatusRoom(string CodeRoom, DateTime now)
-        {
-            RoomExtStatusEN aRoomExtStatusEN = new RoomExtStatusEN();
-            Rooms aRooms = this.Select_ByCodeRoom(CodeRoom,1);
-            if (aRooms != null)
-            {
-                aRoomExtStatusEN = this.GetStatusRoom(aRooms.ID, now);
-                return aRoomExtStatusEN;
-            }
-            else
-            {
-                return null;
-            }
 
-        }
-        public RoomExtStatusEN GetStatusRoom(int IDRoom, DateTime now)
+
+        public List<RoomExtStatusEN> GetStatusRoom(List<string> ListCodeRoom, DateTime now)
         {
-            List<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result> aList = this.aDatabaseDA.sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime(IDRoom, now).ToList();
+            List<RoomExtStatusEN> ret = new List<RoomExtStatusEN>();
+            List<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> aList = this.aDatabaseDA.sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string.Join(",", ListCodeRoom), now).ToList();
 
             RoomExtStatusEN aRoomExtStatusEN = new RoomExtStatusEN();
 
-            if (aList.Count > 0)
+            for (int i = 0; i < aList.Count; i++)
             {
-                for (int i = 0; i < aList.Count; i++)
+                aRoomExtStatusEN = new RoomExtStatusEN();
+                aRoomExtStatusEN.ID = aList[i].ID;
+                aRoomExtStatusEN.Bed1 = aList[i].Bed1;
+                aRoomExtStatusEN.Bed2 = aList[i].Bed2;
+                aRoomExtStatusEN.CostRef = aList[i].CostRef;
+                aRoomExtStatusEN.Code = aList[i].Code;
+                aRoomExtStatusEN.Sku = aList[i].Sku;
+                aRoomExtStatusEN.Note = aList[i].Note;
+                aRoomExtStatusEN.Type = aList[i].Type;
+                aRoomExtStatusEN.LevelSku = aList[i].LevelSku;
+                aRoomExtStatusEN.OrderSku = aList[i].OrderSku;
+                aRoomExtStatusEN.BookingRooms_ID = aList[i].BookingRooms_ID;
+                aRoomExtStatusEN.Disable = aList[i].Disable;
+
+                aRoomExtStatusEN.BookingRs_BookingMoney = aList[i].BookingRs_BookingMoney;
+                aRoomExtStatusEN.BookingRs_CustomerType = aList[i].BookingRs_CustomerType;
+                aRoomExtStatusEN.BookingRs_ID = aList[i].BookingRs_ID;
+                aRoomExtStatusEN.BookingRs_Subject = aList[i].BookingRs_Subject;
+                aRoomExtStatusEN.CheckInActual = aList[i].CheckInActual;
+                aRoomExtStatusEN.CheckInPlan = aList[i].CheckInPlan;
+                aRoomExtStatusEN.CheckOutActual = aList[i].CheckOutActual;
+                aRoomExtStatusEN.CheckOutPlan = aList[i].CheckOutPlan;
+                aRoomExtStatusEN.Color = aList[i].Color;
+                aRoomExtStatusEN.Companies_Name = aList[i].Companies_Name;
+                aRoomExtStatusEN.CostRef = aList[i].CostRef;
+                aRoomExtStatusEN.CustomerGroups_Name = aList[i].CustomerGroups_Name;
+                aRoomExtStatusEN.Customers_Address = aList[i].Customers_Address;
+                aRoomExtStatusEN.Customers_Name = aList[i].Customers_Name;
+                aRoomExtStatusEN.Customers_Nationality = aList[i].Customers_Nationality;
+                aRoomExtStatusEN.Customers_Tel = aList[i].Customers_Tel;
+                aRoomExtStatusEN.Companies_ID = aList[i].Companies_ID;
+                aRoomExtStatusEN.CustomerGroups_ID = aList[i].CustomerGroups_ID;
+                aRoomExtStatusEN.Customers_ID = aList[i].Customers_ID;
+
+                if (aList[i].BookingRooms_Status == 1)
                 {
-                    aRoomExtStatusEN = new RoomExtStatusEN();
-                    aRoomExtStatusEN.ID = aList[i].ID;
-                    aRoomExtStatusEN.Bed1 = aList[i].Bed1;
-                    aRoomExtStatusEN.Bed2 = aList[i].Bed2;
-                    aRoomExtStatusEN.CostRef = aList[i].CostRef;
-                    aRoomExtStatusEN.Code = aList[i].Code;
-                    aRoomExtStatusEN.Sku = aList[i].Sku;
-                    aRoomExtStatusEN.Note = aList[i].Note;
-                    aRoomExtStatusEN.Type = aList[i].Type;
-                    aRoomExtStatusEN.LevelSku = aList[i].LevelSku;
-                    aRoomExtStatusEN.OrderSku = aList[i].OrderSku;
-                    aRoomExtStatusEN.BookingRooms_ID = aList[i].BookingRooms_ID;
-
-                    aRoomExtStatusEN.BookingRs_BookingMoney = aList[i].BookingRs_BookingMoney;
-                    aRoomExtStatusEN.BookingRs_CustomerType = aList[i].BookingRs_CustomerType;
-                    aRoomExtStatusEN.BookingRs_ID = aList[i].BookingRs_ID;
-                    aRoomExtStatusEN.BookingRs_Subject = aList[i].BookingRs_Subject;
-                    aRoomExtStatusEN.CheckInActual = aList[i].CheckInActual;
-                    aRoomExtStatusEN.CheckInPlan = aList[i].CheckInPlan;
-                    aRoomExtStatusEN.CheckOutActual = aList[i].CheckOutActual;
-                    aRoomExtStatusEN.CheckOutPlan = aList[i].CheckOutPlan;
-                    aRoomExtStatusEN.Color = aList[i].Color;
-                    aRoomExtStatusEN.Companies_Name = aList[i].Companies_Name;
-                    aRoomExtStatusEN.CostRef = aList[i].CostRef;
-                    aRoomExtStatusEN.CustomerGroups_Name = aList[i].CustomerGroups_Name;
-                    aRoomExtStatusEN.Customers_Address = aList[i].Customers_Address;
-                    aRoomExtStatusEN.Customers_Name = aList[i].Customers_Name;
-                    aRoomExtStatusEN.Customers_Nationality = aList[i].Customers_Nationality;
-                    aRoomExtStatusEN.Customers_Tel = aList[i].Customers_Tel;
-                    aRoomExtStatusEN.Companies_ID = aList[i].Companies_ID;
-                    aRoomExtStatusEN.CustomerGroups_ID = aList[i].CustomerGroups_ID;
-                    aRoomExtStatusEN.Customers_ID = aList[i].Customers_ID;
-                    
-                    if (aList[i].BookingRooms_Status == 1)
-                    {
-                        aRoomExtStatusEN.RoomStatus = 1;
-                    }
-                    else if (aList[i].BookingRooms_Status == 2)
-                    {
-                        aRoomExtStatusEN.RoomStatus = 2;
-                    }
-                    else if (aList[i].BookingRooms_Status == 3)
-                    {
-                        aRoomExtStatusEN.RoomStatus = 3;
-                    }
-                    else if (aList[i].BookingRooms_Status == 5)
-                    {
-                        aRoomExtStatusEN.RoomStatus = 5;
-                    }
-                    else if ((aList[i].BookingRooms_Status == 6) || (aList[i].BookingRooms_Status == 7) || (aList[i].BookingRooms_Status == 8))
-                    {
-                        aRoomExtStatusEN.RoomStatus = 0;
-                    }
-
+                    aRoomExtStatusEN.RoomStatus = 1;
                 }
-                return aRoomExtStatusEN;
+                else if (aList[i].BookingRooms_Status == 2)
+                {
+                    aRoomExtStatusEN.RoomStatus = 2;
+                }
+                else if (aList[i].BookingRooms_Status == 3)
+                {
+                    aRoomExtStatusEN.RoomStatus = 3;
+                }
+                else if (aList[i].BookingRooms_Status == 5)
+                {
+                    aRoomExtStatusEN.RoomStatus = 5;
+                }
+                else if ((aList[i].BookingRooms_Status == 6) || (aList[i].BookingRooms_Status == 7) || (aList[i].BookingRooms_Status == 8))
+                {
+                    aRoomExtStatusEN.RoomStatus = 0;
+                }
+                ret.Add(aRoomExtStatusEN);
+
             }
-            else
+            ret = ret.Distinct().ToList();
+
+            List<string> aListCodeTempt = aList.Select(p=>p.Code).ToList();
+                    
+            //-----------------------------------
+            // Xoa nhung phong da dang su dung vao thoi diem do, con lai nhung phong trong
+            for (int iii = 0 ; iii<aListCodeTempt.Count ; iii++)
+            {
+                ListCodeRoom.Remove(aListCodeTempt[iii]);
+            }
+            //-----------------------------------
+            // Lay thong tin phong trong
+            for (int iii = 0; iii < ListCodeRoom.Count; iii++)
             {
                 RoomsBO aRoomsBO = new RoomsBO();
-                Rooms aRooms = aRoomsBO.Select_ByID(IDRoom);
+                Rooms aRooms = aRoomsBO.Select_ByCodeRoom(ListCodeRoom[iii],1);
                 if (aRooms != null)
                 {
                     aRoomExtStatusEN = new RoomExtStatusEN();
@@ -223,32 +222,31 @@ namespace BussinessLogic
                     aRoomExtStatusEN.Type = aRooms.Type;
                     aRoomExtStatusEN.LevelSku = aRooms.LevelSku;
                     aRoomExtStatusEN.OrderSku = aRooms.OrderSku;
+                    aRoomExtStatusEN.Disable = aRooms.Disable;
+                    ret.Add(aRoomExtStatusEN);
                 }
                 else
                 {
                     throw new Exception("Phòng cần check trạng thái không tồn tại");
-
+                          
                 }
-                return aRoomExtStatusEN;
-
             }
+
+            return ret.Distinct().ToList();
         }
 
         public List<RoomExtStatusEN> GetListStatusRoom(DateTime now)
         {
             RoomsBO aRoomsBO = new RoomsBO();
-            List<Rooms> aList = aRoomsBO.Select_All().Where(p => p.IDLang == 1 && p.Disable == false).ToList();
+            List<Rooms> aList = aRoomsBO.Select_All().Where(p => p.IDLang == 1).ToList();
             List<RoomExtStatusEN> ret = new List<RoomExtStatusEN>();
-            for (int i = 0; i < aList.Count; i++)
+            try
             {
-                try
-                {
-                    ret.Add(this.GetStatusRoom(aList[i].ID, now));
-                }
-                catch (Exception e)
-                {
-                    throw new Exception("Có lỗi khi lấy trạng thái phòng " + aList[i].ID.ToString() + "-" + aList[i].Sku + "|" + e.Message.ToString());
-                }
+                ret = this.GetStatusRoom(aList.Select(p => p.Code).ToList(), now);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Có lỗi khi lấy trạng thái phòng : " + e.Message.ToString());
             }
             return ret;
         }

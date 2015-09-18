@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using DataAccess;
 namespace Entity
 {
-   public class RoomExtStatusEN : sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result
+   public class RoomExtStatusEN : sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result
     {
        public int RoomStatus;
 
@@ -16,7 +16,7 @@ namespace Entity
          
            this.RoomStatus = 0;
            this.Code = "0";
-
+           this.Disable = false;
            this.ID = 0;
            this.Bed1 = 0;
            this.Bed2 = 0;
