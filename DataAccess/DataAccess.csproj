@@ -252,6 +252,12 @@
     <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_RoomsExt_CalculationEfficiency_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>

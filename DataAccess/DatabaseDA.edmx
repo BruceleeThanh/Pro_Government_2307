@@ -2672,8 +2672,9 @@
           <Parameter Name="Now" Type="datetime" Mode="In" />
         </Function>
         <Function Name="sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ListCodeRoom" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ListCodeRoom" Type="varchar(max)" Mode="In" />
           <Parameter Name="Now" Type="datetime" Mode="In" />
+          <Parameter Name="IDLang" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ListIDRoom" Type="nvarchar(max)" Mode="In" />
@@ -2928,6 +2929,7 @@
           <FunctionImport Name="sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime" ReturnType="Collection(Model.sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result)">
             <Parameter Name="ListCodeRoom" Mode="In" Type="String" />
             <Parameter Name="Now" Mode="In" Type="DateTime" />
+            <Parameter Name="IDLang" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime" ReturnType="Collection(Model.sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result)">
             <Parameter Name="ListIDRoom" Mode="In" Type="String" />
@@ -5084,6 +5086,7 @@
           <Property Type="Int32" Name="LevelSku" Nullable="true" />
           <Property Type="Int32" Name="OrderSku" Nullable="true" />
           <Property Type="Boolean" Name="Disable" Nullable="true" />
+          <Property Type="Int32" Name="IDLang" Nullable="true" />
           <Property Type="Int32" Name="BookingRooms_ID" Nullable="false" />
           <Property Type="DateTime" Name="CheckInActual" Nullable="false" Precision="23" />
           <Property Type="String" Name="Note" Nullable="true" MaxLength="255" />
@@ -7330,6 +7333,7 @@
                 <ScalarProperty Name="LevelSku" ColumnName="LevelSku" />
                 <ScalarProperty Name="OrderSku" ColumnName="OrderSku" />
                 <ScalarProperty Name="Disable" ColumnName="Disable" />
+                <ScalarProperty Name="IDLang" ColumnName="IDLang" />
                 <ScalarProperty Name="BookingRooms_ID" ColumnName="BookingRooms_ID" />
                 <ScalarProperty Name="CheckInActual" ColumnName="CheckInActual" />
                 <ScalarProperty Name="Note" ColumnName="Note" />

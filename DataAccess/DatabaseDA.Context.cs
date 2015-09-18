@@ -299,7 +299,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime", iDRoomParameter, nowParameter);
         }
     
-        public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string listCodeRoom, Nullable<System.DateTime> now)
+        public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string listCodeRoom, Nullable<System.DateTime> now, Nullable<int> iDLang)
         {
             var listCodeRoomParameter = listCodeRoom != null ?
                 new ObjectParameter("ListCodeRoom", listCodeRoom) :
@@ -309,7 +309,11 @@ namespace DataAccess
                 new ObjectParameter("Now", now) :
                 new ObjectParameter("Now", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime", listCodeRoomParameter, nowParameter);
+            var iDLangParameter = iDLang.HasValue ?
+                new ObjectParameter("IDLang", iDLang) :
+                new ObjectParameter("IDLang", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result>("sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime", listCodeRoomParameter, nowParameter, iDLangParameter);
         }
     
         public virtual ObjectResult<sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime_Result> sp_RoomExt_GetCurrentStatusRooms_ByListIDRoom_ByTime(string listIDRoom, Nullable<System.DateTime> now)

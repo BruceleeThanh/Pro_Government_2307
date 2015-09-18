@@ -23,6 +23,7 @@ namespace DataAccess
         public Nullable<int> LevelSku { get; set; }
         public Nullable<int> OrderSku { get; set; }
         public Nullable<bool> Disable { get; set; }
+        public Nullable<int> IDLang { get; set; }
         public int BookingRooms_ID { get; set; }
         public System.DateTime CheckInActual { get; set; }
         public string Note { get; set; }
