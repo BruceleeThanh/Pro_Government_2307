@@ -189,64 +189,76 @@ namespace RoomManager
 
             BookingHalls_ServicesBO aBookingHalls_ServicesBO = new BookingHalls_ServicesBO();
             BookingHalls_Services aBookingHalls_Services;
-            for (int i = 0; i < aListSelected.Count; i++)
+
+            List<string> aList = aListSelected.Where(p => p.Tag == null || p.Tag == string.Empty).Select(p => p.Tag).ToList();
+            if (aList.Count > 0)
             {
-                aBookingHalls_Services = aBookingHalls_ServicesBO.Select_ByID(aListSelected[i].ID);
-                if (aBookingHalls_Services != null)
-                {
-                    aBookingHalls_Services.Cost = aListSelected[i].Cost;
-                    aBookingHalls_Services.Quantity = aListSelected[i].Quantity;
-                    aBookingHalls_Services.PercentTax = aListSelected[i].PercentTax;
-                    aBookingHalls_Services.Date = aListSelected[i].Date;
-
-                    aBookingHalls_ServicesBO.Update(aBookingHalls_Services);
-                }
-                else
-                {
-                    aBookingHalls_Services = new BookingHalls_Services();
-                    aBookingHalls_Services.Info = "";
-                    aBookingHalls_Services.Type = 1;
-                    aBookingHalls_Services.Status = 1;
-                    aBookingHalls_Services.Disable = false;
-                    aBookingHalls_Services.IDBookingHall = this.IDBookingHall;
-                    aBookingHalls_Services.IDService = aListSelected[i].IDService;
-                    aBookingHalls_Services.Cost = aListSelected[i].Cost;
-                    aBookingHalls_Services.Date = dtpDate.DateTime;
-                    aBookingHalls_Services.CostRef_Services = aListSelected[i].CostRef_Services;
-                    aBookingHalls_Services.PercentTax = 10;// de mac dinh
-                    aBookingHalls_Services.Quantity = aListSelected[i].Quantity;
-                    aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
-                }
+                MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
             }
-            foreach (BookingHalls_Services items in this.aListRemove)
+            else
             {
-                aBookingHalls_ServicesBO.Delete(items.ID);
-            }
 
-            if (this.afrmTsk_Payment_Step2 != null)
-            {
-                if (aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList().Count > 0)
+                for (int i = 0; i < aListSelected.Count; i++)
                 {
-                    aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed.Clear();
-                    aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed = aReceptionTaskBO.GetListServiceUsedInHall_ByIDBookingHall(IDBookingHall);
+                    aBookingHalls_Services = aBookingHalls_ServicesBO.Select_ByID(aListSelected[i].ID);
+                    if (aBookingHalls_Services != null)
+                    {
+                        aBookingHalls_Services.Cost = aListSelected[i].Cost;
+                        aBookingHalls_Services.Quantity = aListSelected[i].Quantity;
+                        aBookingHalls_Services.PercentTax = aListSelected[i].PercentTax;
+                        aBookingHalls_Services.Date = aListSelected[i].Date;
+                        aBookingHalls_Services.Tag = aListSelected[i].Tag;
+                        aBookingHalls_ServicesBO.Update(aBookingHalls_Services);
+                    }
+                    else
+                    {
+                        aBookingHalls_Services = new BookingHalls_Services();
+                        aBookingHalls_Services.Info = "";
+                        aBookingHalls_Services.Type = 1;
+                        aBookingHalls_Services.Status = 1;
+                        aBookingHalls_Services.Disable = false;
+                        aBookingHalls_Services.IDBookingHall = this.IDBookingHall;
+                        aBookingHalls_Services.IDService = aListSelected[i].IDService;
+                        aBookingHalls_Services.Cost = aListSelected[i].Cost;
+                        aBookingHalls_Services.Date = dtpDate.DateTime;
+                        aBookingHalls_Services.CostRef_Services = aListSelected[i].CostRef_Services;
+                        aBookingHalls_Services.PercentTax = 10;// de mac dinh
+                        aBookingHalls_Services.Quantity = aListSelected[i].Quantity;
+                        aBookingHalls_Services.Tag = aListSelected[i].Tag;
 
+                        aBookingHalls_ServicesBO.Insert(aBookingHalls_Services);
+                    }
                 }
-                this.afrmTsk_Payment_Step2.Reload();
-            }
-            if (this.afrmTsk_UpdBookingHall != null)
-            {
-                if (aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList().Count > 0)
+                foreach (BookingHalls_Services items in this.aListRemove)
                 {
-                    aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed.Clear();
-                    aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed = aReceptionTaskBO.GetListServiceUsedInHall_ByIDBookingHall(IDBookingHall);
-
+                    aBookingHalls_ServicesBO.Delete(items.ID);
                 }
-                this.afrmTsk_UpdBookingHall.Reload(this.aNewPaymentH);
+
+                if (this.afrmTsk_Payment_Step2 != null)
+                {
+                    if (aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList().Count > 0)
+                    {
+                        aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed.Clear();
+                        aNewPayment.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed = aReceptionTaskBO.GetListServiceUsedInHall_ByIDBookingHall(IDBookingHall);
+
+                    }
+                    this.afrmTsk_Payment_Step2.Reload();
+                }
+                if (this.afrmTsk_UpdBookingHall != null)
+                {
+                    if (aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList().Count > 0)
+                    {
+                        aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed.Clear();
+                        aNewPaymentH.aListBookingHallUsed.Where(a => a.ID == IDBookingHall).ToList()[0].aListServiceUsed = aReceptionTaskBO.GetListServiceUsedInHall_ByIDBookingHall(IDBookingHall);
+
+                    }
+                    this.afrmTsk_UpdBookingHall.Reload(this.aNewPaymentH);
+                }
+
+                MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
             }
-
-            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
         }
 
         public void LoadServiceInBookingHall(int IDBookingHall)
@@ -275,11 +287,28 @@ namespace RoomManager
                     aBookingHall_ServiceEN.Date = aListTemp[i].Date;
                     aBookingHall_ServiceEN.PercentTax = aListTemp[i].PercentTax;
                     aBookingHall_ServiceEN.Quantity = aListTemp[i].Quantity;
-                    
+
+                    aBookingHall_ServiceEN.Tag = aListTemp[i].Tag;
+
                     aListSelected.Add(aBookingHall_ServiceEN);
                 }
                 dgvServiceInHall.DataSource = aListSelected;
                 dgvServiceInHall.RefreshDataSource();
+
+
+                CustomersBO aCustomersBO = new CustomersBO();
+                BookingRs_BookingHsBO aBookingRs_BookingHsBO = new BookingRs_BookingHsBO();
+                List<Customers> aListCustomerRoom = new List<Customers>();
+                List<Customers> aListCustomerHall = aCustomersBO.SelectListCustomer_ByIDBookingH(this.IDBookingHall);
+                if (this.aNewPayment != null) 
+                {
+                    if (this.aNewPayment.IDBookingR > 0)
+                    {
+                       aListCustomerRoom = aCustomersBO.SelectListCustomer_ByIDBookingR(this.aNewPayment.IDBookingR.GetValueOrDefault(0));
+                    }
+                }
+                aListCustomerHall.AddRange(aListCustomerRoom);
+                lueUserInHall.DataSource = aListCustomerHall;
             }
             catch (Exception ex)
             {

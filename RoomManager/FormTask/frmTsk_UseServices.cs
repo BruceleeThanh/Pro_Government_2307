@@ -210,6 +210,7 @@ namespace RoomManager
 
                 lueUserInRoom.DataSource = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.IDBookingRoom);
                 
+                
             }
             catch (Exception ex)
             {
@@ -287,7 +288,7 @@ namespace RoomManager
             BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
             BookingRooms_Services aBookingRooms_Services;
 
-            List<string> aList = aListSelected.Where(p => p.Tag != null).Where(p => p.Tag != string.Empty).Select(p => p.Tag).ToList();
+            List<string> aList = aListSelected.Where(p => p.Tag == null || p.Tag == string.Empty).Select(p => p.Tag).ToList();
 
             if (aList.Count > 0)
             {

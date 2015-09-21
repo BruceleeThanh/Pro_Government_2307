@@ -247,7 +247,7 @@ namespace BussinessLogic
                 throw new Exception("CustomersBO.SelectListCustomer_ByListIDBookingRoom\n" + ex.ToString());
             }
         }
-
+ 
         public List<Customers> SelectListCustomer_ByIDBookingRoom(int IDBookingRoom)
         {
             try
@@ -283,7 +283,28 @@ namespace BussinessLogic
                 throw new Exception("CustomersBO.SelectListCustomer_ByIDBookingRoom\n" + ex.ToString());
             }
         }
-        
+        public List<Customers> SelectListCustomer_ByIDBookingH(int IDBookingH)
+        {
+            try
+            {
+
+                List<int> aList = aDatabaseDA.BookingHs.Where(p => p.ID == IDBookingH).Select(p => p.IDCustomerGroup).ToList();
+                if (aList.Count > 0)
+                {
+                    CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                    return this.SelectListCustomer_ByIDCustomerGroups(aList[0]).ToList();
+                }
+                else
+                {
+                    return new List<Customers>();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("CustomersBO.SelectListCustomer_ByIDBookingRoom\n" + ex.ToString());
+            }
+        }
 
         //Lingting - Tự động thêm khách hàng và đưa vào nhóm
         public int AutoInsertCustomer(string Name, int IDCustomerGroup, string Tel,DateTime FromDate)

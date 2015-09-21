@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIns_BookingHalls_Services));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -52,10 +52,11 @@
             this.txtCost = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.grcPercentTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnCancel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.grcDateUseService = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grcSumMoneyService = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgvHalls = new DevExpress.XtraGrid.GridControl();
             this.grvHalls = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -63,7 +64,8 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnAddService = new DevExpress.XtraEditors.SimpleButton();
             this.dtpDate = new DevExpress.XtraEditors.DateEdit();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grcTag = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueUserInHall = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
@@ -85,6 +87,7 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInHall)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -252,7 +255,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelect_ButtonClick);
@@ -281,7 +284,8 @@
             this.dgvServiceInHall.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnCancel,
             this.txtQuantity,
-            this.txtCost});
+            this.txtCost,
+            this.lueUserInHall});
             this.dgvServiceInHall.Size = new System.Drawing.Size(816, 513);
             this.dgvServiceInHall.TabIndex = 1;
             this.dgvServiceInHall.UseEmbeddedNavigator = true;
@@ -297,14 +301,14 @@
             this.grcCost,
             this.grcPercentTax,
             this.gridColumn2,
-            this.gridColumn5,
+            this.colDel,
             this.grcDateUseService,
+            this.grcTag,
             this.grcSumMoneyService,
             this.gridColumn3});
             this.grvServiceInHall.GridControl = this.dgvServiceInHall;
             this.grvServiceInHall.Name = "grvServiceInHall";
             this.grvServiceInHall.OptionsMenu.ShowGroupSummaryEditorItem = true;
-            this.grvServiceInHall.OptionsView.ColumnAutoWidth = false;
             this.grvServiceInHall.OptionsView.EnableAppearanceEvenRow = true;
             this.grvServiceInHall.OptionsView.EnableAppearanceOddRow = true;
             this.grvServiceInHall.OptionsView.ShowFooter = true;
@@ -322,14 +326,14 @@
             this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn4.Caption = "Tên dịch vụ";
+            this.gridColumn4.Caption = "Dịch vụ";
             this.gridColumn4.FieldName = "Service_Name";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 1;
-            this.gridColumn4.Width = 157;
+            this.gridColumn4.Width = 151;
             // 
             // grcQuantity
             // 
@@ -348,7 +352,7 @@
             this.grcQuantity.Name = "grcQuantity";
             this.grcQuantity.Visible = true;
             this.grcQuantity.VisibleIndex = 2;
-            this.grcQuantity.Width = 43;
+            this.grcQuantity.Width = 53;
             // 
             // txtQuantity
             // 
@@ -379,7 +383,7 @@
             this.grcCost.Name = "grcCost";
             this.grcCost.Visible = true;
             this.grcCost.VisibleIndex = 4;
-            this.grcCost.Width = 128;
+            this.grcCost.Width = 105;
             // 
             // txtCost
             // 
@@ -405,12 +409,12 @@
             this.grcPercentTax.Caption = "Thuế";
             this.grcPercentTax.DisplayFormat.FormatString = "n0";
             this.grcPercentTax.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.grcPercentTax.FieldName = "SumTax";
+            this.grcPercentTax.FieldName = "PercentTax";
             this.grcPercentTax.Name = "grcPercentTax";
             this.grcPercentTax.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SumTax", "{0:0,0}")});
             this.grcPercentTax.Visible = true;
-            this.grcPercentTax.VisibleIndex = 6;
+            this.grcPercentTax.VisibleIndex = 5;
             this.grcPercentTax.Width = 63;
             // 
             // gridColumn2
@@ -429,29 +433,30 @@
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 55;
+            this.gridColumn2.Width = 62;
             // 
-            // gridColumn5
+            // colDel
             // 
-            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn5.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn5.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.gridColumn5.ColumnEdit = this.btnCancel;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 8;
-            this.gridColumn5.Width = 53;
+            this.colDel.AppearanceCell.Options.UseTextOptions = true;
+            this.colDel.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDel.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDel.AppearanceHeader.Options.UseFont = true;
+            this.colDel.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDel.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDel.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
+            this.colDel.Caption = "Xóa";
+            this.colDel.ColumnEdit = this.btnCancel;
+            this.colDel.Name = "colDel";
+            this.colDel.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            this.colDel.Visible = true;
+            this.colDel.VisibleIndex = 8;
+            this.colDel.Width = 53;
             // 
             // btnCancel
             // 
             this.btnCancel.AutoHeight = false;
             this.btnCancel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCancel.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnCancel.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnCancel_ButtonClick);
@@ -481,6 +486,8 @@
             this.grcSumMoneyService.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grcSumMoneyService.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.grcSumMoneyService.AppearanceHeader.Options.UseFont = true;
+            this.grcSumMoneyService.AppearanceHeader.Options.UseTextOptions = true;
+            this.grcSumMoneyService.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.grcSumMoneyService.Caption = "Tổng tiền";
             this.grcSumMoneyService.DisplayFormat.FormatString = "{0:0,0}";
             this.grcSumMoneyService.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -490,8 +497,27 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Sum", "{0:0,0}")});
             this.grcSumMoneyService.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.grcSumMoneyService.Visible = true;
-            this.grcSumMoneyService.VisibleIndex = 7;
+            this.grcSumMoneyService.VisibleIndex = 6;
             this.grcSumMoneyService.Width = 151;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.gridColumn3.Caption = "Trước thuế";
+            this.gridColumn3.DisplayFormat.FormatString = "n0";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "SumBeforeTax";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SumBeforeTax", "{0:0,0}")});
+            this.gridColumn3.Width = 98;
             // 
             // groupControl1
             // 
@@ -603,26 +629,31 @@
             this.dtpDate.Size = new System.Drawing.Size(200, 22);
             this.dtpDate.TabIndex = 38;
             // 
-            // gridColumn3
+            // grcTag
             // 
-            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.gridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn3.Caption = "Trước thuế";
-            this.gridColumn3.DisplayFormat.FormatString = "n0";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn3.FieldName = "SumBeforeTax";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SumBeforeTax", "{0:0,0}")});
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 5;
-            this.gridColumn3.Width = 98;
+            this.grcTag.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.grcTag.AppearanceHeader.Options.UseFont = true;
+            this.grcTag.Caption = "Người dùng";
+            this.grcTag.ColumnEdit = this.lueUserInHall;
+            this.grcTag.FieldName = "Tag";
+            this.grcTag.Name = "grcTag";
+            this.grcTag.Visible = true;
+            this.grcTag.VisibleIndex = 7;
+            this.grcTag.Width = 130;
+            // 
+            // lueUserInHall
+            // 
+            this.lueUserInHall.AutoHeight = false;
+            this.lueUserInHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInHall.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
+            this.lueUserInHall.DisplayMember = "Name";
+            this.lueUserInHall.Name = "lueUserInHall";
+            this.lueUserInHall.NullText = "Chọn người dùng";
+            this.lueUserInHall.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInHall.ValueMember = "ID";
             // 
             // frmIns_BookingHalls_Services
             // 
@@ -660,6 +691,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtpDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInHall)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -677,7 +709,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn grcCost;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn colDel;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCancel;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl dgvHalls;
@@ -699,5 +731,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn grcPercentTax;
         private DevExpress.XtraGrid.Columns.GridColumn grcSumMoneyService;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn grcTag;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInHall;
     }
 }

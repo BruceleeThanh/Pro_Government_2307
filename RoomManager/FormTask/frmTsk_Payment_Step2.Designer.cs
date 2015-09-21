@@ -28,16 +28,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_Payment_Step2));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject81 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject82 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject83 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject84 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject85 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject86 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject87 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject88 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject89 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject90 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -71,6 +71,7 @@
             this.txtServiceCost = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTagR = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDeleteService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -282,6 +283,9 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnSplitBill = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrintPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
+            this.lueUserInBookingR = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.colTagH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueUserInBookingH = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -396,6 +400,8 @@
             this.tableLayoutPanel38.SuspendLayout();
             this.tableLayoutPanel39.SuspendLayout();
             this.tableLayoutPanel40.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -671,6 +677,9 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(939, 32);
             this.tableLayoutPanel5.TabIndex = 61;
             // 
@@ -711,7 +720,8 @@
             this.txtQuantity,
             this.txtPercentTaxService,
             this.txtServiceCost,
-            this.btnDeleteService});
+            this.btnDeleteService,
+            this.lueUserInBookingR});
             this.dgvServicesR.Size = new System.Drawing.Size(933, 157);
             this.dgvServicesR.TabIndex = 65;
             this.dgvServicesR.UseEmbeddedNavigator = true;
@@ -730,6 +740,7 @@
             this.colCost,
             this.colTotal,
             this.gridColumn7,
+            this.colTagR,
             this.gridColumn25});
             this.viewServicesR.GridControl = this.dgvServicesR;
             this.viewServicesR.Name = "viewServicesR";
@@ -766,7 +777,7 @@
             this.colDate.OptionsFilter.AutoFilterCondition = DevExpress.XtraGrid.Columns.AutoFilterCondition.Like;
             this.colDate.Visible = true;
             this.colDate.VisibleIndex = 0;
-            this.colDate.Width = 111;
+            this.colDate.Width = 110;
             // 
             // gridColumn2
             // 
@@ -785,7 +796,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 99;
+            this.gridColumn2.Width = 98;
             // 
             // colPercentTax
             // 
@@ -801,7 +812,7 @@
             this.colPercentTax.Name = "colPercentTax";
             this.colPercentTax.Visible = true;
             this.colPercentTax.VisibleIndex = 4;
-            this.colPercentTax.Width = 94;
+            this.colPercentTax.Width = 49;
             // 
             // txtPercentTaxService
             // 
@@ -823,13 +834,14 @@
             this.colQuantity.AppearanceHeader.Options.UseTextOptions = true;
             this.colQuantity.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colQuantity.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.colQuantity.Caption = "Số lượng";
+            this.colQuantity.Caption = "SL";
             this.colQuantity.ColumnEdit = this.txtQuantity;
             this.colQuantity.FieldName = "Quantity";
+            this.colQuantity.MinWidth = 40;
             this.colQuantity.Name = "colQuantity";
             this.colQuantity.Visible = true;
             this.colQuantity.VisibleIndex = 3;
-            this.colQuantity.Width = 85;
+            this.colQuantity.Width = 40;
             // 
             // txtQuantity
             // 
@@ -849,7 +861,7 @@
             this.colCost.AppearanceHeader.Options.UseFont = true;
             this.colCost.AppearanceHeader.Options.UseTextOptions = true;
             this.colCost.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colCost.Caption = "Đơn giá (VND)";
+            this.colCost.Caption = "Giá (VND)";
             this.colCost.ColumnEdit = this.txtServiceCost;
             this.colCost.DisplayFormat.FormatString = "{0:0,0}";
             this.colCost.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -857,7 +869,7 @@
             this.colCost.Name = "colCost";
             this.colCost.Visible = true;
             this.colCost.VisibleIndex = 2;
-            this.colCost.Width = 125;
+            this.colCost.Width = 124;
             // 
             // txtServiceCost
             // 
@@ -891,7 +903,7 @@
             this.colTotal.OptionsColumn.AllowFocus = false;
             this.colTotal.Visible = true;
             this.colTotal.VisibleIndex = 5;
-            this.colTotal.Width = 137;
+            this.colTotal.Width = 167;
             // 
             // gridColumn7
             // 
@@ -908,7 +920,21 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
-            this.gridColumn7.Width = 137;
+            this.gridColumn7.Width = 167;
+            // 
+            // colTagR
+            // 
+            this.colTagR.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colTagR.AppearanceHeader.Options.UseFont = true;
+            this.colTagR.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTagR.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colTagR.Caption = "Người trả";
+            this.colTagR.ColumnEdit = this.lueUserInBookingR;
+            this.colTagR.FieldName = "Tag";
+            this.colTagR.Name = "colTagR";
+            this.colTagR.Visible = true;
+            this.colTagR.VisibleIndex = 7;
+            this.colTagR.Width = 139;
             // 
             // gridColumn25
             // 
@@ -921,14 +947,14 @@
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn25.Visible = true;
-            this.gridColumn25.VisibleIndex = 7;
-            this.gridColumn25.Width = 55;
+            this.gridColumn25.VisibleIndex = 8;
+            this.gridColumn25.Width = 37;
             // 
             // btnDeleteService
             // 
             this.btnDeleteService.AutoHeight = false;
             this.btnDeleteService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject81, "", null, null, true)});
             this.btnDeleteService.Name = "btnDeleteService";
             this.btnDeleteService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteService_ButtonClick);
@@ -1118,7 +1144,7 @@
             // 
             this.btnEditCustomer.AutoHeight = false;
             this.btnEditCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject82, "", null, null, true)});
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditCustomer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditCustomer_ButtonClick);
@@ -1141,7 +1167,7 @@
             // 
             this.btnDeleteCus.AutoHeight = false;
             this.btnDeleteCus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject83, "", null, null, true)});
             this.btnDeleteCus.Name = "btnDeleteCus";
             this.btnDeleteCus.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteCus.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteCus_ButtonClick);
@@ -1150,7 +1176,7 @@
             // 
             this.btnSelectCustomer.AutoHeight = false;
             this.btnSelectCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject84, "", null, null, true)});
             this.btnSelectCustomer.Name = "btnSelectCustomer";
             this.btnSelectCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1830,7 +1856,7 @@
             // 
             this.btnDetailRooms.AutoHeight = false;
             this.btnDetailRooms.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject85, "", null, null, true)});
             this.btnDetailRooms.Name = "btnDetailRooms";
             this.btnDetailRooms.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetailRooms.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetailRooms_ButtonClick);
@@ -1872,7 +1898,7 @@
             // 
             this.btnDeleteRoom.AutoHeight = false;
             this.btnDeleteRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject86, "", null, null, true)});
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteRoom.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteRoom_ButtonClick);
@@ -2642,7 +2668,7 @@
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject87, "", null, null, true)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -2740,7 +2766,8 @@
             this.btnServicesQuantityForHalls,
             this.btnServicesPercentTaxForHalls,
             this.btnServicesCostForHalls,
-            this.btnDeleteServiceHall});
+            this.btnDeleteServiceHall,
+            this.lueUserInBookingH});
             this.dgvServicesH.Size = new System.Drawing.Size(935, 205);
             this.dgvServicesH.TabIndex = 139;
             this.dgvServicesH.UseEmbeddedNavigator = true;
@@ -2759,6 +2786,7 @@
             this.colServicesCostForHalls,
             this.gridColumn8,
             this.gridColumn23,
+            this.colTagH,
             this.gridColumn26,
             this.grcIDBookingService_H});
             this.viewServicesH.GridControl = this.dgvServicesH;
@@ -2819,13 +2847,13 @@
             this.ColServicesPercentTaxForHalls.AppearanceHeader.Options.UseFont = true;
             this.ColServicesPercentTaxForHalls.AppearanceHeader.Options.UseTextOptions = true;
             this.ColServicesPercentTaxForHalls.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ColServicesPercentTaxForHalls.Caption = "Thuế(%)";
+            this.ColServicesPercentTaxForHalls.Caption = "Thuế";
             this.ColServicesPercentTaxForHalls.ColumnEdit = this.btnServicesPercentTaxForHalls;
             this.ColServicesPercentTaxForHalls.FieldName = "Tax";
             this.ColServicesPercentTaxForHalls.Name = "ColServicesPercentTaxForHalls";
             this.ColServicesPercentTaxForHalls.Visible = true;
             this.ColServicesPercentTaxForHalls.VisibleIndex = 4;
-            this.ColServicesPercentTaxForHalls.Width = 106;
+            this.ColServicesPercentTaxForHalls.Width = 62;
             // 
             // btnServicesPercentTaxForHalls
             // 
@@ -2847,13 +2875,13 @@
             this.colServicesQuantityForHalls.AppearanceHeader.Options.UseTextOptions = true;
             this.colServicesQuantityForHalls.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colServicesQuantityForHalls.AppearanceHeader.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
-            this.colServicesQuantityForHalls.Caption = "Số lượng";
+            this.colServicesQuantityForHalls.Caption = "SL";
             this.colServicesQuantityForHalls.ColumnEdit = this.btnServicesQuantityForHalls;
             this.colServicesQuantityForHalls.FieldName = "Quantity";
             this.colServicesQuantityForHalls.Name = "colServicesQuantityForHalls";
             this.colServicesQuantityForHalls.Visible = true;
             this.colServicesQuantityForHalls.VisibleIndex = 2;
-            this.colServicesQuantityForHalls.Width = 96;
+            this.colServicesQuantityForHalls.Width = 41;
             // 
             // btnServicesQuantityForHalls
             // 
@@ -2877,7 +2905,7 @@
             this.colServicesCostForHalls.AppearanceHeader.Options.UseFont = true;
             this.colServicesCostForHalls.AppearanceHeader.Options.UseTextOptions = true;
             this.colServicesCostForHalls.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colServicesCostForHalls.Caption = "Đơn giá (VND)";
+            this.colServicesCostForHalls.Caption = "Giá (VND)";
             this.colServicesCostForHalls.ColumnEdit = this.btnServicesCostForHalls;
             this.colServicesCostForHalls.DisplayFormat.FormatString = "{0:0,0}";
             this.colServicesCostForHalls.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -2885,7 +2913,7 @@
             this.colServicesCostForHalls.Name = "colServicesCostForHalls";
             this.colServicesCostForHalls.Visible = true;
             this.colServicesCostForHalls.VisibleIndex = 3;
-            this.colServicesCostForHalls.Width = 141;
+            this.colServicesCostForHalls.Width = 128;
             // 
             // btnServicesCostForHalls
             // 
@@ -2917,7 +2945,7 @@
             this.gridColumn8.OptionsColumn.AllowFocus = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 5;
-            this.gridColumn8.Width = 109;
+            this.gridColumn8.Width = 167;
             // 
             // gridColumn23
             // 
@@ -2932,7 +2960,7 @@
             this.gridColumn23.OptionsColumn.AllowEdit = false;
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 6;
-            this.gridColumn23.Width = 72;
+            this.gridColumn23.Width = 167;
             // 
             // gridColumn26
             // 
@@ -2945,13 +2973,14 @@
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 7;
+            this.gridColumn26.VisibleIndex = 8;
+            this.gridColumn26.Width = 38;
             // 
             // btnDeleteServiceHall
             // 
             this.btnDeleteServiceHall.AutoHeight = false;
             this.btnDeleteServiceHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject88, "", null, null, true)});
             this.btnDeleteServiceHall.Name = "btnDeleteServiceHall";
             this.btnDeleteServiceHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteServiceHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteServiceHall_ButtonClick);
@@ -3492,7 +3521,7 @@
             // 
             this.btnEditBookingHall.AutoHeight = false;
             this.btnEditBookingHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject89, "", null, null, true)});
             this.btnEditBookingHall.Name = "btnEditBookingHall";
             this.btnEditBookingHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditBookingHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditBookingHall_ButtonClick);
@@ -3514,7 +3543,7 @@
             // 
             this.btnDeleteHall.AutoHeight = false;
             this.btnDeleteHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject90, "", null, null, true)});
             this.btnDeleteHall.Name = "btnDeleteHall";
             this.btnDeleteHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteHall_ButtonClick);
@@ -3904,6 +3933,48 @@
             this.btnPrintPaymentTotal.Text = "In báo thanh toán";
             this.btnPrintPaymentTotal.Click += new System.EventHandler(this.btnPrintPaymentTotal_Click);
             // 
+            // lueUserInBookingR
+            // 
+            this.lueUserInBookingR.AutoHeight = false;
+            this.lueUserInBookingR.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInBookingR.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "IDUser")});
+            this.lueUserInBookingR.DisplayMember = "Name";
+            this.lueUserInBookingR.Name = "lueUserInBookingR";
+            this.lueUserInBookingR.NullText = "Thiếu người thanh toán";
+            this.lueUserInBookingR.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInBookingR.ValueMember = "ID";
+            // 
+            // colTagH
+            // 
+            this.colTagH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.colTagH.AppearanceHeader.Options.UseFont = true;
+            this.colTagH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTagH.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colTagH.Caption = "Người trả";
+            this.colTagH.ColumnEdit = this.lueUserInBookingH;
+            this.colTagH.FieldName = "Tag";
+            this.colTagH.Name = "colTagH";
+            this.colTagH.Visible = true;
+            this.colTagH.VisibleIndex = 7;
+            this.colTagH.Width = 139;
+            // 
+            // lueUserInBookingH
+            // 
+            this.lueUserInBookingH.AutoHeight = false;
+            this.lueUserInBookingH.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInBookingH.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
+            this.lueUserInBookingH.DisplayMember = "Name";
+            this.lueUserInBookingH.Name = "lueUserInBookingH";
+            this.lueUserInBookingH.NullText = "Chưa chọn người thanh toán";
+            this.lueUserInBookingH.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInBookingH.ValueMember = "ID";
+            // 
             // frmTsk_Payment_Step2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -4057,6 +4128,8 @@
             this.tableLayoutPanel39.ResumeLayout(false);
             this.tableLayoutPanel39.PerformLayout();
             this.tableLayoutPanel40.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4307,6 +4380,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDeleteHall;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chbPaymentStatusH;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel42;
+        private DevExpress.XtraGrid.Columns.GridColumn colTagR;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInBookingR;
+        private DevExpress.XtraGrid.Columns.GridColumn colTagH;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInBookingH;
 
     }
 }

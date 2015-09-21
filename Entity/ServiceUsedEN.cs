@@ -30,6 +30,7 @@ namespace Entity
         public DateTime? InvoiceDate { get; set; }
         public DateTime? AcceptDate { get; set; }
         public string Sku { get; set; }
+        public string Tag { get; set; }
 
         // Lỗi số lượng nhập được số âm
         public decimal? TotalMoney { 

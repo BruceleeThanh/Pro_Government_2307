@@ -489,6 +489,11 @@ namespace RoomManager
                 // Danh sách dịch vụ
                 dgvServicesR.DataSource = aNewPaymentEN.GetListServiceUsedInRoom(aBookingRoomUsedEN.ID);
                 dgvServicesR.RefreshDataSource();
+                //-----------Ngoc bổ sung --------------
+                CustomersBO aCustomersBO = new CustomersBO();
+                lueUserInBookingR.DataSource = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.CurrentIDBookingRoom);
+                //-----------Ngoc bổ sung --------------
+
                 lblTotalMoneyServiceR.Text = String.Format("{0:0,0} (VND)", this.aNewPaymentEN.GetMoneyListServiceUsedInARoom(aBookingRoomUsedEN.ID));
             }
                 //=========================================
@@ -623,6 +628,11 @@ namespace RoomManager
                     txtBookingHallsCost.EditValue = BookingHallsCost;
                     dgvServicesH.DataSource = this.aNewPaymentEN.GetListServiceUsedInHall(aBookingHallUsedEN.ID);
                     dgvServicesH.RefreshDataSource();
+                    //-----------Ngoc bổ sung --------------
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    lueUserInBookingH.DataSource = aCustomersBO.SelectListCustomer_ByIDBookingH(this.CurrentIDBookingHall);
+                    //-----------Ngoc bổ sung --------------
+
                     lblTotalMoneyServiceH.Text = String.Format("{0:0,0} (VND)", this.aNewPaymentEN.GetMoneyListServiceUsedInAHall(aBookingHallUsedEN.ID));
                 }
             }

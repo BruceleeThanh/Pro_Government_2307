@@ -305,6 +305,24 @@ namespace BussinessLogic
                 throw new Exception(string.Format("CustomerGroupBO.Select_ByIDBookingR :" + ex.Message.ToString()));
             }
         }
+        public CustomerGroups Select_ByIDBookingH(int IDBookingH)
+        {
+            try
+            {
+                BookingHsBO aBookingHsBO = new BookingHsBO();
+                BookingHs aBookingHs = aBookingHsBO.Select_ByID(IDBookingH);
+                List<int> aListIDCustomerGroups = new List<int>();
+                int aIDCustomerGroups;
 
+                aIDCustomerGroups = new int();
+                aIDCustomerGroups = aBookingHs.IDCustomerGroup;
+
+                return this.Select_ByID(aIDCustomerGroups);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(string.Format("CustomerGroupBO.Select_ByIDBookingR :" + ex.Message.ToString()));
+            }
+        }
     }
 }

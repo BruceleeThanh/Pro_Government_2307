@@ -3164,7 +3164,11 @@ namespace BussinessLogic
                     aServiceUsedEN.Cost = aListTemp[i].BookingRooms_Services_Cost;
                     aServiceUsedEN.CostRef_Service = aListTemp[i].Services_CostRef;
                     aServiceUsedEN.Tax = aListTemp[i].BookingRooms_Services_PercentTax;
-   
+
+                    //-----Ngoc bo sung ------
+                    aServiceUsedEN.Tag = aListTemp[i].BookingRooms_Services_Tag;
+                    //-----Ngoc bo sung ------
+
                     aListReturn.Insert(i, aServiceUsedEN);
                 }
 

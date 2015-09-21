@@ -229,7 +229,6 @@ namespace RoomManager
                     dgvBookingHallUseServices.DataSource = this.aNewPaymentHEN.GetListServiceUsedInHall(aBookingHallUsedEN.ID);
                     dgvBookingHallUseServices.RefreshDataSource();
                     lblTotalMoneyServices_BookingH.Text = String.Format("{0:0,0} (VND)", this.aNewPaymentHEN.GetMoneyListServiceUsedInAHall(aBookingHallUsedEN.ID));
-
                 }
             }
         }
