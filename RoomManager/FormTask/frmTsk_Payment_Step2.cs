@@ -2074,7 +2074,12 @@ namespace RoomManager
                         }
                         aCustomerGroups_CustomersBO.DeleteAllCustomersFromCustomerGroup_ByIDBookingRs(this.IDBookingR);
                         aCustomerGroupsBO.Delete_ByID(Convert.ToInt32(this.aNewPaymentEN.IDCustomerGroup));
-                        aBookingRsBO.Delete(this.IDBookingR);
+                        int ret =  aBookingRsBO.Delete(this.IDBookingR);
+                        
+                        if (ret > 0)
+                        {
+                            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
 
                 }
@@ -2103,10 +2108,14 @@ namespace RoomManager
                                 aMenus_FoodsBO.Delete_ByIDMenu(aMenu.ID);
                             }
                         }
-                        aBookingHsBO.Delete(this.IDBookingH);
+                        int ret = aBookingHsBO.Delete(this.IDBookingH);
+                        if (ret > 0)
+                        {
+                            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-                MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 this.Close();
                 if (this.afrmMain != null)
                 {

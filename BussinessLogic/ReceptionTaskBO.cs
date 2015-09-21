@@ -4294,6 +4294,11 @@ namespace BussinessLogic
             
         }
 
+        public List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> GetInfoBookingRoom_ByIDCustomer(List<int> ListIDCustomer)
+        {
+            List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> aList = aDatabaseDA.vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups.Where(p=>ListIDCustomer.Contains(p.Customers_ID)).Distinct().ToList();
+            return aList;
+        }
 
         public List<int> CheckAvaiableRoom(int IDBookingRoom, string CodeRoom, DateTime From, DateTime To)
         {

@@ -82,7 +82,8 @@
       [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_IndexSubPayment] AS [BookingHalls_Services_IndexSubPayment], 
       [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_InvoiceDate] AS [BookingHalls_Services_InvoiceDate], 
       [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_InvoiceNumber] AS [BookingHalls_Services_InvoiceNumber], 
-      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_AcceptDate] AS [BookingHalls_Services_AcceptDate]
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_AcceptDate] AS [BookingHalls_Services_AcceptDate], 
+      [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups].[BookingHalls_Services_Tag] AS [BookingHalls_Services_Tag]
       FROM [dbo].[vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups] AS [vw_[BookingHalls_ServicesInfo]]_BookingHalls_BookingHallsServices_Services_ServiceGroups]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers" EntityType="Model.Store.vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers" store:Type="Views" store:Schema="dbo" store:Name="vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers">
@@ -319,7 +320,8 @@
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_IndexSubPayment] AS [BookingRooms_Services_IndexSubPayment], 
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_InvoiceDate] AS [BookingRooms_Services_InvoiceDate], 
       [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_InvoiceNumber] AS [BookingRooms_Services_InvoiceNumber], 
-      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_AcceptDate] AS [BookingRooms_Services_AcceptDate]
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_AcceptDate] AS [BookingRooms_Services_AcceptDate], 
+      [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups].[BookingRooms_Services_Tag] AS [BookingRooms_Services_Tag]
       FROM [dbo].[vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups] AS [vw_[BookingRooms_ServicesInfo]]_BookingRooms_BookingRoomsServices_Services_ServiceGroups]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_[CertificatesInfo]_SystemUsers_Certificates" EntityType="Model.Store.vw_[CertificatesInfo]_SystemUsers_Certificates" store:Type="Views" store:Schema="dbo" store:Name="vw_[CertificatesInfo]_SystemUsers_Certificates">
@@ -658,7 +660,9 @@
       [vw_QueryDataPayment_Ext].[FeeServiceHallNotTax] AS [FeeServiceHallNotTax], 
       [vw_QueryDataPayment_Ext].[FeeServiceHallWithTax] AS [FeeServiceHallWithTax], 
       [vw_QueryDataPayment_Ext].[BookingRs_Subject] AS [BookingRs_Subject], 
-      [vw_QueryDataPayment_Ext].[BookingHs_Subject] AS [BookingHs_Subject]
+      [vw_QueryDataPayment_Ext].[BookingHs_Subject] AS [BookingHs_Subject], 
+      [vw_QueryDataPayment_Ext].[BookingRooms_Services_Tag] AS [BookingRooms_Services_Tag], 
+      [vw_QueryDataPayment_Ext].[BookingHalls_Services_Tag] AS [BookingHalls_Services_Tag]
       FROM [dbo].[vw_QueryDataPayment_Ext] AS [vw_QueryDataPayment_Ext]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_Support1_DataPayment" EntityType="Model.Store.vw_Support1_DataPayment" store:Type="Views" store:Schema="dbo" store:Name="vw_Support1_DataPayment">
@@ -716,7 +720,8 @@
       [vw_Support1_DataPayment].[FeeRoomNotTax] AS [FeeRoomNotTax], 
       [vw_Support1_DataPayment].[FeeRoomWithTax] AS [FeeRoomWithTax], 
       [vw_Support1_DataPayment].[FeeServiceRoomNotTax] AS [FeeServiceRoomNotTax], 
-      [vw_Support1_DataPayment].[FeeServiceRoomWithTax] AS [FeeServiceRoomWithTax]
+      [vw_Support1_DataPayment].[FeeServiceRoomWithTax] AS [FeeServiceRoomWithTax], 
+      [vw_Support1_DataPayment].[BookingRooms_Services_Tag] AS [BookingRooms_Services_Tag]
       FROM [dbo].[vw_Support1_DataPayment] AS [vw_Support1_DataPayment]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="vw_Support2_DataPayment" EntityType="Model.Store.vw_Support2_DataPayment" store:Type="Views" store:Schema="dbo" store:Name="vw_Support2_DataPayment">
@@ -773,7 +778,8 @@
       [vw_Support2_DataPayment].[FeeHallNotTax] AS [FeeHallNotTax], 
       [vw_Support2_DataPayment].[FeeHallWithTax] AS [FeeHallWithTax], 
       [vw_Support2_DataPayment].[FeeServiceHallNotTax] AS [FeeServiceHallNotTax], 
-      [vw_Support2_DataPayment].[FeeServiceHallWithTax] AS [FeeServiceHallWithTax]
+      [vw_Support2_DataPayment].[FeeServiceHallWithTax] AS [FeeServiceHallWithTax], 
+      [vw_Support2_DataPayment].[BookingHalls_Services_Tag] AS [BookingHalls_Services_Tag]
       FROM [dbo].[vw_Support2_DataPayment] AS [vw_Support2_DataPayment]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
@@ -1033,6 +1039,7 @@
           <Property Name="AcceptDate" Type="datetime" />
           <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="InvoiceDate" Type="datetime" />
+          <Property Name="Tag" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="BookingHs">
           <Key>
@@ -1492,6 +1499,7 @@
           <Property Name="InvoiceDate" Type="datetime" />
           <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="AcceptDate" Type="datetime" />
+          <Property Name="Tag" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="BookingRoomsMembers">
           <Key>
@@ -1688,6 +1696,7 @@
           <Property Name="BookingHalls_Services_InvoiceDate" Type="datetime" />
           <Property Name="BookingHalls_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="BookingHalls_Services_AcceptDate" Type="datetime" />
+          <Property Name="BookingHalls_Services_Tag" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[BookingHInfo]_BookingHs_Customers_Companies_SystemUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -1983,6 +1992,7 @@
           <Property Name="BookingRooms_Services_InvoiceDate" Type="datetime" />
           <Property Name="BookingRooms_Services_InvoiceNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="BookingRooms_Services_AcceptDate" Type="datetime" />
+          <Property Name="BookingRooms_Services_Tag" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_[CertificatesInfo]_SystemUsers_Certificates' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -2384,6 +2394,8 @@
           <Property Name="FeeServiceHallWithTax" Type="float" />
           <Property Name="BookingRs_Subject" Type="nvarchar" MaxLength="255" />
           <Property Name="BookingHs_Subject" Type="nvarchar" MaxLength="255" />
+          <Property Name="BookingRooms_Services_Tag" Type="nvarchar(max)" />
+          <Property Name="BookingHalls_Services_Tag" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_Support1_DataPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -2452,6 +2464,7 @@
           <Property Name="FeeRoomWithTax" Type="money" />
           <Property Name="FeeServiceRoomNotTax" Type="float" />
           <Property Name="FeeServiceRoomWithTax" Type="float" />
+          <Property Name="BookingRooms_Services_Tag" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
       warning 6002: The table/view 'RM_Database_v7.5.1_Dev.dbo.vw_Support2_DataPayment' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
@@ -2516,6 +2529,7 @@
           <Property Name="FeeHallWithTax" Type="float" />
           <Property Name="FeeServiceHallNotTax" Type="float" />
           <Property Name="FeeServiceHallWithTax" Type="float" />
+          <Property Name="BookingHalls_Services_Tag" Type="nvarchar(max)" />
         </EntityType>
         <Function Name="Calculator_Cost_BookingRooms" ReturnType="money" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Cost" Type="money" Mode="In" />
@@ -2739,6 +2753,7 @@
           <Parameter Name="AcceptDate" Type="datetime" Mode="In" />
           <Parameter Name="InvoiceNumber" Type="nvarchar" Mode="In" />
           <Parameter Name="InvoiceDate" Type="datetime" Mode="In" />
+          <Parameter Name="Tag" Type="nvarchar(max)" Mode="In" />
         </Function>
         <Function Name="sp_Save_BookingRooms" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
@@ -2790,6 +2805,7 @@
           <Parameter Name="InvoiceDate" Type="datetime" Mode="In" />
           <Parameter Name="InvoiceNumber" Type="nvarchar" Mode="In" />
           <Parameter Name="AcceptDate" Type="datetime" Mode="In" />
+          <Parameter Name="Tag" Type="nvarchar(max)" Mode="In" />
         </Function>
         <Function Name="sp_SystemUsers_GetCurrentInDivision" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IDDivision" Type="int" Mode="In" />
@@ -2994,6 +3010,7 @@
             <Parameter Name="AcceptDate" Mode="In" Type="DateTime" />
             <Parameter Name="InvoiceNumber" Mode="In" Type="String" />
             <Parameter Name="InvoiceDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Tag" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_Save_BookingRooms">
             <Parameter Name="ID" Mode="In" Type="Int32" />
@@ -3045,6 +3062,7 @@
             <Parameter Name="InvoiceDate" Mode="In" Type="DateTime" />
             <Parameter Name="InvoiceNumber" Mode="In" Type="String" />
             <Parameter Name="AcceptDate" Mode="In" Type="DateTime" />
+            <Parameter Name="Tag" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_SystemUsers_GetCurrentInDivision" ReturnType="Collection(Model.sp_SystemUsers_GetCurrentInDivision_Result)">
             <Parameter Name="IDDivision" Mode="In" Type="Int32" />
@@ -3335,6 +3353,7 @@
           <Property Name="AcceptDate" Type="DateTime" Precision="3" />
           <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
+          <Property Name="Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="BookingHs">
           <Key>
@@ -3794,6 +3813,7 @@
           <Property Name="InvoiceDate" Type="DateTime" Precision="3" />
           <Property Name="InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="AcceptDate" Type="DateTime" Precision="3" />
+          <Property Name="Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="BookingRoomsMembers">
           <Key>
@@ -3987,6 +4007,7 @@
           <Property Name="BookingHalls_Services_InvoiceDate" Type="DateTime" Precision="3" />
           <Property Name="BookingHalls_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BookingHalls_Services_AcceptDate" Type="DateTime" Precision="3" />
+          <Property Name="BookingHalls_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw__BookingHInfo__BookingHs_Customers_Companies_SystemUsers">
           <Key>
@@ -4264,6 +4285,7 @@
           <Property Name="BookingRooms_Services_InvoiceDate" Type="DateTime" Precision="3" />
           <Property Name="BookingRooms_Services_InvoiceNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="BookingRooms_Services_AcceptDate" Type="DateTime" Precision="3" />
+          <Property Name="BookingRooms_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw__CertificatesInfo__SystemUsers_Certificates">
           <Key>
@@ -4641,6 +4663,8 @@
           <Property Name="FeeServiceHallWithTax" Type="Double" />
           <Property Name="BookingRs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
           <Property Name="BookingHs_Subject" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="BookingRooms_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="BookingHalls_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw_Support1_DataPayment">
           <Key>
@@ -4706,6 +4730,7 @@
           <Property Name="FeeRoomWithTax" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="FeeServiceRoomNotTax" Type="Double" />
           <Property Name="FeeServiceRoomWithTax" Type="Double" />
+          <Property Name="BookingRooms_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="vw_Support2_DataPayment">
           <Key>
@@ -4767,6 +4792,7 @@
           <Property Name="FeeHallWithTax" Type="Double" />
           <Property Name="FeeServiceHallNotTax" Type="Double" />
           <Property Name="FeeServiceHallWithTax" Type="Double" />
+          <Property Name="BookingHalls_Services_Tag" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <ComplexType Name="sp_BookingExt_GetAllBooking_Result">
           <Property Type="Int32" Name="ID" Nullable="false" />
@@ -5509,6 +5535,7 @@
                 <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
                 <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
                 <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -5993,6 +6020,7 @@
                 <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
                 <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
                 <ScalarProperty Name="AcceptDate" ColumnName="AcceptDate" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6190,6 +6218,7 @@
                 <ScalarProperty Name="BookingHalls_Services_InvoiceDate" ColumnName="BookingHalls_Services_InvoiceDate" />
                 <ScalarProperty Name="BookingHalls_Services_InvoiceNumber" ColumnName="BookingHalls_Services_InvoiceNumber" />
                 <ScalarProperty Name="BookingHalls_Services_AcceptDate" ColumnName="BookingHalls_Services_AcceptDate" />
+                <ScalarProperty Name="BookingHalls_Services_Tag" ColumnName="BookingHalls_Services_Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6439,6 +6468,7 @@
                 <ScalarProperty Name="BookingRooms_Services_InvoiceDate" ColumnName="BookingRooms_Services_InvoiceDate" />
                 <ScalarProperty Name="BookingRooms_Services_InvoiceNumber" ColumnName="BookingRooms_Services_InvoiceNumber" />
                 <ScalarProperty Name="BookingRooms_Services_AcceptDate" ColumnName="BookingRooms_Services_AcceptDate" />
+                <ScalarProperty Name="BookingRooms_Services_Tag" ColumnName="BookingRooms_Services_Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6794,6 +6824,8 @@
                 <ScalarProperty Name="FeeServiceHallWithTax" ColumnName="FeeServiceHallWithTax" />
                 <ScalarProperty Name="BookingRs_Subject" ColumnName="BookingRs_Subject" />
                 <ScalarProperty Name="BookingHs_Subject" ColumnName="BookingHs_Subject" />
+                <ScalarProperty Name="BookingRooms_Services_Tag" ColumnName="BookingRooms_Services_Tag" />
+                <ScalarProperty Name="BookingHalls_Services_Tag" ColumnName="BookingHalls_Services_Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6854,6 +6886,7 @@
                 <ScalarProperty Name="FeeRoomWithTax" ColumnName="FeeRoomWithTax" />
                 <ScalarProperty Name="FeeServiceRoomNotTax" ColumnName="FeeServiceRoomNotTax" />
                 <ScalarProperty Name="FeeServiceRoomWithTax" ColumnName="FeeServiceRoomWithTax" />
+                <ScalarProperty Name="BookingRooms_Services_Tag" ColumnName="BookingRooms_Services_Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -6913,6 +6946,7 @@
                 <ScalarProperty Name="FeeHallWithTax" ColumnName="FeeHallWithTax" />
                 <ScalarProperty Name="FeeServiceHallNotTax" ColumnName="FeeServiceHallNotTax" />
                 <ScalarProperty Name="FeeServiceHallWithTax" ColumnName="FeeServiceHallWithTax" />
+                <ScalarProperty Name="BookingHalls_Services_Tag" ColumnName="BookingHalls_Services_Tag" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

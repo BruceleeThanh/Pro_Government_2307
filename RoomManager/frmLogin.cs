@@ -34,7 +34,7 @@ namespace RoomManager
 
         private void bnLogin_Click(object sender, EventArgs e)
         {
-
+            progressPanel1.Visible = true;
                 if (CORE.Login_WinForm(txtUserName.Text, txtPassword.Text) == true)
                 {
                     frmMain afrmMain = new frmMain(this);
@@ -44,6 +44,7 @@ namespace RoomManager
                         //afrmMain.ReloadData();
                         
                         afrmMain.Show();
+                        progressPanel1.Visible = false;
                         this.Visible = false;
                     }
 
@@ -55,6 +56,7 @@ namespace RoomManager
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.afrmMain = new frmMain(this);
+            progressPanel1.Visible = false;
         }
 
 
@@ -63,6 +65,7 @@ namespace RoomManager
         {
             if (e.KeyCode == Keys.Enter)
             {
+                progressPanel1.Visible = true;
                 if (CORE.Login_WinForm(txtUserName.Text, txtPassword.Text) == true)
                 {
                     frmMain afrmMain = new frmMain(this);
@@ -71,6 +74,7 @@ namespace RoomManager
                         afrmMain.LoadData();
                         //afrmMain.ReloadData();
                         afrmMain.Show();
+                        progressPanel1.Visible = false;
                         this.Visible = false;
                     }
 

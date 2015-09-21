@@ -200,11 +200,16 @@ namespace RoomManager
                     aBookingRoom_ServiceEN.Date = aListTemp[i].Date;
                     aBookingRoom_ServiceEN.PercentTax = aListTemp[i].PercentTax;
                     aBookingRoom_ServiceEN.Quantity = aListTemp[i].Quantity;
-                   
+                    aBookingRoom_ServiceEN.Tag = aListTemp[i].Tag;
                     aListSelected.Add(aBookingRoom_ServiceEN);
                 }
                 dgvServiceInRoom.DataSource = aListSelected;
                 dgvServiceInRoom.RefreshDataSource();
+
+                CustomersBO aCustomersBO = new CustomersBO();
+
+                lueUserInRoom.DataSource = aCustomersBO.SelectListCustomer_ByIDBookingRoom(this.IDBookingRoom);
+                
             }
             catch (Exception ex)
             {
@@ -242,6 +247,8 @@ namespace RoomManager
                 this.aListSelected.Insert(0, aBookingRoom_ServiceEN);
                 dgvServiceInRoom.DataSource = aListSelected;
                 dgvServiceInRoom.RefreshDataSource();
+
+                
             }
         }
 
@@ -288,9 +295,17 @@ namespace RoomManager
                     aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
                     aBookingRooms_Services.PercentTax = aListSelected[i].PercentTax;
                     aBookingRooms_Services.Date = aListSelected[i].Date;
-
-
-                    aBookingRooms_ServicesBO.Update(aBookingRooms_Services);
+                    aBookingRooms_Services.Tag = aListSelected[i].Tag;
+                    if (string.IsNullOrEmpty(aBookingRooms_Services.Tag))
+                    {
+                        MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
+                        break;
+                    }
+                    else
+                    {
+                        aBookingRooms_ServicesBO.Update(aBookingRooms_Services);
+                    }
+                    
                 }
                 else
                 {
@@ -306,7 +321,18 @@ namespace RoomManager
                     aBookingRooms_Services.CostRef_Services = aListSelected[i].CostRef_Services;
                     aBookingRooms_Services.PercentTax = 10;// de mac dinh
                     aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
-                    aBookingRooms_ServicesBO.Insert(aBookingRooms_Services);
+                    aBookingRooms_Services.Tag = aListSelected[i].Tag;
+                    if (string.IsNullOrEmpty(aBookingRooms_Services.Tag))
+                    {
+                        MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
+                        break;
+                    }
+                    else
+                    {
+                        aBookingRooms_ServicesBO.Insert(aBookingRooms_Services);
+                        
+                    }
+                    
                 }
             }
             foreach (BookingRooms_Services items in this.aListRemove)
@@ -380,6 +406,11 @@ namespace RoomManager
             {
                 MessageBox.Show("frmTsk_UseServices.grvRoom_RowClick\n" + ex.Message.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dgvServiceInRoom_Click(object sender, EventArgs e)
+        {
+
         }
 
 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_UseServices));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtQuantity = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.txtPercenTax = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -65,6 +65,8 @@
             this.grcPercentTax = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.grcSum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.grcTag = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueUserInRoom = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.grcIDBookingRoomService = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -88,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,11 +122,12 @@
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
             this.splitContainerControl1.Panel1.Text = "Panel1";
             this.splitContainerControl1.Panel2.Controls.Add(this.tableLayoutPanel1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(1243, 516);
+            this.splitContainerControl1.Size = new System.Drawing.Size(1450, 635);
             this.splitContainerControl1.SplitterPosition = 0;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
@@ -141,22 +145,25 @@
             this.tableLayoutPanel1.Controls.Add(this.dgvServiceInRoom, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnAddNew, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1096, 516);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1279, 635);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // dgvRooms
             // 
             this.dgvRooms.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvRooms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRooms.Location = new System.Drawing.Point(3, 46);
+            this.dgvRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvRooms.Location = new System.Drawing.Point(3, 57);
             this.dgvRooms.MainView = this.grvRooms;
+            this.dgvRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvRooms.Name = "dgvRooms";
-            this.dgvRooms.Size = new System.Drawing.Size(120, 431);
+            this.dgvRooms.Size = new System.Drawing.Size(141, 530);
             this.dgvRooms.TabIndex = 0;
             this.dgvRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvRooms});
@@ -236,16 +243,18 @@
             this.panelControl3.Controls.Add(this.labelControl1);
             this.panelControl3.Controls.Add(this.lbCurrentRoom);
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl3.Location = new System.Drawing.Point(129, 3);
+            this.panelControl3.Location = new System.Drawing.Point(150, 4);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(686, 37);
+            this.panelControl3.Size = new System.Drawing.Size(802, 45);
             this.panelControl3.TabIndex = 0;
             // 
             // dtpDate
             // 
             this.dtpDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpDate.EditValue = null;
-            this.dtpDate.Location = new System.Drawing.Point(445, 4);
+            this.dtpDate.Location = new System.Drawing.Point(520, 4);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -258,31 +267,34 @@
             this.dtpDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtpDate.Properties.Mask.BeepOnError = true;
             this.dtpDate.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.dtpDate.Size = new System.Drawing.Size(138, 20);
+            this.dtpDate.Size = new System.Drawing.Size(161, 22);
             this.dtpDate.TabIndex = 50;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(234, 12);
+            this.labelControl3.Location = new System.Drawing.Point(273, 15);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(0, 13);
+            this.labelControl3.Size = new System.Drawing.Size(0, 16);
             this.labelControl3.TabIndex = 1;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Location = new System.Drawing.Point(291, 6);
+            this.labelControl1.Location = new System.Drawing.Point(339, 7);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(105, 13);
+            this.labelControl1.Size = new System.Drawing.Size(134, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Ngày dùng dịch vụ:";
             // 
             // lbCurrentRoom
             // 
             this.lbCurrentRoom.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.lbCurrentRoom.Location = new System.Drawing.Point(49, 6);
+            this.lbCurrentRoom.Location = new System.Drawing.Point(57, 7);
+            this.lbCurrentRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbCurrentRoom.Name = "lbCurrentRoom";
-            this.lbCurrentRoom.Size = new System.Drawing.Size(57, 13);
+            this.lbCurrentRoom.Size = new System.Drawing.Size(74, 17);
             this.lbCurrentRoom.TabIndex = 0;
             this.lbCurrentRoom.Text = "Phòng số :";
             // 
@@ -291,9 +303,10 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(821, 483);
+            this.btnSave.Location = new System.Drawing.Point(958, 595);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 29);
+            this.btnSave.Size = new System.Drawing.Size(117, 36);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Cập nhật";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -302,12 +315,14 @@
             // 
             this.dgvServices.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvServices.EmbeddedNavigator.Enabled = false;
-            this.dgvServices.Location = new System.Drawing.Point(821, 46);
+            this.dgvServices.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvServices.Location = new System.Drawing.Point(958, 57);
             this.dgvServices.MainView = this.grvServices;
+            this.dgvServices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServices.Name = "dgvServices";
             this.dgvServices.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.bnAddService});
-            this.dgvServices.Size = new System.Drawing.Size(272, 431);
+            this.dgvServices.Size = new System.Drawing.Size(318, 530);
             this.dgvServices.TabIndex = 0;
             this.dgvServices.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvServices});
@@ -346,7 +361,7 @@
             // 
             this.bnAddService.AutoHeight = false;
             this.bnAddService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnAddService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.bnAddService.Name = "bnAddService";
             this.bnAddService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.bnAddService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnAddService_ButtonClick);
@@ -370,18 +385,22 @@
             // 
             // dgvServiceInRoom
             // 
-            this.dgvServiceInRoom.Location = new System.Drawing.Point(129, 46);
+            this.dgvServiceInRoom.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvServiceInRoom.Location = new System.Drawing.Point(150, 57);
             this.dgvServiceInRoom.MainView = this.grvServiceInRoom;
+            this.dgvServiceInRoom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvServiceInRoom.Name = "dgvServiceInRoom";
             this.dgvServiceInRoom.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2,
             this.repositoryItemTextEdit3,
-            this.btnDelete});
-            this.dgvServiceInRoom.Size = new System.Drawing.Size(686, 431);
+            this.btnDelete,
+            this.lueUserInRoom});
+            this.dgvServiceInRoom.Size = new System.Drawing.Size(800, 530);
             this.dgvServiceInRoom.TabIndex = 0;
             this.dgvServiceInRoom.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvServiceInRoom});
+            this.dgvServiceInRoom.Click += new System.EventHandler(this.dgvServiceInRoom_Click);
             // 
             // grvServiceInRoom
             // 
@@ -395,6 +414,7 @@
             this.grcCost,
             this.grcPercentTax,
             this.grcSum,
+            this.grcTag,
             this.gridColumn1,
             this.grcIDBookingRoomService});
             this.grvServiceInRoom.GridControl = this.dgvServiceInRoom;
@@ -444,7 +464,7 @@
             this.ServiceName.OptionsColumn.AllowFocus = false;
             this.ServiceName.Visible = true;
             this.ServiceName.VisibleIndex = 1;
-            this.ServiceName.Width = 166;
+            this.ServiceName.Width = 151;
             // 
             // grcQuantity
             // 
@@ -463,7 +483,7 @@
             this.grcQuantity.Name = "grcQuantity";
             this.grcQuantity.Visible = true;
             this.grcQuantity.VisibleIndex = 2;
-            this.grcQuantity.Width = 59;
+            this.grcQuantity.Width = 53;
             // 
             // repositoryItemTextEdit3
             // 
@@ -489,7 +509,7 @@
             this.Unit.OptionsColumn.AllowFocus = false;
             this.Unit.Visible = true;
             this.Unit.VisibleIndex = 3;
-            this.Unit.Width = 54;
+            this.Unit.Width = 49;
             // 
             // grcDate
             // 
@@ -508,7 +528,7 @@
             this.grcDate.OptionsColumn.AllowFocus = false;
             this.grcDate.Visible = true;
             this.grcDate.VisibleIndex = 0;
-            this.grcDate.Width = 116;
+            this.grcDate.Width = 105;
             // 
             // grcCost
             // 
@@ -527,7 +547,7 @@
             this.grcCost.Name = "grcCost";
             this.grcCost.Visible = true;
             this.grcCost.VisibleIndex = 4;
-            this.grcCost.Width = 116;
+            this.grcCost.Width = 105;
             // 
             // repositoryItemTextEdit2
             // 
@@ -557,7 +577,7 @@
             this.grcPercentTax.Name = "grcPercentTax";
             this.grcPercentTax.Visible = true;
             this.grcPercentTax.VisibleIndex = 5;
-            this.grcPercentTax.Width = 48;
+            this.grcPercentTax.Width = 43;
             // 
             // repositoryItemTextEdit1
             // 
@@ -589,7 +609,32 @@
             this.grcSum.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.grcSum.Visible = true;
             this.grcSum.VisibleIndex = 6;
-            this.grcSum.Width = 158;
+            this.grcSum.Width = 144;
+            // 
+            // grcTag
+            // 
+            this.grcTag.Caption = "Người dùng";
+            this.grcTag.ColumnEdit = this.lueUserInRoom;
+            this.grcTag.FieldName = "Tag";
+            this.grcTag.Name = "grcTag";
+            this.grcTag.Visible = true;
+            this.grcTag.VisibleIndex = 7;
+            this.grcTag.Width = 130;
+            // 
+            // lueUserInRoom
+            // 
+            this.lueUserInRoom.AutoHeight = false;
+            this.lueUserInRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInRoom.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name")});
+            this.lueUserInRoom.DisplayMember = "Name";
+            this.lueUserInRoom.Name = "lueUserInRoom";
+            this.lueUserInRoom.NullText = "Chọn người dùng";
+            this.lueUserInRoom.NullValuePrompt = "Bạn phải chọn người sử dụng dịch vụ";
+            this.lueUserInRoom.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInRoom.ValueMember = "ID";
             // 
             // gridColumn1
             // 
@@ -604,14 +649,13 @@
             this.gridColumn1.ColumnEdit = this.btnDelete;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 7;
-            this.gridColumn1.Width = 83;
+            this.gridColumn1.VisibleIndex = 8;
             // 
             // btnDelete
             // 
             this.btnDelete.AutoHeight = false;
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelete.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick);
@@ -628,21 +672,23 @@
             this.btnAddNew.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.btnAddNew.Appearance.Options.UseFont = true;
             this.btnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNew.Image")));
-            this.btnAddNew.Location = new System.Drawing.Point(821, 10);
+            this.btnAddNew.Location = new System.Drawing.Point(958, 12);
+            this.btnAddNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(126, 23);
+            this.btnAddNew.Size = new System.Drawing.Size(147, 28);
             this.btnAddNew.TabIndex = 2;
             this.btnAddNew.Text = "Thêm dịch vụ";
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // frmTsk_UseServices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 516);
+            this.ClientSize = new System.Drawing.Size(1284, 635);
             this.Controls.Add(this.splitContainerControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmTsk_UseServices";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -670,6 +716,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInRoom)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             this.ResumeLayout(false);
 
@@ -715,6 +762,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.SimpleButton btnAddNew;
         private DevExpress.XtraGrid.Columns.GridColumn grcIDBookingRoomService;
+        private DevExpress.XtraGrid.Columns.GridColumn grcTag;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInRoom;
 
     }
 }

@@ -97,10 +97,10 @@
             this.lbWarning.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap;
             this.lbWarning.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
             this.lbWarning.ImageAlignToText = DevExpress.XtraEditors.ImageAlignToText.RightTop;
-            this.lbWarning.Location = new System.Drawing.Point(11, 51);
-            this.lbWarning.Margin = new System.Windows.Forms.Padding(4);
+            this.lbWarning.Location = new System.Drawing.Point(10, 51);
+            this.lbWarning.Margin = new System.Windows.Forms.Padding(0);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(82, 104);
+            this.lbWarning.Size = new System.Drawing.Size(92, 104);
             this.lbWarning.TabIndex = 5;
             this.lbWarning.Text = "CheckOut";
             this.lbWarning.Visible = false;

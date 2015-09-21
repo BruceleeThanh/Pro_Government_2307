@@ -30,5 +30,6 @@ namespace DataAccess
         public Nullable<System.DateTime> InvoiceDate { get; set; }
         public string InvoiceNumber { get; set; }
         public Nullable<System.DateTime> AcceptDate { get; set; }
+        public string Tag { get; set; }
     }
 }

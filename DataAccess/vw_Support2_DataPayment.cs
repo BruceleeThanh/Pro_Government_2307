@@ -67,5 +67,6 @@ namespace DataAccess
         public Nullable<double> FeeHallWithTax { get; set; }
         public Nullable<double> FeeServiceHallNotTax { get; set; }
         public Nullable<double> FeeServiceHallWithTax { get; set; }
+        public string BookingHalls_Services_Tag { get; set; }
     }
 }

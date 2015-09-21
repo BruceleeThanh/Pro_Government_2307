@@ -1017,6 +1017,7 @@ namespace RoomManager
 
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
+            progressPanel_Tab3.Visible = true;
             if (e.Page.Name.ToLower() == "tabovertimecheckin")
             {
                 BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
@@ -1029,6 +1030,7 @@ namespace RoomManager
                 RoomsBO aRoomsBO = new RoomsBO();
 
                 //aRoomsBO.GetStatusRoom(aListTemp.Select(p => p.CodeRoom).ToList(), DateTime.Now);
+                
                 aList = aRoomsBO.GetListUsingRooms(DateTime.Now).Where(p => p.CheckOutPlan.Date <= DateTime.Today.Date).ToList();
                 dgvBookingRooms.DataSource = aList;
                 dgvBookingRooms.RefreshDataSource();
@@ -1039,6 +1041,7 @@ namespace RoomManager
                 //dgvBookingRooms.DataSource = this.GetListBookingRooms(aListTemp, aListRooms);
                 //dgvBookingRooms.RefreshDataSource();
             }
+            progressPanel_Tab3.Visible = false;
             
         }
         private List<BookingRooms> GetListBookingRooms(List<BookingRooms> aListBookingRooms, List<Rooms> aListRooms)
@@ -1086,6 +1089,11 @@ namespace RoomManager
                 MessageBox.Show("frmTsk_CheckOut.GetListBookingRooms\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
+        }
+
+        private void xtraTabControl1_Click(object sender, EventArgs e)
+        {
+
         }
 
 

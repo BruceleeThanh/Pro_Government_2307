@@ -268,14 +268,24 @@ namespace RoomManager
             DialogResult result = MessageBox.Show("Bạn có muốn xóa khách hàng " + Name + " này không?", "Xóa khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                
                 CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
                 CustomersBO aCustomersBO = new CustomersBO();
-                
-                aCustomerGroups_CustomersBO.se
-                aCustomersBO.Delete(ID);
-                MessageBox.Show("Xóa thành công");
-                this.ReloadData();
+                ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
+
+                List<CustomerGroups_Customers> aListTemp = aCustomerGroups_CustomersBO.Select_ByIDCustomer(ID);
+                List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> aList = aReceptionTaskBO.GetInfoBookingRoom_ByIDCustomer(aListTemp.Select(p => p.IDCustomer).ToList());
+                if (aList.Count > 0)
+                {
+                    MessageBox.Show("Bạn không được xóa khách này vì sẽ làm mất thông tin khách này với đặt phòng mã : " + string.Join(",", aList.Select(p => p.BookingRooms_IDBookingR).ToArray()));
+                }
+                else
+                {
+                    aCustomersBO.Delete(ID);
+                    MessageBox.Show("Xóa thành công");
+                    this.ReloadData();
+                }
+
             }           
         }
 

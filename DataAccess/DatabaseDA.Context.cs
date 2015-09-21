@@ -485,7 +485,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingHalls", iDParameter, codeHallParameter, costParameter, percentTaxParameter, costRef_HallsParameter, dateParameter, lunarDateParameter, bookingStatusParameter, unitParameter, tableOrPersonParameter, noteParameter, statusParameter, locationParameter, startTimeParameter, endTimeParameter, isAllDayEventParameter, colorParameter, isRecurringParameter, isEditableParameter, additionalColumn1Parameter, iDBookingHParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
         }
     
-        public virtual int sp_Save_BookingHalls_Service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingHall, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> acceptDate, string invoiceNumber, Nullable<System.DateTime> invoiceDate)
+        public virtual int sp_Save_BookingHalls_Service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingHall, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> acceptDate, string invoiceNumber, Nullable<System.DateTime> invoiceDate, string tag)
         {
             var iDParameter = iD.HasValue ?
                 new ObjectParameter("ID", iD) :
@@ -551,7 +551,11 @@ namespace DataAccess
                 new ObjectParameter("InvoiceDate", invoiceDate) :
                 new ObjectParameter("InvoiceDate", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingHalls_Service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingHallParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, acceptDateParameter, invoiceNumberParameter, invoiceDateParameter);
+            var tagParameter = tag != null ?
+                new ObjectParameter("Tag", tag) :
+                new ObjectParameter("Tag", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingHalls_Service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingHallParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, acceptDateParameter, invoiceNumberParameter, invoiceDateParameter, tagParameter);
         }
     
         public virtual int sp_Save_BookingRooms(Nullable<int> iD, Nullable<int> iDBookingR, string codeRoom, Nullable<decimal> cost, Nullable<double> percentTax, Nullable<decimal> costRef_Rooms, string note, Nullable<System.DateTime> checkInPlan, Nullable<System.DateTime> checkInActual, Nullable<System.DateTime> checkOutPlan, Nullable<System.DateTime> checkOutActual, Nullable<int> bookingStatus, Nullable<int> status, Nullable<System.DateTime> startTime, Nullable<System.DateTime> endTime, Nullable<bool> isAllDayEvent, Nullable<bool> color, Nullable<bool> isRecurring, Nullable<bool> isEditable, string additionalColumn1, Nullable<double> costPendingRoom, Nullable<decimal> timeInUser, Nullable<int> type, Nullable<bool> disable, Nullable<int> indexSubPayment, string priceType, Nullable<decimal> addTimeStart, Nullable<decimal> addTimeEnd, Nullable<System.DateTime> acceptDate, string invoiceNumber, Nullable<System.DateTime> invoiceDate)
@@ -683,7 +687,7 @@ namespace DataAccess
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingRooms", iDParameter, iDBookingRParameter, codeRoomParameter, costParameter, percentTaxParameter, costRef_RoomsParameter, noteParameter, checkInPlanParameter, checkInActualParameter, checkOutPlanParameter, checkOutActualParameter, bookingStatusParameter, statusParameter, startTimeParameter, endTimeParameter, isAllDayEventParameter, colorParameter, isRecurringParameter, isEditableParameter, additionalColumn1Parameter, costPendingRoomParameter, timeInUserParameter, typeParameter, disableParameter, indexSubPaymentParameter, priceTypeParameter, addTimeStartParameter, addTimeEndParameter, acceptDateParameter, invoiceNumberParameter, invoiceDateParameter);
         }
     
-        public virtual int sp_Save_BookingRooms_Service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate)
+        public virtual int sp_Save_BookingRooms_Service(Nullable<int> iD, string info, Nullable<int> type, Nullable<int> status, Nullable<bool> disable, Nullable<int> iDBookingRoom, Nullable<int> iDService, Nullable<decimal> cost, Nullable<System.DateTime> date, Nullable<double> percentTax, Nullable<decimal> costRef_Services, Nullable<double> quantity, Nullable<int> indexSubPayment, Nullable<System.DateTime> invoiceDate, string invoiceNumber, Nullable<System.DateTime> acceptDate, string tag)
         {
             var iDParameter = iD.HasValue ?
                 new ObjectParameter("ID", iD) :
@@ -749,7 +753,11 @@ namespace DataAccess
                 new ObjectParameter("AcceptDate", acceptDate) :
                 new ObjectParameter("AcceptDate", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingRooms_Service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter);
+            var tagParameter = tag != null ?
+                new ObjectParameter("Tag", tag) :
+                new ObjectParameter("Tag", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_Save_BookingRooms_Service", iDParameter, infoParameter, typeParameter, statusParameter, disableParameter, iDBookingRoomParameter, iDServiceParameter, costParameter, dateParameter, percentTaxParameter, costRef_ServicesParameter, quantityParameter, indexSubPaymentParameter, invoiceDateParameter, invoiceNumberParameter, acceptDateParameter, tagParameter);
         }
     
         public virtual ObjectResult<sp_SystemUsers_GetCurrentInDivision_Result> sp_SystemUsers_GetCurrentInDivision(Nullable<int> iDDivision)

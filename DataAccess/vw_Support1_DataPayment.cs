@@ -68,5 +68,6 @@ namespace DataAccess
         public Nullable<decimal> FeeRoomWithTax { get; set; }
         public Nullable<double> FeeServiceRoomNotTax { get; set; }
         public Nullable<double> FeeServiceRoomWithTax { get; set; }
+        public string BookingRooms_Services_Tag { get; set; }
     }
 }

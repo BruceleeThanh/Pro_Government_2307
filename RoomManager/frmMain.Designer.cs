@@ -25,8 +25,8 @@
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnBooking_Type1 = new DevExpress.XtraBars.BarButtonItem();
@@ -137,16 +137,31 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.tabOvertimeBooking = new DevExpress.XtraTab.XtraTabPage();
+            this.panLuongNghiepVu = new DevExpress.XtraEditors.PanelControl();
             this.tabCurrentStatus = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnView = new DevExpress.XtraEditors.SimpleButton();
             this.dtpSearch = new DevExpress.XtraEditors.DateEdit();
+            this.btnViewNow = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panStatusRoom = new DevExpress.XtraEditors.PanelControl();
             this.tabOvertimeCheckIn = new DevExpress.XtraTab.XtraTabPage();
-            this.tabOvertimeBooking = new DevExpress.XtraTab.XtraTabPage();
-            this.panLuongNghiepVu = new DevExpress.XtraEditors.PanelControl();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvBookingRooms = new DevExpress.XtraGrid.GridControl();
+            this.grvBookingRoom = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnCheckOut = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
@@ -162,22 +177,8 @@
             this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.btnViewNow = new DevExpress.XtraEditors.SimpleButton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.dgvBookingRooms = new DevExpress.XtraGrid.GridControl();
-            this.grvBookingRoom = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemDateEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnCheckOut = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
-            this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.progressPanel_Tab3 = new DevExpress.XtraWaitForm.ProgressPanel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
@@ -193,6 +194,9 @@
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
+            this.tabOvertimeBooking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).BeginInit();
+            this.panLuongNghiepVu.SuspendLayout();
             this.tabCurrentStatus.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -201,8 +205,15 @@
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panStatusRoom)).BeginInit();
             this.tabOvertimeCheckIn.SuspendLayout();
-            this.tabOvertimeBooking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookingRooms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvBookingRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -214,15 +225,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookingRooms)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvBookingRoom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -1352,7 +1354,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tabOvertimeBooking;
+            this.xtraTabControl1.SelectedTabPage = this.tabCurrentStatus;
             this.xtraTabControl1.Size = new System.Drawing.Size(1166, 585);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
@@ -1361,7 +1363,26 @@
             this.tabOvertimeBooking});
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             this.xtraTabControl1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.xtraTabControl1_ControlAdded);
+            // 
+            // tabOvertimeBooking
+            // 
+            this.tabOvertimeBooking.Controls.Add(this.panLuongNghiepVu);
+            this.tabOvertimeBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabOvertimeBooking.Name = "tabOvertimeBooking";
+            this.tabOvertimeBooking.Size = new System.Drawing.Size(1160, 553);
+            this.tabOvertimeBooking.Text = "Đặt phòng quá hạn";
+            // 
+            // panLuongNghiepVu
+            // 
+            this.panLuongNghiepVu.Controls.Add(this.progressPanel_Tab3);
+            this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
+            this.panLuongNghiepVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panLuongNghiepVu.Name = "panLuongNghiepVu";
+            this.panLuongNghiepVu.Size = new System.Drawing.Size(1160, 553);
+            this.panLuongNghiepVu.TabIndex = 0;
             // 
             // tabCurrentStatus
             // 
@@ -1394,7 +1415,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 769F));
             this.tableLayoutPanel2.Controls.Add(this.btnView, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.dtpSearch, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnViewNow, 3, 0);
@@ -1441,6 +1462,16 @@
             this.dtpSearch.TabIndex = 1;
             this.dtpSearch.EditValueChanged += new System.EventHandler(this.dtpSearch_EditValueChanged);
             // 
+            // btnViewNow
+            // 
+            this.btnViewNow.Image = ((System.Drawing.Image)(resources.GetObject("btnViewNow.Image")));
+            this.btnViewNow.Location = new System.Drawing.Point(306, 3);
+            this.btnViewNow.Name = "btnViewNow";
+            this.btnViewNow.Size = new System.Drawing.Size(76, 29);
+            this.btnViewNow.TabIndex = 3;
+            this.btnViewNow.Text = "Hiện tại";
+            this.btnViewNow.Click += new System.EventHandler(this.btnViewNow_Click);
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -1472,161 +1503,6 @@
             this.tabOvertimeCheckIn.Size = new System.Drawing.Size(1160, 553);
             this.tabOvertimeCheckIn.Text = "CheckIn quá hạn";
             // 
-            // tabOvertimeBooking
-            // 
-            this.tabOvertimeBooking.Controls.Add(this.panLuongNghiepVu);
-            this.tabOvertimeBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabOvertimeBooking.Name = "tabOvertimeBooking";
-            this.tabOvertimeBooking.Size = new System.Drawing.Size(1185, 553);
-            this.tabOvertimeBooking.Text = "Đặt phòng quá hạn";
-            // 
-            // panLuongNghiepVu
-            // 
-            this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
-            this.panLuongNghiepVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panLuongNghiepVu.Name = "panLuongNghiepVu";
-            this.panLuongNghiepVu.Size = new System.Drawing.Size(1185, 553);
-            this.panLuongNghiepVu.TabIndex = 0;
-            // 
-            // dockPanel3
-            // 
-            this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
-            this.dockPanel3.ID = new System.Guid("aefe7e3e-bffc-4b04-ba10-d1d411989cc4");
-            this.dockPanel3.Location = new System.Drawing.Point(261, 144);
-            this.dockPanel3.Name = "dockPanel3";
-            this.dockPanel3.OriginalSize = new System.Drawing.Size(700, 200);
-            this.dockPanel3.Size = new System.Drawing.Size(700, 388);
-            // 
-            // dockPanel3_Container
-            // 
-            this.dockPanel3_Container.Location = new System.Drawing.Point(4, 23);
-            this.dockPanel3_Container.Name = "dockPanel3_Container";
-            this.dockPanel3_Container.Size = new System.Drawing.Size(692, 361);
-            this.dockPanel3_Container.TabIndex = 0;
-            // 
-            // dockPanel2
-            // 
-            this.dockPanel2.Controls.Add(this.controlContainer1);
-            this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel2.ID = new System.Guid("5a1c6bb8-fa30-40ab-be53-28cd23606330");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel2.Name = "dockPanel2";
-            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel2.Size = new System.Drawing.Size(0, 0);
-            this.dockPanel2.Text = "dockPanel2";
-            // 
-            // controlContainer1
-            // 
-            this.controlContainer1.Location = new System.Drawing.Point(0, 0);
-            this.controlContainer1.Name = "controlContainer1";
-            this.controlContainer1.Size = new System.Drawing.Size(0, 0);
-            this.controlContainer1.TabIndex = 0;
-            // 
-            // dockPanel4
-            // 
-            this.dockPanel4.Controls.Add(this.dockPanel4_Container);
-            this.dockPanel4.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockPanel4.ID = new System.Guid("b90f4928-1750-446a-9d78-1d028beb24db");
-            this.dockPanel4.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel4.Name = "dockPanel4";
-            this.dockPanel4.OriginalSize = new System.Drawing.Size(200, 200);
-            this.dockPanel4.Size = new System.Drawing.Size(0, 0);
-            this.dockPanel4.Text = "dockPanel4";
-            // 
-            // dockPanel4_Container
-            // 
-            this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
-            this.dockPanel4_Container.Name = "dockPanel4_Container";
-            this.dockPanel4_Container.Size = new System.Drawing.Size(0, 0);
-            this.dockPanel4_Container.TabIndex = 0;
-            // 
-            // dockManager1
-            // 
-            this.dockManager1.AllowGlyphSkinning = true;
-            this.dockManager1.Form = this;
-            this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
-            this.dockCurrentUser});
-            this.dockManager1.TopZIndexControls.AddRange(new string[] {
-            "DevExpress.XtraBars.BarDockControl",
-            "DevExpress.XtraBars.StandaloneBarDockControl",
-            "System.Windows.Forms.StatusBar",
-            "System.Windows.Forms.MenuStrip",
-            "System.Windows.Forms.StatusStrip",
-            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
-            "DevExpress.XtraBars.Ribbon.RibbonControl"});
-            // 
-            // dockCurrentUser
-            // 
-            this.dockCurrentUser.Controls.Add(this.dockPanel5_Container);
-            this.dockCurrentUser.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
-            this.dockCurrentUser.FloatSize = new System.Drawing.Size(200, 180);
-            this.dockCurrentUser.ID = new System.Guid("7aad232f-c29e-4fff-853b-6b18beca6b3a");
-            this.dockCurrentUser.Location = new System.Drawing.Point(0, 155);
-            this.dockCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dockCurrentUser.Name = "dockCurrentUser";
-            this.dockCurrentUser.OriginalSize = new System.Drawing.Size(198, 200);
-            this.dockCurrentUser.Size = new System.Drawing.Size(198, 589);
-            this.dockCurrentUser.Text = "Welcome";
-            // 
-            // dockPanel5_Container
-            // 
-            this.dockPanel5_Container.Controls.Add(this.panCurrentUser);
-            this.dockPanel5_Container.Location = new System.Drawing.Point(4, 24);
-            this.dockPanel5_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dockPanel5_Container.Name = "dockPanel5_Container";
-            this.dockPanel5_Container.Size = new System.Drawing.Size(190, 561);
-            this.dockPanel5_Container.TabIndex = 0;
-            // 
-            // panCurrentUser
-            // 
-            this.panCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panCurrentUser.Location = new System.Drawing.Point(0, 0);
-            this.panCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panCurrentUser.Name = "panCurrentUser";
-            this.panCurrentUser.Size = new System.Drawing.Size(190, 561);
-            this.panCurrentUser.TabIndex = 0;
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.xtraTabControl1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(198, 155);
-            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1170, 589);
-            this.panelControl1.TabIndex = 4;
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.Name = "popupMenu1";
-            this.popupMenu1.Ribbon = this.ribbon;
-            // 
-            // popupMenu2
-            // 
-            this.popupMenu2.Name = "popupMenu2";
-            this.popupMenu2.Ribbon = this.ribbon;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 60000;
-            // 
-            // popupMenu3
-            // 
-            this.popupMenu3.Name = "popupMenu3";
-            this.popupMenu3.Ribbon = this.ribbon;
-            // 
-            // btnViewNow
-            // 
-            this.btnViewNow.Image = ((System.Drawing.Image)(resources.GetObject("btnViewNow.Image")));
-            this.btnViewNow.Location = new System.Drawing.Point(306, 3);
-            this.btnViewNow.Name = "btnViewNow";
-            this.btnViewNow.Size = new System.Drawing.Size(76, 29);
-            this.btnViewNow.TabIndex = 3;
-            this.btnViewNow.Text = "Hiện tại";
-            this.btnViewNow.Click += new System.EventHandler(this.btnViewNow_Click);
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
@@ -1641,32 +1517,13 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1160, 553);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // gridColumn3
-            // 
-            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn3.Caption = "Giá phòng ( VNĐ)";
-            this.gridColumn3.DisplayFormat.FormatString = "n";
-            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.gridColumn3.FieldName = "CostRef_Rooms";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.OptionsColumn.AllowEdit = false;
-            this.gridColumn3.OptionsColumn.AllowFocus = false;
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 175;
-            // 
             // dgvBookingRooms
             // 
             this.dgvBookingRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBookingRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.dgvBookingRooms.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.dgvBookingRooms.Location = new System.Drawing.Point(3, 51);
             this.dgvBookingRooms.MainView = this.grvBookingRoom;
             this.dgvBookingRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1838,7 +1695,7 @@
             // 
             this.btnCheckOut.AutoHeight = false;
             this.btnCheckOut.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnCheckOut.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.btnCheckOut.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
@@ -1865,6 +1722,168 @@
             this.repositoryItemDateEdit3.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.repositoryItemDateEdit3.Mask.EditMask = "";
             this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            // 
+            // dockPanel3
+            // 
+            this.dockPanel3.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.dockPanel3.ID = new System.Guid("aefe7e3e-bffc-4b04-ba10-d1d411989cc4");
+            this.dockPanel3.Location = new System.Drawing.Point(261, 144);
+            this.dockPanel3.Name = "dockPanel3";
+            this.dockPanel3.OriginalSize = new System.Drawing.Size(700, 200);
+            this.dockPanel3.Size = new System.Drawing.Size(700, 388);
+            // 
+            // dockPanel3_Container
+            // 
+            this.dockPanel3_Container.Location = new System.Drawing.Point(4, 23);
+            this.dockPanel3_Container.Name = "dockPanel3_Container";
+            this.dockPanel3_Container.Size = new System.Drawing.Size(692, 361);
+            this.dockPanel3_Container.TabIndex = 0;
+            // 
+            // dockPanel2
+            // 
+            this.dockPanel2.Controls.Add(this.controlContainer1);
+            this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel2.ID = new System.Guid("5a1c6bb8-fa30-40ab-be53-28cd23606330");
+            this.dockPanel2.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel2.Name = "dockPanel2";
+            this.dockPanel2.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel2.Size = new System.Drawing.Size(0, 0);
+            this.dockPanel2.Text = "dockPanel2";
+            // 
+            // controlContainer1
+            // 
+            this.controlContainer1.Location = new System.Drawing.Point(0, 0);
+            this.controlContainer1.Name = "controlContainer1";
+            this.controlContainer1.Size = new System.Drawing.Size(0, 0);
+            this.controlContainer1.TabIndex = 0;
+            // 
+            // dockPanel4
+            // 
+            this.dockPanel4.Controls.Add(this.dockPanel4_Container);
+            this.dockPanel4.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockPanel4.ID = new System.Guid("b90f4928-1750-446a-9d78-1d028beb24db");
+            this.dockPanel4.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel4.Name = "dockPanel4";
+            this.dockPanel4.OriginalSize = new System.Drawing.Size(200, 200);
+            this.dockPanel4.Size = new System.Drawing.Size(0, 0);
+            this.dockPanel4.Text = "dockPanel4";
+            // 
+            // dockPanel4_Container
+            // 
+            this.dockPanel4_Container.Location = new System.Drawing.Point(0, 0);
+            this.dockPanel4_Container.Name = "dockPanel4_Container";
+            this.dockPanel4_Container.Size = new System.Drawing.Size(0, 0);
+            this.dockPanel4_Container.TabIndex = 0;
+            // 
+            // dockManager1
+            // 
+            this.dockManager1.AllowGlyphSkinning = true;
+            this.dockManager1.Form = this;
+            this.dockManager1.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.dockCurrentUser});
+            this.dockManager1.TopZIndexControls.AddRange(new string[] {
+            "DevExpress.XtraBars.BarDockControl",
+            "DevExpress.XtraBars.StandaloneBarDockControl",
+            "System.Windows.Forms.StatusBar",
+            "System.Windows.Forms.MenuStrip",
+            "System.Windows.Forms.StatusStrip",
+            "DevExpress.XtraBars.Ribbon.RibbonStatusBar",
+            "DevExpress.XtraBars.Ribbon.RibbonControl"});
+            // 
+            // dockCurrentUser
+            // 
+            this.dockCurrentUser.Controls.Add(this.dockPanel5_Container);
+            this.dockCurrentUser.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
+            this.dockCurrentUser.FloatSize = new System.Drawing.Size(200, 180);
+            this.dockCurrentUser.ID = new System.Guid("7aad232f-c29e-4fff-853b-6b18beca6b3a");
+            this.dockCurrentUser.Location = new System.Drawing.Point(0, 155);
+            this.dockCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockCurrentUser.Name = "dockCurrentUser";
+            this.dockCurrentUser.OriginalSize = new System.Drawing.Size(198, 200);
+            this.dockCurrentUser.Size = new System.Drawing.Size(198, 589);
+            this.dockCurrentUser.Text = "Welcome";
+            // 
+            // dockPanel5_Container
+            // 
+            this.dockPanel5_Container.Controls.Add(this.panCurrentUser);
+            this.dockPanel5_Container.Location = new System.Drawing.Point(4, 24);
+            this.dockPanel5_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel5_Container.Name = "dockPanel5_Container";
+            this.dockPanel5_Container.Size = new System.Drawing.Size(190, 561);
+            this.dockPanel5_Container.TabIndex = 0;
+            // 
+            // panCurrentUser
+            // 
+            this.panCurrentUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panCurrentUser.Location = new System.Drawing.Point(0, 0);
+            this.panCurrentUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panCurrentUser.Name = "panCurrentUser";
+            this.panCurrentUser.Size = new System.Drawing.Size(190, 561);
+            this.panCurrentUser.TabIndex = 0;
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.xtraTabControl1);
+            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl1.Location = new System.Drawing.Point(198, 155);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(1170, 589);
+            this.panelControl1.TabIndex = 4;
+            // 
+            // popupMenu1
+            // 
+            this.popupMenu1.Name = "popupMenu1";
+            this.popupMenu1.Ribbon = this.ribbon;
+            // 
+            // popupMenu2
+            // 
+            this.popupMenu2.Name = "popupMenu2";
+            this.popupMenu2.Ribbon = this.ribbon;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 60000;
+            // 
+            // popupMenu3
+            // 
+            this.popupMenu3.Name = "popupMenu3";
+            this.popupMenu3.Ribbon = this.ribbon;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn3.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn3.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn3.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn3.Caption = "Giá phòng ( VNĐ)";
+            this.gridColumn3.DisplayFormat.FormatString = "n";
+            this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn3.FieldName = "CostRef_Rooms";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.OptionsColumn.AllowFocus = false;
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 175;
+            // 
+            // progressPanel_Tab3
+            // 
+            this.progressPanel_Tab3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel_Tab3.Appearance.Options.UseBackColor = true;
+            this.progressPanel_Tab3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.progressPanel_Tab3.AppearanceCaption.Options.UseFont = true;
+            this.progressPanel_Tab3.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.progressPanel_Tab3.AppearanceDescription.Options.UseFont = true;
+            this.progressPanel_Tab3.Enabled = false;
+            this.progressPanel_Tab3.Location = new System.Drawing.Point(417, 223);
+            this.progressPanel_Tab3.Name = "progressPanel_Tab3";
+            this.progressPanel_Tab3.Size = new System.Drawing.Size(246, 66);
+            this.progressPanel_Tab3.TabIndex = 0;
+            this.progressPanel_Tab3.Text = "progressPanel1";
             // 
             // frmMain
             // 
@@ -1908,6 +1927,9 @@
             this.dockPanel1_Container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
+            this.tabOvertimeBooking.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).EndInit();
+            this.panLuongNghiepVu.ResumeLayout(false);
             this.tabCurrentStatus.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1916,8 +1938,15 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panStatusRoom)).EndInit();
             this.tabOvertimeCheckIn.ResumeLayout(false);
-            this.tabOvertimeBooking.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBookingRooms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvBookingRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
@@ -1929,15 +1958,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu3)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBookingRooms)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvBookingRoom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2096,5 +2116,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCheckOut;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit3;
+        private DevExpress.XtraWaitForm.ProgressPanel progressPanel_Tab3;
+        
     }
 }

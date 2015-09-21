@@ -95,8 +95,8 @@ namespace RoomManager
                     this.rectangleShape_BackColor = System.Drawing.Color.SkyBlue;
                     this.rectangleShape_BorderColor = System.Drawing.Color.Teal;
 
-                    this.lblSku_BackColor = System.Drawing.Color.LimeGreen;
-                    this.lblSku_ForeColor = System.Drawing.Color.Green;
+                    this.lblSku_BackColor = System.Drawing.Color.SkyBlue;
+                    this.lblSku_ForeColor = System.Drawing.Color.WhiteSmoke;
                 }
                 if (Datasource.RoomStatus == 5)
                 {
@@ -164,7 +164,7 @@ namespace RoomManager
                         this.lbWarning.Text = this.CountMemberInRoom(this.Datasource.BookingRooms_ID) + "\n" + this.Datasource.CheckInActual.ToString("dd/MM/yyyy") + "\n" + this.Datasource.CheckOutPlan.ToString("dd/MM/yyyy") + "\n" + Warning;
                         this.lbWarning.Visible = true;
                         this.lbWarning.BackColor = rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                     else if (compare > 0 && aRank.TotalHours < 36)
                     {
@@ -173,7 +173,7 @@ namespace RoomManager
                         this.lbWarning.Text = this.CountMemberInRoom(this.Datasource.BookingRooms_ID) + "\n" + this.Datasource.CheckInActual.ToString("dd/MM/yyyy") + "\n" + this.Datasource.CheckOutPlan.ToString("dd/MM/yyyy") + "\n" + Warning;
                         this.lbWarning.Visible = true;
                         this.lbWarning.BackColor = rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                     else if (compare > 0 && aRank.TotalHours >= 36)
                     {
@@ -182,14 +182,14 @@ namespace RoomManager
                         this.lbWarning.Text = this.CountMemberInRoom(this.Datasource.BookingRooms_ID) + "\n" + this.Datasource.CheckInActual.ToString("dd/MM/yyyy") + "\n" + this.Datasource.CheckOutPlan.ToString("dd/MM/yyyy");
                         this.lbWarning.Visible = true;
                         this.lbWarning.BackColor = rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                     else
                     {
                         this.lbWarning.Text = this.CountMemberInRoom(this.Datasource.BookingRooms_ID) + "\n" + this.Datasource.CheckInActual.ToString("dd/MM/yyyy") + "\n" + this.Datasource.CheckOutPlan.ToString("dd/MM/yyyy") + "\n" + this.Mess_Qua_han;
                         this.lbWarning.Visible = true;
                         this.lbWarning.BackColor = this.rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                 }
 
@@ -202,7 +202,7 @@ namespace RoomManager
                         this.lbWarning.Visible = true;
 
                         this.lbWarning.BackColor = rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                 }
 
@@ -215,7 +215,7 @@ namespace RoomManager
                         this.lbWarning.Visible = true;
 
                         this.lbWarning.BackColor = rectangleShape1.BackColor;
-                        this.lbWarning.ForeColor = lblSku_BackColor;
+                        this.lbWarning.ForeColor = lblSku_ForeColor;
                     }
                 }
             }

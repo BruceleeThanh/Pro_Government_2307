@@ -10,6 +10,8 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using Entity;
 
+using DevExpress.XtraEditors.Controls;
+
 namespace BussinessLogic
 {
     public class RoomsBO
@@ -128,6 +130,7 @@ namespace BussinessLogic
             }
         }
 
+  
 
         public List<RoomExtStatusEN> GetStatusRoom(List<string> ListCodeRoom, DateTime now)
         {
