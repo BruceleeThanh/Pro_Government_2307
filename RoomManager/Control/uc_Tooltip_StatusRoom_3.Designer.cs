@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Tooltip_StatusRoom_3));
             this.pan_Status_3 = new DevExpress.XtraEditors.PanelControl();
+            this.lueRooms = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.btnMergerRoom = new DevExpress.XtraEditors.SimpleButton();
             this.btnCheckInHalls = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.tbnChangeRoom = new DevExpress.XtraEditors.SimpleButton();
             this.btnLockRoom = new DevExpress.XtraEditors.SimpleButton();
             this.lblBookingMoney = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
@@ -66,11 +69,9 @@
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.lblStatus_3 = new DevExpress.XtraEditors.LabelControl();
-            this.btnMergerRoom = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.lueRooms = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pan_Status_3)).BeginInit();
             this.pan_Status_3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
@@ -79,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // pan_Status_3
@@ -88,7 +88,7 @@
             this.pan_Status_3.Controls.Add(this.labelControl9);
             this.pan_Status_3.Controls.Add(this.btnMergerRoom);
             this.pan_Status_3.Controls.Add(this.btnCheckInHalls);
-            this.pan_Status_3.Controls.Add(this.simpleButton1);
+            this.pan_Status_3.Controls.Add(this.tbnChangeRoom);
             this.pan_Status_3.Controls.Add(this.btnLockRoom);
             this.pan_Status_3.Controls.Add(this.lblBookingMoney);
             this.pan_Status_3.Controls.Add(this.groupControl2);
@@ -115,6 +115,38 @@
             this.pan_Status_3.TabIndex = 0;
             this.pan_Status_3.Paint += new System.Windows.Forms.PaintEventHandler(this.pan_Status_3_Paint);
             // 
+            // lueRooms
+            // 
+            this.lueRooms.Location = new System.Drawing.Point(165, 546);
+            this.lueRooms.Name = "lueRooms";
+            this.lueRooms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueRooms.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Rooms_Sku", "Sku"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CustomerGroups_Name", 50, "CustomerGroups Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BookingRs_ID", "IDBookingRs")});
+            this.lueRooms.Size = new System.Drawing.Size(56, 22);
+            this.lueRooms.TabIndex = 36;
+            this.lueRooms.EditValueChanged += new System.EventHandler(this.lueRooms_EditValueChanged);
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(18, 549);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(126, 17);
+            this.labelControl9.TabIndex = 35;
+            this.labelControl9.Text = "Gộp sang đặt phòng";
+            // 
+            // btnMergerRoom
+            // 
+            this.btnMergerRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnMergerRoom.Image")));
+            this.btnMergerRoom.Location = new System.Drawing.Point(227, 542);
+            this.btnMergerRoom.Name = "btnMergerRoom";
+            this.btnMergerRoom.Size = new System.Drawing.Size(105, 28);
+            this.btnMergerRoom.TabIndex = 33;
+            this.btnMergerRoom.Text = "Gộp phòng";
+            this.btnMergerRoom.Click += new System.EventHandler(this.btnMergerRoom_Click);
+            // 
             // btnCheckInHalls
             // 
             this.btnCheckInHalls.Image = ((System.Drawing.Image)(resources.GetObject("btnCheckInHalls.Image")));
@@ -126,16 +158,16 @@
             this.btnCheckInHalls.Text = "Đặt tiệc";
             this.btnCheckInHalls.Click += new System.EventHandler(this.btnCheckInHalls_Click);
             // 
-            // simpleButton1
+            // tbnChangeRoom
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(165, 470);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(167, 28);
-            this.simpleButton1.TabIndex = 32;
-            this.simpleButton1.Text = "Chuyển phòng";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.tbnChangeRoom.Image = ((System.Drawing.Image)(resources.GetObject("tbnChangeRoom.Image")));
+            this.tbnChangeRoom.Location = new System.Drawing.Point(165, 470);
+            this.tbnChangeRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.tbnChangeRoom.Name = "tbnChangeRoom";
+            this.tbnChangeRoom.Size = new System.Drawing.Size(167, 28);
+            this.tbnChangeRoom.TabIndex = 32;
+            this.tbnChangeRoom.Text = "Sửa chi tiết phòng";
+            this.tbnChangeRoom.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnLockRoom
             // 
@@ -174,6 +206,7 @@
             this.groupControl2.Size = new System.Drawing.Size(509, 139);
             this.groupControl2.TabIndex = 29;
             this.groupControl2.Text = "Thông tin đặt phòng";
+            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
             // lblIDBookingR_3
             // 
@@ -507,38 +540,6 @@
             this.lblStatus_3.TabIndex = 0;
             this.lblStatus_3.Text = "Trạng thái phòng";
             // 
-            // btnMergerRoom
-            // 
-            this.btnMergerRoom.Image = ((System.Drawing.Image)(resources.GetObject("btnMergerRoom.Image")));
-            this.btnMergerRoom.Location = new System.Drawing.Point(237, 542);
-            this.btnMergerRoom.Name = "btnMergerRoom";
-            this.btnMergerRoom.Size = new System.Drawing.Size(95, 28);
-            this.btnMergerRoom.TabIndex = 33;
-            this.btnMergerRoom.Text = "Gộp phòng";
-            this.btnMergerRoom.Click += new System.EventHandler(this.btnMergerRoom_Click);
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(18, 549);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(126, 17);
-            this.labelControl9.TabIndex = 35;
-            this.labelControl9.Text = "Gộp sang đặt phòng";
-            // 
-            // lueRooms
-            // 
-            this.lueRooms.Location = new System.Drawing.Point(165, 546);
-            this.lueRooms.Name = "lueRooms";
-            this.lueRooms.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueRooms.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Rooms_Sku", "Sku"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("CustomerGroups_Name", 50, "CustomerGroups Name"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("BookingRs_ID", "IDBookingRs")});
-            this.lueRooms.Size = new System.Drawing.Size(66, 22);
-            this.lueRooms.TabIndex = 36;
-            this.lueRooms.EditValueChanged += new System.EventHandler(this.lueRooms_EditValueChanged);
-            // 
             // uc_Tooltip_StatusRoom_3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -550,6 +551,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pan_Status_3)).EndInit();
             this.pan_Status_3.ResumeLayout(false);
             this.pan_Status_3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
@@ -560,7 +562,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueRooms.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -601,7 +602,7 @@
         private DevExpress.XtraEditors.LabelControl lblCustomerType_3;
         private DevExpress.XtraEditors.LabelControl lblBookingMoney;
         private DevExpress.XtraEditors.SimpleButton btnLockRoom;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton tbnChangeRoom;
         private DevExpress.XtraEditors.SimpleButton btnCheckInHalls;
         private DevExpress.XtraEditors.SimpleButton btnDetailRooms;
         private DevExpress.XtraEditors.SimpleButton btnMergerRoom;

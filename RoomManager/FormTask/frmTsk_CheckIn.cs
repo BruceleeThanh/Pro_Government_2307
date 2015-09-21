@@ -844,9 +844,9 @@ namespace RoomManager
                 }
 
                 // Check du lieu cua khach moi truoc khi checkin
-                if (!this.CheckDataBeforeSaveCustomer()) {
-                    return false;
-                }
+               //if (!this.CheckDataBeforeSaveCustomer()) {
+               //     return false;
+               // }
 
                 // Ket thuc
 

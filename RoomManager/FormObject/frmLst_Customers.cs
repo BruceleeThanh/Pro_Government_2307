@@ -264,10 +264,15 @@ namespace RoomManager
         {
             int ID = int.Parse(viewAvailableCustomers.GetFocusedRowCellValue("ID").ToString());
             string Name = viewAvailableCustomers.GetFocusedRowCellValue("Name").ToString();
-            CustomersBO aCustomersBO = new CustomersBO();
+           
             DialogResult result = MessageBox.Show("Bạn có muốn xóa khách hàng " + Name + " này không?", "Xóa khách hàng", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                CustomerGroupsBO aCustomerGroupsBO = new CustomerGroupsBO();
+                CustomerGroups_CustomersBO aCustomerGroups_CustomersBO = new CustomerGroups_CustomersBO();
+                CustomersBO aCustomersBO = new CustomersBO();
+                
+                aCustomerGroups_CustomersBO.se
                 aCustomersBO.Delete(ID);
                 MessageBox.Show("Xóa thành công");
                 this.ReloadData();

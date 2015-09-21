@@ -43,7 +43,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.rectangleShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(117, 151);
+            this.shapeContainer1.Size = new System.Drawing.Size(117, 167);
             this.shapeContainer1.TabIndex = 0;
             this.shapeContainer1.TabStop = false;
             // 
@@ -57,13 +57,11 @@
             this.rectangleShape1.FillGradientColor = System.Drawing.Color.Gainsboro;
             this.rectangleShape1.Location = new System.Drawing.Point(5, 8);
             this.rectangleShape1.Name = "rectangleShape1";
-            this.rectangleShape1.Size = new System.Drawing.Size(87, 137);
+            this.rectangleShape1.Size = new System.Drawing.Size(87, 151);
             this.rectangleShape1.Tag = "";
             this.rectangleShape1.Click += new System.EventHandler(this.rectangleShape1_Click);
-
             this.rectangleShape1.MouseEnter += new System.EventHandler(this.rectangleShape1_MouseEnter);
             this.rectangleShape1.MouseLeave += new System.EventHandler(this.rectangleShape1_MouseLeave);
-
             // 
             // lblSku
             // 
@@ -102,7 +100,7 @@
             this.lbWarning.Location = new System.Drawing.Point(11, 51);
             this.lbWarning.Margin = new System.Windows.Forms.Padding(4);
             this.lbWarning.Name = "lbWarning";
-            this.lbWarning.Size = new System.Drawing.Size(89, 88);
+            this.lbWarning.Size = new System.Drawing.Size(82, 104);
             this.lbWarning.TabIndex = 5;
             this.lbWarning.Text = "CheckOut";
             this.lbWarning.Visible = false;
@@ -119,7 +117,7 @@
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "uc_RoomStatusItem";
-            this.Size = new System.Drawing.Size(117, 151);
+            this.Size = new System.Drawing.Size(117, 167);
             this.Load += new System.EventHandler(this.uc_RoomStatusItem_Load);
             this.Click += new System.EventHandler(this.uc_RoomStatusItem_Click);
             this.ResumeLayout(false);

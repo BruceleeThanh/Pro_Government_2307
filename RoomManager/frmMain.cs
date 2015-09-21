@@ -917,19 +917,19 @@ namespace RoomManager
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            DateTime aTimeToExecute = DateTime.Now.Date.AddHours(21).AddMinutes(00);
-            if (DateTime.Now.TimeOfDay == aTimeToExecute.TimeOfDay)
-            {
-                List<OverNightCustomerEN> aListForeign = aReportTaskBO.GetOverNightCustomer(DateTime.Now, 3).Where(a => a.Nationality != "VIET NAM").ToList();
-                string FileName = aReceptionTaskBO.ExportDBF(aListForeign);
-                string SendEmail = CORE.CONSTANTS.ListEmails.SenderMail.ID;
-                string Pass = CORE.CONSTANTS.ListEmails.SenderMail.PassWord;
-                string ReceiveEmail1 = CORE.CONSTANTS.ListEmails.ReceiverMail1.ID;
-                string ReceiveEmail2 = CORE.CONSTANTS.ListEmails.ReceiverMail2.ID;
-                string subject = "Gửi thông báo tạm trú ngày :" + String.Format("{0:MM-dd-yyyy}", DateTime.Now);
-                aReceptionTaskBO.SendMail(SendEmail, Pass, ReceiveEmail1, subject, FileName);
-                aReceptionTaskBO.SendMail(SendEmail, Pass, ReceiveEmail2, subject, FileName);
-            }
+            //DateTime aTimeToExecute = DateTime.Now.Date.AddHours(21).AddMinutes(00);
+            //if (DateTime.Now.TimeOfDay == aTimeToExecute.TimeOfDay)
+            //{
+            //    List<OverNightCustomerEN> aListForeign = aReportTaskBO.GetOverNightCustomer(DateTime.Now, 3).Where(a => a.Nationality != "VIET NAM").ToList();
+            //    string FileName = aReceptionTaskBO.ExportDBF(aListForeign);
+            //    string SendEmail = CORE.CONSTANTS.ListEmails.SenderMail.ID;
+            //    string Pass = CORE.CONSTANTS.ListEmails.SenderMail.PassWord;
+            //    string ReceiveEmail1 = CORE.CONSTANTS.ListEmails.ReceiverMail1.ID;
+            //    string ReceiveEmail2 = CORE.CONSTANTS.ListEmails.ReceiverMail2.ID;
+            //    string subject = "Gửi thông báo tạm trú ngày :" + String.Format("{0:MM-dd-yyyy}", DateTime.Now);
+            //    aReceptionTaskBO.SendMail(SendEmail, Pass, ReceiveEmail1, subject, FileName);
+            //    aReceptionTaskBO.SendMail(SendEmail, Pass, ReceiveEmail2, subject, FileName);
+           // }
         }
 
         private void btnListCustomersCurrentInRooms_ItemClick(object sender, ItemClickEventArgs e)
@@ -1003,6 +1003,92 @@ namespace RoomManager
         {
 
         }
+
+        private void dtpSearch_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewNow_Click(object sender, EventArgs e)
+        {
+            RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
+            dtpSearch.DateTime = DateTime.Now;
+        }
+
+        private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (e.Page.Name.ToLower() == "tabovertimecheckin")
+            {
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                List<RoomExtStatusEN> aList = new List<RoomExtStatusEN>();
+                //List<Rooms> aListRooms = new List<Rooms>();
+
+                //List<BookingRooms> aListTemp = new List<BookingRooms>();
+                //aListTemp = aBookingRoomsBO.Select_ByStatus(3).Where(p => p.CheckOutPlan.Date  <= DateTime.Today.Date).ToList();
+                
+                RoomsBO aRoomsBO = new RoomsBO();
+
+                //aRoomsBO.GetStatusRoom(aListTemp.Select(p => p.CodeRoom).ToList(), DateTime.Now);
+                aList = aRoomsBO.GetListUsingRooms(DateTime.Now).Where(p => p.CheckOutPlan.Date <= DateTime.Today.Date).ToList();
+                dgvBookingRooms.DataSource = aList;
+                dgvBookingRooms.RefreshDataSource();
+                
+
+                //RoomsBO aRoomsBO = new RoomsBO();
+                //aListRooms = aRoomsBO.Select_All();
+                //dgvBookingRooms.DataSource = this.GetListBookingRooms(aListTemp, aListRooms);
+                //dgvBookingRooms.RefreshDataSource();
+            }
+            
+        }
+        private List<BookingRooms> GetListBookingRooms(List<BookingRooms> aListBookingRooms, List<Rooms> aListRooms)
+        {
+            try
+            {
+                List<BookingRooms> aListBookingRoomsTemp = new List<BookingRooms>();
+                BookingRooms aBookingRooms;
+                foreach (BookingRooms items in aListBookingRooms)
+                {
+                    aBookingRooms = new BookingRooms();
+                    aBookingRooms.ID = items.ID;
+                    aBookingRooms.IDBookingR = items.IDBookingR;
+                    aBookingRooms.CodeRoom = items.CodeRoom;
+                    aBookingRooms.Cost = items.Cost;
+                    aBookingRooms.PercentTax = items.PercentTax;
+                    aBookingRooms.CostRef_Rooms = items.CostRef_Rooms;
+                    aBookingRooms.Note = items.Note;
+                    aBookingRooms.CheckInPlan = items.CheckInPlan;
+                    aBookingRooms.CheckOutPlan = items.CheckOutPlan;
+                    aBookingRooms.CheckInActual = items.CheckInActual;
+                    aBookingRooms.CheckOutActual = items.CheckOutActual;
+                    aBookingRooms.BookingStatus = items.BookingStatus;
+                    aBookingRooms.Status = items.Status;
+                    aBookingRooms.StartTime = items.StartTime;
+                    aBookingRooms.EndTime = items.EndTime;
+                    aBookingRooms.IsAllDayEvent = items.IsAllDayEvent;
+                    aBookingRooms.Color = items.Color;
+                    aBookingRooms.IsRecurring = items.IsRecurring;
+                    aBookingRooms.IsEditable = items.IsEditable;
+
+                    //dung tam cot AdditionalColumn1 de hien thi ten phong(Sku)
+                    if (aListRooms.Where(r => r.Code == items.CodeRoom).ToList().Count > 0)
+                    {
+                        aBookingRooms.AdditionalColumn1 = aListRooms.Where(r => r.Code == items.CodeRoom).ToList()[0].Sku;
+                    }
+                    aBookingRooms.CostPendingRoom = items.CostPendingRoom;
+                    aBookingRooms.TimeInUse = items.TimeInUse;
+                    aListBookingRoomsTemp.Add(aBookingRooms);
+                }
+                return aListBookingRoomsTemp;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("frmTsk_CheckOut.GetListBookingRooms\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
 
 
 

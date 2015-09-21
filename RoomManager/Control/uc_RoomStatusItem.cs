@@ -92,8 +92,8 @@ namespace RoomManager
                 }
                 if (Datasource.RoomStatus == 3) // Dang o
                 {
-                    this.rectangleShape_BackColor = System.Drawing.Color.Green;
-                    this.rectangleShape_BorderColor = System.Drawing.Color.DarkGreen;
+                    this.rectangleShape_BackColor = System.Drawing.Color.SkyBlue;
+                    this.rectangleShape_BorderColor = System.Drawing.Color.Teal;
 
                     this.lblSku_BackColor = System.Drawing.Color.LimeGreen;
                     this.lblSku_ForeColor = System.Drawing.Color.Green;
@@ -122,6 +122,8 @@ namespace RoomManager
         public void DataBind()
         {
             lblSku.Text = this.Datasource.Sku;
+            Size aSize = new System.Drawing.Size(rectangleShape1.Size.Width, lbWarning.Size.Height);
+            lbWarning.Size = aSize;
         }
 
         private void uc_RoomStatusItem_Load(object sender, EventArgs e)

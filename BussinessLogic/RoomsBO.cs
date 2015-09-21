@@ -132,7 +132,7 @@ namespace BussinessLogic
         public List<RoomExtStatusEN> GetStatusRoom(List<string> ListCodeRoom, DateTime now)
         {
             List<RoomExtStatusEN> ret = new List<RoomExtStatusEN>();
-            List<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> aList = this.aDatabaseDA.sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string.Join(",", ListCodeRoom), now).ToList();
+            List<sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime_Result> aList = this.aDatabaseDA.sp_RoomExt_GetCurrentStatusRooms_ByListCodeRoom_ByTime(string.Join(",", ListCodeRoom), now,1).ToList();
 
             RoomExtStatusEN aRoomExtStatusEN = new RoomExtStatusEN();
 
@@ -164,12 +164,13 @@ namespace BussinessLogic
                 aRoomExtStatusEN.Companies_Name = aList[i].Companies_Name;
                 aRoomExtStatusEN.CostRef = aList[i].CostRef;
                 aRoomExtStatusEN.CustomerGroups_Name = aList[i].CustomerGroups_Name;
+                aRoomExtStatusEN.CustomerGroups_ID = aList[i].CustomerGroups_ID;
+                aRoomExtStatusEN.Companies_ID = aList[i].Companies_ID;
+
                 aRoomExtStatusEN.Customers_Address = aList[i].Customers_Address;
                 aRoomExtStatusEN.Customers_Name = aList[i].Customers_Name;
                 aRoomExtStatusEN.Customers_Nationality = aList[i].Customers_Nationality;
                 aRoomExtStatusEN.Customers_Tel = aList[i].Customers_Tel;
-                aRoomExtStatusEN.Companies_ID = aList[i].Companies_ID;
-                aRoomExtStatusEN.CustomerGroups_ID = aList[i].CustomerGroups_ID;
                 aRoomExtStatusEN.Customers_ID = aList[i].Customers_ID;
 
                 if (aList[i].BookingRooms_Status == 1)

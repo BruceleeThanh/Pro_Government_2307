@@ -75,6 +75,18 @@ namespace BussinessLogic
                 throw new Exception("CustomerGroups_CustomersBO.Select_ByIDCustomerGroup:" + ex.ToString());
             }
         }
+        public List<CustomerGroups_Customers> Select_ByIDCustomer(int IDCustomer)
+        {
+            try
+            {
+                return aDatabaseDA.CustomerGroups_Customers.Where(c => c.IDCustomer == IDCustomer).ToList();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("CustomerGroups_CustomersBO.Select_ByIDCustomer:" + ex.ToString());
+            }
+        }
         //-----------------Select by Name-------------------------------
         public List<CustomerGroups_Customers> Select_ByName(string name)
         {

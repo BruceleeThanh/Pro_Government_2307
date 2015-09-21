@@ -86,18 +86,12 @@ namespace RoomManager
             lueRooms.Properties.DataSource = Datasource;
             lueRooms.Properties.ValueMember = "BookingRs_ID";
             lueRooms.Properties.DisplayMember = "Rooms_Sku";
-            if (Datasource.Count >= 0)
+            if (Datasource.Count > 0)
             {
                 lueRooms.Properties.NullText = Datasource[0].Rooms_Sku;
                 lueRooms.SelectedText = Datasource[0].Rooms_Sku;
-                lueRooms.EditValue = Datasource[0].BookingRs_ID;
-
-         
-                
+                lueRooms.EditValue = Datasource[0].BookingRs_ID;              
             }
-        
-
-
         }
 
         private List<vw__BookingRInfo__BookingRooms_Rooms_SystemUsers_Customers_CustomerGroups> GetAvaiableRoom()
@@ -279,6 +273,11 @@ namespace RoomManager
         }
 
         private void lueRooms_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
         {
 
         }

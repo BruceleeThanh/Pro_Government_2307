@@ -64,7 +64,7 @@ namespace RoomManager {
                 NavBarGroup aNavBarGroup = new NavBarGroup();
                 aNavBarGroup.Caption = "Tầng " + i;
                 aNavBarGroup.Name = "navBarGroup" + i;
-                aNavBarGroup.GroupClientHeight = 140;
+           
               
                 aNavBarGroup.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer;
                 aNavBarGroup.Expanded = true;
@@ -85,7 +85,7 @@ namespace RoomManager {
 
 
             aNavBarGroup.ControlContainer = aNavBarGroupControlContainer;
-            aNavBarGroup.GroupClientHeight = 300;
+            aNavBarGroup.GroupClientHeight = 370;
 
             aNavBarGroupControlContainer.Controls.Add(aListFlowLayoutPanel[LevelSku - 1]);
 
