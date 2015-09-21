@@ -286,68 +286,60 @@ namespace RoomManager
         {
             BookingRooms_ServicesBO aBookingRooms_ServicesBO = new BookingRooms_ServicesBO();
             BookingRooms_Services aBookingRooms_Services;
-            for (int i = 0; i < aListSelected.Count; i++)
+
+            List<string> aList = aListSelected.Where(p => p.Tag != null).Where(p => p.Tag != string.Empty).Select(p => p.Tag).ToList();
+
+            if (aList.Count > 0)
             {
-                aBookingRooms_Services = aBookingRooms_ServicesBO.Select_ByID(aListSelected[i].ID);
-                if (aBookingRooms_Services != null)
+                MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
+            }
+            else
+            {
+                for (int i = 0; i < aListSelected.Count; i++)
                 {
-                    aBookingRooms_Services.Cost = aListSelected[i].Cost;
-                    aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
-                    aBookingRooms_Services.PercentTax = aListSelected[i].PercentTax;
-                    aBookingRooms_Services.Date = aListSelected[i].Date;
-                    aBookingRooms_Services.Tag = aListSelected[i].Tag;
-                    if (string.IsNullOrEmpty(aBookingRooms_Services.Tag))
+                    aBookingRooms_Services = aBookingRooms_ServicesBO.Select_ByID(aListSelected[i].ID);
+                    if (aBookingRooms_Services != null)
                     {
-                        MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
-                        break;
-                    }
-                    else
-                    {
+                        aBookingRooms_Services.Cost = aListSelected[i].Cost;
+                        aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
+                        aBookingRooms_Services.PercentTax = aListSelected[i].PercentTax;
+                        aBookingRooms_Services.Date = aListSelected[i].Date;
+                        aBookingRooms_Services.Tag = aListSelected[i].Tag;
                         aBookingRooms_ServicesBO.Update(aBookingRooms_Services);
-                    }
-                    
-                }
-                else
-                {
-                    aBookingRooms_Services = new BookingRooms_Services();
-                    aBookingRooms_Services.Info = "";
-                    aBookingRooms_Services.Type = 1;
-                    aBookingRooms_Services.Status = 1;
-                    aBookingRooms_Services.Disable = false;
-                    aBookingRooms_Services.IDBookingRoom = this.IDBookingRoom;
-                    aBookingRooms_Services.IDService = aListSelected[i].IDService;
-                    aBookingRooms_Services.Cost = aListSelected[i].Cost;
-                    aBookingRooms_Services.Date = dtpDate.DateTime;
-                    aBookingRooms_Services.CostRef_Services = aListSelected[i].CostRef_Services;
-                    aBookingRooms_Services.PercentTax = 10;// de mac dinh
-                    aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
-                    aBookingRooms_Services.Tag = aListSelected[i].Tag;
-                    if (string.IsNullOrEmpty(aBookingRooms_Services.Tag))
-                    {
-                        MessageBox.Show("Có dịch vụ nào đó chưa được chọn người trả tiền");
-                        break;
+
                     }
                     else
                     {
+                        aBookingRooms_Services = new BookingRooms_Services();
+                        aBookingRooms_Services.Info = "";
+                        aBookingRooms_Services.Type = 1;
+                        aBookingRooms_Services.Status = 1;
+                        aBookingRooms_Services.Disable = false;
+                        aBookingRooms_Services.IDBookingRoom = this.IDBookingRoom;
+                        aBookingRooms_Services.IDService = aListSelected[i].IDService;
+                        aBookingRooms_Services.Cost = aListSelected[i].Cost;
+                        aBookingRooms_Services.Date = dtpDate.DateTime;
+                        aBookingRooms_Services.CostRef_Services = aListSelected[i].CostRef_Services;
+                        aBookingRooms_Services.PercentTax = 10;// de mac dinh
+                        aBookingRooms_Services.Quantity = aListSelected[i].Quantity;
+                        aBookingRooms_Services.Tag = aListSelected[i].Tag;
                         aBookingRooms_ServicesBO.Insert(aBookingRooms_Services);
-                        
+
                     }
-                    
                 }
-            }
-            foreach (BookingRooms_Services items in this.aListRemove)
-            {
-                aBookingRooms_ServicesBO.Delete(items.ID);
-            }
+                foreach (BookingRooms_Services items in this.aListRemove)
+                {
+                    aBookingRooms_ServicesBO.Delete(items.ID);
+                }
 
-            if (this.afrmTsk_Payment_Step2 != null)
-            {
-                this.afrmTsk_Payment_Step2.Reload();
+                if (this.afrmTsk_Payment_Step2 != null)
+                {
+                    this.afrmTsk_Payment_Step2.Reload();
+                }
+
+                MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
-
-            MessageBox.Show("Thực hiện thành công!", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
         }
 
 
@@ -412,12 +404,6 @@ namespace RoomManager
         {
 
         }
-
-
-
-
-      
-       
     }
 
 }
