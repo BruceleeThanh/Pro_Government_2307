@@ -107,12 +107,13 @@ namespace RoomManager
                 colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "DisplayMoneyTaxRoom", "{0:0,0}");
                 colPaymentMoneyaRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
 
+                colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
                 ////tong tien phong truoc thue
-                //lblSumMoneyRoomsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()));
+                lblSumMoneyRoomsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()));
                 ////Tong tien thue
-                //lblSumMoneyRoomTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(this.aNewPaymentEN.GetMoneyRoomsBeforeTax(), 10)));
+                lblSumMoneyRoomTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(this.aNewPaymentEN.GetMoneyRoomsBeforeTax(), 10)));
                 ////tong tien phong sau thue
-                //lblSumMoneyRoomsAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()));
+                lblSumMoneyRoomsAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRooms()));
 
 
                 XRSummary aXRSummaryMoneyRoomBeforeTax = new XRSummary();
@@ -158,11 +159,11 @@ namespace RoomManager
                 colTotalMoneyServiceAfterTax.DataBindings.Add("Text", this.DetailReport2.DataSource, "TotalMoneyAfterTax", "{0:0,0}");
 
                 ////tong tien dich vu truoc thue
-                //lblSumMoneyService_BookingRBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()));
+                lblSumMoneyService_BookingRBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax()));
                 ////Tong so tien thue
-                //lblSumMoneyServiceTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax(), 10)));
+                lblSumMoneyServiceTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyTax(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRoomsBeforeTax(), 10)));
                 ////tong tien dich vu sau thue
-                //lblSumMoneyService_BookingRAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms()));
+                lblSumMoneyService_BookingRAfterTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetTotalMoneyServiceUsedInRooms()));
 
                 XRSummary aXRSummaryTotalMoneyBeforeTax = new XRSummary();
                 aXRSummaryTotalMoneyBeforeTax.Func = SummaryFunc.Sum;
@@ -185,6 +186,7 @@ namespace RoomManager
                 aXRSummaryTotalMoneyAfterTax.Running = SummaryRunning.Group;
                 aXRSummaryTotalMoneyAfterTax.IgnoreNullValues = true;
                 aXRSummaryTotalMoneyAfterTax.FormatString = "{0:0,0}";
+
                 lblSumMoneyService_BookingRAfterTax.DataBindings.AddRange(new XRBinding[] { new XRBinding("Text", this.DetailReport2.DataSource, "TotalMoneyAfterTax", "{0:0,0}") });
                 lblSumMoneyService_BookingRAfterTax.Summary = aXRSummaryTotalMoneyAfterTax;
 

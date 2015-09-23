@@ -17,8 +17,17 @@ namespace Entity
 
        public bool IsCheckInEarly { get; set; }
        public bool IsCheckOutLate { get; set; }
-       
+
+       //Danh cho report
        public decimal? TotalMoney { get{return this.GetTotalMoneyRoom();}}
+       //Danh cho report
+       public decimal? TotalTimeInUse { get { return this.TimeInUse/(24 * 60) + Convert.ToDecimal(this.AddTimeEnd.GetValueOrDefault(0)) + Convert.ToDecimal(this.AddTimeStart.GetValueOrDefault(0)); } }
+       //Danh cho report
+       public decimal? OnlyMoneyRoomBeforeTax { get { return this.GetOnlyMoneyRoomBeforeTax(); } }
+       //Danh cho report
+       public decimal? OnlyMoneyRoom { get { return this.GetOnlyMoneyRoom(); } }
+       //Danh cho report
+       public decimal? OnlyTax { get { return this.GetOnlyMoneyRoom() - this.GetOnlyMoneyRoomBeforeTax(); } }
 
 
        public bool IsPaid { get { return this.IsPaidRoom(); } }

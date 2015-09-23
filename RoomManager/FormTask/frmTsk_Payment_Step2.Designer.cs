@@ -28,16 +28,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_Payment_Step2));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject81 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject82 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject83 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject84 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject85 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject86 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject87 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject88 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject89 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject90 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,6 +58,7 @@
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.btnAddService = new DevExpress.XtraEditors.SimpleButton();
+            this.ddbBill = new DevExpress.XtraEditors.DropDownButton();
             this.dgvServicesR = new DevExpress.XtraGrid.GridControl();
             this.viewServicesR = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.grcIDBookingService_R = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,6 +73,7 @@
             this.colTotal = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTagR = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueUserInBookingR = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDeleteService = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -212,6 +214,8 @@
             this.btnServicesCostForHalls = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTagH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lueUserInBookingH = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnDeleteServiceHall = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.grcIDBookingService_H = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -283,9 +287,6 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.btnSplitBill = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrintPaymentTotal = new DevExpress.XtraEditors.SimpleButton();
-            this.lueUserInBookingR = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.colTagH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lueUserInBookingH = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -301,6 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPercentTaxService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServiceCost)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteService)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
@@ -372,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesPercentTaxForHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesQuantityForHalls)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesCostForHalls)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteServiceHall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             this.tableLayoutPanel26.SuspendLayout();
@@ -400,8 +403,6 @@
             this.tableLayoutPanel38.SuspendLayout();
             this.tableLayoutPanel39.SuspendLayout();
             this.tableLayoutPanel40.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -446,8 +447,8 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.53009F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.4699F));
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel8, 1, 1);
@@ -475,13 +476,13 @@
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(331, 49);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(326, 49);
             this.tableLayoutPanel11.TabIndex = 67;
             // 
             // lueBookingR_Paymethod
             // 
             this.lueBookingR_Paymethod.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lueBookingR_Paymethod.Location = new System.Drawing.Point(168, 13);
+            this.lueBookingR_Paymethod.Location = new System.Drawing.Point(166, 13);
             this.lueBookingR_Paymethod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lueBookingR_Paymethod.Name = "lueBookingR_Paymethod";
             this.lueBookingR_Paymethod.Properties.Appearance.Options.UseTextOptions = true;
@@ -491,7 +492,7 @@
             this.lueBookingR_Paymethod.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Type")});
             this.lueBookingR_Paymethod.Properties.NullText = "Chọn lựa";
-            this.lueBookingR_Paymethod.Size = new System.Drawing.Size(159, 22);
+            this.lueBookingR_Paymethod.Size = new System.Drawing.Size(157, 22);
             this.lueBookingR_Paymethod.TabIndex = 68;
             this.lueBookingR_Paymethod.EditValueChanged += new System.EventHandler(this.lueBookingR_Paymethod_EditValueChanged);
             // 
@@ -499,7 +500,7 @@
             // 
             this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl5.Location = new System.Drawing.Point(8, 16);
+            this.labelControl5.Location = new System.Drawing.Point(6, 16);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(154, 17);
@@ -514,19 +515,19 @@
             this.tableLayoutPanel7.Controls.Add(this.labelControl11, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.lblTotalMoneyServiceR, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(331, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(326, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(616, 49);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(621, 49);
             this.tableLayoutPanel7.TabIndex = 70;
             // 
             // labelControl11
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl11.Location = new System.Drawing.Point(273, 16);
+            this.labelControl11.Location = new System.Drawing.Point(276, 16);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(124, 17);
@@ -536,7 +537,7 @@
             // lblTotalMoneyServiceR
             // 
             this.lblTotalMoneyServiceR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(403, 16);
+            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(406, 16);
             this.lblTotalMoneyServiceR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyServiceR.Name = "lblTotalMoneyServiceR";
             this.lblTotalMoneyServiceR.Size = new System.Drawing.Size(43, 16);
@@ -555,12 +556,12 @@
             this.tableLayoutPanel8.Controls.Add(this.btnPayment, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.btnBookHall, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(331, 49);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(326, 49);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(616, 41);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(621, 41);
             this.tableLayoutPanel8.TabIndex = 73;
             // 
             // btnPrintListCus
@@ -569,7 +570,7 @@
             this.btnPrintListCus.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintListCus.Appearance.Options.UseFont = true;
             this.btnPrintListCus.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintListCus.Image")));
-            this.btnPrintListCus.Location = new System.Drawing.Point(34, 5);
+            this.btnPrintListCus.Location = new System.Drawing.Point(35, 5);
             this.btnPrintListCus.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrintListCus.Name = "btnPrintListCus";
             this.btnPrintListCus.Size = new System.Drawing.Size(136, 31);
@@ -583,7 +584,7 @@
             this.btnPrint.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(441, 5);
+            this.btnPrint.Location = new System.Drawing.Point(444, 5);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(155, 31);
@@ -597,7 +598,7 @@
             this.btnPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.Appearance.Options.UseFont = true;
             this.btnPayment.Image = ((System.Drawing.Image)(resources.GetObject("btnPayment.Image")));
-            this.btnPayment.Location = new System.Drawing.Point(276, 5);
+            this.btnPayment.Location = new System.Drawing.Point(279, 5);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(155, 31);
@@ -611,7 +612,7 @@
             this.btnBookHall.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookHall.Appearance.Options.UseFont = true;
             this.btnBookHall.Image = ((System.Drawing.Image)(resources.GetObject("btnBookHall.Image")));
-            this.btnBookHall.Location = new System.Drawing.Point(180, 5);
+            this.btnBookHall.Location = new System.Drawing.Point(182, 5);
             this.btnBookHall.Margin = new System.Windows.Forms.Padding(3, 4, 7, 4);
             this.btnBookHall.Name = "btnBookHall";
             this.btnBookHall.Size = new System.Drawing.Size(86, 31);
@@ -630,7 +631,7 @@
             this.tableLayoutPanel42.Name = "tableLayoutPanel42";
             this.tableLayoutPanel42.RowCount = 1;
             this.tableLayoutPanel42.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel42.Size = new System.Drawing.Size(323, 34);
+            this.tableLayoutPanel42.Size = new System.Drawing.Size(180, 34);
             this.tableLayoutPanel42.TabIndex = 74;
             // 
             // btnPrintPayment_OldStyle
@@ -670,6 +671,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel5.Controls.Add(this.labelControl10, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnAddService, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.ddbBill, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -677,9 +679,9 @@
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(939, 32);
             this.tableLayoutPanel5.TabIndex = 61;
             // 
@@ -707,6 +709,15 @@
             this.btnAddService.TabIndex = 64;
             this.btnAddService.Text = "Thêm dịch vụ";
             this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
+            // ddbBill
+            // 
+            this.ddbBill.Location = new System.Drawing.Point(471, 3);
+            this.ddbBill.Name = "ddbBill";
+            this.ddbBill.Size = new System.Drawing.Size(175, 23);
+            this.ddbBill.TabIndex = 66;
+            this.ddbBill.Text = "Phiếu báo thanh toán";
+            this.ddbBill.Click += new System.EventHandler(this.ddbBill_Click);
             // 
             // dgvServicesR
             // 
@@ -936,6 +947,20 @@
             this.colTagR.VisibleIndex = 7;
             this.colTagR.Width = 139;
             // 
+            // lueUserInBookingR
+            // 
+            this.lueUserInBookingR.AutoHeight = false;
+            this.lueUserInBookingR.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInBookingR.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "IDUser")});
+            this.lueUserInBookingR.DisplayMember = "Name";
+            this.lueUserInBookingR.Name = "lueUserInBookingR";
+            this.lueUserInBookingR.NullText = "Thiếu người thanh toán";
+            this.lueUserInBookingR.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInBookingR.ValueMember = "ID";
+            // 
             // gridColumn25
             // 
             this.gridColumn25.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -954,7 +979,7 @@
             // 
             this.btnDeleteService.AutoHeight = false;
             this.btnDeleteService.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject81, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteService.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnDeleteService.Name = "btnDeleteService";
             this.btnDeleteService.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteService.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteService_ButtonClick);
@@ -1144,7 +1169,7 @@
             // 
             this.btnEditCustomer.AutoHeight = false;
             this.btnEditCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject82, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditCustomer.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditCustomer_ButtonClick);
@@ -1167,7 +1192,7 @@
             // 
             this.btnDeleteCus.AutoHeight = false;
             this.btnDeleteCus.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject83, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.btnDeleteCus.Name = "btnDeleteCus";
             this.btnDeleteCus.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteCus.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteCus_ButtonClick);
@@ -1176,7 +1201,7 @@
             // 
             this.btnSelectCustomer.AutoHeight = false;
             this.btnSelectCustomer.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject84, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectCustomer.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.btnSelectCustomer.Name = "btnSelectCustomer";
             this.btnSelectCustomer.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -1856,7 +1881,7 @@
             // 
             this.btnDetailRooms.AutoHeight = false;
             this.btnDetailRooms.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject85, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailRooms.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnDetailRooms.Name = "btnDetailRooms";
             this.btnDetailRooms.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDetailRooms.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDetailRooms_ButtonClick);
@@ -1898,7 +1923,7 @@
             // 
             this.btnDeleteRoom.AutoHeight = false;
             this.btnDeleteRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject86, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnDeleteRoom.Name = "btnDeleteRoom";
             this.btnDeleteRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteRoom.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteRoom_ButtonClick);
@@ -2668,7 +2693,7 @@
             // 
             this.repositoryItemButtonEdit3.AutoHeight = false;
             this.repositoryItemButtonEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject87, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit3.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.repositoryItemButtonEdit3.Name = "repositoryItemButtonEdit3";
             this.repositoryItemButtonEdit3.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -2962,6 +2987,34 @@
             this.gridColumn23.VisibleIndex = 6;
             this.gridColumn23.Width = 167;
             // 
+            // colTagH
+            // 
+            this.colTagH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.colTagH.AppearanceHeader.Options.UseFont = true;
+            this.colTagH.AppearanceHeader.Options.UseTextOptions = true;
+            this.colTagH.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.colTagH.Caption = "Người trả";
+            this.colTagH.ColumnEdit = this.lueUserInBookingH;
+            this.colTagH.FieldName = "Tag";
+            this.colTagH.Name = "colTagH";
+            this.colTagH.Visible = true;
+            this.colTagH.VisibleIndex = 7;
+            this.colTagH.Width = 139;
+            // 
+            // lueUserInBookingH
+            // 
+            this.lueUserInBookingH.AutoHeight = false;
+            this.lueUserInBookingH.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lueUserInBookingH.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
+            this.lueUserInBookingH.DisplayMember = "Name";
+            this.lueUserInBookingH.Name = "lueUserInBookingH";
+            this.lueUserInBookingH.NullText = "Chưa chọn người thanh toán";
+            this.lueUserInBookingH.NullValuePromptShowForEmptyValue = true;
+            this.lueUserInBookingH.ValueMember = "ID";
+            // 
             // gridColumn26
             // 
             this.gridColumn26.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
@@ -2980,7 +3033,7 @@
             // 
             this.btnDeleteServiceHall.AutoHeight = false;
             this.btnDeleteServiceHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject88, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteServiceHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnDeleteServiceHall.Name = "btnDeleteServiceHall";
             this.btnDeleteServiceHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteServiceHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteServiceHall_ButtonClick);
@@ -3521,7 +3574,7 @@
             // 
             this.btnEditBookingHall.AutoHeight = false;
             this.btnEditBookingHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject89, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnEditBookingHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, "", null, null, true)});
             this.btnEditBookingHall.Name = "btnEditBookingHall";
             this.btnEditBookingHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnEditBookingHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnEditBookingHall_ButtonClick);
@@ -3543,7 +3596,7 @@
             // 
             this.btnDeleteHall.AutoHeight = false;
             this.btnDeleteHall.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject90, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeleteHall.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject10, "", null, null, true)});
             this.btnDeleteHall.Name = "btnDeleteHall";
             this.btnDeleteHall.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeleteHall.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeleteHall_ButtonClick);
@@ -3933,48 +3986,6 @@
             this.btnPrintPaymentTotal.Text = "In báo thanh toán";
             this.btnPrintPaymentTotal.Click += new System.EventHandler(this.btnPrintPaymentTotal_Click);
             // 
-            // lueUserInBookingR
-            // 
-            this.lueUserInBookingR.AutoHeight = false;
-            this.lueUserInBookingR.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueUserInBookingR.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "IDUser")});
-            this.lueUserInBookingR.DisplayMember = "Name";
-            this.lueUserInBookingR.Name = "lueUserInBookingR";
-            this.lueUserInBookingR.NullText = "Thiếu người thanh toán";
-            this.lueUserInBookingR.NullValuePromptShowForEmptyValue = true;
-            this.lueUserInBookingR.ValueMember = "ID";
-            // 
-            // colTagH
-            // 
-            this.colTagH.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
-            this.colTagH.AppearanceHeader.Options.UseFont = true;
-            this.colTagH.AppearanceHeader.Options.UseTextOptions = true;
-            this.colTagH.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.colTagH.Caption = "Người trả";
-            this.colTagH.ColumnEdit = this.lueUserInBookingH;
-            this.colTagH.FieldName = "Tag";
-            this.colTagH.Name = "colTagH";
-            this.colTagH.Visible = true;
-            this.colTagH.VisibleIndex = 7;
-            this.colTagH.Width = 139;
-            // 
-            // lueUserInBookingH
-            // 
-            this.lueUserInBookingH.AutoHeight = false;
-            this.lueUserInBookingH.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lueUserInBookingH.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", "Name"),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
-            this.lueUserInBookingH.DisplayMember = "Name";
-            this.lueUserInBookingH.Name = "lueUserInBookingH";
-            this.lueUserInBookingH.NullText = "Chưa chọn người thanh toán";
-            this.lueUserInBookingH.NullValuePromptShowForEmptyValue = true;
-            this.lueUserInBookingH.ValueMember = "ID";
-            // 
             // frmTsk_Payment_Step2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -4008,6 +4019,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPercentTaxService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtServiceCost)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteService)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
@@ -4094,6 +4106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesPercentTaxForHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesQuantityForHalls)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnServicesCostForHalls)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDeleteServiceHall)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             this.tableLayoutPanel26.ResumeLayout(false);
@@ -4128,8 +4141,6 @@
             this.tableLayoutPanel39.ResumeLayout(false);
             this.tableLayoutPanel39.PerformLayout();
             this.tableLayoutPanel40.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lueUserInBookingH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4384,6 +4395,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInBookingR;
         private DevExpress.XtraGrid.Columns.GridColumn colTagH;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInBookingH;
+        private DevExpress.XtraEditors.DropDownButton ddbBill;
 
     }
 }

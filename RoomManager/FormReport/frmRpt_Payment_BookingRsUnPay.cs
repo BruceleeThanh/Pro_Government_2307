@@ -31,6 +31,18 @@ namespace RoomManager
             try
             {
                 //------------- Phong ------------------------
+                if (aNewPaymentEN.Status_BookingR < 7)
+                {
+                    lblTitle.Text = "PHIẾU BÁO THANH TOÁN (TẠM TÍNH)";
+                }
+                else if (aNewPaymentEN.Status_BookingR == 7 || aNewPaymentEN.Status_BookingR == 8)
+                {
+                    lblTitle.Text = "PHIẾU BÁO THANH TOÁN";
+                }
+                lblTimePrint.Text = DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+                lblSystemUserPrint.Text = Program.sys_CurrentUser.Name;
+                lblSystemUserCheckIn.Text = aNewPaymentEN.NameSystemUser;
+                lblListCustomer.Text = string.Join(",", aNewPaymentEN.GetListAllCustomer().Select(p=>p.Name).ToArray());
 
                 lblNumberVote.Text = Convert.ToString(this.aNewPaymentEN.IDBookingR);
                 lblIDBookingR.Text = Convert.ToString(this.aNewPaymentEN.IDBookingR);
@@ -38,6 +50,7 @@ namespace RoomManager
                 lblGroup.Text = this.aNewPaymentEN.NameCustomerGroup;
                 lblCompany.Text = this.aNewPaymentEN.NameCompany;
                 lblTaxNumberCode.Text = this.aNewPaymentEN.TaxNumberCodeCompany;
+
 
                 int day = DateTime.Now.Day;
                 int month = DateTime.Now.Month;
@@ -81,7 +94,7 @@ namespace RoomManager
 
                 //danh sach phong
                 this.DetailReport.DataSource = aNewPaymentEN.aListBookingRoomUsed;
-
+                
 
                 colSkuRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "RoomSku");
                 colCheckIn.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckInActual", "{0:dd-MM-yyyy HH:mm}");
@@ -91,15 +104,18 @@ namespace RoomManager
                 }
                 else
                 {
+                    xrTableCell13.Text = "CheckOut dự kiến";
                     colCheckOut.DataBindings.Add("Text", this.DetailReport.DataSource, "CheckOutPlan", "{0:dd-MM-yyyy HH:mm}");
 
                 }
                 colBookingRoomCost.DataBindings.Add("Text", this.DetailReport.DataSource, "Cost", "{0:0,0.##}");
                 colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "DateUsed", "{0:0,0.##}");
-                colMoneyRoomBeforeTax.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoomBeforeTax", "{0:0,0}");
-                colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "DisplayMoneyTaxRoom", "{0:0,0}");
-                colPaymentMoneyaRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "MoneyRoom", "{0:0,0}");
 
+                colPaymentMoneyaRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "OnlyMoneyRoom", "{0:0,0}");
+                colMoneyRoomBeforeTax.DataBindings.Add("Text", this.DetailReport.DataSource, "OnlyMoneyRoomBeforeTax", "{0:0,0}");
+                colPercentTaxRoom.DataBindings.Add("Text", this.DetailReport.DataSource, "OnlyTax", "{0:0,0}");
+
+                colDateInUse.DataBindings.Add("Text", this.DetailReport.DataSource, "TotalTimeInUse", "{0:0,0}");
                 ////tong tien phong truoc thue
                 //lblSumMoneyRoomsBeforeTax.Text = String.Format("{0:0,0}", Convert.ToDecimal(this.aNewPaymentEN.GetMoneyRoomsBeforeTax()));
                 ////Tong tien thue
@@ -115,6 +131,7 @@ namespace RoomManager
                 aXRSummaryMoneyRoomBeforeTax.FormatString = "{0:0,0}";
                 XRBinding aXRBindingMoneyRoomBeforeTax = new XRBinding("Text", this.DetailReport.DataSource, "MoneyRoomBeforeTax", "{0:0,0}");
                 XRBinding[] listXRBindingMoneyRoomBeforeTax = new XRBinding[] { aXRBindingMoneyRoomBeforeTax };
+                
                 lblSumMoneyRoomsBeforeTax.DataBindings.AddRange(listXRBindingMoneyRoomBeforeTax);
                 lblSumMoneyRoomsBeforeTax.Summary = aXRSummaryMoneyRoomBeforeTax;
 

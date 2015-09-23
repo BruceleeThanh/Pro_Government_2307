@@ -493,49 +493,63 @@
             // 
             // colCheckIn
             // 
+            this.colCheckIn.Font = new System.Drawing.Font("Arial", 8F);
             this.colCheckIn.Name = "colCheckIn";
+            this.colCheckIn.StylePriority.UseFont = false;
             this.colCheckIn.StylePriority.UseTextAlignment = false;
             this.colCheckIn.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.colCheckIn.Weight = 0.33734075209307796D;
             // 
             // colCheckOut
             // 
+            this.colCheckOut.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.colCheckOut.Name = "colCheckOut";
+            this.colCheckOut.StylePriority.UseFont = false;
             this.colCheckOut.StylePriority.UseTextAlignment = false;
             this.colCheckOut.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.colCheckOut.Weight = 0.33734074226119376D;
             // 
             // colDateInUse
             // 
+            this.colDateInUse.Font = new System.Drawing.Font("Arial", 8F);
             this.colDateInUse.Name = "colDateInUse";
+            this.colDateInUse.StylePriority.UseFont = false;
             this.colDateInUse.StylePriority.UseTextAlignment = false;
             this.colDateInUse.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.colDateInUse.Weight = 0.13800303619011842D;
             // 
             // colBookingRoomCost
             // 
+            this.colBookingRoomCost.Font = new System.Drawing.Font("Arial", 8F);
             this.colBookingRoomCost.Name = "colBookingRoomCost";
+            this.colBookingRoomCost.StylePriority.UseFont = false;
             this.colBookingRoomCost.StylePriority.UseTextAlignment = false;
             this.colBookingRoomCost.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.colBookingRoomCost.Weight = 0.306673392743467D;
             // 
             // colMoneyRoomBeforeTax
             // 
+            this.colMoneyRoomBeforeTax.Font = new System.Drawing.Font("Arial", 8F);
             this.colMoneyRoomBeforeTax.Name = "colMoneyRoomBeforeTax";
+            this.colMoneyRoomBeforeTax.StylePriority.UseFont = false;
             this.colMoneyRoomBeforeTax.StylePriority.UseTextAlignment = false;
             this.colMoneyRoomBeforeTax.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colMoneyRoomBeforeTax.Weight = 0.3680080596761634D;
             // 
             // colPercentTaxRoom
             // 
+            this.colPercentTaxRoom.Font = new System.Drawing.Font("Arial", 8F);
             this.colPercentTaxRoom.Name = "colPercentTaxRoom";
+            this.colPercentTaxRoom.StylePriority.UseFont = false;
             this.colPercentTaxRoom.StylePriority.UseTextAlignment = false;
             this.colPercentTaxRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colPercentTaxRoom.Weight = 0.30667339670037352D;
             // 
             // colPaymentMoneyaRoom
             // 
+            this.colPaymentMoneyaRoom.Font = new System.Drawing.Font("Arial", 8F);
             this.colPaymentMoneyaRoom.Name = "colPaymentMoneyaRoom";
+            this.colPaymentMoneyaRoom.StylePriority.UseFont = false;
             this.colPaymentMoneyaRoom.StylePriority.UseTextAlignment = false;
             this.colPaymentMoneyaRoom.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.colPaymentMoneyaRoom.Weight = 0.37414213106547045D;

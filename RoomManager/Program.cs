@@ -7,6 +7,9 @@ using CORESYSTEM;
 using DevExpress.LookAndFeel;
 using System.Configuration;
 using Entity;
+using DataAccess;
+using BussinessLogic;
+
 namespace RoomManager
 {
     static class Program
@@ -19,7 +22,9 @@ namespace RoomManager
 
         //public CORE.CORE CORE = new CORE.CORE();
         //------------------------
+        public static SystemUsers sys_CurrentUser = new SystemUsers();
         [STAThread]
+        
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -30,8 +35,7 @@ namespace RoomManager
 
 
             CORE.INIT(ConfigurationManager.AppSettings["SystemKey"].ToString());
-            RoomExtStatusEN From = new RoomExtStatusEN();
-            RoomExtStatusEN To = new RoomExtStatusEN();
+            
 
             //Application.Run(new Form1());
             Application.Run(new frmLogin());

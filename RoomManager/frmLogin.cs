@@ -37,6 +37,7 @@ namespace RoomManager
             progressPanel1.Visible = true;
                 if (CORE.Login_WinForm(txtUserName.Text, txtPassword.Text) == true)
                 {
+                    Program.sys_CurrentUser = (new SystemUsersBO()).Select_ByUsername(txtUserName.Text);
                     frmMain afrmMain = new frmMain(this);
                     if (CORE.CheckPermit_WinForm(afrmMain) == true)
                     {

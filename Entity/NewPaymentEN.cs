@@ -37,7 +37,9 @@ namespace Entity
        public string TaxNumberCodeCompany { get; set; }
        public string AddressCompany { get; set; }
        public string InvoiceNumber { get; set; }
-       public DateTime? AcceptDate { get; set; }      
+       public DateTime? AcceptDate { get; set; }
+
+
 
        public List<int> ListIndex = new List<int>();
        public Nullable<DateTime> InvoiceDate { get; set; } // ngay tren hoa don do, ngay chot doanh thu
@@ -72,7 +74,15 @@ namespace Entity
                return 0;
            }
        }
-
+       public List<Customers> GetListAllCustomer()
+       {
+           List<Customers> aList = new List<Customers>();
+           for (int i = 0; i < this.aListBookingRoomUsed.Count; i++)
+           {
+               aList.AddRange(this.aListBookingRoomUsed[i].ListCustomer);
+           }
+           return aList.Distinct().ToList();
+       }
 
        //Hiennv  03/11/2014
        public decimal? GetMoneyTax(decimal? TotalMoney , decimal? PercentTax)
@@ -365,6 +375,43 @@ namespace Entity
                //this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].TotalMoney = this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].GetTotalMoneyRoom();
            }
        }
+
+       public decimal GetTimeInUsed(int IDBookingRoom)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               return this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].TimeInUse.GetValueOrDefault(0);
+
+           }
+           else
+           {
+               return 0;
+           }
+       }
+       public double GetAddTimeStart(int IDBookingRoom)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               return this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].AddTimeStart.GetValueOrDefault(0);
+
+           }
+           else
+           {
+               return 0;
+           }
+       }
+       public double GetAddTimeEnd(int IDBookingRoom)
+       {
+           if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
+           {
+               return this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].AddTimeEnd.GetValueOrDefault(0);
+           }
+           else
+           {
+               return 0;
+           }
+       }
+
        public void ChangeCostServiceUsedInRoom(int IDBookingRoom, int IDBookingRoomService, decimal Cost)
        {
            if (this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList().Count > 0)
@@ -1203,8 +1250,6 @@ namespace Entity
            return 0;
        }
        
-
-
        public int GetTypeBookingRoom(int IDBookingRoom)
        {
            try
@@ -1239,6 +1284,45 @@ namespace Entity
                return this.aListBookingRoomUsed.Where(a => a.ID == IDBookingRoom).ToList()[0].Cost;
            }
            return null;
+       }
+
+
+       public NewPaymentEN SlipPaymentByCustomer(Customers aCustomers)
+       {
+           NewPaymentEN aNewPaymentEN = new NewPaymentEN();
+           aNewPaymentEN = this;
+           
+          
+           List<BookingRoomUsedEN> aList = new List<BookingRoomUsedEN>();
+           for (int a = 0; a < this.aListBookingRoomUsed.Count; a++)
+           {
+              
+               int Count  = this.aListBookingRoomUsed[a].ListCustomer.Where(p=>p.ID == aCustomers.ID).ToList().Count;
+               if (Count > 0)
+               {
+                   aList.Add(this.aListBookingRoomUsed[a]);
+               }
+           }
+
+           int NumberCustomerInRoom = 0;
+           List<ServiceUsedEN> aListService = new List<ServiceUsedEN>();
+           for (int i = 0; i < aList.Count; i++)
+           {
+               NumberCustomerInRoom = aList[i].ListCustomer.Count ;
+               aList[i].Cost = aList[i].Cost / NumberCustomerInRoom;
+               aList[i].CostPendingRoom = aList[i].CostPendingRoom / NumberCustomerInRoom;
+               aList[i].CostRef_Rooms = aList[i].CostRef_Rooms / NumberCustomerInRoom;
+               aListService = new List<ServiceUsedEN>();
+               aListService = aList[i].ListServiceUsed.Where(p => p.Tag != aCustomers.ID.ToString()).ToList();
+               for (int ii = 0; ii < aListService.Count; ii++)
+               {
+                   aList[i].ListServiceUsed.Remove(aListService[ii]);
+               }
+               
+           }
+           aNewPaymentEN.aListBookingRoomUsed.Clear();
+           aNewPaymentEN.aListBookingRoomUsed.AddRange (aList);
+           return aNewPaymentEN;
        }
     }
 

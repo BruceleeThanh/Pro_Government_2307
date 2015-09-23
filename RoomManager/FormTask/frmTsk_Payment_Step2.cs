@@ -7,6 +7,7 @@ using BussinessLogic;
 using Entity;
 using DevExpress.XtraReports.UI;
 using DevExpress.Utils;
+
 using System.Globalization;
 using CORESYSTEM;
 using System.Drawing;
@@ -688,6 +689,7 @@ namespace RoomManager
 
                 this.LoadDataCurrentRoomForControl();
                 this.LoadDataCurrentHallForControl();
+                
 
             }
             catch (Exception ex)
@@ -1591,6 +1593,7 @@ namespace RoomManager
             {
                 if (aNewPaymentEN.Status_BookingR == 8 || aNewPaymentEN.Status_BookingR == 7)
                 {
+                    
                     frmRpt_Payment_BookingRs afrmRpt_Payment_BookingRs = new frmRpt_Payment_BookingRs(this.aNewPaymentEN);
                     ReportPrintTool tool = new ReportPrintTool(afrmRpt_Payment_BookingRs);
                     tool.ShowPreview();
@@ -2321,8 +2324,13 @@ namespace RoomManager
 
         }
 
-
-
+        private void ddbBill_Click(object sender, EventArgs e)
+        {
+            CustomersBO aCustomersBO = new CustomersBO();
+            Customers aCustomer = new Customers();
+            aCustomer = aCustomersBO.Select_ByID (this.aNewPaymentEN.IDCustomer.GetValueOrDefault(0));
+            this.aNewPaymentEN = this.aNewPaymentEN.SlipPaymentByCustomer(aCustomer);
+        }
 
     }
 }
