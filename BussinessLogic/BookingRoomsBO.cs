@@ -284,7 +284,7 @@ namespace BussinessLogic
             }
         }
         //Hiennv  26/11/2014   xoa bookingRoom theo 1 list cac bookingRoom
-        public int Remove(List<BookingRooms> aListBookingRoom)
+        public int Delete(List<BookingRooms> aListBookingRoom)
         {
             try
             {

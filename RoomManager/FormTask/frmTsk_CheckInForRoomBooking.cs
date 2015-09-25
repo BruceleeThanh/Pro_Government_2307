@@ -664,6 +664,7 @@ namespace RoomManager
                             IDCustomer = this.aCurrent_IDCustomer;
                         }
 
+
                         aCustomerInfoEN.ID = IDCustomer;
                         aCustomerInfoEN.RoomCode = this.aCurrent_CodeRoom;
                         aCustomerInfoEN.Name = txtNames.Text;
@@ -680,11 +681,13 @@ namespace RoomManager
                         aCustomerInfoEN.Organization = txtOrganization.Text;
                         aCustomerInfoEN.LimitDateEnterCountry = String.IsNullOrEmpty(dtpLimitDateEnterCountry.Text) ? dateTime : dtpLimitDateEnterCountry.DateTime;
                         aCustomerInfoEN.PepoleRepresentative = false;
-                        this.aCheckInEN.AddCustomerToRoom(this.aCurrent_CodeRoom, aCustomerInfoEN);
 
+                        CustomersBO aCustomersBO = new CustomersBO();
+                        List<Customers> aListExitCustomer = aCustomersBO.Select_ByNameOrIdentifier1(2, txtIdentifier1.Text);
+                        
+                        this.aCheckInEN.AddCustomerToRoom(this.aCurrent_CodeRoom, aCustomerInfoEN);
                         dgvSelectedCustomer.DataSource = this.aCheckInEN.GetListCustomerByRoomCode(this.aCurrent_CodeRoom);
                         dgvSelectedCustomer.RefreshDataSource();
-
 
                     }
                     this.ResetValueAddNew();
@@ -771,6 +774,17 @@ namespace RoomManager
                         MessageBox.Show("Vui lòng nhập ngày hết hạn cư trú phải lớn hơn hoặc bằng ngày hiện tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return false;
                     }
+                }
+                else if (txtIdentifier1.Text != null)
+                {
+                    CustomersBO aCustomersBO = new CustomersBO();
+                    List<Customers> aListExitCustomer = aCustomersBO.Select_ByNameOrIdentifier1(2, txtIdentifier1.Text);
+                    if (aListExitCustomer.Count > 0)
+                    {
+                        txtIdentifier1.Focus();
+                        MessageBox.Show("Số CMT đã tồn tại");
+                        return false;
+                    }   
                 }
                 else
                 {
@@ -905,7 +919,7 @@ namespace RoomManager
                         if (this.aListRemoveBookingRooms.Count > 0)
                         {
                             BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
-                            aBookingRoomsBO.Remove(aListRemoveBookingRooms);
+                            aBookingRoomsBO.Delete(aListRemoveBookingRooms);
                         }
                         #endregion
 
@@ -935,6 +949,16 @@ namespace RoomManager
             catch (Exception ex)
             {
                 MessageBox.Show("frmTsk_CheckInForRoomBooking.btnCheckIn_Click()\n" + ex.ToString(), "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtIdentifier1_Leave(object sender, EventArgs e)
+        {
+            CustomersBO aCustomersBO = new CustomersBO();
+            List<Customers> aListExitCustomer = aCustomersBO.Select_ByNameOrIdentifier1(2, txtIdentifier1.Text);
+            if (aListExitCustomer.Count > 0)
+            {
+                MessageBox.Show("Số CMT đã tồn tại");
             }
         }
 

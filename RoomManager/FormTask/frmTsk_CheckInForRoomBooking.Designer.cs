@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTsk_CheckInForRoomBooking));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.chkCustomerType = new DevExpress.XtraEditors.CheckEdit();
@@ -352,7 +352,7 @@
             this.labelControl1.Location = new System.Drawing.Point(226, 4);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(81, 21);
+            this.labelControl1.Size = new System.Drawing.Size(66, 17);
             this.labelControl1.TabIndex = 11;
             this.labelControl1.Text = "Đến ngày";
             // 
@@ -362,7 +362,7 @@
             this.labelControl5.Location = new System.Drawing.Point(3, 4);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(69, 21);
+            this.labelControl5.Size = new System.Drawing.Size(57, 17);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "Từ ngày";
             // 
@@ -404,13 +404,13 @@
             // 
             this.dgvAvailableRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAvailableRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvAvailableRooms.Location = new System.Drawing.Point(3, 25);
+            this.dgvAvailableRooms.Location = new System.Drawing.Point(3, 21);
             this.dgvAvailableRooms.MainView = this.viewAvailableRooms;
             this.dgvAvailableRooms.Margin = new System.Windows.Forms.Padding(3, 25, 3, 4);
             this.dgvAvailableRooms.Name = "dgvAvailableRooms";
             this.dgvAvailableRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelect});
-            this.dgvAvailableRooms.Size = new System.Drawing.Size(446, 239);
+            this.dgvAvailableRooms.Size = new System.Drawing.Size(446, 243);
             this.dgvAvailableRooms.TabIndex = 15;
             this.dgvAvailableRooms.UseEmbeddedNavigator = true;
             this.dgvAvailableRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -492,7 +492,7 @@
             // 
             this.btnSelect.AutoHeight = false;
             this.btnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, "", null, null, true)});
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelect_ButtonClick);
@@ -568,13 +568,13 @@
             // 
             this.dgvSelectedRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSelectedRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvSelectedRooms.Location = new System.Drawing.Point(3, 25);
+            this.dgvSelectedRooms.Location = new System.Drawing.Point(3, 21);
             this.dgvSelectedRooms.MainView = this.viewSelectedRooms;
             this.dgvSelectedRooms.Margin = new System.Windows.Forms.Padding(3, 25, 3, 4);
             this.dgvSelectedRooms.Name = "dgvSelectedRooms";
             this.dgvSelectedRooms.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnUnSelect});
-            this.dgvSelectedRooms.Size = new System.Drawing.Size(146, 239);
+            this.dgvSelectedRooms.Size = new System.Drawing.Size(146, 243);
             this.dgvSelectedRooms.TabIndex = 17;
             this.dgvSelectedRooms.UseEmbeddedNavigator = true;
             this.dgvSelectedRooms.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -635,7 +635,7 @@
             // 
             this.btnUnSelect.AutoHeight = false;
             this.btnUnSelect.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnUnSelect.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject6, "", null, null, true)});
             this.btnUnSelect.Name = "btnUnSelect";
             this.btnUnSelect.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnUnSelect.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnUnSelect_ButtonClick);
@@ -673,14 +673,14 @@
             // 
             this.dgvSelectedCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSelectedCustomer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvSelectedCustomer.Location = new System.Drawing.Point(3, 25);
+            this.dgvSelectedCustomer.Location = new System.Drawing.Point(3, 21);
             this.dgvSelectedCustomer.MainView = this.viewSelectedCustomer;
             this.dgvSelectedCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvSelectedCustomer.Name = "dgvSelectedCustomer";
             this.dgvSelectedCustomer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDeletePepoleOutRoom,
             this.chkIDCustomer});
-            this.dgvSelectedCustomer.Size = new System.Drawing.Size(253, 239);
+            this.dgvSelectedCustomer.Size = new System.Drawing.Size(253, 243);
             this.dgvSelectedCustomer.TabIndex = 20;
             this.dgvSelectedCustomer.UseEmbeddedNavigator = true;
             this.dgvSelectedCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -754,7 +754,7 @@
             // 
             this.btnDeletePepoleOutRoom.AutoHeight = false;
             this.btnDeletePepoleOutRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeletePepoleOutRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDeletePepoleOutRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject7, "", null, null, true)});
             this.btnDeletePepoleOutRoom.Name = "btnDeletePepoleOutRoom";
             this.btnDeletePepoleOutRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDeletePepoleOutRoom.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDeletePepoleOutRoom_ButtonClick);
@@ -764,11 +764,11 @@
             this.lblRoomSku.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRoomSku.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomSku.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblRoomSku.Location = new System.Drawing.Point(681, 4);
+            this.lblRoomSku.Location = new System.Drawing.Point(693, 6);
             this.lblRoomSku.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblRoomSku.Name = "lblRoomSku";
             this.lblRoomSku.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblRoomSku.Size = new System.Drawing.Size(135, 29);
+            this.lblRoomSku.Size = new System.Drawing.Size(111, 25);
             this.lblRoomSku.TabIndex = 18;
             this.lblRoomSku.Text = "Phòng số : 000";
             // 
@@ -859,10 +859,10 @@
             // 
             this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl3.Location = new System.Drawing.Point(428, 9);
+            this.labelControl3.Location = new System.Drawing.Point(428, 11);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(195, 21);
+            this.labelControl3.Size = new System.Drawing.Size(157, 17);
             this.labelControl3.TabIndex = 40;
             this.labelControl3.Text = "Mục đích đến Việt Nam";
             // 
@@ -882,10 +882,10 @@
             // 
             this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl2.Location = new System.Drawing.Point(428, 48);
+            this.labelControl2.Location = new System.Drawing.Point(428, 50);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(138, 21);
+            this.labelControl2.Size = new System.Drawing.Size(112, 17);
             this.labelControl2.TabIndex = 42;
             this.labelControl2.Text = "Ngày nhập cảnh";
             // 
@@ -915,10 +915,10 @@
             // 
             this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl6.Location = new System.Drawing.Point(428, 126);
+            this.labelControl6.Location = new System.Drawing.Point(428, 128);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(185, 21);
+            this.labelControl6.Size = new System.Drawing.Size(151, 17);
             this.labelControl6.TabIndex = 46;
             this.labelControl6.Text = "Ngày đăng ký tạm trú";
             // 
@@ -926,10 +926,10 @@
             // 
             this.labelControl4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl4.Location = new System.Drawing.Point(428, 87);
+            this.labelControl4.Location = new System.Drawing.Point(428, 89);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(174, 21);
+            this.labelControl4.Size = new System.Drawing.Size(142, 17);
             this.labelControl4.TabIndex = 44;
             this.labelControl4.Text = "Cửa khẩu nhập cảnh";
             // 
@@ -971,10 +971,10 @@
             // 
             this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl7.Location = new System.Drawing.Point(428, 165);
+            this.labelControl7.Location = new System.Drawing.Point(428, 167);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(166, 21);
+            this.labelControl7.Size = new System.Drawing.Size(132, 17);
             this.labelControl7.TabIndex = 48;
             this.labelControl7.Text = "Ngày dời đi dự kiến";
             // 
@@ -1004,10 +1004,10 @@
             // 
             this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl8.Location = new System.Drawing.Point(428, 204);
+            this.labelControl8.Location = new System.Drawing.Point(428, 206);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(131, 21);
+            this.labelControl8.Size = new System.Drawing.Size(105, 17);
             this.labelControl8.TabIndex = 50;
             this.labelControl8.Text = "Đơn vị tiếp đón";
             // 
@@ -1015,10 +1015,10 @@
             // 
             this.labelControl9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl9.Location = new System.Drawing.Point(428, 243);
+            this.labelControl9.Location = new System.Drawing.Point(428, 245);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(170, 21);
+            this.labelControl9.Size = new System.Drawing.Size(139, 17);
             this.labelControl9.TabIndex = 52;
             this.labelControl9.Text = "Ngày hết hạn cư trú";
             // 
@@ -1026,11 +1026,11 @@
             // 
             this.labelControl12.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl12.Location = new System.Drawing.Point(3, 239);
+            this.labelControl12.Location = new System.Drawing.Point(3, 241);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl12.Size = new System.Drawing.Size(87, 29);
+            this.labelControl12.Size = new System.Drawing.Size(71, 25);
             this.labelControl12.TabIndex = 38;
             this.labelControl12.Text = "Quốc tịch";
             // 
@@ -1057,11 +1057,11 @@
             // 
             this.labelControl13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl13.Location = new System.Drawing.Point(3, 200);
+            this.labelControl13.Location = new System.Drawing.Point(3, 202);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl13.Size = new System.Drawing.Size(119, 29);
+            this.labelControl13.Size = new System.Drawing.Size(96, 25);
             this.labelControl13.TabIndex = 36;
             this.labelControl13.Text = "Số điện thoại";
             // 
@@ -1083,11 +1083,11 @@
             // 
             this.labelControl14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl14.Location = new System.Drawing.Point(3, 161);
+            this.labelControl14.Location = new System.Drawing.Point(3, 163);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl14.Size = new System.Drawing.Size(79, 29);
+            this.labelControl14.Size = new System.Drawing.Size(62, 25);
             this.labelControl14.TabIndex = 34;
             this.labelControl14.Text = "Giới tính";
             // 
@@ -1114,11 +1114,11 @@
             // 
             this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl11.Location = new System.Drawing.Point(3, 122);
+            this.labelControl11.Location = new System.Drawing.Point(3, 124);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl11.Size = new System.Drawing.Size(91, 29);
+            this.labelControl11.Size = new System.Drawing.Size(68, 24);
             this.labelControl11.TabIndex = 32;
             this.labelControl11.Text = "Ngày sinh";
             // 
@@ -1146,11 +1146,11 @@
             // 
             this.labelControl15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl15.Location = new System.Drawing.Point(3, 83);
+            this.labelControl15.Location = new System.Drawing.Point(3, 85);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl15.Size = new System.Drawing.Size(174, 29);
+            this.labelControl15.Size = new System.Drawing.Size(141, 25);
             this.labelControl15.TabIndex = 30;
             this.labelControl15.Text = "CMND/Giấy tờ khác";
             // 
@@ -1165,6 +1165,7 @@
             this.txtIdentifier1.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtIdentifier1.Size = new System.Drawing.Size(222, 22);
             this.txtIdentifier1.TabIndex = 31;
+            this.txtIdentifier1.Leave += new System.EventHandler(this.txtIdentifier1_Leave);
             // 
             // txtNames
             // 
@@ -1182,11 +1183,11 @@
             // 
             this.labelControl10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl10.Location = new System.Drawing.Point(3, 44);
+            this.labelControl10.Location = new System.Drawing.Point(3, 46);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl10.Size = new System.Drawing.Size(37, 29);
+            this.labelControl10.Size = new System.Drawing.Size(29, 24);
             this.labelControl10.TabIndex = 28;
             this.labelControl10.Text = "Tên";
             // 
@@ -1194,11 +1195,11 @@
             // 
             this.labelControl16.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl16.Location = new System.Drawing.Point(3, 5);
+            this.labelControl16.Location = new System.Drawing.Point(3, 7);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl16.Size = new System.Drawing.Size(135, 29);
+            this.labelControl16.Size = new System.Drawing.Size(103, 24);
             this.labelControl16.TabIndex = 26;
             this.labelControl16.Text = "Mã khách hàng";
             // 
@@ -1206,11 +1207,11 @@
             // 
             this.lblIDCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblIDCustomer.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDCustomer.Location = new System.Drawing.Point(176, 5);
+            this.lblIDCustomer.Location = new System.Drawing.Point(176, 7);
             this.lblIDCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblIDCustomer.Name = "lblIDCustomer";
             this.lblIDCustomer.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblIDCustomer.Size = new System.Drawing.Size(39, 29);
+            this.lblIDCustomer.Size = new System.Drawing.Size(30, 24);
             this.lblIDCustomer.TabIndex = 27;
             this.lblIDCustomer.Text = "000";
             // 
@@ -1261,7 +1262,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(245, 46);
             this.tableLayoutPanel10.TabIndex = 54;
             // 
@@ -1337,11 +1338,11 @@
             // 
             this.labelControl17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl17.Location = new System.Drawing.Point(8, 9);
+            this.labelControl17.Location = new System.Drawing.Point(22, 11);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
             this.labelControl17.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.labelControl17.Size = new System.Drawing.Size(162, 21);
+            this.labelControl17.Size = new System.Drawing.Size(134, 17);
             this.labelControl17.TabIndex = 57;
             this.labelControl17.Text = "Số tiền ứng trước";
             // 
@@ -1379,13 +1380,13 @@
             // 
             this.dgvAvailableCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAvailableCustomer.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvAvailableCustomer.Location = new System.Drawing.Point(3, 25);
+            this.dgvAvailableCustomer.Location = new System.Drawing.Point(3, 21);
             this.dgvAvailableCustomer.MainView = this.grvAvailableCustomer;
             this.dgvAvailableCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAvailableCustomer.Name = "dgvAvailableCustomer";
             this.dgvAvailableCustomer.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnSelectPepoleToRoom});
-            this.dgvAvailableCustomer.Size = new System.Drawing.Size(470, 691);
+            this.dgvAvailableCustomer.Size = new System.Drawing.Size(470, 695);
             this.dgvAvailableCustomer.TabIndex = 22;
             this.dgvAvailableCustomer.UseEmbeddedNavigator = true;
             this.dgvAvailableCustomer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1423,7 +1424,7 @@
             // 
             this.btnSelectPepoleToRoom.AutoHeight = false;
             this.btnSelectPepoleToRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectPepoleToRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnSelectPepoleToRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject8, "", null, null, true)});
             this.btnSelectPepoleToRoom.Name = "btnSelectPepoleToRoom";
             this.btnSelectPepoleToRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnSelectPepoleToRoom.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnSelectPepoleToRoom_ButtonClick);

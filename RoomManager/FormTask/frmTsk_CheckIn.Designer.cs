@@ -227,7 +227,7 @@
             // chkCustomerType
             // 
             this.chkCustomerType.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.chkCustomerType.Location = new System.Drawing.Point(637, 6);
+            this.chkCustomerType.Location = new System.Drawing.Point(637, 8);
             this.chkCustomerType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkCustomerType.Name = "chkCustomerType";
             this.chkCustomerType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
@@ -1304,7 +1304,7 @@
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel10.Size = new System.Drawing.Size(241, 39);
             this.tableLayoutPanel10.TabIndex = 54;
             // 

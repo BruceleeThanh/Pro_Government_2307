@@ -18,6 +18,56 @@ namespace Entity
        public bool IsCheckInEarly { get; set; }
        public bool IsCheckOutLate { get; set; }
 
+       public BookingRoomUsedEN Clone(BookingRoomUsedEN aBookingRoomUsedEN)
+       {
+           this.AcceptDate = aBookingRoomUsedEN.AcceptDate;
+           this.AdditionalColumn1 = aBookingRoomUsedEN.AdditionalColumn1;
+           this.AddTimeEnd = aBookingRoomUsedEN.AddTimeEnd;
+           this.AddTimeStart = aBookingRoomUsedEN.AddTimeStart;
+           this.BookingStatus = aBookingRoomUsedEN.BookingStatus;
+           
+           this.CheckInPlan = aBookingRoomUsedEN.CheckInPlan;
+           this.CheckInActual = aBookingRoomUsedEN.CheckInActual;
+
+           this.CheckOutActual = aBookingRoomUsedEN.CheckOutActual;
+           this.CheckOutPlan = aBookingRoomUsedEN.CheckOutPlan;
+           this.CodeRoom = aBookingRoomUsedEN.CodeRoom;
+           this.Color = aBookingRoomUsedEN.Color;
+           this.Cost = aBookingRoomUsedEN.Cost;
+           this.CostPendingRoom = aBookingRoomUsedEN.CostPendingRoom;
+           this.CostRef_Rooms = aBookingRoomUsedEN.CostRef_Rooms;
+           this.Disable = aBookingRoomUsedEN.Disable;
+           this.EndTime = aBookingRoomUsedEN.EndTime;
+           this.ID = aBookingRoomUsedEN.ID;
+           this.IDBookingR = aBookingRoomUsedEN.IDBookingR;
+           this.IndexSubPayment = aBookingRoomUsedEN.IndexSubPayment;
+           this.InvoiceDate = aBookingRoomUsedEN.InvoiceDate;
+           this.InvoiceNumber = aBookingRoomUsedEN.InvoiceNumber;
+           this.IsAllDayEvent = aBookingRoomUsedEN.IsAllDayEvent;
+           this.IsCheckInEarly = aBookingRoomUsedEN.IsCheckInEarly;
+           this.IsCheckOutLate = aBookingRoomUsedEN.IsCheckOutLate;
+           this.IsEditable = aBookingRoomUsedEN.IsEditable;
+  
+           this.IsRecurring = aBookingRoomUsedEN.IsRecurring;
+           this.LevelBookingRoom = aBookingRoomUsedEN.LevelBookingRoom;
+           this.Note = aBookingRoomUsedEN.Note;
+ 
+           this.PercentTax = aBookingRoomUsedEN.PercentTax;
+           this.PriceType = aBookingRoomUsedEN.PriceType;
+           this.RoomSku = aBookingRoomUsedEN.RoomSku;
+           this.StartTime = aBookingRoomUsedEN.StartTime;
+           this.Status = aBookingRoomUsedEN.Status;
+           this.TimeInUse = aBookingRoomUsedEN.TimeInUse;
+          
+           this.Type = aBookingRoomUsedEN.Type;
+           this.ListServiceUsed.Clear();
+           this.ListServiceUsed.AddRange(aBookingRoomUsedEN.ListServiceUsed);
+
+           this.ListCustomer.Clear();
+           this.ListCustomer.AddRange(aBookingRoomUsedEN.ListCustomer);
+           return this;
+           
+       }
        //Danh cho report
        public decimal? TotalMoney { get{return this.GetTotalMoneyRoom();}}
        //Danh cho report

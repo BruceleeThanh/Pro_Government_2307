@@ -25,8 +25,14 @@
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode4 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.applicationMenu1 = new DevExpress.XtraBars.Ribbon.ApplicationMenu(this.components);
             this.btnBooking_Type1 = new DevExpress.XtraBars.BarButtonItem();
@@ -137,8 +143,6 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.tabOvertimeBooking = new DevExpress.XtraTab.XtraTabPage();
-            this.panLuongNghiepVu = new DevExpress.XtraEditors.PanelControl();
             this.tabCurrentStatus = new DevExpress.XtraTab.XtraTabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -160,8 +164,27 @@
             this.repositoryItemDateEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnCheckOut = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colViewDetail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDetailBooking = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemCalcEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
             this.repositoryItemDateEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.tabOvertimeBooking = new DevExpress.XtraTab.XtraTabPage();
+            this.panLuongNghiepVu = new DevExpress.XtraEditors.PanelControl();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvOvertimeBooking = new DevExpress.XtraGrid.GridControl();
+            this.grvOvertimeBooking = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.colDelBookingOvertime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDelBooking = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colCheckInBookingRoom = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnCheckInBookingRoom = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.repositoryItemCalcEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit();
+            this.repositoryItemDateEdit5 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.dockPanel3 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel3_Container = new DevExpress.XtraBars.Docking.ControlContainer();
             this.dockPanel2 = new DevExpress.XtraBars.Docking.DockPanel();
@@ -178,7 +201,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.popupMenu3 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.progressPanel_Tab3 = new DevExpress.XtraWaitForm.ProgressPanel();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemRichTextEdit1)).BeginInit();
@@ -194,9 +216,6 @@
             this.dockPanel1_Container.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            this.tabOvertimeBooking.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).BeginInit();
-            this.panLuongNghiepVu.SuspendLayout();
             this.tabCurrentStatus.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -211,9 +230,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetailBooking)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).BeginInit();
+            this.tabOvertimeBooking.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).BeginInit();
+            this.panLuongNghiepVu.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOvertimeBooking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvOvertimeBooking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit4.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelBooking)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckInBookingRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit5.CalendarTimeProperties)).BeginInit();
             this.dockPanel2.SuspendLayout();
             this.dockPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -320,7 +353,6 @@
             this.ribbon.ShowFullScreenButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.Size = new System.Drawing.Size(1368, 155);
             this.ribbon.StatusBar = this.ribbonStatusBar;
-            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // applicationMenu1
             // 
@@ -1363,26 +1395,7 @@
             this.tabOvertimeBooking});
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
-            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             this.xtraTabControl1.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.xtraTabControl1_ControlAdded);
-            // 
-            // tabOvertimeBooking
-            // 
-            this.tabOvertimeBooking.Controls.Add(this.panLuongNghiepVu);
-            this.tabOvertimeBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabOvertimeBooking.Name = "tabOvertimeBooking";
-            this.tabOvertimeBooking.Size = new System.Drawing.Size(1160, 553);
-            this.tabOvertimeBooking.Text = "Đặt phòng quá hạn";
-            // 
-            // panLuongNghiepVu
-            // 
-            this.panLuongNghiepVu.Controls.Add(this.progressPanel_Tab3);
-            this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
-            this.panLuongNghiepVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panLuongNghiepVu.Name = "panLuongNghiepVu";
-            this.panLuongNghiepVu.Size = new System.Drawing.Size(1160, 553);
-            this.panLuongNghiepVu.TabIndex = 0;
             // 
             // tabCurrentStatus
             // 
@@ -1460,7 +1473,6 @@
             this.dtpSearch.Properties.Mask.EditMask = "dd/MM/yyyy HH:mm";
             this.dtpSearch.Size = new System.Drawing.Size(174, 22);
             this.dtpSearch.TabIndex = 1;
-            this.dtpSearch.EditValueChanged += new System.EventHandler(this.dtpSearch_EditValueChanged);
             // 
             // btnViewNow
             // 
@@ -1521,8 +1533,10 @@
             // 
             this.dgvBookingRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBookingRooms.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level2";
             this.dgvBookingRooms.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1,
             gridLevelNode2});
             this.dgvBookingRooms.Location = new System.Drawing.Point(3, 51);
             this.dgvBookingRooms.MainView = this.grvBookingRoom;
@@ -1532,7 +1546,8 @@
             this.btnCheckOut,
             this.repositoryItemCalcEdit1,
             this.repositoryItemDateEdit3,
-            this.repositoryItemDateEdit2});
+            this.repositoryItemDateEdit2,
+            this.btnDetailBooking});
             this.dgvBookingRooms.Size = new System.Drawing.Size(1154, 498);
             this.dgvBookingRooms.TabIndex = 2;
             this.dgvBookingRooms.UseEmbeddedNavigator = true;
@@ -1549,7 +1564,8 @@
             this.gridColumn5,
             this.gridColumn6,
             this.gridColumn7,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.colViewDetail});
             this.grvBookingRoom.GridControl = this.dgvBookingRooms;
             this.grvBookingRoom.Name = "grvBookingRoom";
             this.grvBookingRoom.OptionsFind.AlwaysVisible = true;
@@ -1573,7 +1589,7 @@
             this.gridColumn1.OptionsColumn.AllowFocus = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.gridColumn1.Width = 106;
             // 
             // gridColumn2
             // 
@@ -1591,7 +1607,7 @@
             this.gridColumn2.OptionsColumn.AllowFocus = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 138;
+            this.gridColumn2.Width = 126;
             // 
             // gridColumn4
             // 
@@ -1610,7 +1626,7 @@
             this.gridColumn4.OptionsColumn.AllowFocus = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 190;
+            this.gridColumn4.Width = 174;
             // 
             // gridColumn5
             // 
@@ -1629,7 +1645,7 @@
             this.gridColumn5.OptionsColumn.AllowFocus = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 182;
+            this.gridColumn5.Width = 167;
             // 
             // gridColumn6
             // 
@@ -1648,7 +1664,7 @@
             this.gridColumn6.OptionsColumn.AllowFocus = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 316;
+            this.gridColumn6.Width = 260;
             // 
             // gridColumn7
             // 
@@ -1659,7 +1675,7 @@
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 140;
+            this.gridColumn7.Width = 142;
             // 
             // repositoryItemDateEdit2
             // 
@@ -1689,18 +1705,39 @@
             this.gridColumn8.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
-            this.gridColumn8.Width = 76;
+            this.gridColumn8.Width = 77;
             // 
             // btnCheckOut
             // 
             this.btnCheckOut.AutoHeight = false;
             this.btnCheckOut.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckOut.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.btnCheckOut.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
     "):[0-5]\\d";
             this.btnCheckOut.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // colViewDetail
+            // 
+            this.colViewDetail.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.colViewDetail.AppearanceHeader.Options.UseFont = true;
+            this.colViewDetail.Caption = "Chi tiết";
+            this.colViewDetail.ColumnEdit = this.btnDetailBooking;
+            this.colViewDetail.Image = ((System.Drawing.Image)(resources.GetObject("colViewDetail.Image")));
+            this.colViewDetail.Name = "colViewDetail";
+            this.colViewDetail.Visible = true;
+            this.colViewDetail.VisibleIndex = 7;
+            this.colViewDetail.Width = 84;
+            // 
+            // btnDetailBooking
+            // 
+            this.btnDetailBooking.AutoHeight = false;
+            this.btnDetailBooking.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDetailBooking.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.btnDetailBooking.Name = "btnDetailBooking";
+            this.btnDetailBooking.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDetailBooking.Click += new System.EventHandler(this.btnDetailBooking_Click);
             // 
             // repositoryItemCalcEdit1
             // 
@@ -1722,6 +1759,258 @@
             this.repositoryItemDateEdit3.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.repositoryItemDateEdit3.Mask.EditMask = "";
             this.repositoryItemDateEdit3.Name = "repositoryItemDateEdit3";
+            // 
+            // tabOvertimeBooking
+            // 
+            this.tabOvertimeBooking.Controls.Add(this.panLuongNghiepVu);
+            this.tabOvertimeBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabOvertimeBooking.Name = "tabOvertimeBooking";
+            this.tabOvertimeBooking.Size = new System.Drawing.Size(1160, 553);
+            this.tabOvertimeBooking.Text = "Đặt phòng quá hạn";
+            // 
+            // panLuongNghiepVu
+            // 
+            this.panLuongNghiepVu.Controls.Add(this.tableLayoutPanel5);
+            this.panLuongNghiepVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panLuongNghiepVu.Location = new System.Drawing.Point(0, 0);
+            this.panLuongNghiepVu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panLuongNghiepVu.Name = "panLuongNghiepVu";
+            this.panLuongNghiepVu.Size = new System.Drawing.Size(1160, 553);
+            this.panLuongNghiepVu.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.dgvOvertimeBooking, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.499096F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.50091F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1156, 549);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // dgvOvertimeBooking
+            // 
+            this.dgvOvertimeBooking.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvOvertimeBooking.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode4.RelationName = "Level2";
+            this.dgvOvertimeBooking.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode3,
+            gridLevelNode4});
+            this.dgvOvertimeBooking.Location = new System.Drawing.Point(3, 50);
+            this.dgvOvertimeBooking.MainView = this.grvOvertimeBooking;
+            this.dgvOvertimeBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvOvertimeBooking.Name = "dgvOvertimeBooking";
+            this.dgvOvertimeBooking.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.btnDelBooking,
+            this.repositoryItemCalcEdit2,
+            this.repositoryItemDateEdit5,
+            this.repositoryItemDateEdit4,
+            this.btnCheckInBookingRoom});
+            this.dgvOvertimeBooking.Size = new System.Drawing.Size(1150, 495);
+            this.dgvOvertimeBooking.TabIndex = 2;
+            this.dgvOvertimeBooking.UseEmbeddedNavigator = true;
+            this.dgvOvertimeBooking.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvOvertimeBooking});
+            // 
+            // grvOvertimeBooking
+            // 
+            this.grvOvertimeBooking.ColumnPanelRowHeight = 35;
+            this.grvOvertimeBooking.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.colDelBookingOvertime,
+            this.colCheckInBookingRoom});
+            this.grvOvertimeBooking.GridControl = this.dgvOvertimeBooking;
+            this.grvOvertimeBooking.Name = "grvOvertimeBooking";
+            this.grvOvertimeBooking.OptionsFind.AlwaysVisible = true;
+            this.grvOvertimeBooking.OptionsView.ShowFooter = true;
+            this.grvOvertimeBooking.OptionsView.ShowGroupPanel = false;
+            this.grvOvertimeBooking.RowHeight = 25;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.AppearanceCell.Options.UseFont = true;
+            this.gridColumn9.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn9.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn9.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn9.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn9.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn9.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn9.Caption = "BookingRs_ID";
+            this.gridColumn9.FieldName = "BookingRs_ID";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.OptionsColumn.AllowEdit = false;
+            this.gridColumn9.OptionsColumn.AllowFocus = false;
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 0;
+            this.gridColumn9.Width = 106;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.AppearanceCell.Options.UseFont = true;
+            this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn10.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn10.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn10.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn10.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn10.Caption = "Tên phòng";
+            this.gridColumn10.FieldName = "Sku";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.OptionsColumn.AllowEdit = false;
+            this.gridColumn10.OptionsColumn.AllowFocus = false;
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 126;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn11.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn11.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn11.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn11.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn11.Caption = "Khách";
+            this.gridColumn11.DisplayFormat.FormatString = "n";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "CustomerGroups_Name";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.OptionsColumn.AllowEdit = false;
+            this.gridColumn11.OptionsColumn.AllowFocus = false;
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 2;
+            this.gridColumn11.Width = 174;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn12.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn12.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn12.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn12.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn12.Caption = "Check In dự kiến";
+            this.gridColumn12.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.gridColumn12.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn12.FieldName = "CheckInPlan";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.OptionsColumn.AllowEdit = false;
+            this.gridColumn12.OptionsColumn.AllowFocus = false;
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 3;
+            this.gridColumn12.Width = 167;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.gridColumn13.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn13.AppearanceHeader.Options.UseTextOptions = true;
+            this.gridColumn13.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn13.Caption = "Check Out dự kiến";
+            this.gridColumn13.DisplayFormat.FormatString = "d";
+            this.gridColumn13.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.gridColumn13.FieldName = "CheckOutPlan";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.OptionsColumn.AllowEdit = false;
+            this.gridColumn13.OptionsColumn.AllowFocus = false;
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 4;
+            this.gridColumn13.Width = 260;
+            // 
+            // repositoryItemDateEdit4
+            // 
+            this.repositoryItemDateEdit4.AutoHeight = false;
+            this.repositoryItemDateEdit4.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit4.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit4.CalendarTimeProperties.Mask.EditMask = "dd/MM/yyyy HH:mm";
+            this.repositoryItemDateEdit4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.repositoryItemDateEdit4.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.repositoryItemDateEdit4.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.repositoryItemDateEdit4.Name = "repositoryItemDateEdit4";
+            // 
+            // colDelBookingOvertime
+            // 
+            this.colDelBookingOvertime.AppearanceCell.Options.UseTextOptions = true;
+            this.colDelBookingOvertime.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelBookingOvertime.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.colDelBookingOvertime.AppearanceHeader.Options.UseFont = true;
+            this.colDelBookingOvertime.AppearanceHeader.Options.UseTextOptions = true;
+            this.colDelBookingOvertime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colDelBookingOvertime.Caption = "Hủy";
+            this.colDelBookingOvertime.ColumnEdit = this.btnDelBooking;
+            this.colDelBookingOvertime.Name = "colDelBookingOvertime";
+            this.colDelBookingOvertime.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
+            this.colDelBookingOvertime.Visible = true;
+            this.colDelBookingOvertime.VisibleIndex = 5;
+            this.colDelBookingOvertime.Width = 77;
+            // 
+            // btnDelBooking
+            // 
+            this.btnDelBooking.AutoHeight = false;
+            this.btnDelBooking.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnDelBooking.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            this.btnDelBooking.Mask.EditMask = "([012]?[1-9]|[123]0|31)/(0?[1-9]|1[012])/([123][0-9])?[0-9][0-9] (0?\\d|1\\d|2[0-3]" +
+    "):[0-5]\\d";
+            this.btnDelBooking.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.btnDelBooking.Name = "btnDelBooking";
+            this.btnDelBooking.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDelBooking.Click += new System.EventHandler(this.btnDelBooking_Click);
+            // 
+            // colCheckInBookingRoom
+            // 
+            this.colCheckInBookingRoom.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
+            this.colCheckInBookingRoom.AppearanceHeader.Options.UseFont = true;
+            this.colCheckInBookingRoom.Caption = "CheckIn";
+            this.colCheckInBookingRoom.ColumnEdit = this.btnCheckInBookingRoom;
+            this.colCheckInBookingRoom.Image = ((System.Drawing.Image)(resources.GetObject("colCheckInBookingRoom.Image")));
+            this.colCheckInBookingRoom.Name = "colCheckInBookingRoom";
+            this.colCheckInBookingRoom.Visible = true;
+            this.colCheckInBookingRoom.VisibleIndex = 6;
+            this.colCheckInBookingRoom.Width = 84;
+            // 
+            // btnCheckInBookingRoom
+            // 
+            this.btnCheckInBookingRoom.AutoHeight = false;
+            this.btnCheckInBookingRoom.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("btnCheckInBookingRoom.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            this.btnCheckInBookingRoom.Name = "btnCheckInBookingRoom";
+            this.btnCheckInBookingRoom.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnCheckInBookingRoom.Click += new System.EventHandler(this.btnCheckInBookingRoom_Click);
+            // 
+            // repositoryItemCalcEdit2
+            // 
+            this.repositoryItemCalcEdit2.AutoHeight = false;
+            this.repositoryItemCalcEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemCalcEdit2.Name = "repositoryItemCalcEdit2";
+            // 
+            // repositoryItemDateEdit5
+            // 
+            this.repositoryItemDateEdit5.AutoHeight = false;
+            this.repositoryItemDateEdit5.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit5.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit5.CalendarTimeProperties.DisplayFormat.FormatString = "d";
+            this.repositoryItemDateEdit5.CalendarTimeProperties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit5.CalendarTimeProperties.EditFormat.FormatString = "d";
+            this.repositoryItemDateEdit5.CalendarTimeProperties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit5.Mask.EditMask = "";
+            this.repositoryItemDateEdit5.Name = "repositoryItemDateEdit5";
             // 
             // dockPanel3
             // 
@@ -1870,21 +2159,6 @@
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 175;
             // 
-            // progressPanel_Tab3
-            // 
-            this.progressPanel_Tab3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progressPanel_Tab3.Appearance.Options.UseBackColor = true;
-            this.progressPanel_Tab3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.progressPanel_Tab3.AppearanceCaption.Options.UseFont = true;
-            this.progressPanel_Tab3.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.progressPanel_Tab3.AppearanceDescription.Options.UseFont = true;
-            this.progressPanel_Tab3.Enabled = false;
-            this.progressPanel_Tab3.Location = new System.Drawing.Point(417, 223);
-            this.progressPanel_Tab3.Name = "progressPanel_Tab3";
-            this.progressPanel_Tab3.Size = new System.Drawing.Size(246, 66);
-            this.progressPanel_Tab3.TabIndex = 0;
-            this.progressPanel_Tab3.Text = "progressPanel1";
-            // 
             // frmMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -1927,9 +2201,6 @@
             this.dockPanel1_Container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            this.tabOvertimeBooking.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).EndInit();
-            this.panLuongNghiepVu.ResumeLayout(false);
             this.tabCurrentStatus.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1944,9 +2215,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCheckOut)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDetailBooking)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit3)).EndInit();
+            this.tabOvertimeBooking.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panLuongNghiepVu)).EndInit();
+            this.panLuongNghiepVu.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOvertimeBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvOvertimeBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit4.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelBooking)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCheckInBookingRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCalcEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit5.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit5)).EndInit();
             this.dockPanel2.ResumeLayout(false);
             this.dockPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
@@ -2116,7 +2401,23 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCheckOut;
         private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit3;
-        private DevExpress.XtraWaitForm.ProgressPanel progressPanel_Tab3;
+        private DevExpress.XtraGrid.Columns.GridColumn colViewDetail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDetailBooking;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private DevExpress.XtraGrid.GridControl dgvOvertimeBooking;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvOvertimeBooking;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit4;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDelBooking;
+        private DevExpress.XtraGrid.Columns.GridColumn colCheckInBookingRoom;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCheckInBookingRoom;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCalcEdit repositoryItemCalcEdit2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit5;
+        private DevExpress.XtraGrid.Columns.GridColumn colDelBookingOvertime;
         
     }
 }

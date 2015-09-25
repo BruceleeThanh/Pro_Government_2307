@@ -105,6 +105,9 @@ namespace BussinessLogic
         {
             try
             {
+                
+               // List<vw__BookingRInfo__BookingRooms_Room_Customers_CustomerGroups> aListView = new List<vw__BookingRInfo__BookingRooms_Room_Customers_CustomerGroups>();
+               // aListView = aDatabaseDA.vw__BookingRInfo__BookingRooms_Room_Customers_CustomerGroups.Where(p => p.IDCustomer == id).ToList();
                 Customers aCustomer = aDatabaseDA.Customers.Find(id);
                 aDatabaseDA.Customers.Remove(aCustomer);
                 return aDatabaseDA.SaveChanges();

@@ -837,6 +837,12 @@
     <Compile Include="FormTask\frmTsk_CheckoutExpire.Designer.cs">
       <DependentUpon>frmTsk_CheckoutExpire.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTask\frmTsk_ChoosePrintType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask\frmTsk_ChoosePrintType.Designer.cs">
+      <DependentUpon>frmTsk_ChoosePrintType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTask\frmTsk_DetailMenus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1403,6 +1409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_CheckoutExpire.resx">
       <DependentUpon>frmTsk_CheckoutExpire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask\frmTsk_ChoosePrintType.resx">
+      <DependentUpon>frmTsk_ChoosePrintType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTask\frmTsk_DetailMenus.resx">
       <DependentUpon>frmTsk_DetailMenus.cs</DependentUpon>

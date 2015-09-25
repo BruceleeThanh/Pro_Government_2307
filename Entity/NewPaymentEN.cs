@@ -13,7 +13,9 @@ namespace Entity
     {
        public int? IDBookingH { get; set; }
        public int? IDBookingR { get; set; }
+
        public List<BookingHallUsedEN> aListBookingHallUsed = new List<BookingHallUsedEN>();
+
        public List<BookingRoomUsedEN> aListBookingRoomUsed = new List<BookingRoomUsedEN>();
        public Nullable<DateTime> CreatedDate_BookingR { get; set; }
        public Nullable<DateTime> CreatedDate_BookingH { get; set; }
@@ -40,6 +42,46 @@ namespace Entity
        public DateTime? AcceptDate { get; set; }
 
 
+       public NewPaymentEN Clone(NewPaymentEN aNewPaymentEN)
+       {
+           this.aListBookingHallUsed.Clear();
+           this.aListBookingHallUsed.InsertRange(0,aNewPaymentEN.aListBookingHallUsed);
+
+           this.aListBookingRoomUsed.Clear();
+           for (int i = 0; i < aNewPaymentEN.aListBookingRoomUsed.Count; i++)
+           {
+               this.aListBookingRoomUsed.Add((new BookingRoomUsedEN()).Clone(aNewPaymentEN.aListBookingRoomUsed[i]));
+           }
+               
+
+           this.IDBookingH = aNewPaymentEN.IDBookingH;
+           this.IDBookingR = aNewPaymentEN.IDBookingR;
+           this.CreatedDate_BookingH = aNewPaymentEN.CreatedDate_BookingH;
+           this.CreatedDate_BookingR = aNewPaymentEN.CreatedDate_BookingR;
+           this.CustomerType = aNewPaymentEN.CustomerType;
+           this.PayMenthodR = aNewPaymentEN.PayMenthodR;
+           this.PayMenthodH = aNewPaymentEN.PayMenthodH;
+           this.StatusPay = aNewPaymentEN.StatusPay;
+           this.BookingHMoney = aNewPaymentEN.BookingHMoney;
+           this.BookingRMoney = aNewPaymentEN.BookingRMoney;
+           this.Status_BookingR = aNewPaymentEN.Status_BookingR;
+           this.Status_BookingH = aNewPaymentEN.Status_BookingH;
+           this.IDCustomer = aNewPaymentEN.IDCustomer;
+           this.NameCustomer = aNewPaymentEN.NameCustomer;
+           this.IDSystemUser = aNewPaymentEN.IDSystemUser;
+           this.NameSystemUser = aNewPaymentEN.NameSystemUser;
+           this.IDCustomerGroup = aNewPaymentEN.IDCustomerGroup;
+           this.NameCustomerGroup = aNewPaymentEN.NameCustomerGroup;
+           this.IDCompany = aNewPaymentEN.IDCompany;
+           this.NameCompany = aNewPaymentEN.NameCompany;
+           this.TaxNumberCodeCompany = aNewPaymentEN.TaxNumberCodeCompany;
+           this.AddressCompany = aNewPaymentEN.AddressCompany;
+           this.InvoiceNumber = aNewPaymentEN.InvoiceNumber;
+           this.AcceptDate = aNewPaymentEN.AcceptDate;
+
+           return this;
+          
+       }
 
        public List<int> ListIndex = new List<int>();
        public Nullable<DateTime> InvoiceDate { get; set; } // ngay tren hoa don do, ngay chot doanh thu

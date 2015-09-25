@@ -14,6 +14,26 @@ namespace Entity
         public decimal? PriceMenu { get; set;}
 
         public List<Foods> aListFoods = new List<Foods>();
+
+        public void Clone(MenusEN aMenusEN)
+        {
+            this.CodeHall = aMenusEN.CodeHall;
+            this.Disable = aMenusEN.Disable;
+            this.ID = aMenusEN.ID;
+            this.IDBookingHall = aMenusEN.IDBookingHall;
+            this.IDSystemUser = aMenusEN.IDSystemUser;
+            this.Info = aMenusEN.Info;
+            this.Issue = aMenusEN.Issue;
+            this.Name = aMenusEN.Name;
+            this.NameFood = aMenusEN.NameFood;
+            this.PriceMenu = aMenusEN.PriceMenu;
+            this.SkuHall = aMenusEN.SkuHall;
+            this.Status = aMenusEN.Status;
+            this.Type = aMenusEN.Type;
+
+            this.aListFoods.Clear();
+            this.aListFoods.AddRange(aMenusEN.aListFoods);
+        }
         public int InsertFood(Foods aFood)
         {
             try

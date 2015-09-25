@@ -26,7 +26,8 @@ namespace RoomManager
         public frmMain_Halls afrmMain_Halls = null;
 
         private NewPaymentEN aNewPaymentEN = new NewPaymentEN();
-        
+        private NewPaymentEN aNewPaymentEN_Backup = new NewPaymentEN();
+
         private int IDBookingH = 0;
         private int IDBookingR = 0;
         private int CurrentIDBookingRoom = 0;
@@ -402,7 +403,8 @@ namespace RoomManager
                  */
                 ReceptionTaskBO aReceptionTaskBO = new ReceptionTaskBO();
 
-                
+
+
                 if (aBookingRoomUsedEN.Status == 1 || aBookingRoomUsedEN.Status == 2)
                 {
                     dtpCheckInActual.DateTime = aBookingRoomUsedEN.CheckInPlan;
@@ -501,6 +503,9 @@ namespace RoomManager
                 //=========================================
                 //=========================================
                 // Load lai  control khac
+
+
+
                 //-------------- Phòng ---------------------
                 //Thong tin nguoi dat
                 lblNameCompany_BookingR.Text = this.aNewPaymentEN.NameCompany;
@@ -689,6 +694,16 @@ namespace RoomManager
 
                 this.LoadDataCurrentRoomForControl();
                 this.LoadDataCurrentHallForControl();
+
+                Customers aDefaultCustomer = new Customers();
+                aDefaultCustomer.Name = "[Hiển thị tất cả]";
+                aDefaultCustomer.ID = 0;
+                List<Customers> aListCustomer = new List<Customers>();
+                aListCustomer = this.aNewPaymentEN.GetListAllCustomer();
+                aListCustomer.Add(aDefaultCustomer);
+                loeListCustomer.Properties.DataSource = aListCustomer;
+                loeListCustomer.Properties.NullText = "[Hiển thị tất cả]";
+                loeListCustomer.EditValue = 0;
                 
 
             }
@@ -698,8 +713,6 @@ namespace RoomManager
                 MessageBox.Show("frmTsk_PaymentStep2.frmTsk_Payment_Step2_Load\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        
 
         //Ngoc - Done
         private void LockForm_Status7()
@@ -2326,10 +2339,81 @@ namespace RoomManager
 
         private void ddbBill_Click(object sender, EventArgs e)
         {
+            frmTsk_ChoosePrintType afrm = new frmTsk_ChoosePrintType(this.aNewPaymentEN);
+            afrm.ShowDialog();
+        }
+
+        private void loeListCustomer_EditValueChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void loeListCustomer_EditValueChanging(object sender, DevExpress.XtraEditors.Controls.ChangingEventArgs e)
+        {
             CustomersBO aCustomersBO = new CustomersBO();
             Customers aCustomer = new Customers();
-            aCustomer = aCustomersBO.Select_ByID (this.aNewPaymentEN.IDCustomer.GetValueOrDefault(0));
-            this.aNewPaymentEN = this.aNewPaymentEN.SlipPaymentByCustomer(aCustomer);
+
+            if (loeListCustomer.OldEditValue != null || int.Parse(e.NewValue.ToString()) != 0 )  // Để khi fill dữ liệu vào lần đầu không xóa mất aNewPaymentEN
+            {
+                if (int.Parse(e.OldValue.ToString()) == 0)
+                {
+                    this.aNewPaymentEN_Backup.Clone(this.aNewPaymentEN);
+                    aCustomer = aCustomersBO.Select_ByID(int.Parse(e.NewValue.ToString()));
+                    this.aNewPaymentEN = this.aNewPaymentEN.SlipPaymentByCustomer(aCustomer);
+                    if (this.aNewPaymentEN.aListBookingRoomUsed.Count > 0)
+                    {
+                        this.CurrentIDBookingRoom = this.aNewPaymentEN.aListBookingRoomUsed[0].ID;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Có thể có lỗi dữ liệu vì người dùng này đang không tồn tại trong phòng nào");
+                    }
+
+                    this.LoadDataCurrentHallForControl();
+                    this.LoadDataCurrentRoomForControl();
+                }
+                else if (int.Parse(e.OldValue.ToString()) != 0)
+                {
+
+                    if (int.Parse(e.NewValue.ToString()) != 0) // Khi chọn hiển thị dữ liệu cho một người khác
+                    {
+                        this.aNewPaymentEN.Clone(this.aNewPaymentEN_Backup);
+
+                        aCustomer = aCustomersBO.Select_ByID(int.Parse(e.NewValue.ToString()));
+                        this.aNewPaymentEN = this.aNewPaymentEN.SlipPaymentByCustomer(aCustomer);
+
+                        if (this.aNewPaymentEN.aListBookingRoomUsed.Count > 0)
+                        {
+                            this.CurrentIDBookingRoom = this.aNewPaymentEN.aListBookingRoomUsed[0].ID;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Có thể có lỗi dữ liệu vì người dùng này đang không tồn tại trong phòng nào");
+                        }
+
+                        this.LoadDataCurrentHallForControl();
+                        this.LoadDataCurrentRoomForControl();
+                    }
+                    else //khi chọn hiển thị dữ liệu cho tất cả
+                    {
+                        this.aNewPaymentEN.Clone(this.aNewPaymentEN_Backup);
+                        if (this.aNewPaymentEN.aListBookingRoomUsed.Count > 0)
+                        {
+                            this.CurrentIDBookingRoom = this.aNewPaymentEN.aListBookingRoomUsed[0].ID;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Có thể có lỗi dữ liệu vì người dùng này đang không tồn tại trong phòng nào");
+                        }
+
+                        this.LoadDataCurrentHallForControl();
+                        this.LoadDataCurrentRoomForControl();
+                    }
+                }
+            }
+
         }
 
     }

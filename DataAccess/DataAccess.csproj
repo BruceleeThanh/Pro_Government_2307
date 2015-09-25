@@ -249,6 +249,9 @@
     <Compile Include="sp_PaymentExt_GetAllData_Ext_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_RoomExt_GetBookingRoom_ByListStatus_Result.cs">
+      <DependentUpon>DatabaseDA.tt</DependentUpon>
+    </Compile>
     <Compile Include="sp_RoomExt_GetCurrentStatusRooms_ByIDRoom_ByTime_Result.cs">
       <DependentUpon>DatabaseDA.tt</DependentUpon>
     </Compile>

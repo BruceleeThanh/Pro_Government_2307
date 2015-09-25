@@ -45,8 +45,10 @@
             this.lueBookingR_Paymethod = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.loeListCustomer = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.lblTotalMoneyServiceR = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.btnPrintListCus = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -293,6 +295,7 @@
             this.tableLayoutPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lueBookingR_Paymethod.Properties)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loeListCustomer.Properties)).BeginInit();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel42.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -509,11 +512,15 @@
             // 
             // tableLayoutPanel7
             // 
-            this.tableLayoutPanel7.ColumnCount = 2;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel7.Controls.Add(this.labelControl11, 0, 0);
-            this.tableLayoutPanel7.Controls.Add(this.lblTotalMoneyServiceR, 1, 0);
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.52055F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.47945F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 149F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 185F));
+            this.tableLayoutPanel7.Controls.Add(this.loeListCustomer, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.labelControl6, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lblTotalMoneyServiceR, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.labelControl11, 2, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(326, 0);
             this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(0);
@@ -523,26 +530,57 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(621, 49);
             this.tableLayoutPanel7.TabIndex = 70;
             // 
-            // labelControl11
+            // loeListCustomer
             // 
-            this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.labelControl11.Location = new System.Drawing.Point(276, 16);
-            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(124, 17);
-            this.labelControl11.TabIndex = 71;
-            this.labelControl11.Text = "Tổng tiền dịch vụ:";
+            this.loeListCustomer.Location = new System.Drawing.Point(130, 13);
+            this.loeListCustomer.Margin = new System.Windows.Forms.Padding(3, 13, 3, 3);
+            this.loeListCustomer.Name = "loeListCustomer";
+            this.loeListCustomer.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.loeListCustomer.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("Name", 40, "Name"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "ID", 20, DevExpress.Utils.FormatType.None, "", false, DevExpress.Utils.HorzAlignment.Default)});
+            this.loeListCustomer.Properties.DisplayMember = "Name";
+            this.loeListCustomer.Properties.NullText = "Chọn khách";
+            this.loeListCustomer.Properties.NullValuePrompt = "Bạn chưa chọn khách";
+            this.loeListCustomer.Properties.NullValuePromptShowForEmptyValue = true;
+            this.loeListCustomer.Properties.ValueMember = "ID";
+            this.loeListCustomer.Size = new System.Drawing.Size(153, 22);
+            this.loeListCustomer.TabIndex = 74;
+            this.loeListCustomer.EditValueChanged += new System.EventHandler(this.loeListCustomer_EditValueChanged);
+            this.loeListCustomer.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.loeListCustomer_EditValueChanging);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl6.Location = new System.Drawing.Point(3, 16);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(122, 17);
+            this.labelControl6.TabIndex = 73;
+            this.labelControl6.Text = "Hiển dữ liệu theo:";
             // 
             // lblTotalMoneyServiceR
             // 
             this.lblTotalMoneyServiceR.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(406, 16);
+            this.lblTotalMoneyServiceR.Location = new System.Drawing.Point(438, 16);
             this.lblTotalMoneyServiceR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalMoneyServiceR.Name = "lblTotalMoneyServiceR";
             this.lblTotalMoneyServiceR.Size = new System.Drawing.Size(43, 16);
             this.lblTotalMoneyServiceR.TabIndex = 72;
             this.lblTotalMoneyServiceR.Text = "0 (Vnđ)";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl11.Location = new System.Drawing.Point(308, 16);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(124, 17);
+            this.labelControl11.TabIndex = 71;
+            this.labelControl11.Text = "Tổng tiền dịch vụ:";
             // 
             // tableLayoutPanel8
             // 
@@ -4009,6 +4047,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lueBookingR_Paymethod.Properties)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.loeListCustomer.Properties)).EndInit();
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel42.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -4396,6 +4435,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTagH;
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lueUserInBookingH;
         private DevExpress.XtraEditors.DropDownButton ddbBill;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LookUpEdit loeListCustomer;
 
     }
 }

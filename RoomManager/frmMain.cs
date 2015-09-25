@@ -999,16 +999,6 @@ namespace RoomManager
             }
         }
 
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtpSearch_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnViewNow_Click(object sender, EventArgs e)
         {
             RefreshData_auc_StatusRoomsUpdate(DateTime.Now);
@@ -1017,83 +1007,102 @@ namespace RoomManager
 
         private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            progressPanel_Tab3.Visible = true;
+         
             if (e.Page.Name.ToLower() == "tabovertimecheckin")
             {
-                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
-                List<RoomExtStatusEN> aList = new List<RoomExtStatusEN>();
-                //List<Rooms> aListRooms = new List<Rooms>();
-
-                //List<BookingRooms> aListTemp = new List<BookingRooms>();
-                //aListTemp = aBookingRoomsBO.Select_ByStatus(3).Where(p => p.CheckOutPlan.Date  <= DateTime.Today.Date).ToList();
-                
-                RoomsBO aRoomsBO = new RoomsBO();
-
-                //aRoomsBO.GetStatusRoom(aListTemp.Select(p => p.CodeRoom).ToList(), DateTime.Now);
-                
-                aList = aRoomsBO.GetListUsingRooms(DateTime.Now).Where(p => p.CheckOutPlan.Date <= DateTime.Today.Date).ToList();
-                dgvBookingRooms.DataSource = aList;
-                dgvBookingRooms.RefreshDataSource();
-                
-
-                //RoomsBO aRoomsBO = new RoomsBO();
-                //aListRooms = aRoomsBO.Select_All();
-                //dgvBookingRooms.DataSource = this.GetListBookingRooms(aListTemp, aListRooms);
-                //dgvBookingRooms.RefreshDataSource();
+                LoadDataForOverTimeCheckIn();
             }
-            progressPanel_Tab3.Visible = false;
+            if (e.Page.Name.ToLower() == "tabovertimebooking")
+            {
+                LoadDataForOverTimeBooking();
+            }
             
         }
-        private List<BookingRooms> GetListBookingRooms(List<BookingRooms> aListBookingRooms, List<Rooms> aListRooms)
+        private void LoadDataForOverTimeBooking()
         {
-            try
-            {
-                List<BookingRooms> aListBookingRoomsTemp = new List<BookingRooms>();
-                BookingRooms aBookingRooms;
-                foreach (BookingRooms items in aListBookingRooms)
-                {
-                    aBookingRooms = new BookingRooms();
-                    aBookingRooms.ID = items.ID;
-                    aBookingRooms.IDBookingR = items.IDBookingR;
-                    aBookingRooms.CodeRoom = items.CodeRoom;
-                    aBookingRooms.Cost = items.Cost;
-                    aBookingRooms.PercentTax = items.PercentTax;
-                    aBookingRooms.CostRef_Rooms = items.CostRef_Rooms;
-                    aBookingRooms.Note = items.Note;
-                    aBookingRooms.CheckInPlan = items.CheckInPlan;
-                    aBookingRooms.CheckOutPlan = items.CheckOutPlan;
-                    aBookingRooms.CheckInActual = items.CheckInActual;
-                    aBookingRooms.CheckOutActual = items.CheckOutActual;
-                    aBookingRooms.BookingStatus = items.BookingStatus;
-                    aBookingRooms.Status = items.Status;
-                    aBookingRooms.StartTime = items.StartTime;
-                    aBookingRooms.EndTime = items.EndTime;
-                    aBookingRooms.IsAllDayEvent = items.IsAllDayEvent;
-                    aBookingRooms.Color = items.Color;
-                    aBookingRooms.IsRecurring = items.IsRecurring;
-                    aBookingRooms.IsEditable = items.IsEditable;
+            BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+            List<RoomExtStatusEN> aList = new List<RoomExtStatusEN>();
 
-                    //dung tam cot AdditionalColumn1 de hien thi ten phong(Sku)
-                    if (aListRooms.Where(r => r.Code == items.CodeRoom).ToList().Count > 0)
-                    {
-                        aBookingRooms.AdditionalColumn1 = aListRooms.Where(r => r.Code == items.CodeRoom).ToList()[0].Sku;
-                    }
-                    aBookingRooms.CostPendingRoom = items.CostPendingRoom;
-                    aBookingRooms.TimeInUse = items.TimeInUse;
-                    aListBookingRoomsTemp.Add(aBookingRooms);
-                }
-                return aListBookingRoomsTemp;
-            }
-            catch (Exception ex)
+            RoomsBO aRoomsBO = new RoomsBO();
+
+            List<int> aListStatus = new List<int>();
+            aListStatus.Add(1);
+            aListStatus.Add(2);
+            aListStatus.Add(5);
+
+            aList = aRoomsBO.GetStatusRoom_ByListStatus(aListStatus).Where(p => p.CheckInPlan.Date <= DateTime.Now.Date).ToList();
+
+            dgvOvertimeBooking.DataSource = aList;
+            dgvOvertimeBooking.RefreshDataSource();
+        }
+        private void LoadDataForOverTimeCheckIn()
+        {
+            BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+            List<RoomExtStatusEN> aList = new List<RoomExtStatusEN>();
+
+            RoomsBO aRoomsBO = new RoomsBO();
+
+            List<int> aListStatus = new List<int>();
+            aListStatus.Add(3);
+
+
+            aList = aRoomsBO.GetStatusRoom_ByListStatus(aListStatus).Where(p => p.CheckOutPlan.Date <= DateTime.Now.Date).ToList();
+
+            dgvBookingRooms.DataSource = aList;
+            dgvBookingRooms.RefreshDataSource();
+        }
+
+
+        private void btnDetailBooking_Click(object sender, EventArgs e)
+        {
+
+            int BookingRs_ID = Convert.ToInt32(grvBookingRoom.GetFocusedRowCellValue("BookingRs_ID").ToString());
+           
+            BookingRs_BookingHsBO aBookingRs_BookingHsBO = new BookingRs_BookingHsBO();
+            BookingRs_BookingHs aBookingRs_BookingHs = aBookingRs_BookingHsBO.Select_ByIDBookingR(Convert.ToInt32(BookingRs_ID));
+            int IDBookingH = 0;
+
+            if (aBookingRs_BookingHs != null)
             {
-                MessageBox.Show("frmTsk_CheckOut.GetListBookingRooms\n" + ex.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
+                IDBookingH = Convert.ToInt32(aBookingRs_BookingHs.IDBookingH);
+            }
+            frmTsk_Payment_Step2 afrmTsk_Payment_Step2 = new frmTsk_Payment_Step2(this, Convert.ToInt32(BookingRs_ID), IDBookingH, 3, true);
+            afrmTsk_Payment_Step2.ShowDialog();
+            
+        }
+
+        private void btnDelBooking_Click(object sender, EventArgs e)
+        {
+            int BookingRs_ID = Convert.ToInt32(grvOvertimeBooking.GetFocusedRowCellValue("BookingRs_ID").ToString());
+            DialogResult aRet = MessageBox.Show("Có chắc bạn muốn xóa đặt phòng này không ?", "Cảnh báo", MessageBoxButtons.YesNo);
+            if (aRet == System.Windows.Forms.DialogResult.Yes)
+            {
+
+                BookingRsBO aBookingRsBO = new BookingRsBO();
+                BookingRoomsBO aBookingRoomsBO = new BookingRoomsBO();
+                List<BookingRooms> aListBookingRooms =  aBookingRoomsBO.Select_ByIDBookingRs(BookingRs_ID);
+
+                int ret1 = aBookingRoomsBO.Delete(aListBookingRooms);
+                int ret2 = aBookingRsBO.Delete(BookingRs_ID);
+                if (ret2 > 0 && ret1 >0)
+                {
+                    MessageBox.Show("Xóa thành công");
+                    LoadDataForOverTimeBooking();
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công");
+                }
+
             }
         }
 
-        private void xtraTabControl1_Click(object sender, EventArgs e)
+        private void btnCheckInBookingRoom_Click(object sender, EventArgs e)
         {
-
+            int IDBookingRs = Convert.ToInt32(grvOvertimeBooking.GetFocusedRowCellValue("BookingRs_ID"));
+            DateTime CheckOutPlan = Convert.ToDateTime(grvOvertimeBooking.GetFocusedRowCellValue("CheckOutPlan"));
+            frmTsk_CheckInForRoomBooking afrmTsk_CheckInForRoomBooking = new frmTsk_CheckInForRoomBooking(this, IDBookingRs, CheckOutPlan);
+            afrmTsk_CheckInForRoomBooking.Show();
         }
 
 

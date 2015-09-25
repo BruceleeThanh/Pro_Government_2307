@@ -777,5 +777,18 @@ namespace DataAccess
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_SystemUsers_GetCurrentNotInDivision_Result>("sp_SystemUsers_GetCurrentNotInDivision", iDDivisionParameter);
         }
+    
+        public virtual ObjectResult<sp_RoomExt_GetBookingRoom_ByListStatus_Result> sp_RoomExt_GetBookingRoom_ByListStatus(string listStatus, Nullable<int> iDLang)
+        {
+            var listStatusParameter = listStatus != null ?
+                new ObjectParameter("ListStatus", listStatus) :
+                new ObjectParameter("ListStatus", typeof(string));
+    
+            var iDLangParameter = iDLang.HasValue ?
+                new ObjectParameter("IDLang", iDLang) :
+                new ObjectParameter("IDLang", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RoomExt_GetBookingRoom_ByListStatus_Result>("sp_RoomExt_GetBookingRoom_ByListStatus", listStatusParameter, iDLangParameter);
+        }
     }
 }
